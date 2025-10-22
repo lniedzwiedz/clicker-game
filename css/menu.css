@@ -183,3 +183,21 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
+
+@media(max-width: 1200px){
+
+    #containerSectionMenu {
+        display: grid;
+        grid-template-rows: 20fr 60fr 20fr;
+        grid-template-columns: 7fr 28fr 58fr 7fr;
+    }
+
+    #containerMenuMainParts {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr 7fr;
+    }
+
+}

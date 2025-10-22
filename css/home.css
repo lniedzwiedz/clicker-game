@@ -308,8 +308,8 @@
 
 .fraudCountRoundUpdateNumber {
     color: #232323;
-    /*font-size: 100%;*/
-    font-size: 90%;
+    font-size: 100%;
+    /*font-size: 90%;*/
     font-weight: 900;
 }
 
@@ -424,4 +424,18 @@
 .fa-timeBest {
     color: #e9a610;
     opacity: 0.9;
+}
+
+@media(max-width: 1200px){
+
+    #containerMainSectionHome {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;
+        grid-template-columns: 5fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 5fr;
+
+
+    }
+
 }
