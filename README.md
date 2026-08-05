@@ -5,7 +5,7 @@ Your goal is to click on the color as quickly as possible when it changes.
 
 ---
 
-### How the Game Works
+## Game Rules
 
 * Click on the color **as soon as it changes**.
 * The game also tracks the number of clicks **before the color changes** to catch any attempts to “cheat”.
@@ -15,13 +15,15 @@ Your goal is to click on the color as quickly as possible when it changes.
 
 ---
 
-### 👉 [Play the game](https://lniedzwiedz.github.io/website-clickerGame/)
+## 👉 [Play the game](https://lniedzwiedz.github.io/website-clickerGame/)
 
+
+ 
 The game is responsive and works smoothly on computers and tablets.
 
 ---
 
-### Technologies
+## Technologies
 
 * HTML
 * CSS
