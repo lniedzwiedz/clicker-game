@@ -170,7 +170,7 @@ const fraudCountRoundCommon = "fraudCountRoundCommon";
 // const statisticsFraudCountTextDisplay = "<i class=\"fa-solid fa-gem\"></i> &nbsp sum"
 // const statisticsFraudCountTextDisplay = " statistic fraud count "
 // const statisticsFraudCountTextDisplay = "STATISTIC FRAUD COUNT"
-const statisticsFraudCountTextDisplay = "FRAUD COUNT"
+const statisticsFraudCountTextDisplay = "FRAUD COUNTER"
 const statisticsFraudCountNumberTextDisplay = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp &nbsp"
 
 // menu

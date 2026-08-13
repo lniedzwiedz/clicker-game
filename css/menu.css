@@ -1,17 +1,7 @@
 #containerSectionMenu {
     display: grid;
-    /*grid-template-rows: 20fr 60fr 20fr;*/
-    /*grid-template-rows: 20fr 70fr 10fr;*/
-    /*grid-template-columns: 15fr 15fr 55fr 15fr;*/
-
-    /*grid-template-rows: 20fr 70fr 10fr;*/
-    /*grid-template-columns: 7fr 28fr 58fr 7fr;*/
-
-    /*grid-template-rows: 20fr 70fr 10fr;*/
-    /*grid-template-columns: 15fr 15fr 55fr 15fr;*/
-
     grid-template-rows: 20fr 70fr 10fr;
-    grid-template-columns: 5fr 30fr 60fr 5fr;
+    grid-template-columns: 15fr 15fr 55fr 15fr;
 }
 
 .containerMenuMain {
@@ -27,8 +17,7 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
-    /*grid-template-columns: 5fr 5fr;*/
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 4fr 6fr;
 }
 
 .containerMenuTitleMain {
@@ -45,15 +34,13 @@
     justify-content: left;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .menuTitleText {
     margin: 0;
     padding: 0;
-    /*color: #ac4a71;*/
-    color: lightgoldenrodyellow;
+    color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     opacity: 0.9;
     font-size: 2.1rem;
-    /*font-size: 2.0rem;*/
     font-weight: 400;
 }
 
@@ -67,16 +54,11 @@
 
 #containerMenuGameConfigurationParts {
     display: grid;
-    /*grid-row: 1 / 1;*/
-    /*grid-column: 1 / 1;*/
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 2fr 1fr 7fr;*/
-
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr  8fr;
-    /*grid-template-columns: 1fr  9fr;*/
+    /*grid-template-columns: 2fr  8fr;*/
+    grid-template-columns: 1fr  9fr;
 }
 
 #containerMenuGameConfigurationText {
@@ -105,21 +87,14 @@
     padding: 0;
 }
 
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .fa-screwdriver-wrench {
     color: #FFFFFF;
     opacity: 0.7;
     font-weight: 600;
-    /*font-size: 200%;*/
-    /*font-size: 2.0rem;*/
-    /*font-size: 4.0rem;*/
-    /*font-size: 3.0rem;*/
     font-size: 2.0rem;
     text-shadow: 0px 0px 40px #EC7998;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .menuGameConfigurationButton {
     justify-content: center;
     align-items: center;
@@ -127,7 +102,6 @@
     width: 100%;
     height: 100%;
     border: none;
-    /*background-color: #000000;*/
     background-color: #2c3e3a;
     /*color: #ac4a71;*/
     /*color: #ac4a71;*/
@@ -215,68 +189,12 @@
     grid-template-columns: 1fr;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 600px) {
 
     #containerSectionMenu {
-        /*display: grid;*/
-        /*grid-template-rows: 20fr 60fr 20fr;*/
-        /*grid-template-rows: 20fr 70fr 10fr;*/
-        /*grid-template-columns: 7fr 28fr 58fr 7fr;*/
-    }
-
-    #containerMenuMainParts {
-        /*display: grid;*/
-        /*grid-row: 1 / 1;*/
-        /*grid-column: 1 / 1;*/
-        /*grid-template-rows: 1fr;*/
-        /*grid-template-columns: 4fr 6fr;*/
-        /*grid-template-columns: 2fr 8fr;*/
-    }
-
-    /*#containerMenuMainParts {*/
-    /*    display: grid;*/
-    /*    grid-row: 1 / 1;*/
-    /*    grid-column: 1 / 1;*/
-    /*    !*grid-template-rows: 2fr 2fr;*!*/
-    /*    grid-template-rows: 1fr 3fr;*/
-    /*    grid-template-columns: 1fr;*/
-    /*}*/
-
-    /*#containerMenuGameConfiguration {*/
-    /*    display: grid;*/
-    /*    grid-row: 2 / 2;*/
-    /*    grid-column: 1 / 2;*/
-    /*    grid-template-rows: 1fr;*/
-    /*    grid-template-columns: 1fr;*/
-    /*}*/
-
-    /*.containerMenuTitleMain {*/
-    /*    display: grid;*/
-    /*    grid-row: 1 / 1;*/
-    /*    grid-column: 1 / 2;*/
-    /*    grid-template-rows: 1fr;*/
-    /*    grid-template-columns: 1fr;*/
-    /*}*/
-
-}
-
-/*@media (max-width: 400px) {*/
-@media (max-width: 430px) {
-
-    #containerSectionMenu {
-        /*display: grid;*/
-        /*grid-template-rows: 20fr 60fr 20fr;*/
-        /*grid-template-rows: 20fr 70fr 10fr;*/
-        /*grid-template-columns: 7fr 28fr 58fr 7fr;*/
-    }
-
-    #containerMenuMainParts {
         display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        /*grid-template-rows: 2fr 2fr;*/
-        grid-template-rows: 1fr 3fr;
-        grid-template-columns: 1fr;
+        grid-template-rows: 20fr 70fr 10fr;
+        grid-template-columns: 5fr 30fr 60fr 5fr;
     }
 
     #containerMenuGameConfiguration {
@@ -287,6 +205,23 @@
         grid-template-columns: 1fr;
     }
 
+    #containerMenuGameConfigurationParts {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        /*grid-template-columns: 1fr  9fr;*/
+        grid-template-columns: 2fr  8fr;
+    }
+
+    #containerMenuMainParts {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr;
+    }
+
     .containerMenuTitleMain {
         display: grid;
         grid-row: 1 / 1;
@@ -294,7 +229,14 @@
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
     }
+}
 
+@media (max-width: 1000px) {
 
-
+    #containerSectionMenu {
+        display: grid;
+        grid-template-rows: 20fr 70fr 10fr;
+        /*grid-template-columns: 5fr 35fr 55fr 5fr;*/
+        grid-template-columns: 8fr 32fr 52fr 8fr;
+    }
 }
