@@ -10,7 +10,6 @@
     grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
     grid-template-columns: 15fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 15fr;
     /*grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;*/
-
 }
 
 #containerMainHome {
@@ -53,10 +52,9 @@
     color: #000000;
     text-shadow: 4px -1px 20px #FFFFFF;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-/*button start / stop*/
 #containerGameFiled-buttonsMain {
     display: grid;
     grid-row: 2 / 3;
@@ -289,7 +287,7 @@
     color: #ac4a71;
     opacity: 0.9;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .fraudCountRound {
@@ -302,19 +300,19 @@
     background-color: #000000;
     color: #ac4a71;
     padding: 0px;
-    font-size: 0.9rem;
     font-weight: 200;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;
 }
 
+/* runda klikniec zliczenie */
 .fraudCountRoundUpdateNumber {
     color: #232323;
-    font-size: 100%;
-    /*font-size: 90%;*/
+    font-size: 1.3rem;
     font-weight: 900;
 }
 
+/* text fraud counter*/
 .statisticsFraudCountText {
     width: 100%;
     height: 100%;
@@ -324,7 +322,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 100%;
+    font-size: 1.3rem;
     font-weight: 200;
     border: none;
     border-radius: 0.45rem;
@@ -332,63 +330,83 @@
 }
 
 .fraudCountRoundUpdateSumNumber {
-    width: 100%;
-    height: 100%;
-    color: #ac4a71;
-    font-size: 100%;
-    font-weight: 900;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*color: #ac4a71;*/
+    /*font-size: 5rem;*/
+    /*font-weight: 900;*/
 }
 
 .statisticsTimeMinGamePlay {
     color: #78C209;
+    font-size: 1.2rem;
 }
 
 .statisticsTimeMinText {
     color: #78C209;
+    font-size: 1.0rem;
 }
 
 .statisticsTimeAvgGamePlay {
     color: skyblue;
+    font-size: 1.2rem;
 }
 
 .statisticsTimeAvgText {
     color: skyblue;
+    font-size: 1.0rem;
 }
 
 .statisticsTimeMaxGamePlay {
     color: #EC7998;
+    font-size: 1.2rem;
 }
 
 .statisticsTimeMaxText {
     color: #EC7998;
+    font-size: 1.0rem;
 }
 
 .statisticsTimeBestGamePlay {
     color: #e9a610;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .fa-clock {
-    font-size: 130%;
+    font-size: 1.3rem;
 }
 
 .fa-star {
     color: #e9a610;
-    opacity: 0.7;
+    opacity: 0.8;
+    font-size: 1.0rem;
 }
 
 .fa-gem {
     color: #ac4a71;
     opacity: 0.7;
+    font-size: 1.0rem;
 }
 
 .fa-whiskey-glass {
     color: #FFFFFF;
     opacity: 0.7;
+    font-weight: 600;
+    font-size: 1.0rem;
 }
 
-/* commonVariables.js -> <i fa-... ></i> */
+.fa-fraudBest {
+    color: #FFFFFF;
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* commonVariables.js :
+-> statisticsFraudCountNumberTextDisplaySetUp/ statisticsFraudCountNumberTextDisplay
+-> <i fa-... ></i> */
+
 .fa-playGameAction-beforeClick {
     color: #FFFFFF;
     opacity: 0.7;
@@ -399,13 +417,6 @@
     color: #e9a610;
     opacity: 1;
     font-size: 1.3rem;
-}
-
-.fa-fraudBest {
-    color: #FFFFFF;
-    opacity: 0.9;
-    font-weight: 600;
-    font-size: 140%;
 }
 
 .fa-timeMin {
@@ -425,7 +436,8 @@
 
 .fa-timeBest {
     color: #e9a610;
-    opacity: 0.9;
+    opacity: 1.2;
+    font-size: 1.9rem;
 }
 
 @media (max-width: 600px) {
@@ -435,17 +447,96 @@
         grid-row: 1 / 1;
         grid-column: 1 / 1;
         grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
-        /*grid-template-columns: 7fr 12fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 12fr 7fr;*/
         grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;
-
     }
 
-    .fa-playGameAction-beforeClick {
+    .statisticsFraudBestUpdateNumber {
         font-size: 1.1rem;
+    }
+
+    .fraudCountRoundUpdateNumber {
+        font-size: 0.8rem;
+    }
+
+    .statisticsFraudCountText {
+        font-size: 0.9rem;
+    }
+
+    /* text fraud counter*/
+    .statisticsFraudCountText {
+        font-size: 0.9rem;
+    }
+
+    .fraudCountRoundUpdateSumNumber {
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*color: #ac4a71;*/
+        /*font-size: 5rem;*/
+        /*font-weight: 900;*/
+    }
+
+    .statisticsTimeMinGamePlay {
+        font-size: 0.8rem;
+    }
+
+    .statisticsTimeMinText {
+        font-size: 0.5rem;
+    }
+
+    .statisticsTimeAvgGamePlay {
+        font-size: 0.8rem;
+    }
+
+    .statisticsTimeAvgText {
+        font-size: 0.5rem;
+    }
+
+    .statisticsTimeMaxGamePlay {
+        font-size: 0.8rem;
+    }
+
+    .statisticsTimeMaxText {
+        font-size: 0.5rem;
+    }
+
+    .statisticsTimeBestGamePlay {
+        font-size: 0.9rem;
+    }
+
+    .fa-clock {
+        font-size: 0.9rem;
+    }
+
+    .fa-star {
+        font-size: 0.6rem;
+    }
+
+    .fa-gem {
+        font-size: 0.6rem;
+    }
+
+    .fa-whiskey-glass {
+        font-size: 0.4rem;
+    }
+
+    /* kubek miedzy dziamentami*/
+    .fa-fraudBest {
+        font-size: 0.8rem;
+    }
+
+    /* commonVariables.js :
+    -> statisticsFraudCountNumberTextDisplaySetUp/ statisticsFraudCountNumberTextDisplay
+    -> <i fa-... ></i> */
+    .fa-playGameAction-beforeClick {
+        font-size: 0.9rem;
     }
 
     .fa-playGameAction-afterClick {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .fa-timeBest {
+        font-size: 0.9rem;
     }
 }
 
@@ -459,9 +550,12 @@
         grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
     }
 
+    .gameFiledButtonPlayGameOver {
+        font-size: 1.1rem;
+    }
+
     .gameFiledButtonMain {
         width: 70%;
         height: 50%;
     }
 }
-

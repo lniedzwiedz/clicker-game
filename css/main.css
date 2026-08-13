@@ -41,3 +41,9 @@ body {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
+
+@media (max-width: 600px) {
+    .containerMain {
+        grid-template-rows: 14fr 83fr 3fr;
+    }
+}

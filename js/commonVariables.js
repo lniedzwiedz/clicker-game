@@ -171,7 +171,8 @@ const fraudCountRoundCommon = "fraudCountRoundCommon";
 // const statisticsFraudCountTextDisplay = " statistic fraud count "
 // const statisticsFraudCountTextDisplay = "STATISTIC FRAUD COUNT"
 const statisticsFraudCountTextDisplay = "FRAUD COUNTER"
-const statisticsFraudCountNumberTextDisplay = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp &nbsp"
+const statisticsFraudCountNumberTextDisplaySetUp = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp &nbsp &nbsp"
+const statisticsFraudCountNumberTextDisplay = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp"
 
 // menu
 const sectionMenu = "sectionMenu";
@@ -210,7 +211,5 @@ const containerSectionFooter = "containerSectionFooter";
 const containerMainFooter = "containerMainFooter";
 const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
-const footerAuthorData = "Copyright &copy 2025 Liliana Niedźwiedź";
+const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
 const sectionFooter = "sectionFooter";
-
-

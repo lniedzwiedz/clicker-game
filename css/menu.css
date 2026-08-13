@@ -37,8 +37,8 @@
 .menuTitleText {
     margin: 0;
     padding: 0;
-    /*color: #ac4a71;*/
-    color: lightgoldenrodyellow;
+    color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     opacity: 0.9;
     font-size: 1.8rem;
     font-weight: 400;
@@ -140,9 +140,6 @@
 
 #containerMenuGameConfigurationClickNumber {
     display: grid;
-    /*grid-row: 1 / 2;*/
-    /*grid-column: 3 / 4;*/
-
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     grid-template-rows: 1fr;
@@ -190,7 +187,6 @@
 }
 
 
-
 @media (max-width: 1000px) {
 
     #containerSectionMenu {
@@ -219,7 +215,6 @@
         width: 50%;
         height: 50%;
     }
-
 }
 
 @media (max-width: 600px) {
