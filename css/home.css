@@ -439,6 +439,14 @@
         grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;
 
     }
+
+    .fa-playGameAction-beforeClick {
+        font-size: 1.1rem;
+    }
+
+    .fa-playGameAction-afterClick {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -449,7 +457,11 @@
         grid-column: 1 / 1;
         grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
         grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
+    }
 
+    .gameFiledButtonMain {
+        width: 70%;
+        height: 50%;
     }
 }
 
