@@ -49,7 +49,8 @@
 .menuTitleText {
     margin: 0;
     padding: 0;
-    color: #ac4a71;
+    /*color: #ac4a71;*/
+    color: lightgoldenrodyellow;
     opacity: 0.9;
     font-size: 2.1rem;
     /*font-size: 2.0rem;*/
@@ -259,7 +260,8 @@
 
 }
 
-@media (max-width: 400px) {
+/*@media (max-width: 400px) {*/
+@media (max-width: 430px) {
 
     #containerSectionMenu {
         /*display: grid;*/
