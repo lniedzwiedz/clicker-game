@@ -418,10 +418,8 @@ function setGameSConfigurationStatisticFraud() {
 }
 
 function setGameStatisticFraudCountedNumber() {
-    // let fraudCountLessThanTen = " &nbsp";
     let result;
     if(fraudCountedNumber < 10)
-        // result = setNumberAsString(fraudCountedNumber) + fraudCountLessThanTen;
         result = setNumberAsString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
     else
         result = fraudCountedNumber;

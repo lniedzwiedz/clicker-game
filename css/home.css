@@ -58,10 +58,11 @@
 
 .gameFiledButtonPlayGameOver {
     background-color: #000000;
-    color: #000000;
-    text-shadow: 4px -1px 20px #FFFFFF;
+    /*color: #000000;*/
+    color: lightgoldenrodyellow;
+    /*text-shadow: 4px -1px 20px #FFFFFF;*/
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 
 }
 
