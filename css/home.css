@@ -7,9 +7,11 @@
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
-    grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
+    /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
+    /*grid-template-columns: 15fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 15fr;*/
+
+    grid-template-rows: 3fr 20fr 17fr    5fr 5fr     17fr 20fr 3fr;
     grid-template-columns: 15fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 15fr;
-    /*grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;*/
 }
 
 #containerMainHome {
@@ -38,13 +40,23 @@
 
 .containerGameFiled-buttonPlay {
     border-radius: 0.45rem;
-    box-shadow: 0 0px 17px 9px #FFFFFF;
+    /*box-shadow: 0 0px 17px 9px #FFFFFF;*/
+    /*box-shadow: 0 0px 17px 9px #FFFFFF,*/
+    /*            inset 0 0px 17px 9px #FFFFFF;*/
     opacity: 0.8;
 }
 
 .buttonPlay {
     background-color: var(--gameFiledButtonPlayColor);
     border: 0;
+    border-radius: 0.45rem;
+    box-shadow: 0 0px 17px 9px lightgoldenrodyellow;
+    /*box-shadow: 0 0px 17px 9px #2c3e3a;*/
+    /*box-shadow: inset 0 0px 17px 9px #FFFFFF;*/
+    /*box-shadow: 0 0px 17px 9px #FFFFFF,*/
+    /*inset 0 0px 17px 9px #FFFFFF;*/
+    /*box-shadow: 0 0px 9px 9px #FFFFFF, inset 0 0px 9px 7px #FFFFFF;*/
+    /*box-shadow: 0 0px 9px 9px #2c3e3a, inset 0 0px 9px 7px  #2c3e3a;*/
 }
 
 .gameFiledButtonPlayGameOver {
@@ -53,6 +65,7 @@
     text-shadow: 4px -1px 20px #FFFFFF;
     font-weight: 900;
     font-size: 1.5rem;
+
 }
 
 #containerGameFiled-buttonsMain {
@@ -275,6 +288,7 @@
 
 .fraudCountRoundCommon {
     color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
 }
 
 .statisticsFraudBestText {
@@ -285,6 +299,7 @@
 
 .statisticsFraudBestUpdateNumber {
     color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     opacity: 0.9;
     font-weight: 600;
     font-size: 1.7rem;
@@ -318,6 +333,7 @@
     height: 100%;
     background-color: #000000;
     color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     padding: 0px;
     justify-content: center;
     align-items: center;
@@ -370,7 +386,7 @@
 .statisticsTimeBestGamePlay {
     color: #e9a610;
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 
 .fa-clock {
@@ -380,11 +396,12 @@
 .fa-star {
     color: #e9a610;
     opacity: 0.8;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
 }
 
 .fa-gem {
     color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     opacity: 0.7;
     font-size: 1.0rem;
 }
@@ -416,7 +433,8 @@
 .fa-playGameAction-afterClick {
     color: #e9a610;
     opacity: 1;
-    font-size: 1.3rem;
+    /*font-size: 1.3rem;*/
+    font-size: 1.7rem;
 }
 
 .fa-timeMin {
@@ -446,9 +464,18 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
+        /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
         grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;
     }
+
+
+    /*.fa-playGameAction-beforeClick {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
+
+    /*.fa-playGameAction-afterClick {*/
+    /*    font-size: 1.1em;*/
+    /*}*/
 
     .statisticsFraudBestUpdateNumber {
         font-size: 1.1rem;
@@ -500,7 +527,7 @@
     }
 
     .statisticsTimeBestGamePlay {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .fa-clock {
@@ -519,24 +546,16 @@
         font-size: 0.4rem;
     }
 
-    /* kubek miedzy dziamentami*/
     .fa-fraudBest {
-        font-size: 0.8rem;
-    }
-
-    /* commonVariables.js :
-    -> statisticsFraudCountNumberTextDisplaySetUp/ statisticsFraudCountNumberTextDisplay
-    -> <i fa-... ></i> */
-    .fa-playGameAction-beforeClick {
         font-size: 0.9rem;
     }
 
-    .fa-playGameAction-afterClick {
-        font-size: 0.9rem;
+    .gameFiledButtonPlayGameOver {
+        font-size: 1.1rem;
     }
 
     .fa-timeBest {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -546,13 +565,19 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;
+        /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
         grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
     }
 
-    .gameFiledButtonPlayGameOver {
-        font-size: 1.1rem;
+    .fa-playGameAction-beforeClick {
+        font-size: 0.9rem;
     }
+
+    .fa-playGameAction-afterClick {
+        font-size: 1.1em;
+    }
+
+
 
     .gameFiledButtonMain {
         width: 70%;

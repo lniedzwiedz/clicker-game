@@ -7,15 +7,19 @@
 }
 
 .containerSectionFooter {
-    color: #000000;
+    /*color: #000000;*/
+    color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
+    opacity: 0.9;
+    font-size: 0.8rem;
 }
 
 .containerSectionFooter:hover {
     background-color: #000000;
-    color: #ac4a71;
-    /*color: #e9a610;*/
-    opacity: 0.8;
-    font-size: 100%;
+    /*color: #ac4a71;*/
+    color: lightgoldenrodyellow;
+    opacity: 0.7;
+    font-size: 0.9rem;
     box-shadow: 0px 0px 1px 1px #1f130e;
 }
 
@@ -47,7 +51,28 @@
     padding: 0;
 }
 
+
+@media (max-width: 1000px) {
+
+    #containerSectionFooter {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 8fr 84fr 8fr;
+    }
+}
+
 @media (max-width: 600px) {
+
+    #containerSectionFooter {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 5fr 90fr 5fr;
+    }
+
     .footerAuthor {
         font-size: 0.6rem;
     }

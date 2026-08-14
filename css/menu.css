@@ -37,8 +37,8 @@
 .menuTitleText {
     margin: 0;
     padding: 0;
-    color: #ac4a71;
-    /*color: lightgoldenrodyellow;*/
+    /*color: #ac4a71;*/
+    color: lightgoldenrodyellow;
     opacity: 0.9;
     font-size: 1.8rem;
     font-weight: 400;
