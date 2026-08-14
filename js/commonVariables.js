@@ -76,11 +76,12 @@ const containerGameFiledStatisticsTimeBestGamePlay = "containerGameFiled-statist
 const gameFiledStatisticsTimeBestGamePlay = "containerGameFiled-statisticsTimeBestGamePlay";
 const gameFiledStatisticsTimeBestText = "gameFiledStatisticsTimeBestText";
 const statisticsTimeBestGamePlay = "statisticsTimeBestGamePlay";
+
 const statisticsTimeBestGamePlayDisplay = "0.0000 ??? ";
 const statisticsTimeBestText = "statisticsTimeBestText";
 // const statisticsTimeBestTextDisplay = "Best";
 const statisticsTimeBestTextDisplay = "<i class=\"fa-solid fa-star\"></i> &nbsp " +
-    "<i class=\"fa-solid fa-clock fa-timeBest\"></i> &nbsp " +
+    "<i class=\"fa-solid fa-clock fa-clockMainBestTime\"></i> &nbsp " +
     "<i class=\"fa-solid fa-star\"></i> ";
 
 const containerGameFiledStatisticsTimeMin = "containerGameFiled-statisticsTimeMin";
@@ -142,7 +143,7 @@ const gameFiledStatisticsFraudBestGamePlay = "containerGameFiled-statisticsFraud
 const gameFiledStatisticsFraudBestText = "gameFiledStatisticsFraudBestText";
 const statisticsFraudBestGamePlay = "statisticsFraudBestGamePlay";
 const statisticsFraudBestGamePlayDisplay = " ??? ";
-// const statisticsFraudBestGamePlayDisplay = "<i class=\"fa-solid fa-whiskey-glass fa-fraudBest\"></i> &nbsp &nbsp";
+// const statisticsFraudBestGamePlayDisplay = "<i class=\"fa-solid fa-whiskey-glass fa-whiskeyGlassMainFraud\"></i> &nbsp &nbsp";
 const statisticsFraudBestText = "statisticsFraudBestText";
 const statisticsFraudBestUpdateNumber = "statisticsFraudBestUpdateNumber";
 // const statisticsFraudBestTextDisplay = "Best";
@@ -150,7 +151,7 @@ const statisticsFraudBestUpdateNumber = "statisticsFraudBestUpdateNumber";
 // const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-user-ninja\"></i> &nbsp sum"
 // const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-gem\"></i> &nbsp sum"
 // const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-gem\"></i> &nbsp SUM &nbsp <i class=\"fa-solid fa-gem\"></i>"
-const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-gem\"></i> &nbsp <i class=\"fa-solid fa-whiskey-glass fa-fraudBest\"></i> &nbsp <i class=\"fa-solid fa-gem\"></i>"
+const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-gem\"></i> &nbsp <i class=\"fa-solid fa-whiskey-glass fa-whiskeyGlassMainFraud\"></i> &nbsp <i class=\"fa-solid fa-gem\"></i>"
 // const statisticsFraudBestTextDisplay = "<i class=\"fa-solid fa-person-military-rifle\"></i> &nbsp sum"
 
 const containerGameFiledStatisticsFraudCount = "containerGameFiled-statisticsFraudCount";
