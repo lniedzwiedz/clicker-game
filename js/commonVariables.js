@@ -173,6 +173,7 @@ const fraudCountRoundCommon = "fraudCountRoundCommon";
 const statisticsFraudCountTextDisplay = "FRAUD COUNTER"
 const statisticsFraudCountNumberTextDisplaySetUp = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp &nbsp &nbsp"
 const statisticsFraudCountNumberTextDisplay = "<i class=\"fa-solid fa-whiskey-glass\"></i> &nbsp"
+const statisticsFraudCountNumberTextDisplayLessThanTen = " &nbsp";
 
 // menu
 const sectionMenu = "sectionMenu";

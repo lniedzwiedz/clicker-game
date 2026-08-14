@@ -21,7 +21,6 @@ let currentFunctionOnclickName;
 let fraudCountedNumber = 0;
 let fraudCountedSumNumber = 0;
 let fraudCountRoundIndex = 0;
-let fraudCountLessThanTen = "&nbsp ";
 
 const fileWithColors = "#1A1A1D, #3B1C32, #6A1E55, #A64D79, #251B37, #372948, #FFCACA, #FFECEF, " +
     "#F3F2DA, #4E8D7C, #045762, #EA97AD, #FAD9E6, #E4AEC5, #5F7464, #243D25";
@@ -419,9 +418,11 @@ function setGameSConfigurationStatisticFraud() {
 }
 
 function setGameStatisticFraudCountedNumber() {
+    // let fraudCountLessThanTen = " &nbsp";
     let result;
     if(fraudCountedNumber < 10)
-        result = setNumberAsString(fraudCountedNumber) + fraudCountLessThanTen;
+        // result = setNumberAsString(fraudCountedNumber) + fraudCountLessThanTen;
+        result = setNumberAsString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
     else
         result = fraudCountedNumber;
     document.getElementById(fraudCountRoundGamePlayUpdateNumber + fraudCountRoundIndex).innerHTML

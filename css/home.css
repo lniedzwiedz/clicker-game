@@ -7,9 +7,6 @@
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
-    /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
-    /*grid-template-columns: 15fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 15fr;*/
-
     grid-template-rows: 3fr 20fr 17fr    5fr 5fr     17fr 20fr 3fr;
     grid-template-columns: 15fr 4fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 4fr 15fr;
 }
@@ -288,19 +285,27 @@
 
 .fraudCountRoundCommon {
     color: #ac4a71;
-    /*color: lightgoldenrodyellow;*/
+    color: lightgoldenrodyellow;
+    opacity: 0.8;
+    color: #FFFFFF;
+    color: #B1B1B1;
+    color: #FF7E00;
 }
 
 .statisticsFraudBestText {
     color: #ac4a71;
+    color: lightgoldenrodyellow;
     opacity: 0.9;
     font-weight: 600;
 }
 
 .statisticsFraudBestUpdateNumber {
     color: #ac4a71;
-    /*color: lightgoldenrodyellow;*/
-    opacity: 0.9;
+    color: lightgoldenrodyellow;
+    color: #FFFFFF;
+    color: #FF7E00;
+    /*color: #B1B1B1;*/
+    opacity: 0.8;
     font-weight: 600;
     font-size: 1.7rem;
 }
@@ -320,7 +325,6 @@
     box-shadow: 0px 0px 1px 1px #2a1e1e;
 }
 
-/* runda klikniec zliczenie */
 .fraudCountRoundUpdateNumber {
     color: #232323;
     font-size: 1.3rem;
@@ -332,8 +336,14 @@
     width: 100%;
     height: 100%;
     background-color: #000000;
-    color: #ac4a71;
+    /*color: #ac4a71;*/
     /*color: lightgoldenrodyellow;*/
+    color: #FF7E00;
+    /*color: #FFFFFF;*/
+    /*color: #B1B1B1;*/
+    /*color: #FF7E00;*/
+
+    opacity: 0.8;
     padding: 0px;
     justify-content: center;
     align-items: center;
@@ -395,27 +405,32 @@
 
 .fa-star {
     color: #e9a610;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
     font-size: 1.1rem;
 }
 
 .fa-gem {
-    color: #ac4a71;
-    /*color: lightgoldenrodyellow;*/
-    opacity: 0.7;
+    /*color: #ac4a71;*/
+    color: lightgoldenrodyellow;
+    /*color: #FFFFFF;*/
+    /*color: #B1B1B1;*/
+    /*color: #FF7E00;*/
+    opacity: 0.9;
     font-size: 1.0rem;
 }
 
 .fa-whiskey-glass {
     color: #FFFFFF;
-    opacity: 0.7;
+    /*color: #FF7E00;*/
+    opacity: 0.9;
     font-weight: 600;
     font-size: 1.0rem;
 }
 
 .fa-fraudBest {
     color: #FFFFFF;
-    opacity: 0.9;
+    /*color: #FF7E00;*/
+    opacity: 0.8;
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -426,36 +441,51 @@
 
 .fa-playGameAction-beforeClick {
     color: #FFFFFF;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
     font-size: 1.3rem;
 }
 
 .fa-playGameAction-afterClick {
     color: #e9a610;
-    opacity: 1;
+    /*opacity: 1;*/
     /*font-size: 1.3rem;*/
     font-size: 1.7rem;
 }
 
 .fa-timeMin {
     color: #78C209;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .fa-timeAvg {
     color: skyblue;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .fa-timeMax {
     color: #EC7998;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .fa-timeBest {
     color: #e9a610;
-    opacity: 1.2;
+    /*opacity: 1.2;*/
     font-size: 1.9rem;
+}
+
+@media (max-width: 1000px) {
+
+    #containerMainSectionHome {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
+    }
+
+    .gameFiledButtonMain {
+        width: 70%;
+        height: 50%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -464,18 +494,16 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
         grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;
     }
 
+    .fa-playGameAction-beforeClick {
+        font-size: 1.1rem;
+    }
 
-    /*.fa-playGameAction-beforeClick {*/
-    /*    font-size: 0.9rem;*/
-    /*}*/
-
-    /*.fa-playGameAction-afterClick {*/
-    /*    font-size: 1.1em;*/
-    /*}*/
+    .fa-playGameAction-afterClick {
+        font-size: 1.3rem;
+    }
 
     .statisticsFraudBestUpdateNumber {
         font-size: 1.1rem;
@@ -489,7 +517,6 @@
         font-size: 0.9rem;
     }
 
-    /* text fraud counter*/
     .statisticsFraudCountText {
         font-size: 0.9rem;
     }
@@ -565,19 +592,8 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        /*grid-template-rows: 4fr 19fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
         grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
     }
-
-    .fa-playGameAction-beforeClick {
-        font-size: 0.9rem;
-    }
-
-    .fa-playGameAction-afterClick {
-        font-size: 1.1em;
-    }
-
-
 
     .gameFiledButtonMain {
         width: 70%;

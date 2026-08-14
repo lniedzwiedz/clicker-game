@@ -37,8 +37,8 @@
 .menuTitleText {
     margin: 0;
     padding: 0;
-    /*color: #ac4a71;*/
-    color: lightgoldenrodyellow;
+    color: #ac4a71;
+    /*color: lightgoldenrodyellow;*/
     opacity: 0.9;
     font-size: 1.8rem;
     font-weight: 400;
@@ -57,7 +57,6 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
-    /*grid-template-columns: 2fr  8fr;*/
     grid-template-columns: 1fr  9fr;
 }
 
@@ -186,37 +185,6 @@
     grid-template-columns: 1fr;
 }
 
-
-@media (max-width: 1000px) {
-
-    #containerSectionMenu {
-        display: grid;
-        grid-template-rows: 20fr 70fr 10fr;
-        /*grid-template-columns: 5fr 35fr 55fr 5fr;*/
-        grid-template-columns: 8fr 32fr 52fr 8fr;
-    }
-
-    .menuTitleText {
-        font-size: 1.8rem;
-        font-weight: 400;
-    }
-
-    .fa-screwdriver-wrench {;
-        font-weight: 600;
-        font-size: 1.5rem;
-    }
-
-    .menuGameConfigurationButton {
-        font-size: 0.8rem;
-        font-weight: 200;
-    }
-
-    .gameFiledButtonMain {
-        width: 50%;
-        height: 50%;
-    }
-}
-
 @media (max-width: 600px) {
 
     #containerSectionMenu {
@@ -238,7 +206,6 @@
         grid-row: 1 / 1;
         grid-column: 1 / 1;
         grid-template-rows: 1fr;
-        /*grid-template-columns: 1fr  9fr;*/
         grid-template-columns: 2fr  8fr;
     }
 
@@ -269,5 +236,34 @@
 
     .menuGameConfigurationButton {
         font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #containerSectionMenu {
+        display: grid;
+        grid-template-rows: 20fr 70fr 10fr;
+        grid-template-columns: 8fr 32fr 52fr 8fr;
+    }
+
+    .menuTitleText {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .fa-screwdriver-wrench {;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .menuGameConfigurationButton {
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+
+    .gameFiledButtonMain {
+        width: 50%;
+        height: 50%;
     }
 }
