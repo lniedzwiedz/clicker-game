@@ -76,3 +76,10 @@
         grid-template-columns: 8fr 84fr 8fr;
     }
 }
+
+@media (max-device-height: 500px) {
+
+    .footerAuthor {
+        font-size: 0.5rem;
+    }
+}

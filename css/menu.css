@@ -268,3 +268,23 @@
         height: 50%;
     }
 }
+
+@media (max-device-height: 500px) {
+
+    .menuTitleText {
+        font-size: 1.2rem;
+        /*font-weight: 400;*/
+    }
+
+    .fa-screwdriver-wrench {;
+        font-size: 0.9rem;
+    }
+
+    .fa-computer-mouse {
+        font-size: 0.6rem;
+    }
+
+    .menuGameConfigurationButton {
+        font-size: 0.5rem;
+    }
+}
