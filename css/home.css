@@ -606,91 +606,91 @@
 
 @media (max-device-height: 500px) {
 
-    .fa-playGameAction-beforeClick {
-        font-size: 0.6rem;
-    }
+    /*.fa-playGameAction-beforeClick {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .fa-playGameAction-afterClick {
-        font-size: 0.7rem;
-    }
+    /*.fa-playGameAction-afterClick {*/
+    /*    font-size: 0.7rem;*/
+    /*}*/
 
-    .statisticsFraudBestUpdateNumber {
-        font-size: 0.7rem;
-    }
+    /*.statisticsFraudBestUpdateNumber {*/
+    /*    font-size: 0.7rem;*/
+    /*}*/
 
-    .fraudCountRoundUpdateNumber {
-        font-size: 0.6rem;
-    }
+    /*.fraudCountRoundUpdateNumber {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .statisticsFraudCountText {
-        font-size: 0.6rem;
-    }
+    /*.statisticsFraudCountText {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .statisticsFraudCountText {
-        font-size: 0.7rem;
-    }
+    /*.statisticsFraudCountText {*/
+    /*    font-size: 0.7rem;*/
+    /*}*/
 
-    .fraudCountRoundUpdateSumNumber {
-        /*width: 100%;*/
-        /*height: 100%;*/
-        /*color: #ac4a71;*/
-        /*font-size: 5rem;*/
-        /*font-weight: 900;*/
-    }
+    /*.fraudCountRoundUpdateSumNumber {*/
+    /*    !*width: 100%;*!*/
+    /*    !*height: 100%;*!*/
+    /*    !*color: #ac4a71;*!*/
+    /*    !*font-size: 5rem;*!*/
+    /*    !*font-weight: 900;*!*/
+    /*}*/
 
-    .statisticsTimeMinGamePlay {
-        font-size: 0.4rem;
-    }
+    /*.statisticsTimeMinGamePlay {*/
+    /*    font-size: 0.4rem;*/
+    /*}*/
 
-    .statisticsTimeMinText {
-        font-size: 0.3rem;
-    }
+    /*.statisticsTimeMinText {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .statisticsTimeAvgGamePlay {
-        font-size: 0.6rem;
-    }
+    /*.statisticsTimeAvgGamePlay {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .statisticsTimeAvgText {
-        font-size: 0.3rem;
-    }
+    /*.statisticsTimeAvgText {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .statisticsTimeMaxGamePlay {
-        font-size: 0.6rem;
-    }
+    /*.statisticsTimeMaxGamePlay {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .statisticsTimeMaxText {
-        font-size: 0.3rem;
-    }
+    /*.statisticsTimeMaxText {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .statisticsTimeBestGamePlay {
-        font-size: 0.7rem;
-    }
+    /*.statisticsTimeBestGamePlay {*/
+    /*    font-size: 0.7rem;*/
+    /*}*/
 
-    .fa-clock {
-        font-size: 0.5rem;
-    }
+    /*.fa-clock {*/
+    /*    font-size: 0.5rem;*/
+    /*}*/
 
-    .fa-star {
-        font-size: 0.3rem;
-    }
+    /*.fa-star {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .fa-gem {
-        font-size: 0.3rem;
-    }
+    /*.fa-gem {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .fa-whiskey-glass {
-        font-size: 0.3rem;
-    }
+    /*.fa-whiskey-glass {*/
+    /*    font-size: 0.3rem;*/
+    /*}*/
 
-    .fa-whiskeyGlassMainFraud {
-        font-size: 0.7rem;
-    }
+    /*.fa-whiskeyGlassMainFraud {*/
+    /*    font-size: 0.7rem;*/
+    /*}*/
 
-    .gameFiledButtonPlayGameOver {
-        font-size: 0.8rem;
-    }
+    /*.gameFiledButtonPlayGameOver {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
 
-    .fa-clockMainBestTime {
-        font-size: 0.8rem;
-    }
+    /*.fa-clockMainBestTime {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
 }

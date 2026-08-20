@@ -79,7 +79,7 @@
 
 @media (max-device-height: 500px) {
 
-    .footerAuthor {
-        font-size: 0.5rem;
-    }
+    /*.footerAuthor {*/
+    /*    font-size: 0.5rem;*/
+    /*}*/
 }
