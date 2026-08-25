@@ -15,7 +15,7 @@ Your goal is to click on the color as quickly as possible when it changes.
 
 ---
 
-## 👉 [Play the game](https://lniedzwiedz.github.io/website-clickerGame/)
+## 👉 [Play the game](https://lniedzwiedz.github.io/clicker-game/)
 
 
  
