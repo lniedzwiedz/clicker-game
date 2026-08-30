@@ -28,3 +28,9 @@ The game is responsive and works smoothly on computers and tablets.
 * HTML
 * CSS
 * JavaScript
+
+---
+
+Here is a short preview of Clicker Game:
+  
+![Save snowman](docs/gif/clickerGame.gif)
