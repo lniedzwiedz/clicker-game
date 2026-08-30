@@ -355,3 +355,5 @@ function createContainerFooterAuthor() {
     setElementClassName(footerAuthor, footerAuthor);
     setElementTextById(footerAuthor, footerAuthorData);
 }
+
+console.log("Clicker game: version 20260830v41");
