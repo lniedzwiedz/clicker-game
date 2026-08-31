@@ -33,4 +33,4 @@ The game is responsive and works smoothly on computers and tablets.
 
 Here is a short preview of Clicker Game:
   
-![Save snowman](docs/gif/clickerGame.gif)
+![Clicker Game](docs/gif/clickerGame.gif)
