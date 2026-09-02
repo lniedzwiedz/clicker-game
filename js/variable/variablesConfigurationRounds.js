@@ -1,0 +1,21 @@
+const containerMenuGameConfiguration = "containerMenuGameConfiguration";
+const containerMenuGameConfigurationParts = "containerMenuGameConfigurationParts";
+const menuGameConfigurationDisplay = "menuGameConfigurationDisplay";
+const containerMenuGameConfigurationText = "containerMenuGameConfigurationText";
+const menuGameConfigurationText = "menuGameConfigurationText";
+const menuGameConfigurationButton = "menuGameConfigurationButton";
+const menuGameConfigurationButtonCurrentNumber = "menuGameConfigurationButtonCurrentNumber";
+const functionNameOnclickSetConfigurationClickNumber = "setConfigurationClickNumber";
+const menuGameConfigurationButtonClickNumber = "menuGameConfigurationButtonClickNumber-";
+const menuGameConfigurationButtonClickNumberGameOn = "menuGameConfigurationButtonClickNumberGameOn";
+const menuGameConfigurationButtonChosenNumber = "menuGameConfigurationButtonChosenNumber";
+const menuGameConfigurationTextDisplay = "<i class=\"fa-solid fa-screwdriver-wrench\"></i>";
+const containerMenuGameConfigurationGameKind = "containerMenuGameConfigurationGameKind";
+const containerMenuGameConfigurationClickNumber = "containerMenuGameConfigurationClickNumber";
+const containerMenuGameConfigurationClickNumberParts = "containerMenuGameConfigurationClickNumberParts";
+const containerMenuGameConfigurationClickNumberRow0 = "containerMenuGameConfigurationClickNumber-row0";
+const containerMenuGameConfigurationClickNumberPartsRow0 = "containerMenuGameConfigurationClickNumberParts-row0";
+const containerMenuGameConfigurationClickNumberRow1 = "containerMenuGameConfigurationClickNumber-row1";
+const containerMenuGameConfigurationClickNumberPartsRow1 = "containerMenuGameConfigurationClickNumberParts-row1";
+const containerMenuGameConfigurationClickNumberPartsRow = "containerMenuGameConfigurationClickNumberParts-row";
+const menuGameConfigurationClickNumberTextDisplay = "<i class=\"fa-solid fa-computer-mouse\"></i> &nbsp &nbsp"
