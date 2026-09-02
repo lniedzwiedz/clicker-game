@@ -13,7 +13,7 @@ function removeElementById(elementId) {
     }
 }
 
-function setElementClassNameBy(elementId, className) {
+function setElementClassNameById(elementId, className) {
     getElementById(elementId).classList.add(className);
 }
 
@@ -45,12 +45,12 @@ function createElementDiv(parentId, childId) {
 
 function createElementDivWithDifferentIdAndClassName(parentId, childId, className) {
     createElementDiv(parentId, childId);
-    setElementClassNameBy(childId, className);
+    setElementClassNameById(childId, className);
 }
 
 function createElementDivWithTheSamIdAndClassName(parentId, elementIdAndClassName) {
     createElementDiv(parentId, elementIdAndClassName);
-    setElementClassNameBy(elementIdAndClassName, elementIdAndClassName);
+    setElementClassNameById(elementIdAndClassName, elementIdAndClassName);
 }
 
 function createElementDivWithChildAndGrandChildId(parentId, childId, grandChildId) {
@@ -59,12 +59,12 @@ function createElementDivWithChildAndGrandChildId(parentId, childId, grandChildI
 }
 
 function setElementClassNameSameAsIdAndText(elementId, text) {
-    setElementClassNameBy(elementId, elementId);
+    setElementClassNameById(elementId, elementId);
     setElementTextById(elementId, text);
 }
 
 function setElementClassNamedAndText(elementId, className, text) {
-    setElementClassNameBy(elementId, className);
+    setElementClassNameById(elementId, className);
     setElementTextById(elementId, text);
 }
 
@@ -115,11 +115,11 @@ function setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNu
 }
 
 function setElementStyleGridTemplateRows(elementId, gridTemplateRowsPattern) {
-    getElementById(elementId).style.gridTemplateRows = gridTemplateRowsPattern;
+    getElementById(elementId).style.gridTemplateRows = valueToString(gridTemplateRowsPattern);
 }
 
 function setElementStyleGridTemplateColumns(elementId, gridTemplateColumnsPattern) {
-    getElementById(elementId).style.gridTemplateColumns = gridTemplateColumnsPattern;
+    getElementById(elementId).style.gridTemplateColumns = valueToString(gridTemplateColumnsPattern);
 }
 
 function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {

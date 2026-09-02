@@ -50,15 +50,15 @@ function createGameConfigurationRoundButton(parentId, buttonId, elementText) {
     createElementButton(parentId, buttonId);
     setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
     setFunctionOnclick(buttonId, functionNameOnclickSetConfigurationClickNumber);
-    setElementClassNameBy(buttonId, commonGameFiledDisplay);
-    setElementClassNameBy(buttonId, menuGameConfigurationText);
-    setElementClassNameBy(buttonId, menuGameConfigurationButton);
+    setElementClassNameById(buttonId, commonGameFiledDisplay);
+    setElementClassNameById(buttonId, menuGameConfigurationText);
+    setElementClassNameById(buttonId, menuGameConfigurationButton);
     setElementTextById(buttonId, elementText);
 }
 
 function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
 
-    let elementId = containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
+    let parentId = containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
     let clicksNumberPerRow = 5;
 
     let gridRowStartNumber = 1;
@@ -68,8 +68,7 @@ function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
 
     let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
     let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
-
-    setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
+    setElementStyletAsGrid(parentId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
 
     let gridRowStartNumberChild = 2;
     let gridColumnStartNumberChild = 2;
@@ -79,7 +78,7 @@ function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
     for (let i = 0; i < clicksNumberPerRow; i++) {
 
         let childId = containerGameConfigurationRoundNumberPrefix + rowNumber + "-button-" + i;
-        createElementDiv(elementId, childId);
+        createElementDiv(parentId, childId);
 
         let gridTemplateRowsChild = "1fr";
         let gridTemplateColumnsChild = "1fr";
@@ -90,7 +89,7 @@ function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
         createGameConfigurationRoundButton(childId, buttonId, elementText);
 
         if (clickNumberButton === 5)
-            setElementClassNameBy(buttonId, menuGameConfigurationButtonCurrentNumber);
+            setElementClassNameById(buttonId, menuGameConfigurationButtonCurrentNumber);
 
         gridColumnStartNumberChild += 3;
         gridColumnEndNumberChild += 3;

@@ -39,4 +39,4 @@ function createContainerGameElements() {
     // createGameFieldStatisticsFraud();
 }
 
-console.log("Clicker game: version 20260902v48");
+console.log("Clicker game: version 20260902v49");

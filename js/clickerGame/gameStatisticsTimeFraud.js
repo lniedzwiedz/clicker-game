@@ -1,7 +1,7 @@
 function createContainerStatisticsFraudSumMain() {
     createElementDiv(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudBest);
     createElementDiv(containerGameFiledStatisticsFraudBest, containerGameFiledStatisticsFraudBestParts);
-    setElementClassNameBy(containerGameFiledStatisticsFraudBestParts, containerGameFiledCommonParts);
+    setElementClassNameById(containerGameFiledStatisticsFraudBestParts, containerGameFiledCommonParts);
 }
 
 function createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay) {

@@ -7,7 +7,7 @@ function createGameFieldPButtonMain() {
 
 function createGameFieldPButtonPlay() {
     createElementButton(containerGameFiledButtonPlay, gameFiledButtonPlay);
-    setElementClassNameBy(gameFiledButtonPlay, gameFiledButtonPlay);
+    setElementClassNameById(gameFiledButtonPlay, gameFiledButtonPlay);
     // setFunctionOnclick(gameFiledButtonPlay, functionNameOnclickPlayGameColor);
 }
 
