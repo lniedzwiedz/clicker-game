@@ -5,23 +5,23 @@ function createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDispla
 
     let newContainerGameFiledStatisticsTimeKindParts = createCSSVariableName(containerGameFiledStatisticsTimeKindParts, timeKind);
     createElementDiv(newContainerGameFiledStatisticsTimeKind, newContainerGameFiledStatisticsTimeKindParts);
-    setElementClassName(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
-    setElementClassName(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+    setElementClassNameBy(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+    setElementClassNameBy(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
 
     // game play - time update
     let newContainerGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(containerGameFiledStatisticsTimeKindGamePlay, timeKind);
     createElementDiv(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindGamePlay);
-    setElementClassName(newContainerGameFiledStatisticsTimeKindGamePlay, containerGameFiledCommonGamePlayUpdate);
+    setElementClassNameBy(newContainerGameFiledStatisticsTimeKindGamePlay, containerGameFiledCommonGamePlayUpdate);
 
     let newGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(gameFiledStatisticsTimeKindGamePlay, timeKind);
     createElementDiv(newContainerGameFiledStatisticsTimeKindGamePlay, newGameFiledStatisticsTimeKindGamePlay);
-    setElementClassName(newGameFiledStatisticsTimeKindGamePlay, commonGameFiledDisplay);
+    setElementClassNameBy(newGameFiledStatisticsTimeKindGamePlay, commonGameFiledDisplay);
 
     let newStatisticsTimeKindGamePlay = createCSSVariableName(statisticsTimeKindGamePlay, timeKind);
     createElementDiv(newGameFiledStatisticsTimeKindGamePlay, newStatisticsTimeKindGamePlay);
-    setElementClassName(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayTextUpdate);
-    setElementClassName(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayUpdateTextTime);
-    setElementClassName(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlay);
+    setElementClassNameBy(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayTextUpdate);
+    setElementClassNameBy(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayUpdateTextTime);
+    setElementClassNameBy(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlay);
 
     let newStatisticsTimeKindGamePlayTextDisplay = createCSSVariableName(statisticsTimeKindGamePlayDisplay, timeKind);
     setElementTextById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlayTextDisplay);
@@ -29,16 +29,16 @@ function createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDispla
     // text - static
     let newContainerGameFiledStatisticsTimeKindText = createCSSVariableName(containerGameFiledStatisticsTimeKindText, timeKind);
     createElementDiv(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindText);
-    setElementClassName(newContainerGameFiledStatisticsTimeKindText, containerGameFiledCommonStaticText);
+    setElementClassNameBy(newContainerGameFiledStatisticsTimeKindText, containerGameFiledCommonStaticText);
 
     let newGameFiledStatisticsTimeKindText = createCSSVariableName(gameFiledStatisticsTimeKindText, timeKind);
     createElementDiv(newContainerGameFiledStatisticsTimeKindText, newGameFiledStatisticsTimeKindText);
-    setElementClassName(newGameFiledStatisticsTimeKindText, commonGameFiledDisplay);
+    setElementClassNameBy(newGameFiledStatisticsTimeKindText, commonGameFiledDisplay);
 
     let newStatisticsTimeKindText = createCSSVariableName(statisticsTimeKindText, timeKind);
     createElementDiv(newGameFiledStatisticsTimeKindText, newStatisticsTimeKindText);
-    setElementClassName(newStatisticsTimeKindText, commonStaticText);
-    setElementClassName(newStatisticsTimeKindText, newStatisticsTimeKindText);
+    setElementClassNameBy(newStatisticsTimeKindText, commonStaticText);
+    setElementClassNameBy(newStatisticsTimeKindText, newStatisticsTimeKindText);
     setElementTextById(newStatisticsTimeKindText, newStatisticsTimeKindTextDisplay);
 }
 

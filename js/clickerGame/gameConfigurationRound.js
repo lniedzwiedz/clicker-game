@@ -12,7 +12,7 @@ function createMainContainerManuConfiguration() {
 }
 
 function createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
-    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
+    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
 }
 
 
@@ -36,8 +36,8 @@ function createContainersMenuConfigurationClickNumberButton() {
 }
 
 function createContainersMenuConfigurationClickNumberRows() {
-    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
-    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
+    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
+    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
 }
 
 function createContainersMenuConfigurationClickNumberAllRows() {
@@ -46,11 +46,19 @@ function createContainersMenuConfigurationClickNumberAllRows() {
     }
 }
 
+function createGameConfigurationRoundButton(parentId, buttonId, elementText) {
+    createElementButton(parentId, buttonId);
+    setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
+    setFunctionOnclick(buttonId, functionNameOnclickSetConfigurationClickNumber);
+    setElementClassNameBy(buttonId, commonGameFiledDisplay);
+    setElementClassNameBy(buttonId, menuGameConfigurationText);
+    setElementClassNameBy(buttonId, menuGameConfigurationButton);
+    setElementTextById(buttonId, elementText);
+}
+
 function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
 
-    let parentElement = document.getElementById(containerMenuGameConfigurationClickNumberPartsRow + rowNumber);
     let elementId = containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
-
     let clicksNumberPerRow = 5;
 
     let gridRowStartNumber = 1;
@@ -63,39 +71,29 @@ function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
 
     setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
 
-    let rowChildStart = 2;
-    let columnChildStart = 2;
-    let rowChildEnd = 3;
-    let columnChildEnd = 3;
+    let gridRowStartNumberChild = 2;
+    let gridColumnStartNumberChild = 2;
+    let gridRowEndNumberChild = 3;
+    let gridColumnEndNumberChild = 3;
 
     for (let i = 0; i < clicksNumberPerRow; i++) {
 
-        let newDiv = document.createElement("div");
-        parentElement.append(newDiv);
-        newDiv.style.display = "grid";
-        newDiv.style.gridRow = valueToString(rowChildStart);
-        newDiv.style.gridColumn = valueToString(columnChildStart);
-        newDiv.style.gridRowEnd = valueToString(rowChildEnd);
-        newDiv.style.gridColumnEnd = valueToString(columnChildEnd);
-        newDiv.style.gridTemplateRows = "1fr";
-        newDiv.style.gridTemplateColumns = "1fr";
+        let childId = containerGameConfigurationRoundNumberPrefix + rowNumber + "-button-" + i;
+        createElementDiv(elementId, childId);
 
-        let newButton = document.createElement("button");
-        newDiv.append(newButton);
-        newButton.innerHTML = menuGameConfigurationClickNumberTextDisplay + valueToString(clickNumberButton);
-        newButton.setAttribute("id", menuGameConfigurationButtonClickNumber + valueToString(clickNumberButton));
-        newButton.classList.add(commonGameFiledDisplay);
-        newButton.classList.add(menuGameConfigurationText);
-        newButton.classList.add(menuGameConfigurationButton);
-        newButton.value = clickNumberButton;
-        setFunctionOnclick(menuGameConfigurationButtonClickNumber + valueToString(clickNumberButton), functionNameOnclickSetConfigurationClickNumber);
+        let gridTemplateRowsChild = "1fr";
+        let gridTemplateColumnsChild = "1fr";
+        setElementStyletAsGrid(childId, gridRowStartNumberChild, gridColumnStartNumberChild, gridRowEndNumberChild, gridColumnEndNumberChild, gridTemplateRowsChild, gridTemplateColumnsChild);
 
-        if (clickNumberButton === 5) {
-            newButton.classList.add(menuGameConfigurationButtonCurrentNumber);
-        }
+        let buttonId = menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumberButton);
+        let elementText = menuGameConfigurationClickNumberTextDisplay + valueToString(clickNumberButton);
+        createGameConfigurationRoundButton(childId, buttonId, elementText);
 
-        columnChildStart += 3;
-        columnChildEnd += 3;
+        if (clickNumberButton === 5)
+            setElementClassNameBy(buttonId, menuGameConfigurationButtonCurrentNumber);
+
+        gridColumnStartNumberChild += 3;
+        gridColumnEndNumberChild += 3;
         clickNumberButton += 1;
     }
 }

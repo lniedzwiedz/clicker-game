@@ -35,7 +35,7 @@ function setConfigurationClickNumber(clickedId) {
 
 function setConfigurationClickNumberButtonChanges() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber));
         confButton.classList.remove(menuGameConfigurationButtonCurrentNumber);
 
         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber))
@@ -46,7 +46,7 @@ function setConfigurationClickNumberButtonChanges() {
 function setConfigurationMaxClicksNumberButtonChosen() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
 
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber));
         confButton.classList.remove(menuGameConfigurationButtonChosenNumber);
 
         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
@@ -58,7 +58,7 @@ function setConfigurationMaxClicksNumberButtonChosen() {
 
 function removeConfigurationButtonChosenNumber() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber));
 
         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
             confButton.classList.remove(menuGameConfigurationButtonChosenNumber);
@@ -84,7 +84,7 @@ function removeConfigurationButtonMainAfterClick(elementId) {
 function setConfigurationButtonMainGameStart() {
     setConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStopTextDisplayId);
-    removeElementClassName(gameFiledButtonMainStop, gameFiledButtonMainInactive);
+    removeElementClassNameById(gameFiledButtonMainStop, gameFiledButtonMainInactive);
 }
 
 function setConfigurationButtonMainGameStop() {
@@ -102,7 +102,7 @@ function removeConfigurationButtonMainGameContinue() {
 
 function setConfigurationButtonMainGameOver() {
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
-    setElementClassName(gameFiledButtonMainStop, gameFiledButtonMainInactive);
+    setElementClassNameBy(gameFiledButtonMainStop, gameFiledButtonMainInactive);
 }
 
 function setConfigurationMaxClicksNumber() {
@@ -308,7 +308,7 @@ function setConfigurationGameOver() {
     removeFunctionOnclick(gameFiledButtonPlay);
     removeFunctionOnclick(buttonMainStop);
     setElementTextById(gameFiledButtonPlay, gameFiledButtonPlayGameOverTextDisplay);
-    setElementClassName(gameFiledButtonPlay, gameFiledButtonPlayGameOver);
+    setElementClassNameBy(gameFiledButtonPlay, gameFiledButtonPlayGameOver);
     setConfigurationButtonMainGameOver();
     removeConfigurationButtonChosenNumber();
 }
@@ -389,7 +389,7 @@ function createContainerStatisticsFraudCountPerRound() {
         let newDivChild = document.createElement("div");
         newDiv.append(newDivChild);
         newDivChild.innerHTML = statisticsFraudCountNumberTextDisplaySetUp;
-        newDivChild.setAttribute("id", fraudCountRoundGamePlayUpdateNumber + i);
+        newDivChild.setAttribute("id", fraudCountRoundGamePlayUpdateNumberPrefix + i);
         newDivChild.classList.add(commonGameFiledDisplay);
         newDivChild.classList.add(commonStaticText);
         newDivChild.classList.add(fraudCountRoundCommon);
@@ -421,7 +421,7 @@ function setGameStatisticFraudCountedNumber() {
         result = valueToString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
     else
         result = fraudCountedNumber;
-    document.getElementById(fraudCountRoundGamePlayUpdateNumber + fraudCountRoundIndex).innerHTML
+    document.getElementById(fraudCountRoundGamePlayUpdateNumberPrefix + fraudCountRoundIndex).innerHTML
         = statisticsFraudCountNumberTextDisplay + result;
 }
 
@@ -435,8 +435,8 @@ function createContainersGameFiledStatistics() {
 }
 
 function removeContainersGameFiledStatistics() {
-    removeElementsById(containerGameFiledStatisticsTimeParts);
-    removeElementsById(containerGameFiledStatisticsFraudParts);
+    removeElementById(containerGameFiledStatisticsTimeParts);
+    removeElementById(containerGameFiledStatisticsFraudParts);
 }
 
 function createContainersGameFiledButtonsMainStop() {
@@ -444,5 +444,5 @@ function createContainersGameFiledButtonsMainStop() {
 }
 
 function removeContainersGameFiledButtonsMainStop() {
-    removeElementsById(containerGameFiledButtonsMainStop);
+    removeElementById(containerGameFiledButtonsMainStop);
 }

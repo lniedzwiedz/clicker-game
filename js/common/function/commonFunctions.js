@@ -6,89 +6,70 @@ function getElementById(elementId) {
     return document.getElementById(elementId);
 }
 
+function removeElementById(elementId) {
+    let element = getElementById(elementId);
+    if (element !== null) {
+        element.remove();
+    }
+}
+
+function setElementClassNameBy(elementId, className) {
+    getElementById(elementId).classList.add(className);
+}
+
 function getElementsByClassName(className) {
     return document.getElementsByClassName(className);
 }
 
-function setFunctionOnclick(elementId, functionNameOnclick) {
-    document.getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
-}
-
-function removeFunctionOnclick(elementId) {
-    document.getElementById(elementId).removeAttribute("onclick");
-}
-
-function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {
-    createElementDiv(containerMainSectionName, containerSectionName)
-
-    let newDiv2 = document.createElement("div");
-    let mainElem = document.getElementById(containerSectionName);
-    mainElem.append(newDiv2);
-    newDiv2.setAttribute("id", containerSectionMainName);
-    newDiv2.classList.add((containerSectionMainName));
+function removeElementClassNameById(elementId, className) {
+    getElementById(elementId).classList.remove(className);
 }
 
 function createElement(parentId, childId, elementKind) {
     let newElement = document.createElement(elementKind);
-    let mainElement = document.getElementById(parentId);
-    mainElement.append(newElement);
+    getElementById(parentId).append(newElement);
     newElement.setAttribute("id", childId);
-}
-
-function createElementDivWithDifferentIdAndClassName(parentId, childId, className) {
-    createElementDiv(parentId, childId);
-    setElementClassName(childId, className);
-}
-
-function createElementDivWithTheSamIdAndClassName(parentId, elementIdAndClassName) {
-    createElementDiv(parentId, elementIdAndClassName);
-    setElementClassName(elementIdAndClassName, elementIdAndClassName);
 }
 
 function createElementButton(parentId, childId) {
     createElement(parentId, childId, "button");
 }
 
-function createElementDiv(parentId, childId) {
-    createElement(parentId, childId, "div");
-}
-
-function createElementDivWithChildAndGrandChild(parentId, childId, grandChildId) {
-    createElement(parentId, childId, "div");
-    createElement(childId, grandChildId, "div");
-}
-
 function createElementP(parentId, childId) {
     createElement(parentId, childId, "p");
 }
 
-function setElementClassName(elementId, className) {
-    document.getElementById(elementId).classList.add(className);
+function createElementDiv(parentId, childId) {
+    createElement(parentId, childId, "div");
+}
+
+function createElementDivWithDifferentIdAndClassName(parentId, childId, className) {
+    createElementDiv(parentId, childId);
+    setElementClassNameBy(childId, className);
+}
+
+function createElementDivWithTheSamIdAndClassName(parentId, elementIdAndClassName) {
+    createElementDiv(parentId, elementIdAndClassName);
+    setElementClassNameBy(elementIdAndClassName, elementIdAndClassName);
+}
+
+function createElementDivWithChildAndGrandChildId(parentId, childId, grandChildId) {
+    createElementDiv(parentId, childId);
+    createElementDiv(childId, grandChildId);
 }
 
 function setElementClassNameSameAsIdAndText(elementId, text) {
-    setElementClassName(elementId, elementId);
+    setElementClassNameBy(elementId, elementId);
     setElementTextById(elementId, text);
 }
 
 function setElementClassNamedAndText(elementId, className, text) {
-    setElementClassName(elementId, className);
+    setElementClassNameBy(elementId, className);
     setElementTextById(elementId, text);
 }
 
-function removeElementClassName(elementId, className) {
-    document.getElementById(elementId).classList.remove(className);
-}
-
-function removeElementsById(elementId) {
-    let element = document.getElementById(elementId);
-    if (element !== null) {
-        element.remove();
-    }
-}
-
 function isElementsExistById(elementId) {
-    let element = document.getElementById(elementId);
+    let element = getElementById(elementId);
     let result = false;
     if (element !== null)
         result = true;
@@ -96,16 +77,27 @@ function isElementsExistById(elementId) {
 }
 
 function setElementTextByClassName(className, text) {
-    document.getElementsByClassName(className)[0].innerHTML = text;
+    getElementsByClassName(className)[0].innerHTML = text;
 }
 
 function setElementTextById(elementId, text) {
-    document.getElementById(elementId).innerHTML = text;
+    getElementById(elementId).innerHTML = text;
 }
 
-function getElementAttributeValueById(clickedId) {
-    let element = document.getElementById(clickedId);
-    return element.getAttribute("value");
+function setElementAttributeValueById(elementId, value) {
+    getElementById(elementId).value = valueToString(value);
+}
+
+function getElementAttributeValueById(elementId) {
+    return getElementById(elementId).getAttribute("value");
+}
+
+function setFunctionOnclick(elementId, functionNameOnclick) {
+    getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
+}
+
+function removeFunctionOnclick(elementId) {
+    getElementById(elementId).removeAttribute("onclick");
 }
 
 function setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns) {
@@ -128,4 +120,9 @@ function setElementStyleGridTemplateRows(elementId, gridTemplateRowsPattern) {
 
 function setElementStyleGridTemplateColumns(elementId, gridTemplateColumnsPattern) {
     getElementById(elementId).style.gridTemplateColumns = gridTemplateColumnsPattern;
+}
+
+function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {
+    createElementDiv(containerMainSectionName, containerSectionName)
+    createElementDivWithTheSamIdAndClassName(containerSectionName, containerSectionMainName);
 }

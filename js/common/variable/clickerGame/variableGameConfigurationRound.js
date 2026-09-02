@@ -6,7 +6,7 @@ const menuGameConfigurationText = "menuGameConfigurationText";
 const menuGameConfigurationButton = "menuGameConfigurationButton";
 const menuGameConfigurationButtonCurrentNumber = "menuGameConfigurationButtonCurrentNumber";
 const functionNameOnclickSetConfigurationClickNumber = "setConfigurationClickNumber";
-const menuGameConfigurationButtonClickNumber = "menuGameConfigurationButtonClickNumber-";
+const menuGameConfigurationButtonClickNumberPrefix = "menuGameConfigurationButtonClickNumber-";
 const menuGameConfigurationButtonClickNumberGameOn = "menuGameConfigurationButtonClickNumberGameOn";
 const menuGameConfigurationButtonChosenNumber = "menuGameConfigurationButtonChosenNumber";
 const menuGameConfigurationTextDisplay = "<i class=\"fa-solid fa-screwdriver-wrench\"></i>";
@@ -19,3 +19,4 @@ const containerMenuGameConfigurationClickNumberRow1 = "containerMenuGameConfigur
 const containerMenuGameConfigurationClickNumberPartsRow1 = "containerMenuGameConfigurationClickNumberParts-row1";
 const containerMenuGameConfigurationClickNumberPartsRow = "containerMenuGameConfigurationClickNumberParts-row";
 const menuGameConfigurationClickNumberTextDisplay = "<i class=\"fa-solid fa-computer-mouse\"></i> &nbsp &nbsp"
+const containerGameConfigurationRoundNumberPrefix = "containerGameConfigurationRoundNumber-";

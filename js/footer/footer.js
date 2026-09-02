@@ -5,7 +5,7 @@ function createFooter() {
 
 function createContainerMainFooter() {
     createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);
-    setElementClassName(containerSectionFooter, containerSectionFooter);
+    setElementClassNameBy(containerSectionFooter, containerSectionFooter);
 }
 
 function createContainerFooterAuthor() {

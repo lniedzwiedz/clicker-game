@@ -18,8 +18,8 @@ function createContainerMainMenuParts() {
 function createContainerManuTitle() {
     createElementDivWithTheSamIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
     createElementDiv(containerMenuTitleMain, menuTitle);
-    setElementClassName(menuTitle, menuTitle)
+    setElementClassNameBy(menuTitle, menuTitle)
     createElementP(menuTitle, menuTitleText);
-    setElementClassName(menuTitleText, menuTitleText);
+    setElementClassNameBy(menuTitleText, menuTitleText);
     setElementTextById(menuTitleText, menuTitleTextDisplay);
 }
