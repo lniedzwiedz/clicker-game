@@ -23,12 +23,22 @@ function createElement(parentId, childId, elementKind) {
     newElement.setAttribute("id", childId);
 }
 
-function createElementDiv(parentId, childId) {
-    createElement(parentId, childId, "div")
+function createElementDivWithDifferentIdAndClassName(parentId, childId, className) {
+    createElementDiv(parentId, childId);
+    setElementClassName(childId, className);
+}
+
+function createElementDivWithTheSamIdAndClassName(parentId, elementIdAndClassName) {
+    createElementDiv(parentId, elementIdAndClassName);
+    setElementClassName(elementIdAndClassName, elementIdAndClassName);
 }
 
 function createElementButton(parentId, childId) {
     createElement(parentId, childId, "button");
+}
+
+function createElementDiv(parentId, childId) {
+    createElement(parentId, childId, "div")
 }
 
 function createElementP(parentId, childId) {
@@ -39,13 +49,13 @@ function setElementClassName(elementId, className) {
     document.getElementById(elementId).classList.add(className);
 }
 
-function removeElementClassName(elementId, className) {
-    document.getElementById(elementId).classList.remove(className);
+function setElementClassNameSameAsIdAndText(elementId, text){
+    setElementClassName(elementId, elementId);
+    setElementTextById(elementId, text);
 }
 
-function createElementDivWithTheSameValueForIdAndClassName(parentId, elementIdAndClassName) {
-    createElementDiv(parentId, elementIdAndClassName);
-    setElementClassName(elementIdAndClassName, elementIdAndClassName);
+function removeElementClassName(elementId, className) {
+    document.getElementById(elementId).classList.remove(className);
 }
 
 function removeElementsById(elementId) {
@@ -71,11 +81,11 @@ function setElementTextById(elementId, text) {
     document.getElementById(elementId).innerHTML = text;
 }
 
-function setNumberAsString(number) {
+function valueToString(number) {
     return number.toString();
 }
 
-function getElementValue(clickedId) {
+function getElementAttributeValueById(clickedId) {
     let element = document.getElementById(clickedId);
     return element.getAttribute("value");
 }

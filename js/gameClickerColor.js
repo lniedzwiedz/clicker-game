@@ -29,16 +29,16 @@ const colors = fileWithColors.split(", ");
 let gameColors = colors;
 
 function setConfigurationClickNumber(clickedId) {
-    maxClicksNumberSetByUser = getElementValue(clickedId);
+    maxClicksNumberSetByUser = getElementAttributeValueById(clickedId);
     setConfigurationClickNumberButtonChanges();
 }
 
 function setConfigurationClickNumberButtonChanges() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + setNumberAsString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
         confButton.classList.remove(menuGameConfigurationButtonCurrentNumber);
 
-        if (setNumberAsString(maxClicksNumberSetByUser) === setNumberAsString(clickNumber))
+        if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber))
             confButton.classList.add(menuGameConfigurationButtonCurrentNumber);
     }
 }
@@ -46,10 +46,10 @@ function setConfigurationClickNumberButtonChanges() {
 function setConfigurationMaxClicksNumberButtonChosen() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
 
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + setNumberAsString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
         confButton.classList.remove(menuGameConfigurationButtonChosenNumber);
 
-        if (setNumberAsString(maxClicksNumberSetByUser) === setNumberAsString(clickNumber)) {
+        if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
             confButton.classList.add(menuGameConfigurationButtonChosenNumber);
             confButton.classList.remove(menuGameConfigurationButtonClickNumberGameOn);
         }
@@ -58,9 +58,9 @@ function setConfigurationMaxClicksNumberButtonChosen() {
 
 function removeConfigurationButtonChosenNumber() {
     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + setNumberAsString(clickNumber));
+        let confButton = document.getElementById(menuGameConfigurationButtonClickNumber + valueToString(clickNumber));
 
-        if (setNumberAsString(maxClicksNumberSetByUser) === setNumberAsString(clickNumber)) {
+        if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
             confButton.classList.remove(menuGameConfigurationButtonChosenNumber);
             confButton.classList.add(menuGameConfigurationButtonCurrentNumber);
         }
@@ -360,10 +360,10 @@ function createContainerStatisticsFraudCountPerRound() {
 
     parentElement.style.display = "grid";
     parentElement.style.backgroundColor = "black";
-    parentElement.style.gridRow = setNumberAsString(rowStart);
-    parentElement.style.gridColumn = setNumberAsString(columnStart);
-    parentElement.style.gridRowEnd = setNumberAsString(rowEnd);
-    parentElement.style.gridColumnEnd = setNumberAsString(columnEnd);
+    parentElement.style.gridRow = valueToString(rowStart);
+    parentElement.style.gridColumn = valueToString(columnStart);
+    parentElement.style.gridRowEnd = valueToString(rowEnd);
+    parentElement.style.gridColumnEnd = valueToString(columnEnd);
     parentElement.style.gridTemplateRows = " repeat(1, 2fr 6fr 2fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + fraudNumber + ", 1fr 100fr 1fr)";
 
@@ -379,10 +379,10 @@ function createContainerStatisticsFraudCountPerRound() {
         newDiv.style.display = "grid";
         newDiv.classList.add(fraudCountRound);
         newDiv.classList.add(fraudCountRoundUpdateNumber);
-        newDiv.style.gridRow = setNumberAsString(rowChildStart);
-        newDiv.style.gridColumn = setNumberAsString(columnChildStart);
-        newDiv.style.gridRowEnd = setNumberAsString(rowChildEnd);
-        newDiv.style.gridColumnEnd = setNumberAsString(columnChildEnd);
+        newDiv.style.gridRow = valueToString(rowChildStart);
+        newDiv.style.gridColumn = valueToString(columnChildStart);
+        newDiv.style.gridRowEnd = valueToString(rowChildEnd);
+        newDiv.style.gridColumnEnd = valueToString(columnChildEnd);
         newDiv.style.gridTemplateRows = "1fr";
         newDiv.style.gridTemplateColumns = "1fr";
         newDiv.classList.add(fraudCountRound);
@@ -420,7 +420,7 @@ function setGameSConfigurationStatisticFraud() {
 function setGameStatisticFraudCountedNumber() {
     let result;
     if(fraudCountedNumber < 10)
-        result = setNumberAsString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
+        result = valueToString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
     else
         result = fraudCountedNumber;
     document.getElementById(fraudCountRoundGamePlayUpdateNumber + fraudCountRoundIndex).innerHTML
