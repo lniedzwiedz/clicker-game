@@ -11,64 +11,57 @@ function createMainContainerManuConfiguration() {
     createElementDiv(containerMenuGameConfiguration, containerMenuGameConfigurationParts);
 }
 
-function createContainerMenuConfigurationText(){
-    createElementDiv(containerMenuGameConfigurationParts, containerMenuGameConfigurationText);
-    createElementDiv(containerMenuGameConfigurationText, menuGameConfigurationText);
-    setElementClassName(menuGameConfigurationText, menuGameConfigurationDisplay);
-    setElementTextById(menuGameConfigurationText, menuGameConfigurationTextDisplay);
+function createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
+    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
 }
 
-function createContainerMenuConfigurationGameKind(){
+
+function createContainerMenuConfigurationText() {
+    createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText);
+    setElementClassNamedAndText(menuGameConfigurationText, menuGameConfigurationDisplay, menuGameConfigurationTextDisplay);
+}
+
+function createContainerMenuConfigurationGameKind() {
     createElementDiv(containerMenuGameConfigurationParts, containerMenuGameConfigurationGameKind);
 }
 
-function createContainerMenuConfigurationClickNumber(){
-    createElementDiv(containerMenuGameConfigurationParts, containerMenuGameConfigurationClickNumber);
-    createElementDiv(containerMenuGameConfigurationClickNumber, containerMenuGameConfigurationClickNumberParts);
+function createContainerMenuConfigurationClickNumber() {
+    createContainerMenuConfiguration(containerMenuGameConfigurationClickNumber, containerMenuGameConfigurationClickNumberParts);
     createContainersMenuConfigurationClickNumberButton();
 }
 
-
-function createContainersMenuConfigurationClickNumberButton(){
+function createContainersMenuConfigurationClickNumberButton() {
     createContainersMenuConfigurationClickNumberRows();
     createContainersMenuConfigurationClickNumberAllRows();
 }
 
-function createContainersMenuConfigurationClickNumberRows(){
-    createElementDiv(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0);
-    createElementDiv(containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
-    createElementDiv(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1);
-    createElementDiv(containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
+function createContainersMenuConfigurationClickNumberRows() {
+    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
+    createElementDivWithChildAndGrandChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
 }
 
-function  createContainersMenuConfigurationClickNumberAllRows(){
-    for(let rowNumber =0; rowNumber<2; rowNumber++){
+function createContainersMenuConfigurationClickNumberAllRows() {
+    for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
         createContainersMenuConfigurationClickNumberPerRow(rowNumber);
     }
 }
 
 function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
-    // console.log("rowNumber: " +rowNumber);
-    let parentElement = document.getElementById(containerMenuGameConfigurationClickNumberPartsRow+rowNumber);
 
-    // console.log("containerMenuGameConfigurationClickNumberRow: " + containerMenuGameConfigurationClickNumberRow+rowNumber);
+    let parentElement = document.getElementById(containerMenuGameConfigurationClickNumberPartsRow + rowNumber);
+    let elementId = containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
+
     let clicksNumberPerRow = 5;
 
-    let rowStart = 1;
-    let columnStart = 1;
-    let rowEnd = 2;
-    let columnEnd = 2;
+    let gridRowStartNumber = 1;
+    let gridColumnStartNumber = 1;
+    let gridRowEndNumber = 2;
+    let gridColumnEndNumber = 2;
 
-    parentElement.style.display = "grid";
-    parentElement.style.backgroundColor = "black";
-    parentElement.style.gridRow = valueToString(rowStart);
-    parentElement.style.gridColumn = valueToString(columnStart);
-    parentElement.style.gridRowEnd = valueToString(rowEnd);
-    parentElement.style.gridColumnEnd = valueToString(columnEnd);
-    // parentElement.style.gridTemplateRows = " repeat(1, 2fr 6fr 2fr) ";
-    parentElement.style.gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
-    // parentElement.style.gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 100fr 1fr)";
-    parentElement.style.gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
+    let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
+    let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
+
+    setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
 
     let rowChildStart = 2;
     let columnChildStart = 2;
@@ -97,7 +90,7 @@ function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
         newButton.value = clickNumberButton;
         setFunctionOnclick(menuGameConfigurationButtonClickNumber + valueToString(clickNumberButton), functionNameOnclickSetConfigurationClickNumber);
 
-        if(clickNumberButton === 5){
+        if (clickNumberButton === 5) {
             newButton.classList.add(menuGameConfigurationButtonCurrentNumber);
         }
 

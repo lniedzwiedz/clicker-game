@@ -75,32 +75,32 @@ function setConfigurationButtonMainAfterClick(elementId) {
 
 function removeConfigurationButtonMainAfterClick(elementId) {
     let buttonPlay = document.getElementById(elementId);
-    if(buttonPlay !== null){
+    if (buttonPlay !== null) {
         buttonPlay.classList.remove(gameFiledButtonMainTextDecorationAfterClick);
         buttonPlay.classList.add(gameFiledButtonMainTextDecorationBeforeClick);
     }
 }
 
-function setConfigurationButtonMainGameStart(){
+function setConfigurationButtonMainGameStart() {
     setConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStopTextDisplayId);
     removeElementClassName(gameFiledButtonMainStop, gameFiledButtonMainInactive);
 }
 
-function setConfigurationButtonMainGameStop(){
+function setConfigurationButtonMainGameStop() {
     setConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStopTextDisplayId);
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
 }
 
-function setConfigurationButtonMainGameContinue(){
+function setConfigurationButtonMainGameContinue() {
     setConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
 }
 
-function removeConfigurationButtonMainGameContinue(){
+function removeConfigurationButtonMainGameContinue() {
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
 }
 
-function setConfigurationButtonMainGameOver(){
+function setConfigurationButtonMainGameOver() {
     removeConfigurationButtonMainAfterClick(containerGameFiledButtonsMainStartTextDisplayId);
     setElementClassName(gameFiledButtonMainStop, gameFiledButtonMainInactive);
 }
@@ -186,7 +186,6 @@ function setGameRandomColor() {
     let randomNumber = getRandomNumber(colors.length);
     let tempColor = gameRandomColor;
     gameRandomColor = colors[randomNumber];
-    // console.log("COLOR: " + gameRandomColor);
     colors[randomNumber] = tempColor;
 }
 
@@ -221,7 +220,6 @@ function setGameButtonStartColor() {
 function setGameRandomTimeInMillisecondsToChangeColor() {
     let randomSecond = getRandomNumber(gameRandomTimeMaxSecond) + 1;
     gameRandomTimeToChangeColor = randomSecond * 1000;
-    // console.log("BREAK TIME: " + gameRandomTimeToChangeColor);
 }
 
 function getGameStatisticTimeInSeconds(timeInMilliseconds) {
@@ -419,7 +417,7 @@ function setGameSConfigurationStatisticFraud() {
 
 function setGameStatisticFraudCountedNumber() {
     let result;
-    if(fraudCountedNumber < 10)
+    if (fraudCountedNumber < 10)
         result = valueToString(fraudCountedNumber) + statisticsFraudCountNumberTextDisplayLessThanTen;
     else
         result = fraudCountedNumber;

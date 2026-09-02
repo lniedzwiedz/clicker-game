@@ -13,9 +13,8 @@ function createGameFieldPButtonPlay() {
 
 function createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart, containerGameFiledButtonsMainStartTextDisplay) {
     createElementButton(gameFiledButtonMainStart, buttonMainStart);
-    setElementClassName(buttonMainStart, gameFiledButtonMain);
     setFunctionOnclick(buttonMainStart, functionNameOnclickPlayGameColorStart);
-    setElementTextById(buttonMainStart, containerGameFiledButtonsMainStartTextDisplay);
+    setElementClassNamedAndText(buttonMainStart, gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
 }
 
 function createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {

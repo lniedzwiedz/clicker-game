@@ -1,3 +1,15 @@
+function valueToString(value) {
+    return value.toString();
+}
+
+function getElementById(elementId) {
+    return document.getElementById(elementId);
+}
+
+function getElementsByClassName(className) {
+    return document.getElementsByClassName(className);
+}
+
 function setFunctionOnclick(elementId, functionNameOnclick) {
     document.getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
@@ -38,7 +50,12 @@ function createElementButton(parentId, childId) {
 }
 
 function createElementDiv(parentId, childId) {
-    createElement(parentId, childId, "div")
+    createElement(parentId, childId, "div");
+}
+
+function createElementDivWithChildAndGrandChild(parentId, childId, grandChildId) {
+    createElement(parentId, childId, "div");
+    createElement(childId, grandChildId, "div");
 }
 
 function createElementP(parentId, childId) {
@@ -49,8 +66,13 @@ function setElementClassName(elementId, className) {
     document.getElementById(elementId).classList.add(className);
 }
 
-function setElementClassNameSameAsIdAndText(elementId, text){
+function setElementClassNameSameAsIdAndText(elementId, text) {
     setElementClassName(elementId, elementId);
+    setElementTextById(elementId, text);
+}
+
+function setElementClassNamedAndText(elementId, className, text) {
+    setElementClassName(elementId, className);
     setElementTextById(elementId, text);
 }
 
@@ -81,11 +103,29 @@ function setElementTextById(elementId, text) {
     document.getElementById(elementId).innerHTML = text;
 }
 
-function valueToString(number) {
-    return number.toString();
-}
-
 function getElementAttributeValueById(clickedId) {
     let element = document.getElementById(clickedId);
     return element.getAttribute("value");
+}
+
+function setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns) {
+    let element = getElementById(elementId);
+    element.style.display = "grid";
+
+    element.style.gridRow = valueToString(gridRowStartNumber);
+    element.style.gridColumn = valueToString(gridColumnStartNumber);
+
+    element.style.gridRowEnd = valueToString(gridRowEndNumber);
+    element.style.gridColumnEnd = valueToString(gridColumnEndNumber);
+
+    setElementStyleGridTemplateRows(elementId, gridTemplateRows);
+    setElementStyleGridTemplateColumns(elementId, gridTemplateColumns);
+}
+
+function setElementStyleGridTemplateRows(elementId, gridTemplateRowsPattern) {
+    getElementById(elementId).style.gridTemplateRows = gridTemplateRowsPattern;
+}
+
+function setElementStyleGridTemplateColumns(elementId, gridTemplateColumnsPattern) {
+    getElementById(elementId).style.gridTemplateColumns = gridTemplateColumnsPattern;
 }

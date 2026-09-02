@@ -12,8 +12,7 @@ function createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudPar
 function createContainerStatisticsFraudSumUpdate() {
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudBestParts, containerGameFiledStatisticsFraudBestGamePlay, fraudCountRoundUpdateSumNumber, gameFiledStatisticsFraudBestGamePlay, commonGameFiledDisplay);
     createElementDivWithDifferentIdAndClassName(gameFiledStatisticsFraudBestGamePlay, statisticsFraudBestGamePlay, commonGamePlayTextUpdate);
-    setElementClassName(statisticsFraudBestGamePlay, statisticsFraudBestUpdateNumber);
-    setElementTextById(statisticsFraudBestGamePlay, statisticsFraudBestGamePlayDisplay);
+    setElementClassNamedAndText(statisticsFraudBestGamePlay, statisticsFraudBestUpdateNumber, statisticsFraudBestGamePlayDisplay);
 }
 
 function createContainerStatisticsFraudSumTextStatic() {
@@ -29,12 +28,9 @@ function createContainerStatisticsFraudSum() {
 }
 
 function createContainerStatisticsFraudRoundUpdate() {
-    // container main
     createElementDivWithTheSamIdAndClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudCount);
     createElementDivWithDifferentIdAndClassName(containerGameFiledStatisticsFraudCount, containerGameFiledStatisticsFraudCountParts, containerGameFiledCommonParts);
-    // game play - round update
     createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountGamePlay);
-    // text - static
     createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountText);
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudCountText, gameFiledStatisticsFraudCountText, commonGameFiledDisplay, statisticsFraudCountText, commonStaticText);
     setElementClassNameSameAsIdAndText(statisticsFraudCountText, statisticsFraudCountTextDisplay);

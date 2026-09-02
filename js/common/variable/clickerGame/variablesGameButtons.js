@@ -2,7 +2,8 @@ const containerGameFiledButtonPlay = "containerGameFiled-buttonPlay";
 const gameFiledButtonPlay = "buttonPlay";
 const gameFiledButtonPlayGameOver = "gameFiledButtonPlayGameOver";
 // const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /><br /> game over";
-const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /> game over";
+// const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /> game over";
+const gameFiledButtonPlayGameOverTextDisplay = "YOU DID WELL ! <br /> game over";
 const functionNameOnclickPlayGameColor = "playClickerGame";
 const functionNameOnclickPlayGameColorClickBeforeNewRound = "playClickerGameClickBeforeNewRound";
 
