@@ -3,17 +3,22 @@ import {
     createElementButtonAndSetFunctionOnclick,
     createElementDiv,
     createElementDivAnaDivChild,
-    createElementDivWithTheSameIdAndClassName, getElementById, setElementAttributeValueById, setElementClassNameById,
+    createElementDivWithTheSameIdAndClassName, getElementAttributeValueById, getElementById,
+    removeElementClassNameById, setElementAttributeValueById, setElementClassNameById,
     setElementClassNamedAndText, setElementClassNames, setElementStyletAsGrid, valueToString
 } from "../common/function/commonFunctions.js";
 import * as variablesMenu from "../common/variable/menu/variablesMenu.js";
-import  * as variableGameConfigurationRound from "../common/variable/clickerGame/variableGameConfigurationRound.js";
-import * as variablesGameStatisticsTimeGeneral from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
+import * as variableGameConfigurationRound from "../common/variable/clickerGame/variableGameConfigurationRound.js";
+import * as variablesGameStatisticsTimeGeneral
+    from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
 
 
 let clickNumberButton = 1;
+// let  buttonIdPrevious = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5);
 
 export class ViewGameConfigurationRound {
+
+    buttonIdLastClicked = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5);
 
     createContainerManuConfigurationRound() {
         this.createMainContainerManuConfiguration();
@@ -52,7 +57,7 @@ export class ViewGameConfigurationRound {
 
     createContainersMenuConfigurationClickNumberRows() {
         createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberRow0, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow0);
-        createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberRow1,variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow1);
+        createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberRow1, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow1);
     }
 
     createContainersMenuConfigurationClickNumberAllRows() {
@@ -93,6 +98,7 @@ export class ViewGameConfigurationRound {
             let elementText = variableGameConfigurationRound.menuGameConfigurationClickNumberTextDisplay + valueToString(clickNumberButton);
             this.createGameConfigurationRoundButton(childId, buttonId, elementText);
 
+
             if (clickNumberButton === 5)
                 setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
 
@@ -103,27 +109,83 @@ export class ViewGameConfigurationRound {
     }
 
 
-    setConfigurationClickNumber(button) {
-        // tutaj logika setConfigurationClickNumber
-    }
-
     createGameConfigurationRoundButton(parentId, buttonId, elementText) {
-        // createElementButtonAndSetFunctionOnclick(parentId, buttonId, variableGameConfigurationRound.functionNameOnclickSetConfigurationClickNumber);
-        // setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
-        // setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
-        // setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
-        //
-
         createElementButton(parentId, buttonId);
-
-        const button = getElementById(buttonId);
-
-        button.addEventListener("click", () => {
-            this.setConfigurationClickNumber(button);
-        });
-
         setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
         setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
         setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
+        this.setConfigurationClickNumber(buttonId, this.setConfigurationClickNumberButtonChanges);
     }
+
+
+    setConfigurationClickNumberButtonChanges(event) {
+        // console.log("???");
+        removeElementClassNameById(this.buttonIdLastClicked, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+        // let buttonIdLastClicked = event.currentTarget.id;
+        // this.buttonIdPrevious = buttonId;
+         this.buttonIdLastClicked = event.currentTarget.id;
+
+        // this.buttonIdPrevious = event.currentTarget.id;
+        setElementClassNameById(this.buttonIdLastClicked, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    }
+
+    setConfigurationClickNumber(buttonId, functionToCall) {
+        const button = getElementById(buttonId);
+        button.addEventListener("click", (event) => {
+            functionToCall.call(this, event);
+        });
+        console.log("test");
+    }
+
+    getMaxClicksNumberSetByUser() {
+        return this.buttonIdLastClicked;
+    }
+
+    // setConfigurationClickNumber() {
+    //     // maxClicksNumberSetByUser = getElementAttributeValueById(clickedId);
+    //     this.setConfigurationClickNumberButtonChanges();
+    // }
+
+    // setConfigurationMaxClicksNumber() {
+    //     maxClicksNumber = maxClicksNumberSetByUser;
+    //     // this.setConfigurationMaxClicksNumberButtonChosen();
+    //     viewGameConfigurationRound.setConfigurationMaxClicksNumberButtonChosen();
+    // }
+
+
+    // setConfigurationClickNumberButtonChanges(maxClicksNumberSetByUser) {
+    //     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+    //         let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber);
+    //         removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //
+    //         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber))
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //     }
+    // }
+
+    setConfigurationMaxClicksNumberButtonChosen(maxClicksNumberSetByUser) {
+        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+
+            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonClickNumberGameOn);
+            }
+        }
+    }
+
+    removeConfigurationButtonChosenNumber(maxClicksNumberSetByUser) {
+        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+
+            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+                removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+            }
+        }
+    }
+
+
 }

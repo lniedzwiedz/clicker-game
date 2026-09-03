@@ -1,4 +1,4 @@
-import {ViewGameConfigurationRound} from "./clickerGame/ViewGameConfigurationRound";
+
 import {
     createElementDiv,
     getElementAttributeValueById, removeElementById,
@@ -14,10 +14,12 @@ import * as variablesMain from "./common/variable/main/variablesMain.js";
 import * as variablesGameStatisticsTimeFraud from "./common/variable/clickerGame/variablesGameStatisticsTimeFraud.js";
 import * as variablesGameStatisticsTimeGeneral from "./common/variable/clickerGame/variablesGameStatisticsTimeGeneral";
 
+import {ViewGameConfigurationRound} from "./clickerGame/ViewGameConfigurationRound";
 import {ViewGameStatisticsTimeGeneral} from "./clickerGame/ViewGameStatisticsTimeGeneral.js";
 import {ViewGameStatisticsTimeFraud} from "./clickerGame/ViewGameStatisticsTimeFraud.js";
 import {ViewGameButton} from "./clickerGame/ViewGameButton.js";
 
+const viewGameConfigurationRound = new ViewGameConfigurationRound();
 const viewGameStatisticsTimeGeneral = new ViewGameStatisticsTimeGeneral();
 const viewGameStatisticsTimeFraud = new ViewGameStatisticsTimeFraud();
 const viewGameButton = new ViewGameButton();
@@ -25,7 +27,7 @@ const viewGameButton = new ViewGameButton();
 
 
 let maxClicksNumber = 5;
-let maxClicksNumberSetByUser = maxClicksNumber;
+let maxClicksNumberSetByUser = viewGameConfigurationRound.getMaxClicksNumberSetByUser();
 let countedClicksNumber = 0;
 
 let gameRandomColor = "#ac4a71";
@@ -65,47 +67,53 @@ let funTimeoutButtonStop = function setTimeoutButtonStop() {
 }
 
 
+
+
+
 export class ViewGameClickerColor {
 
-    setConfigurationClickNumber(clickedId) {
-        maxClicksNumberSetByUser = getElementAttributeValueById(clickedId);
-        this.setConfigurationClickNumberButtonChanges();
-    }
+    // setConfigurationClickNumber(clickedId) {
+    //     maxClicksNumberSetByUser = getElementAttributeValueById(clickedId);
+    //     this.setConfigurationClickNumberButtonChanges();
+    // }
+    //
+    //
+    // setConfigurationClickNumberButtonChanges() {
+    //     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+    //         let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber);
+    //         removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //
+    //         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber))
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //     }
+    // }
+    //
+    // setConfigurationMaxClicksNumberButtonChosen() {
+    //     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+    //         let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+    //         removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //
+    //         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonClickNumberGameOn);
+    //         }
+    //     }
+    // }
+    //
+    // removeConfigurationButtonChosenNumber() {
+    //     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+    //         let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+    //         removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //
+    //         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+    //             removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //         }
+    //     }
+    // }
 
-
-    setConfigurationClickNumberButtonChanges() {
-        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber);
-            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-
-            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber))
-                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-        }
-    }
-
-    setConfigurationMaxClicksNumberButtonChosen() {
-        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
-            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-
-            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
-                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonClickNumberGameOn);
-            }
-        }
-    }
-
-    removeConfigurationButtonChosenNumber() {
-        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
-            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-
-            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
-                removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-            }
-        }
-    }
+    // viewGameConfigurationRound.setConfigurationClickNumber();
+    // maxClicksNumberSetByUser = viewGameConfigurationRound.getMaxClicksNumberSetByUser();
 
     setConfigurationButtonMainAfterClick(elementId) {
         removeElementClassNameById(elementId, variablesGameButtons.gameFiledButtonMainTextDecorationBeforeClick);
@@ -145,8 +153,13 @@ export class ViewGameClickerColor {
     }
 
     setConfigurationMaxClicksNumber() {
-        maxClicksNumber = maxClicksNumberSetByUser;
-        this.setConfigurationMaxClicksNumberButtonChosen();
+        // maxClicksNumber = maxClicksNumberSetByUser;
+        // // this.setConfigurationMaxClicksNumberButtonChosen();
+        // viewGameConfigurationRound.setConfigurationMaxClicksNumberButtonChosen();
+
+
+         // viewGameConfigurationRound.getMaxClicksNumberSetByUser()
+         // viewGameConfigurationRound.setConfigurationMaxClicksNumberButtonChosen();
     }
 
     playGameColorStart() {
@@ -181,7 +194,8 @@ export class ViewGameClickerColor {
     setConfigurationGameStop() {
         removeFunctionOnclick(variablesGameButtons.gameFiledButtonPlay);
         removeFunctionOnclick(variablesGameButtons.buttonMainStop);
-        this.removeConfigurationButtonChosenNumber();
+        // this.removeConfigurationButtonChosenNumber();
+        viewGameConfigurationRound.removeConfigurationButtonChosenNumber();
         this.setConfigurationButtonMainGameStop();
     }
 
@@ -349,7 +363,8 @@ export class ViewGameClickerColor {
         setElementTextById(variablesGameButtons.gameFiledButtonPlay, variablesGameButtons.gameFiledButtonPlayGameOverTextDisplay);
         setElementClassNameById(variablesGameButtons.gameFiledButtonPlay, variablesGameButtons.gameFiledButtonPlayGameOver);
         this.setConfigurationButtonMainGameOver();
-        this.removeConfigurationButtonChosenNumber();
+        // this.removeConfigurationButtonChosenNumber();
+        viewGameConfigurationRound.removeConfigurationButtonChosenNumber();
     }
 
     removeConfigurationGameOver() {
