@@ -24,11 +24,11 @@ function createMainContainerHome() {
 }
 
 function createMainContainerGameElements() {
-    createElementDivWithTheSamIdAndClassName(containerMainHome, containerGameElements);
-    createElementDivWithTheSamIdAndClassName(containerGameElements, containerGameFiledButtonPlay);
-    createElementDivWithTheSamIdAndClassName(containerGameElements, containerGameFiledButtonMain);
-    createElementDivWithTheSamIdAndClassName(containerGameElements, containerGameFiledStatisticsTime);
-    createElementDivWithTheSamIdAndClassName(containerGameElements, containerGameFiledStatisticsFraud);
+    createElementDivWithTheSameIdAndClassName(containerMainHome, containerGameElements);
+    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledButtonPlay);
+    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledButtonMain);
+    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledStatisticsTime);
+    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledStatisticsFraud);
 }
 
 function createContainerGameElements() {
@@ -39,4 +39,4 @@ function createContainerGameElements() {
     // createGameFieldStatisticsFraud();
 }
 
-console.log("Clicker game: version 20260902v49");
+console.log("Clicker game: version 20260903v50");

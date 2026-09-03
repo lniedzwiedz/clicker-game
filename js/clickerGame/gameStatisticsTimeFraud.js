@@ -1,24 +1,23 @@
 function createContainerStatisticsFraudSumMain() {
-    createElementDiv(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudBest);
-    createElementDiv(containerGameFiledStatisticsFraudBest, containerGameFiledStatisticsFraudBestParts);
+    createElementDivAnaDivChild(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudBest, containerGameFiledStatisticsFraudBestParts);
     setElementClassNameById(containerGameFiledStatisticsFraudBestParts, containerGameFiledCommonParts);
 }
 
 function createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay) {
-    createElementDivWithDifferentIdAndClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate);
-    createElementDivWithDifferentIdAndClassName(containerGameFiledStatisticsFraudGamePlay, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay);
+    createElementDivWithIdAndSetClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate);
+    createElementDivWithIdAndSetClassName(containerGameFiledStatisticsFraudGamePlay, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay);
 }
 
 function createContainerStatisticsFraudSumUpdate() {
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudBestParts, containerGameFiledStatisticsFraudBestGamePlay, fraudCountRoundUpdateSumNumber, gameFiledStatisticsFraudBestGamePlay, commonGameFiledDisplay);
-    createElementDivWithDifferentIdAndClassName(gameFiledStatisticsFraudBestGamePlay, statisticsFraudBestGamePlay, commonGamePlayTextUpdate);
+    createElementDivWithIdAndSetClassName(gameFiledStatisticsFraudBestGamePlay, statisticsFraudBestGamePlay, commonGamePlayTextUpdate);
     setElementClassNamedAndText(statisticsFraudBestGamePlay, statisticsFraudBestUpdateNumber, statisticsFraudBestGamePlayDisplay);
 }
 
 function createContainerStatisticsFraudSumTextStatic() {
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudBestParts, containerGameFiledStatisticsFraudBestText, containerGameFiledCommonStaticText, gameFiledStatisticsFraudBestText, commonGameFiledDisplay);
-    createElementDivWithDifferentIdAndClassName(gameFiledStatisticsFraudBestText, statisticsFraudBestText, commonStaticText);
-    setElementClassNameSameAsIdAndText(statisticsFraudBestText, statisticsFraudBestTextDisplay);
+    createElementDivWithIdAndSetClassName(gameFiledStatisticsFraudBestText, statisticsFraudBestText, commonStaticText);
+    setElementClassNameSameAsIdAndSetText(statisticsFraudBestText, statisticsFraudBestTextDisplay);
 }
 
 function createContainerStatisticsFraudSum() {
@@ -28,16 +27,16 @@ function createContainerStatisticsFraudSum() {
 }
 
 function createContainerStatisticsFraudRoundUpdate() {
-    createElementDivWithTheSamIdAndClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudCount);
-    createElementDivWithDifferentIdAndClassName(containerGameFiledStatisticsFraudCount, containerGameFiledStatisticsFraudCountParts, containerGameFiledCommonParts);
+    createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudCount);
+    createElementDivWithIdAndSetClassName(containerGameFiledStatisticsFraudCount, containerGameFiledStatisticsFraudCountParts, containerGameFiledCommonParts);
     createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountGamePlay);
     createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountText);
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudCountText, gameFiledStatisticsFraudCountText, commonGameFiledDisplay, statisticsFraudCountText, commonStaticText);
-    setElementClassNameSameAsIdAndText(statisticsFraudCountText, statisticsFraudCountTextDisplay);
+    setElementClassNameSameAsIdAndSetText(statisticsFraudCountText, statisticsFraudCountTextDisplay);
 }
 
 function createGameFieldStatisticsFraud() {
-    createElementDivWithTheSamIdAndClassName(containerGameFiledStatisticsFraud, containerGameFiledStatisticsFraudParts);
+    createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsFraud, containerGameFiledStatisticsFraudParts);
     createContainerStatisticsFraudSum();
     createContainerStatisticsFraudRoundUpdate();
     createContainerStatisticsFraudCountPerRound();

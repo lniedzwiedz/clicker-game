@@ -1,45 +1,55 @@
-function createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDisplay) {
-    // container main
+let newContainerGameFiledStatisticsTimeKindParts;
+
+function createCSSVariableName(baseVariableName, partToSwitch) {
+    let timeKind = "Kind";
+    return baseVariableName.replace(timeKind, partToSwitch);
+}
+
+function createContainerStatisticsTimeMain(timeKind){
+
     let newContainerGameFiledStatisticsTimeKind = createCSSVariableName(containerGameFiledStatisticsTimeKind, timeKind);
     createElementDiv(containerGameFiledStatisticsTimeParts, newContainerGameFiledStatisticsTimeKind);
 
-    let newContainerGameFiledStatisticsTimeKindParts = createCSSVariableName(containerGameFiledStatisticsTimeKindParts, timeKind);
-    createElementDiv(newContainerGameFiledStatisticsTimeKind, newContainerGameFiledStatisticsTimeKindParts);
-    setElementClassNameById(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
-    setElementClassNameById(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+    newContainerGameFiledStatisticsTimeKindParts = createCSSVariableName(containerGameFiledStatisticsTimeKindParts, timeKind);
+    createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKind, newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
 
-    // game play - time update
+    setElementClassNameById(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+}
+
+function createContainerStatisticsTimeUpdate(timeKind) {
+
     let newContainerGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(containerGameFiledStatisticsTimeKindGamePlay, timeKind);
-    createElementDiv(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindGamePlay);
-    setElementClassNameById(newContainerGameFiledStatisticsTimeKindGamePlay, containerGameFiledCommonGamePlayUpdate);
+    createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindGamePlay, containerGameFiledCommonGamePlayUpdate);
 
     let newGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(gameFiledStatisticsTimeKindGamePlay, timeKind);
-    createElementDiv(newContainerGameFiledStatisticsTimeKindGamePlay, newGameFiledStatisticsTimeKindGamePlay);
-    setElementClassNameById(newGameFiledStatisticsTimeKindGamePlay, commonGameFiledDisplay);
+    createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindGamePlay, newGameFiledStatisticsTimeKindGamePlay, commonGameFiledDisplay);
 
     let newStatisticsTimeKindGamePlay = createCSSVariableName(statisticsTimeKindGamePlay, timeKind);
-    createElementDiv(newGameFiledStatisticsTimeKindGamePlay, newStatisticsTimeKindGamePlay);
-    setElementClassNameById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayTextUpdate);
-    setElementClassNameById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), commonGamePlayUpdateTextTime);
-    setElementClassNameById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlay);
+    createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindGamePlay, newStatisticsTimeKindGamePlay, commonGamePlayTextUpdate);
+    setElementClassNames(newStatisticsTimeKindGamePlay, commonGamePlayUpdateTextTime, newStatisticsTimeKindGamePlay);
 
     let newStatisticsTimeKindGamePlayTextDisplay = createCSSVariableName(statisticsTimeKindGamePlayDisplay, timeKind);
     setElementTextById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlayTextDisplay);
+}
 
-    // text - static
+function createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay){
+
     let newContainerGameFiledStatisticsTimeKindText = createCSSVariableName(containerGameFiledStatisticsTimeKindText, timeKind);
-    createElementDiv(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindText);
-    setElementClassNameById(newContainerGameFiledStatisticsTimeKindText, containerGameFiledCommonStaticText);
+    createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindText, containerGameFiledCommonStaticText);
 
     let newGameFiledStatisticsTimeKindText = createCSSVariableName(gameFiledStatisticsTimeKindText, timeKind);
-    createElementDiv(newContainerGameFiledStatisticsTimeKindText, newGameFiledStatisticsTimeKindText);
-    setElementClassNameById(newGameFiledStatisticsTimeKindText, commonGameFiledDisplay);
+    createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindText, newGameFiledStatisticsTimeKindText, commonGameFiledDisplay);
 
     let newStatisticsTimeKindText = createCSSVariableName(statisticsTimeKindText, timeKind);
-    createElementDiv(newGameFiledStatisticsTimeKindText, newStatisticsTimeKindText);
-    setElementClassNameById(newStatisticsTimeKindText, commonStaticText);
-    setElementClassNameById(newStatisticsTimeKindText, newStatisticsTimeKindText);
-    setElementTextById(newStatisticsTimeKindText, newStatisticsTimeKindTextDisplay);
+    createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindText, newStatisticsTimeKindText, commonStaticText);
+
+    setElementClassNameSameAsIdAndSetText(newStatisticsTimeKindText, newStatisticsTimeKindTextDisplay);
+}
+
+function createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDisplay) {
+    createContainerStatisticsTimeMain(timeKind);
+    createContainerStatisticsTimeUpdate(timeKind);
+    createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay);
 }
 
 function createContainerStatisticsTimeBest() {
@@ -59,7 +69,7 @@ function createContainerStatisticsTimeMax() {
 }
 
 function createGameFieldStatisticsTime() {
-    createElementDivWithTheSamIdAndClassName(containerGameFiledStatisticsTime, containerGameFiledStatisticsTimeParts);
+    createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsTime, containerGameFiledStatisticsTimeParts);
     createContainerStatisticsTimeBest();
     createContainerStatisticsTimeMin();
     createContainerStatisticsTimeAvg();

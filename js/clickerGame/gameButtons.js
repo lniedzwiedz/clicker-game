@@ -12,14 +12,13 @@ function createGameFieldPButtonPlay() {
 }
 
 function createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart, containerGameFiledButtonsMainStartTextDisplay) {
-    createElementButton(gameFiledButtonMainStart, buttonMainStart);
-    setFunctionOnclick(buttonMainStart, functionNameOnclickPlayGameColorStart);
+    createElementButtonAndSetFunctionOnclick(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart);
     setElementClassNamedAndText(buttonMainStart, gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
 }
 
 function createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
-    createElementDivWithTheSamIdAndClassName(containerGameFiledButtonsMainParts, containerGameFiledButtonsMainStart);
-    createElementDivWithTheSamIdAndClassName(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
+    createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainParts, containerGameFiledButtonsMainStart);
+    createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
 }
 
 function createGameFieldPButtonMainStart() {
@@ -33,9 +32,4 @@ function createGameFieldPButtonMainStop() {
         createContainerGameFieldButtonMain(containerGameFiledButtonsMainStop, gameFiledButtonMainStop);
         createAndConfigureGameButton(gameFiledButtonMainStop, buttonMainStop, functionNameOnclickPlayGameColorStop, containerGameFiledButtonsMainStopTextDisplay)
     }
-}
-
-function createCSSVariableName(baseVariableName, partToSwitch) {
-    let timeKind = "Kind";
-    return baseVariableName.replace(timeKind, partToSwitch);
 }

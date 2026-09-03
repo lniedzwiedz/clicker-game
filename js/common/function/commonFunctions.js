@@ -43,22 +43,27 @@ function createElementDiv(parentId, childId) {
     createElement(parentId, childId, "div");
 }
 
-function createElementDivWithDifferentIdAndClassName(parentId, childId, className) {
+function createElementDivWithIdAndSetClassName(parentId, childId, className) {
     createElementDiv(parentId, childId);
     setElementClassNameById(childId, className);
 }
 
-function createElementDivWithTheSamIdAndClassName(parentId, elementIdAndClassName) {
+function createElementDivWithTheSameIdAndClassName(parentId, elementIdAndClassName) {
     createElementDiv(parentId, elementIdAndClassName);
     setElementClassNameById(elementIdAndClassName, elementIdAndClassName);
 }
 
-function createElementDivWithChildAndGrandChildId(parentId, childId, grandChildId) {
+function createElementDivAnaDivChild(parentId, childId, grandChildId) {
     createElementDiv(parentId, childId);
     createElementDiv(childId, grandChildId);
 }
 
-function setElementClassNameSameAsIdAndText(elementId, text) {
+function createElementButtonAndSetFunctionOnclick(parentId, childId, functionOnclickName) {
+    createElementButton(parentId, childId);
+    setFunctionOnclick(childId, functionOnclickName);
+}
+
+function setElementClassNameSameAsIdAndSetText(elementId, text) {
     setElementClassNameById(elementId, elementId);
     setElementTextById(elementId, text);
 }
@@ -66,6 +71,11 @@ function setElementClassNameSameAsIdAndText(elementId, text) {
 function setElementClassNamedAndText(elementId, className, text) {
     setElementClassNameById(elementId, className);
     setElementTextById(elementId, text);
+}
+
+function setElementClassNames(elementId, classNameOne, classNameTwo){
+    setElementClassNameById(elementId, classNameTwo);
+    setElementClassNameById(elementId, classNameTwo);
 }
 
 function isElementsExistById(elementId) {
@@ -124,5 +134,5 @@ function setElementStyleGridTemplateColumns(elementId, gridTemplateColumnsPatter
 
 function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {
     createElementDiv(containerMainSectionName, containerSectionName)
-    createElementDivWithTheSamIdAndClassName(containerSectionName, containerSectionMainName);
+    createElementDivWithTheSameIdAndClassName(containerSectionName, containerSectionMainName);
 }

@@ -7,14 +7,13 @@ function createContainerManuConfiguration() {
 }
 
 function createMainContainerManuConfiguration() {
-    createElementDivWithTheSamIdAndClassName(containerMenuMainParts, containerMenuGameConfiguration);
+    createElementDivWithTheSameIdAndClassName(containerMenuMainParts, containerMenuGameConfiguration);
     createElementDiv(containerMenuGameConfiguration, containerMenuGameConfigurationParts);
 }
 
 function createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
-    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
+    createElementDivAnaDivChild(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
 }
-
 
 function createContainerMenuConfigurationText() {
     createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText);
@@ -36,8 +35,8 @@ function createContainersMenuConfigurationClickNumberButton() {
 }
 
 function createContainersMenuConfigurationClickNumberRows() {
-    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
-    createElementDivWithChildAndGrandChildId(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
+    createElementDivAnaDivChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
+    createElementDivAnaDivChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
 }
 
 function createContainersMenuConfigurationClickNumberAllRows() {
@@ -47,13 +46,10 @@ function createContainersMenuConfigurationClickNumberAllRows() {
 }
 
 function createGameConfigurationRoundButton(parentId, buttonId, elementText) {
-    createElementButton(parentId, buttonId);
+    createElementButtonAndSetFunctionOnclick(parentId, buttonId, functionNameOnclickSetConfigurationClickNumber);
     setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
-    setFunctionOnclick(buttonId, functionNameOnclickSetConfigurationClickNumber);
-    setElementClassNameById(buttonId, commonGameFiledDisplay);
-    setElementClassNameById(buttonId, menuGameConfigurationText);
-    setElementClassNameById(buttonId, menuGameConfigurationButton);
-    setElementTextById(buttonId, elementText);
+    setElementClassNames(buttonId, commonGameFiledDisplay, menuGameConfigurationButton);
+    setElementClassNamedAndText(buttonId, menuGameConfigurationText, elementText);
 }
 
 function createContainersMenuConfigurationClickNumberPerRow(rowNumber) {

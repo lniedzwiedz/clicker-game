@@ -12,14 +12,12 @@ function createContainerMainMenu() {
 }
 
 function createContainerMainMenuParts() {
-    createElementDivWithTheSamIdAndClassName(containerMenuMain, containerMenuMainParts);
+    createElementDivWithTheSameIdAndClassName(containerMenuMain, containerMenuMainParts);
 }
 
 function createContainerManuTitle() {
-    createElementDivWithTheSamIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
-    createElementDiv(containerMenuTitleMain, menuTitle);
-    setElementClassNameById(menuTitle, menuTitle)
+    createElementDivWithTheSameIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
+    createElementDivWithTheSameIdAndClassName(containerMenuTitleMain, menuTitle);
     createElementP(menuTitle, menuTitleText);
-    setElementClassNameById(menuTitleText, menuTitleText);
-    setElementTextById(menuTitleText, menuTitleTextDisplay);
+    setElementClassNamedAndText(menuTitleText, menuTitleText, menuTitleTextDisplay);
 }

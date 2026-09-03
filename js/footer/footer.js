@@ -9,7 +9,7 @@ function createContainerMainFooter() {
 }
 
 function createContainerFooterAuthor() {
-    createElementDivWithTheSamIdAndClassName(containerMainFooter, containerFooterAuthor);
+    createElementDivWithTheSameIdAndClassName(containerMainFooter, containerFooterAuthor);
     createElementP(containerFooterAuthor, footerAuthor);
-    setElementClassNameSameAsIdAndText(footerAuthor, footerAuthorData);
+    setElementClassNameSameAsIdAndSetText(footerAuthor, footerAuthorData);
 }
