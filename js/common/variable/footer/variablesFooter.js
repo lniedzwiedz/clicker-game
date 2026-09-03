@@ -1,6 +1,6 @@
-const containerSectionFooter = "containerSectionFooter";
-const containerMainFooter = "containerMainFooter";
-const containerFooterAuthor = "containerFooterAuthor";
-const footerAuthor = "footerAuthor";
-const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
-const sectionFooter = "sectionFooter";
+export const containerSectionFooter = "containerSectionFooter";
+export const containerMainFooter = "containerMainFooter";
+export const containerFooterAuthor = "containerFooterAuthor";
+export const footerAuthor = "footerAuthor";
+export const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
+export const sectionFooter = "sectionFooter";

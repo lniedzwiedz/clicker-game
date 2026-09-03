@@ -1,16 +1,16 @@
 // CSS variable
-let rootVariables = document.querySelector(":root");
-let cssGameFiledButtonPlayColor = "--gameFiledButtonPlayColor";
-let gameFiledButtonPlayStartColor = "black";
+export let rootVariables = document.querySelector(":root");
+export let cssGameFiledButtonPlayColor = "--gameFiledButtonPlayColor";
+export let gameFiledButtonPlayStartColor = "black";
 
 // container main
-const containerMain = "containerMain";
-const containerMainSectionMenu = "containerMainSectionMenu";
-const containerMainSectionActions = "containerMainSectionActions";
-const containerMainSectionFooter = "containerMainSectionFooter";
+export const containerMain = "containerMain";
+export const containerMainSectionMenu = "containerMainSectionMenu";
+export const containerMainSectionActions = "containerMainSectionActions";
+export const containerMainSectionFooter = "containerMainSectionFooter";
 
 // subpage HOME - game
-const sectionHome = "sectionHome";
-const containerMainSectionHome = "containerMainSectionHome";
-const containerMainHome = "containerMainHome";
-const containerGameElements = "containerGameElements";
+export const sectionHome = "sectionHome";
+export const containerMainSectionHome = "containerMainSectionHome";
+export const containerMainHome = "containerMainHome";
+export const containerGameElements = "containerGameElements";
