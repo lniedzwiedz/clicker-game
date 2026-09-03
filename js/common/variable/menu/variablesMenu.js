@@ -1,9 +1,9 @@
 // menu
-const sectionMenu = "sectionMenu";
-const containerSectionMenu = "containerSectionMenu";
-const containerMenuMain = "containerMenuMain";
-const containerMenuMainParts = "containerMenuMainParts";
-const containerMenuTitleMain = "containerMenuTitleMain";
-const menuTitle = "menuTitle";
-const menuTitleText = "menuTitleText";
-const menuTitleTextDisplay = "Clicker Game";
+export const sectionMenu = "sectionMenu";
+export const containerSectionMenu = "containerSectionMenu";
+export const containerMenuMain = "containerMenuMain";
+export const containerMenuMainParts = "containerMenuMainParts";
+export const containerMenuTitleMain = "containerMenuTitleMain";
+export const menuTitle = "menuTitle";
+export const menuTitleText = "menuTitleText";
+export const menuTitleTextDisplay = "Clicker Game";

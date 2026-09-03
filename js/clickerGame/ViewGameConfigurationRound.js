@@ -1,11 +1,17 @@
 import {
+    createElementButton,
     createElementButtonAndSetFunctionOnclick,
     createElementDiv,
     createElementDivAnaDivChild,
-    createElementDivWithTheSameIdAndClassName, setElementAttributeValueById, setElementClassNameById,
+    createElementDivWithTheSameIdAndClassName, getElementById, setElementAttributeValueById, setElementClassNameById,
     setElementClassNamedAndText, setElementClassNames, setElementStyletAsGrid, valueToString
 } from "../common/function/commonFunctions.js";
+import * as variablesMenu from "../common/variable/menu/variablesMenu.js";
+import  * as variableGameConfigurationRound from "../common/variable/clickerGame/variableGameConfigurationRound.js";
+import * as variablesGameStatisticsTimeGeneral from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
 
+
+let clickNumberButton = 1;
 
 export class ViewGameConfigurationRound {
 
@@ -17,25 +23,25 @@ export class ViewGameConfigurationRound {
     }
 
     createMainContainerManuConfiguration() {
-        createElementDivWithTheSameIdAndClassName(containerMenuMainParts, containerMenuGameConfiguration);
-        createElementDiv(containerMenuGameConfiguration, containerMenuGameConfigurationParts);
+        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMainParts, variableGameConfigurationRound.containerMenuGameConfiguration);
+        createElementDiv(variableGameConfigurationRound.containerMenuGameConfiguration, variableGameConfigurationRound.containerMenuGameConfigurationParts);
     }
 
     createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
-        createElementDivAnaDivChild(containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
+        createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationParts, containerMenuGameConfigurationText, menuGameConfigurationText);
     }
 
     createContainerMenuConfigurationText() {
-        this.createContainerMenuConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText);
-        setElementClassNamedAndText(menuGameConfigurationText, menuGameConfigurationDisplay, menuGameConfigurationTextDisplay);
+        this.createContainerMenuConfiguration(variableGameConfigurationRound.containerMenuGameConfigurationText, variableGameConfigurationRound.menuGameConfigurationText);
+        setElementClassNamedAndText(variableGameConfigurationRound.menuGameConfigurationText, variableGameConfigurationRound.menuGameConfigurationDisplay, variableGameConfigurationRound.menuGameConfigurationTextDisplay);
     }
 
     createContainerMenuConfigurationGameKind() {
-        createElementDiv(containerMenuGameConfigurationParts, containerMenuGameConfigurationGameKind);
+        createElementDiv(variableGameConfigurationRound.containerMenuGameConfigurationParts, variableGameConfigurationRound.containerMenuGameConfigurationGameKind);
     }
 
     createContainerMenuConfigurationClickNumber() {
-        this.createContainerMenuConfiguration(containerMenuGameConfigurationClickNumber, containerMenuGameConfigurationClickNumberParts);
+        this.createContainerMenuConfiguration(variableGameConfigurationRound.containerMenuGameConfigurationClickNumber, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts);
         this.createContainersMenuConfigurationClickNumberButton();
     }
 
@@ -45,8 +51,8 @@ export class ViewGameConfigurationRound {
     }
 
     createContainersMenuConfigurationClickNumberRows() {
-        createElementDivAnaDivChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow0, containerMenuGameConfigurationClickNumberPartsRow0);
-        createElementDivAnaDivChild(containerMenuGameConfigurationClickNumberParts, containerMenuGameConfigurationClickNumberRow1, containerMenuGameConfigurationClickNumberPartsRow1);
+        createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberRow0, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow0);
+        createElementDivAnaDivChild(variableGameConfigurationRound.containerMenuGameConfigurationClickNumberParts, variableGameConfigurationRound.containerMenuGameConfigurationClickNumberRow1,variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow1);
     }
 
     createContainersMenuConfigurationClickNumberAllRows() {
@@ -55,16 +61,9 @@ export class ViewGameConfigurationRound {
         }
     }
 
-    createGameConfigurationRoundButton(parentId, buttonId, elementText) {
-        createElementButtonAndSetFunctionOnclick(parentId, buttonId, functionNameOnclickSetConfigurationClickNumber);
-        setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
-        setElementClassNames(buttonId, commonGameFiledDisplay, menuGameConfigurationButton);
-        setElementClassNamedAndText(buttonId, menuGameConfigurationText, elementText);
-    }
-
     createContainersMenuConfigurationClickNumberPerRow(rowNumber) {
 
-        let parentId = containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
+        let parentId = variableGameConfigurationRound.containerMenuGameConfigurationClickNumberPartsRow + rowNumber;
         let clicksNumberPerRow = 5;
 
         let gridRowStartNumber = 1;
@@ -83,23 +82,48 @@ export class ViewGameConfigurationRound {
 
         for (let i = 0; i < clicksNumberPerRow; i++) {
 
-            let childId = containerGameConfigurationRoundNumberPrefix + rowNumber + "-button-" + i;
+            let childId = variableGameConfigurationRound.containerGameConfigurationRoundNumberPrefix + rowNumber + "-button-" + i;
             createElementDiv(parentId, childId);
 
             let gridTemplateRowsChild = "1fr";
             let gridTemplateColumnsChild = "1fr";
             setElementStyletAsGrid(childId, gridRowStartNumberChild, gridColumnStartNumberChild, gridRowEndNumberChild, gridColumnEndNumberChild, gridTemplateRowsChild, gridTemplateColumnsChild);
 
-            let buttonId = menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumberButton);
-            let elementText = menuGameConfigurationClickNumberTextDisplay + valueToString(clickNumberButton);
+            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumberButton);
+            let elementText = variableGameConfigurationRound.menuGameConfigurationClickNumberTextDisplay + valueToString(clickNumberButton);
             this.createGameConfigurationRoundButton(childId, buttonId, elementText);
 
             if (clickNumberButton === 5)
-                setElementClassNameById(buttonId, menuGameConfigurationButtonCurrentNumber);
+                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
 
             gridColumnStartNumberChild += 3;
             gridColumnEndNumberChild += 3;
             clickNumberButton += 1;
         }
+    }
+
+
+    setConfigurationClickNumber(button) {
+        // tutaj logika setConfigurationClickNumber
+    }
+
+    createGameConfigurationRoundButton(parentId, buttonId, elementText) {
+        // createElementButtonAndSetFunctionOnclick(parentId, buttonId, variableGameConfigurationRound.functionNameOnclickSetConfigurationClickNumber);
+        // setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
+        // setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
+        // setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
+        //
+
+        createElementButton(parentId, buttonId);
+
+        const button = getElementById(buttonId);
+
+        button.addEventListener("click", () => {
+            this.setConfigurationClickNumber(button);
+        });
+
+        setElementAttributeValueById(buttonId, valueToString(clickNumberButton));
+        setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
+        setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
     }
 }

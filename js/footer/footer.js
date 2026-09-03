@@ -1,7 +1,7 @@
-function createFooter() {
-    createContainerMainFooter();
-    createContainerFooterAuthor();
-}
+// function createFooter() {
+//     createContainerMainFooter();
+//     createContainerFooterAuthor();
+// }
 
 // function createContainerMainFooter() {
 //     createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);

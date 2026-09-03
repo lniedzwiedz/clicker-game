@@ -5,34 +5,17 @@ import {
     setElementClassNameById, setElementClassNamedAndText, setElementClassNameSameAsIdAndSetText
 } from "../common/function/commonFunctions.js";
 
-import {ViewGameConfigurationRound} from "./ViewGameConfigurationRound.js";
-import {
-    containerGameFiledStatisticsFraud,
-    containerGameFiledStatisticsFraudBest,
-    containerGameFiledStatisticsFraudBestGamePlay, containerGameFiledStatisticsFraudBestParts,
-    containerGameFiledStatisticsFraudBestText, containerGameFiledStatisticsFraudCount,
-    containerGameFiledStatisticsFraudCountGamePlay,
-    containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountText,
-    containerGameFiledStatisticsFraudParts, fraudCountRoundUpdateSumNumber, gameFiledStatisticsFraudBestGamePlay,
-    gameFiledStatisticsFraudBestText, gameFiledStatisticsFraudCountText,
-    statisticsFraudBestGamePlay,
-    statisticsFraudBestGamePlayDisplay, statisticsFraudBestText,
-    statisticsFraudBestTextDisplay, statisticsFraudBestUpdateNumber, statisticsFraudCountText,
-    statisticsFraudCountTextDisplay
-} from "../common/variable/clickerGame/variablesGameStatisticsTimeFraud";
-import {
-    commonGameFiledDisplay, commonGamePlayTextUpdate,
-    commonStaticText,
-    containerGameFiledCommonParts,
-    containerGameFiledCommonStaticText
-} from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral";
-const viewGameConfigurationRound = new ViewGameConfigurationRound();
+import * as variablesGameStatisticsTimeFraud from "../common/variable/clickerGame/variablesGameStatisticsTimeFraud.js";
+import {ViewGameClickerColor} from "../ViewGameClickerColor";
+import * as variablesGameStatisticsTimeGeneral from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
+
+const viewGameClickerColor = new ViewGameClickerColor();
 
 export class ViewGameStatisticsTimeFraud {
 
     createContainerStatisticsFraudSumMain() {
-        createElementDivAnaDivChild(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudBest, containerGameFiledStatisticsFraudBestParts);
-        setElementClassNameById(containerGameFiledStatisticsFraudBestParts, containerGameFiledCommonParts);
+        createElementDivAnaDivChild(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBest, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestParts);
+        setElementClassNameById(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestParts, variablesGameStatisticsTimeGeneral.containerGameFiledCommonParts);
     }
 
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay) {
@@ -41,15 +24,15 @@ export class ViewGameStatisticsTimeFraud {
     }
 
     createContainerStatisticsFraudSumUpdate() {
-        this.createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudBestParts, containerGameFiledStatisticsFraudBestGamePlay, fraudCountRoundUpdateSumNumber, gameFiledStatisticsFraudBestGamePlay, commonGameFiledDisplay);
-        createElementDivWithIdAndSetClassName(gameFiledStatisticsFraudBestGamePlay, statisticsFraudBestGamePlay, commonGamePlayTextUpdate);
-        setElementClassNamedAndText(statisticsFraudBestGamePlay, statisticsFraudBestUpdateNumber, statisticsFraudBestGamePlayDisplay);
+        this.createContainerStatisticsFraudMain(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestGamePlay, variablesGameStatisticsTimeFraud.fraudCountRoundUpdateSumNumber, variablesGameStatisticsTimeFraud.gameFiledStatisticsFraudBestGamePlay, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay);
+        createElementDivWithIdAndSetClassName(variablesGameStatisticsTimeFraud.gameFiledStatisticsFraudBestGamePlay, variablesGameStatisticsTimeFraud.statisticsFraudBestGamePlay, variablesGameStatisticsTimeGeneral.commonGamePlayTextUpdate);
+        setElementClassNamedAndText(variablesGameStatisticsTimeFraud.statisticsFraudBestGamePlay, variablesGameStatisticsTimeFraud.statisticsFraudBestUpdateNumber, variablesGameStatisticsTimeFraud.statisticsFraudBestGamePlayDisplay);
     }
 
     createContainerStatisticsFraudSumTextStatic() {
-        this.createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudBestParts, containerGameFiledStatisticsFraudBestText, containerGameFiledCommonStaticText, gameFiledStatisticsFraudBestText, commonGameFiledDisplay);
-        createElementDivWithIdAndSetClassName(gameFiledStatisticsFraudBestText, statisticsFraudBestText, commonStaticText);
-        setElementClassNameSameAsIdAndSetText(statisticsFraudBestText, statisticsFraudBestTextDisplay);
+        this.createContainerStatisticsFraudMain(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudBestText, variablesGameStatisticsTimeGeneral.containerGameFiledCommonStaticText, variablesGameStatisticsTimeFraud.gameFiledStatisticsFraudBestText, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay);
+        createElementDivWithIdAndSetClassName(variablesGameStatisticsTimeFraud.gameFiledStatisticsFraudBestText, variablesGameStatisticsTimeFraud.statisticsFraudBestText, variablesGameStatisticsTimeGeneral.commonStaticText);
+        setElementClassNameSameAsIdAndSetText(variablesGameStatisticsTimeFraud.statisticsFraudBestText, variablesGameStatisticsTimeFraud.statisticsFraudBestTextDisplay);
     }
 
     createContainerStatisticsFraudSum() {
@@ -59,20 +42,18 @@ export class ViewGameStatisticsTimeFraud {
     }
 
     createContainerStatisticsFraudRoundUpdate() {
-        createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudCount);
-        createElementDivWithIdAndSetClassName(containerGameFiledStatisticsFraudCount, containerGameFiledStatisticsFraudCountParts, containerGameFiledCommonParts);
-        createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountGamePlay);
-        createElementDiv(containerGameFiledStatisticsFraudCountParts, containerGameFiledStatisticsFraudCountText);
-        this.createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudCountText, gameFiledStatisticsFraudCountText, commonGameFiledDisplay, statisticsFraudCountText, commonStaticText);
-        setElementClassNameSameAsIdAndSetText(statisticsFraudCountText, statisticsFraudCountTextDisplay);
+        createElementDivWithTheSameIdAndClassName(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCount);
+        createElementDivWithIdAndSetClassName(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCount, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountParts, variablesGameStatisticsTimeGeneral.containerGameFiledCommonParts);
+        createElementDiv(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountGamePlay);
+        createElementDiv(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountParts, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountText);
+        this.createContainerStatisticsFraudMain(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountText, variablesGameStatisticsTimeFraud.gameFiledStatisticsFraudCountText, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variablesGameStatisticsTimeFraud.statisticsFraudCountText, variablesGameStatisticsTimeGeneral);
+        setElementClassNameSameAsIdAndSetText(variablesGameStatisticsTimeFraud.statisticsFraudCountText, variablesGameStatisticsTimeFraud.statisticsFraudCountTextDisplay);
     }
 
     createGameFieldStatisticsFraud() {
-        createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsFraud, containerGameFiledStatisticsFraudParts);
+        createElementDivWithTheSameIdAndClassName(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraud, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudParts);
         this.createContainerStatisticsFraudSum();
         this.createContainerStatisticsFraudRoundUpdate();
-        viewGameConfigurationRound.createContainerStatisticsFraudCountPerRound();
+        viewGameClickerColor.createContainerStatisticsFraudCountPerRound();
     }
-
-
 }

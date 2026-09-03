@@ -2,14 +2,9 @@ import {
     createContainerMainElements,
     createElementDivWithTheSameIdAndClassName, createElementP,
     setElementClassNameById, setElementClassNameSameAsIdAndSetText
-} from "../common/function/commonFunctions";
-import {containerMainSectionFooter} from "../common/variable/main/variablesMain";
-import {
-    containerFooterAuthor,
-    containerMainFooter,
-    containerSectionFooter, footerAuthor, footerAuthorData,
-    sectionFooter
-} from "../common/variable/footer/variablesFooter";
+} from "../common/function/commonFunctions.js";
+import * as variablesFooter from "../common/variable/footer/variablesFooter.js";
+import * as variablesMain from "../common/variable/main/variablesMain.js";
 
 export class ViewFooter {
 
@@ -19,13 +14,13 @@ export class ViewFooter {
     }
 
     createContainerMainFooter() {
-        createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);
-        setElementClassNameById(containerSectionFooter, containerSectionFooter);
+        createContainerMainElements(variablesMain.containerMainSectionFooter, variablesFooter.sectionFooter, variablesFooter.containerSectionFooter, variablesFooter.containerMainFooter);
+        setElementClassNameById(variablesFooter.containerSectionFooter, variablesFooter.containerSectionFooter);
     }
 
     createContainerFooterAuthor() {
-        createElementDivWithTheSameIdAndClassName(containerMainFooter, containerFooterAuthor);
-        createElementP(containerFooterAuthor, footerAuthor);
-        setElementClassNameSameAsIdAndSetText(footerAuthor, footerAuthorData);
+        createElementDivWithTheSameIdAndClassName(variablesFooter.containerMainFooter, variablesFooter.containerFooterAuthor);
+        createElementP(variablesFooter.containerFooterAuthor, variablesFooter.footerAuthor);
+        setElementClassNameSameAsIdAndSetText(variablesFooter.footerAuthor, variablesFooter.footerAuthorData);
     }
 }

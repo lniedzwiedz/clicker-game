@@ -8,83 +8,85 @@ import {
     setElementTextById
 } from "../common/function/commonFunctions.js";
 
+import * as variablesGameStatisticsTimeGeneral from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
+
 let newContainerGameFiledStatisticsTimeKindParts;
 
 export class ViewGameStatisticsTimeGeneral {
 
-     createCSSVariableName(baseVariableName, partToSwitch) {
+    createCSSVariableName(baseVariableName, partToSwitch) {
         let timeKind = "Kind";
         return baseVariableName.replace(timeKind, partToSwitch);
     }
 
-     createContainerStatisticsTimeMain(timeKind){
+    createContainerStatisticsTimeMain(timeKind) {
 
-        let newContainerGameFiledStatisticsTimeKind = createCSSVariableName(containerGameFiledStatisticsTimeKind, timeKind);
-        createElementDiv(containerGameFiledStatisticsTimeParts, newContainerGameFiledStatisticsTimeKind);
+        let newContainerGameFiledStatisticsTimeKind = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeKind, timeKind);
+        createElementDiv(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeParts, newContainerGameFiledStatisticsTimeKind);
 
-        newContainerGameFiledStatisticsTimeKindParts = createCSSVariableName(containerGameFiledStatisticsTimeKindParts, timeKind);
-        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKind, newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+        newContainerGameFiledStatisticsTimeKindParts = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeKindParts, timeKind);
+        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKind, newContainerGameFiledStatisticsTimeKindParts, variablesGameStatisticsTimeGeneral.containerGameFiledCommonParts);
 
-        setElementClassNameById(newContainerGameFiledStatisticsTimeKindParts, containerGameFiledCommonParts);
+        setElementClassNameById(newContainerGameFiledStatisticsTimeKindParts, variablesGameStatisticsTimeGeneral.containerGameFiledCommonParts);
     }
 
-     createContainerStatisticsTimeUpdate(timeKind) {
+    createContainerStatisticsTimeUpdate(timeKind) {
 
-        let newContainerGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(containerGameFiledStatisticsTimeKindGamePlay, timeKind);
-        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindGamePlay, containerGameFiledCommonGamePlayUpdate);
+        let newContainerGameFiledStatisticsTimeKindGamePlay = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeKindGamePlay, timeKind);
+        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindGamePlay, variablesGameStatisticsTimeGeneral.containerGameFiledCommonGamePlayUpdate);
 
-        let newGameFiledStatisticsTimeKindGamePlay = createCSSVariableName(gameFiledStatisticsTimeKindGamePlay, timeKind);
-        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindGamePlay, newGameFiledStatisticsTimeKindGamePlay, commonGameFiledDisplay);
+        let newGameFiledStatisticsTimeKindGamePlay = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.gameFiledStatisticsTimeKindGamePlay, timeKind);
+        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindGamePlay, newGameFiledStatisticsTimeKindGamePlay, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay);
 
-        let newStatisticsTimeKindGamePlay = createCSSVariableName(statisticsTimeKindGamePlay, timeKind);
-        createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindGamePlay, newStatisticsTimeKindGamePlay, commonGamePlayTextUpdate);
-        setElementClassNames(newStatisticsTimeKindGamePlay, commonGamePlayUpdateTextTime, newStatisticsTimeKindGamePlay);
+        let newStatisticsTimeKindGamePlay = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.statisticsTimeKindGamePlay, timeKind);
+        createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindGamePlay, newStatisticsTimeKindGamePlay, variablesGameStatisticsTimeGeneral.commonGamePlayTextUpdate);
+        setElementClassNames(newStatisticsTimeKindGamePlay, variablesGameStatisticsTimeGeneral.commonGamePlayUpdateTextTime, newStatisticsTimeKindGamePlay);
 
-        let newStatisticsTimeKindGamePlayTextDisplay = createCSSVariableName(statisticsTimeKindGamePlayDisplay, timeKind);
-        setElementTextById(createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlayTextDisplay);
+        let newStatisticsTimeKindGamePlayTextDisplay = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.statisticsTimeKindGamePlayDisplay, timeKind);
+        setElementTextById(this.createCSSVariableName(newStatisticsTimeKindGamePlay, timeKind), newStatisticsTimeKindGamePlayTextDisplay);
     }
 
-     createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay){
+    createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay) {
 
-        let newContainerGameFiledStatisticsTimeKindText = createCSSVariableName(containerGameFiledStatisticsTimeKindText, timeKind);
-        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindText, containerGameFiledCommonStaticText);
+        let newContainerGameFiledStatisticsTimeKindText = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeKindText, timeKind);
+        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindParts, newContainerGameFiledStatisticsTimeKindText, variablesGameStatisticsTimeGeneral.containerGameFiledCommonStaticText);
 
-        let newGameFiledStatisticsTimeKindText = createCSSVariableName(gameFiledStatisticsTimeKindText, timeKind);
-        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindText, newGameFiledStatisticsTimeKindText, commonGameFiledDisplay);
+        let newGameFiledStatisticsTimeKindText = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.gameFiledStatisticsTimeKindText, timeKind);
+        createElementDivWithIdAndSetClassName(newContainerGameFiledStatisticsTimeKindText, newGameFiledStatisticsTimeKindText, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay);
 
-        let newStatisticsTimeKindText = createCSSVariableName(statisticsTimeKindText, timeKind);
-        createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindText, newStatisticsTimeKindText, commonStaticText);
+        let newStatisticsTimeKindText = this.createCSSVariableName(variablesGameStatisticsTimeGeneral.statisticsTimeKindText, timeKind);
+        createElementDivWithIdAndSetClassName(newGameFiledStatisticsTimeKindText, newStatisticsTimeKindText, variablesGameStatisticsTimeGeneral.commonStaticText);
 
         setElementClassNameSameAsIdAndSetText(newStatisticsTimeKindText, newStatisticsTimeKindTextDisplay);
     }
 
-     createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDisplay) {
+    createContainerStatisticsTime(timeKind, newStatisticsTimeKindTextDisplay) {
         this.createContainerStatisticsTimeMain(timeKind);
-         this.createContainerStatisticsTimeUpdate(timeKind);
-         this.createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay);
+        this.createContainerStatisticsTimeUpdate(timeKind);
+        this.createContainerStatisticsTimeTextStatic(timeKind, newStatisticsTimeKindTextDisplay);
     }
 
-     createContainerStatisticsTimeBest() {
-         this.createContainerStatisticsTime(timeKindBest, statisticsTimeBestTextDisplay);
+    createContainerStatisticsTimeBest() {
+        this.createContainerStatisticsTime(variablesGameStatisticsTimeGeneral.timeKindBest, variablesGameStatisticsTimeGeneral.statisticsTimeBestTextDisplay);
     }
 
-     createContainerStatisticsTimeMin() {
-         this.createContainerStatisticsTime(timeKindMin, statisticsTimeMinTextDisplay);
+    createContainerStatisticsTimeMin() {
+        this.createContainerStatisticsTime(variablesGameStatisticsTimeGeneral.timeKindMin, variablesGameStatisticsTimeGeneral.statisticsTimeMinTextDisplay);
     }
 
-     createContainerStatisticsTimeAvg() {
-         this.createContainerStatisticsTime(timeKindAvg, statisticsTimeAvgTextDisplay);
+    createContainerStatisticsTimeAvg() {
+        this.createContainerStatisticsTime(variablesGameStatisticsTimeGeneral.timeKindAvg, variablesGameStatisticsTimeGeneral.statisticsTimeAvgTextDisplay);
     }
 
-     createContainerStatisticsTimeMax() {
-         this.createContainerStatisticsTime(timeKindMax, statisticsTimeMaxTextDisplay);
+    createContainerStatisticsTimeMax() {
+        this.createContainerStatisticsTime(variablesGameStatisticsTimeGeneral.timeKindMax, variablesGameStatisticsTimeGeneral.statisticsTimeMaxTextDisplay);
     }
 
-     createGameFieldStatisticsTime() {
-        createElementDivWithTheSameIdAndClassName(containerGameFiledStatisticsTime, containerGameFiledStatisticsTimeParts);
-         this.createContainerStatisticsTimeBest();
-         this.createContainerStatisticsTimeMin();
-         this.createContainerStatisticsTimeAvg();
-         this.createContainerStatisticsTimeMax();
+    createGameFieldStatisticsTime() {
+        createElementDivWithTheSameIdAndClassName(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTime, variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeParts);
+        this.createContainerStatisticsTimeBest();
+        this.createContainerStatisticsTimeMin();
+        this.createContainerStatisticsTimeAvg();
+        this.createContainerStatisticsTimeMax();
     }
 }

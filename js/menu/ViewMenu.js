@@ -7,8 +7,11 @@ import {
 
 let clickNumberButton = 1;
 
+
 import {ViewGameConfigurationRound} from "../clickerGame/ViewGameConfigurationRound.js";
-import {containerMainSectionMenu} from "../common/variable/main/variablesMain";
+import * as variablesMain from "../common/variable/main/variablesMain.js";
+import * as variablesMenu from "../common/variable/menu/variablesMenu.js";
+
 
 const viewGameConfigurationRound = new ViewGameConfigurationRound();
 
@@ -22,17 +25,17 @@ export class ViewMenu {
     }
 
     createContainerMainMenu() {
-        createContainerMainElements(containerMainSectionMenu, sectionMenu, containerSectionMenu, containerMenuMain);
+        createContainerMainElements(variablesMain.containerMainSectionMenu, variablesMenu.sectionMenu, variablesMenu.containerSectionMenu, variablesMenu.containerMenuMain);
     }
 
     createContainerMainMenuParts() {
-        createElementDivWithTheSameIdAndClassName(containerMenuMain, containerMenuMainParts);
+        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMain, variablesMenu.containerMenuMainParts);
     }
 
     createContainerManuTitle() {
-        createElementDivWithTheSameIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
-        createElementDivWithTheSameIdAndClassName(containerMenuTitleMain, menuTitle);
-        createElementP(menuTitle, menuTitleText);
-        setElementClassNamedAndText(menuTitleText, menuTitleText, menuTitleTextDisplay);
+        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMainParts, variablesMenu.containerMenuTitleMain);
+        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuTitleMain, variablesMenu.menuTitle);
+        createElementP(variablesMenu.menuTitle, variablesMenu.menuTitleText);
+        setElementClassNamedAndText(variablesMenu.menuTitleText, variablesMenu.menuTitleText, variablesMenu.menuTitleTextDisplay);
     }
 }

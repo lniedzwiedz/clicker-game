@@ -5,41 +5,43 @@ import {
     createElementDivWithTheSameIdAndClassName, isElementsExistById
 } from "../common/function/commonFunctions.js";
 
+import * as variablesGameButtons from "../common/variable/clickerGame/variablesGameButtons.js";
+
 export class ViewGameButton {
 
     createGameFieldPButtonMain() {
         // start and stop
-        createElementDiv(containerGameFiledButtonMain, containerGameFiledButtonsMainParts);
+        createElementDiv(variablesGameButtons.containerGameFiledButtonMain, variablesGameButtons.containerGameFiledButtonsMainParts);
         this.createGameFieldPButtonMainStart();
         // createGameFieldPButtonMainStop();
     }
 
     createGameFieldPButtonPlay() {
-        createElementButton(containerGameFiledButtonPlay, gameFiledButtonPlay);
-        setElementClassNameById(gameFiledButtonPlay, gameFiledButtonPlay);
+        createElementButton(variablesGameButtons.containerGameFiledButtonPlay, variablesGameButtons.gameFiledButtonPlay);
+        setElementClassNameById(variablesGameButtons.gameFiledButtonPlay, variablesGameButtons.gameFiledButtonPlay);
         // setFunctionOnclick(gameFiledButtonPlay, functionNameOnclickPlayGameColor);
     }
 
     createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart, containerGameFiledButtonsMainStartTextDisplay) {
         createElementButtonAndSetFunctionOnclick(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart);
-        setElementClassNamedAndText(buttonMainStart, gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
+        setElementClassNamedAndText(buttonMainStart, variablesGameButtons.gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
     }
 
     createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
-        createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainParts, containerGameFiledButtonsMainStart);
+        createElementDivWithTheSameIdAndClassName(variablesGameButtons.containerGameFiledButtonsMainParts, containerGameFiledButtonsMainStart);
         createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
     }
 
     createGameFieldPButtonMainStart() {
-        this.createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
-        this.createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart, containerGameFiledButtonsMainStartTextDisplay)
+        this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStart, variablesGameButtons.gameFiledButtonMainStart);
+        this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStart, variablesGameButtons.buttonMainStart, variablesGameButtons.functionNameOnclickPlayGameColorStart, variablesGameButtons.containerGameFiledButtonsMainStartTextDisplay)
     }
 
     createGameFieldPButtonMainStop() {
-        let result = isElementsExistById(containerGameFiledButtonsMainStop);
+        let result = isElementsExistById(variablesGameButtons.containerGameFiledButtonsMainStop);
         if (!result) {
-            this.createContainerGameFieldButtonMain(containerGameFiledButtonsMainStop, gameFiledButtonMainStop);
-            this.createAndConfigureGameButton(gameFiledButtonMainStop, buttonMainStop, functionNameOnclickPlayGameColorStop, containerGameFiledButtonsMainStopTextDisplay)
+            this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStop, variablesGameButtons.gameFiledButtonMainStop);
+            this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.buttonMainStop, variablesGameButtons.functionNameOnclickPlayGameColorStop, variablesGameButtons.containerGameFiledButtonsMainStopTextDisplay)
         }
     }
 }

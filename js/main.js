@@ -10,22 +10,20 @@ import {
     containerMain, containerMainHome,
     containerMainSectionActions, containerMainSectionFooter, containerMainSectionHome,
     containerMainSectionMenu, sectionHome
-} from "./common/variable/main/variablesMain";
+} from "./common/variable/main/variablesMain.js";
 import {
     containerGameFiledButtonMain,
     containerGameFiledButtonPlay
-} from "./common/variable/clickerGame/variablesGameButtons";
-import {containerGameFiledStatisticsTime} from "./common/variable/clickerGame/variablesGameStatisticsTimeGeneral";
-import {containerGameFiledStatisticsFraud} from "./common/variable/clickerGame/variablesGameStatisticsTimeFraud";
-// import {ViewGameConfigurationRound} from "./clickerGame/ViewGameConfigurationRound.js";
-// import {ViewGameStatisticsTimeFraud} from "./clickerGame/ViewGameStatisticsTimeFraud.js";
-// import {ViewGameStatisticsTimeGeneral} from "./clickerGame/ViewGameStatisticsTimeGeneral.js";
+} from "./common/variable/clickerGame/variablesGameButtons.js";
+import {containerGameFiledStatisticsTime} from "./common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
+import {containerGameFiledStatisticsFraud} from "./common/variable/clickerGame/variablesGameStatisticsTimeFraud.js";
+import {ViewFooter} from "./footer/ViewFooter.js";
+
 
 const viewMenu = new ViewMenu();
-// const ViewGameConfigurationRound = new ViewGameConfigurationRound();
 const viewGameButton = new ViewGameButton();
-// const viewGameStatisticsTimeFraud = new ViewGameStatisticsTimeFraud();
-// const viewGameStatisticsTimeGeneral = new ViewGameStatisticsTimeGeneral();
+const viewFooter = new ViewFooter();
+
 
 
 function setContainerMainSection() {
@@ -40,7 +38,7 @@ function setConfigurationWebpageStart() {
     setContainerMainSection();
     viewMenu.createMenu();
     createSubpageHome();
-    createFooter();
+    viewFooter.createFooter();
 }
 
 // main section
