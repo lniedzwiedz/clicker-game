@@ -1,7 +1,9 @@
 import {
     createContainerMainElements,
-    createElementDivWithTheSameIdAndClassName, createElementP,
-    setElementClassNameById, setElementClassNameSameAsIdAndSetText
+    createElementDivWithTheSameIdAndClassName,
+    createElementP,
+    setElementClassNameById,
+    setElementClassNameSameAsIdAndSetText
 } from "../common/function/commonFunctions.js";
 import * as variablesFooter from "../common/variable/footer/variablesFooter.js";
 import * as variablesMain from "../common/variable/main/variablesMain.js";

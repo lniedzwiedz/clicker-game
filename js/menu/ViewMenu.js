@@ -5,15 +5,8 @@ import {
     setElementClassNamedAndText
 } from "../common/function/commonFunctions.js";
 
-let clickNumberButton = 1;
-
-
-import {ViewGameConfigurationRound} from "../clickerGame/ViewGameConfigurationRound.js";
 import * as variablesMain from "../common/variable/main/variablesMain.js";
 import * as variablesMenu from "../common/variable/menu/variablesMenu.js";
-
-
-const viewGameConfigurationRound = new ViewGameConfigurationRound();
 
 export class ViewMenu {
 
@@ -21,7 +14,6 @@ export class ViewMenu {
         this.createContainerMainMenu();
         this.createContainerMainMenuParts();
         this.createContainerManuTitle();
-        viewGameConfigurationRound.createContainerManuConfigurationRound();
     }
 
     createContainerMainMenu() {

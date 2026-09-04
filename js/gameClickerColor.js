@@ -6,7 +6,7 @@
 //     setElementStyletAsGrid, setElementTextById,
 //     valueToString
 // } from "./common/function/commonFunctions";
-// import {ViewGameButton} from "./clickerGame/ViewGameButton";
+// import {ViewGame} from "./clickerGame/ViewGame";
 // import ViewGameStatisticsTimeFraud from "./clickerGame/ViewGameStatisticsTimeFraud";
 // import viewGameStatisticsTimeFraud from "./clickerGame/ViewGameStatisticsTimeFraud";
 //

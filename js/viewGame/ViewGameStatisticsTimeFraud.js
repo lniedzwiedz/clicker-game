@@ -1,15 +1,16 @@
 import {
     createElementDiv,
     createElementDivAnaDivChild,
-    createElementDivWithIdAndSetClassName, createElementDivWithTheSameIdAndClassName,
-    setElementClassNameById, setElementClassNamedAndText, setElementClassNameSameAsIdAndSetText
+    createElementDivWithIdAndSetClassName, createElementDivWithTheSameIdAndClassName, removeElementById,
+    setElementClassNameById, setElementClassNamedAndText, setElementClassNameSameAsIdAndSetText,
+    setElementStyletAsGrid, setElementTextById, valueToString
 } from "../common/function/commonFunctions.js";
 
 import * as variablesGameStatisticsTimeFraud from "../common/variable/clickerGame/variablesGameStatisticsTimeFraud.js";
-import {ViewGameClickerColor} from "../ViewGameClickerColor";
 import * as variablesGameStatisticsTimeGeneral from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
+import {ViewGameStatisticsTimeGeneral} from "./ViewGameStatisticsTimeGeneral.js";
 
-const viewGameClickerColor = new ViewGameClickerColor();
+const viewGameStatisticsTimeGeneral = new ViewGameStatisticsTimeGeneral();
 
 export class ViewGameStatisticsTimeFraud {
 
@@ -54,6 +55,98 @@ export class ViewGameStatisticsTimeFraud {
         createElementDivWithTheSameIdAndClassName(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraud, variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudParts);
         this.createContainerStatisticsFraudSum();
         this.createContainerStatisticsFraudRoundUpdate();
-        viewGameClickerColor.createContainerStatisticsFraudCountPerRound();
+        this.createContainerStatisticsFraudCountPerRound();
+    }
+
+    createElementFraudCountRoundInner(parentId, childId) {
+        createElementDiv(parentId, childId);
+        setElementClassNameById(childId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay);
+        setElementClassNameById(childId, variablesGameStatisticsTimeGeneral.commonStaticText);
+        setElementClassNameById(childId, variablesGameStatisticsTimeFraud.fraudCountRoundCommon);
+        setElementTextById(childId, variablesGameStatisticsTimeFraud.statisticsFraudCountNumberTextDisplaySetUp);
+    }
+
+    createElementFraudCountRoundMain(parentId, childId) {
+        createElementDiv(parentId, childId);
+        setElementClassNameById(parentId, variablesGameStatisticsTimeFraud.fraudCountRound);
+        setElementClassNameById(parentId, variablesGameStatisticsTimeFraud.fraudCountRoundUpdateNumber);
+    }
+
+    createContainerStatisticsFraudCountPerRound(maxClicksNumber) {
+
+        let parentId = variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountGamePlay;
+        let fraudNumber = maxClicksNumber;
+
+        let gridRowStartNumber = 1;
+        let gridColumnStartNumber = 1;
+        let gridRowEndNumber = 2;
+        let gridColumnEndNumber = 2;
+
+        let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
+        let gridTemplateColumns = "repeat(" + fraudNumber + ", 1fr 100fr 1fr)";
+        setElementStyletAsGrid(parentId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
+
+        let gridRowStartNumberChild = 2;
+        let gridColumnStartNumberChild = 2;
+        let gridRowEndNumberChild = 3;
+        let gridColumnEndNumberChild = 3;
+
+        for (let i = 0; i < fraudNumber; i++) {
+
+            let childId = variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudCountGamePlay + "-" + valueToString(i);
+            this.createElementFraudCountRoundMain(parentId, childId);
+
+            let gridTemplateRowsChild = "1fr";
+            let gridTemplateColumnsChild = "1fr";
+            setElementStyletAsGrid(childId, gridRowStartNumberChild, gridColumnStartNumberChild, gridRowEndNumberChild, gridColumnEndNumberChild, gridTemplateRowsChild, gridTemplateColumnsChild);
+
+            let grandChildId = variablesGameStatisticsTimeFraud.fraudCountRoundGamePlayUpdateNumberPrefix + valueToString(i);
+            this.createElementFraudCountRoundInner(childId, grandChildId);
+
+            gridColumnStartNumberChild += 3;
+            gridColumnEndNumberChild += 3;
+        }
+    }
+
+    setGameStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber) {
+        this.getGameStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber);
+        this.setGameStatisticFraudCountedNumber();
+        this.setGameStatisticFraudCountedSumNumber();
+        this.setGameSConfigurationStatisticFraud();
+    }
+
+    getGameStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber) {
+        return fraudCountedSumNumber += fraudCountedNumber;
+    }
+
+    setGameSConfigurationStatisticFraud(fraudCountRoundIndex, fraudCountedNumber) {
+        fraudCountRoundIndex++;
+        fraudCountedNumber = 0;
+    }
+
+    setGameStatisticFraudCountedNumber(fraudCountedNumber, fraudCountRoundIndex) {
+        let result;
+        if (fraudCountedNumber < 10)
+            result = valueToString(fraudCountedNumber) + variablesGameStatisticsTimeFraud.statisticsFraudCountNumberTextDisplayLessThanTen;
+        else
+            result = fraudCountedNumber;
+
+        let elementId = variablesGameStatisticsTimeFraud.fraudCountRoundGamePlayUpdateNumberPrefix + fraudCountRoundIndex;
+        let text = variablesGameStatisticsTimeFraud.statisticsFraudCountNumberTextDisplay + result;
+        setElementTextById(elementId, text);
+    }
+
+    setGameStatisticFraudCountedSumNumber(fraudCountedSumNumber) {
+        setElementTextById(variablesGameStatisticsTimeFraud.statisticsFraudBestGamePlay, fraudCountedSumNumber);
+    }
+
+    createContainersGameFiledStatistics() {
+        viewGameStatisticsTimeGeneral.createGameFieldStatisticsTime();
+        this.createGameFieldStatisticsFraud();
+    }
+
+    removeContainersGameFiledStatistics() {
+        removeElementById(variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTimeParts);
+        removeElementById(variablesGameStatisticsTimeFraud.containerGameFiledStatisticsFraudParts);
     }
 }

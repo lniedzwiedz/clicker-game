@@ -1,70 +1,24 @@
-import {ViewGameButton} from "./clickerGame/ViewGameButton.js";
-import { ViewMenu } from "./menu/ViewMenu.js";
-import {
-    createContainerMainElements,
-    createElementDiv,
-    createElementDivWithTheSameIdAndClassName
-} from "./common/function/commonFunctions.js";
-import {
-    containerGameElements,
-    containerMain, containerMainHome,
-    containerMainSectionActions, containerMainSectionFooter, containerMainSectionHome,
-    containerMainSectionMenu, sectionHome
-} from "./common/variable/main/variablesMain.js";
-import {
-    containerGameFiledButtonMain,
-    containerGameFiledButtonPlay
-} from "./common/variable/clickerGame/variablesGameButtons.js";
-import {containerGameFiledStatisticsTime} from "./common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
-import {containerGameFiledStatisticsFraud} from "./common/variable/clickerGame/variablesGameStatisticsTimeFraud.js";
+import {ViewMain} from "./ViewMain.js";
+import {ViewMenu} from "./menu/ViewMenu.js";
+import {ViewGame} from "./viewGame/ViewGame.js";
 import {ViewFooter} from "./footer/ViewFooter.js";
 
 
+const viewMain = new ViewMain();
+viewMain.setContainerMainSection();
+
+
 const viewMenu = new ViewMenu();
-const viewGameButton = new ViewGameButton();
+viewMenu.createMenu();
+
+
+const viewGame = new ViewGame();
+viewGame.createViewGameConfigurationRound();
+viewGame.createViewGamePlay();
+
 const viewFooter = new ViewFooter();
+viewFooter.createFooter();
 
 
 
-function setContainerMainSection() {
-    createElementDiv(containerMain, containerMainSectionMenu);
-    createElementDiv(containerMain, containerMainSectionActions);
-    createElementDiv(containerMain, containerMainSectionFooter);
-}
-
-setConfigurationWebpageStart();
-
-function setConfigurationWebpageStart() {
-    setContainerMainSection();
-    viewMenu.createMenu();
-    createSubpageHome();
-    viewFooter.createFooter();
-}
-
-// main section
-function createSubpageHome() {
-    createMainContainerHome();
-    createContainerGameElements();
-}
-
-function createMainContainerHome() {
-    createContainerMainElements(containerMainSectionActions, sectionHome, containerMainSectionHome, containerMainHome);
-}
-
-function createMainContainerGameElements() {
-    createElementDivWithTheSameIdAndClassName(containerMainHome, containerGameElements);
-    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledButtonPlay);
-    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledButtonMain);
-    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledStatisticsTime);
-    createElementDivWithTheSameIdAndClassName(containerGameElements, containerGameFiledStatisticsFraud);
-}
-
-function createContainerGameElements() {
-    createMainContainerGameElements();
-    viewGameButton.createGameFieldPButtonPlay();
-    viewGameButton.createGameFieldPButtonMain();
-    // createGameFieldStatisticsTime();
-    // createGameFieldStatisticsFraud();
-}
-
-console.log("Clicker game: version 20260903v50_branch_class_3");
+console.log("Clicker game: version 20260904v50_branch_class_4");

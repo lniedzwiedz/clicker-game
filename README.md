@@ -1,11 +1,11 @@
-# 🐭 Clicker Game 🐭
+# 🐭 Clicker GameEngine 🐭
 
-**Clicker Game** is a game that tests your reflexes.
+**Clicker GameEngine** is a game that tests your reflexes.
 Your goal is to click on the color as quickly as possible when it changes.
 
 ---
 
-## Game Rules
+## GameEngine Rules
 
 * Click on the color **as soon as it changes**.
 * The game also tracks the number of clicks **before the color changes** to catch any attempts to “cheat”.
@@ -31,6 +31,6 @@ The game is responsive and works smoothly on computers and tablets.
 
 ---
 
-Here is a short preview of Clicker Game:
+Here is a short preview of Clicker GameEngine:
   
-![Clicker Game](docs/gif/clickerGame.gif)
+![Clicker GameEngine](docs/gif/clickerGame.gif)
