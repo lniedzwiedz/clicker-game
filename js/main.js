@@ -21,4 +21,4 @@ viewFooter.createFooter();
 
 
 
-console.log("Clicker game: version 20260904v50_branch_class_4");
+console.log("Clicker game: version 20260904v50_branch_class_5");

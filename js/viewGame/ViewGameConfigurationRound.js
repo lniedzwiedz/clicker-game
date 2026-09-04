@@ -3,7 +3,7 @@ import {
     createElementDiv,
     createElementDivAnaDivChild,
     createElementDivWithTheSameIdAndClassName,
-    getElementById,
+    removeElementClassNameById,
     setElementAttributeValueById,
     setElementClassNameById,
     setElementClassNamedAndText,
@@ -17,10 +17,6 @@ import * as variablesGameStatisticsTimeGeneral
     from "../common/variable/clickerGame/variablesGameStatisticsTimeGeneral.js";
 
 export class ViewGameConfigurationRound {
-
-    constructor(gameRoundAction) {
-        this.gameRoundAction = gameRoundAction;
-    }
 
     createViewGameConfigurationRound() {
         this.createMainContainerConfiguration();
@@ -121,17 +117,31 @@ export class ViewGameConfigurationRound {
         setElementAttributeValueById(buttonId, valueToString(attributeValue));
         setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
         setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
-        this.setConfigurationClickNumber(buttonId, this.setConfigurationClickButtonBase);
+        // this.setConfigurationClickNumber(buttonId, this.setConfigurationClickButtonBase);
+        // this.gameRoundAction.setFunctionOnCLick(buttonId);
+
     }
 
-    setConfigurationClickNumber(buttonId, functionToCall) {
-        const button = getElementById(buttonId);
-        button.addEventListener("click", (event) => {
-            functionToCall.call(this, event);
-        });
+    setConfigurationNumberButtonChosen(event) {
+
+        removeElementClassNameById(this.buttonIdChosenFinalForGame, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+        removeElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+        setElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+
+        this.buttonIdChosenFinalForGame = this.buttonIdClickedCurrent;
+        this.buttonIdClickedCurrent = event.currentTarget.id;
     }
 
-    setConfigurationClickButtonBase(event) {
-      this.gameRoundAction.setConfigurationClickNumberButtonChanges(event);
+    removeConfigurationButtonChosenNumber(maxClicksNumberSetByUser) {
+        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+
+            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+                removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+            }
+        }
     }
+
 }
