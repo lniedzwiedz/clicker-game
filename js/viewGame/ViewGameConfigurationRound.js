@@ -3,7 +3,6 @@ import {
     createElementDiv,
     createElementDivAnaDivChild,
     createElementDivWithTheSameIdAndClassName,
-    removeElementClassNameById,
     setElementAttributeValueById,
     setElementClassNameById,
     setElementClassNamedAndText,
@@ -117,31 +116,18 @@ export class ViewGameConfigurationRound {
         setElementAttributeValueById(buttonId, valueToString(attributeValue));
         setElementClassNames(buttonId, variablesGameStatisticsTimeGeneral.commonGameFiledDisplay, variableGameConfigurationRound.menuGameConfigurationButton);
         setElementClassNamedAndText(buttonId, variableGameConfigurationRound.menuGameConfigurationText, elementText);
-        // this.setConfigurationClickNumber(buttonId, this.setConfigurationClickButtonBase);
-        // this.gameRoundAction.setFunctionOnCLick(buttonId);
-
     }
 
-    setConfigurationNumberButtonChosen(event) {
-
-        removeElementClassNameById(this.buttonIdChosenFinalForGame, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-        removeElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-        setElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-
-        this.buttonIdChosenFinalForGame = this.buttonIdClickedCurrent;
-        this.buttonIdClickedCurrent = event.currentTarget.id;
-    }
-
-    removeConfigurationButtonChosenNumber(maxClicksNumberSetByUser) {
-        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
-            let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
-            removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-
-            if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
-                removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
-                setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-            }
-        }
-    }
+    // removeConfigurationButtonChosenNumber(maxClicksNumberSetByUser) {
+    //     for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+    //         let buttonId = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber)
+    //         removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //
+    //         if (valueToString(maxClicksNumberSetByUser) === valueToString(clickNumber)) {
+    //             removeElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonChosenNumber);
+    //             setElementClassNameById(buttonId, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    //         }
+    //     }
+    // }
 
 }

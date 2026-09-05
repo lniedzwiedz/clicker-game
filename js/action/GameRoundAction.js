@@ -1,8 +1,5 @@
 import {
     getElementAttributeValueById,
-    getElementById,
-    removeElementClassNameById,
-    setElementClassNameById,
     valueToString
 } from "../common/function/commonFunctions.js";
 
@@ -10,16 +7,36 @@ import * as variableGameConfigurationRound from "../common/variable/clickerGame/
 
 export class GameRoundAction {
 
-    buttonIdChosenFinalForGame = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5)
-    buttonIdClickedCurrent = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5);
+    buttonIdPrevious = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5)
+    buttonIdCurrent = variableGameConfigurationRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5);
+    buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
 
-    setConfigurationClickNumberButtonChanges(event) {
-        removeElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
-        this.buttonIdClickedCurrent = event.currentTarget.id;
-        setElementClassNameById(this.buttonIdClickedCurrent, variableGameConfigurationRound.menuGameConfigurationButtonCurrentNumber);
+    setConfigurationButtonIdClickedCurrent(event) {
+        this.buttonIdPrevious = this.buttonIdCurrent;
+        this.buttonIdCurrent = event.currentTarget.id;
+    }
+
+    getButtonIdCurrent(){
+        return this.buttonIdCurrent;
+    }
+
+    getButtonIdPrevious() {
+        return this.buttonIdPrevious;
+    }
+
+    setButtonIdChosenFinaRoundNumberForGame() {
+        this.buttonIdPrevious = this.buttonIdCurrent;
+    }
+
+    setButtonIdPMaxClicksNumberSetByUser() {
+        this.buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
+    }
+
+    getButtonIdPMaxClicksNumberSetByUser() {
+        return this.buttonIdMaxClicksNumberSetByUser;
     }
 
     getMaxClicksNumberSetByUser() {
-        return getElementAttributeValueById(this.buttonIdChosenFinalForGame);
+        return getElementAttributeValueById(this.buttonIdPrevious);
     }
 }

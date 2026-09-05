@@ -1,8 +1,9 @@
 import {GameRoundAction} from "../action/GameRoundAction.js";
 import {ViewGameConfigurationRound} from "./ViewGameConfigurationRound.js";
-import {ViewGameButtons} from "./ViewGameButtons.js";
-import {GameButtonsAction} from "../action/GameButtonsAction.js";
-import {GameRoundController} from "../controller/GameRoundController.js";
+import {GameButtonsPlayView} from "./GameButtonsPlayView.js";
+import {GameButtonsPlayAction} from "../action/GameButtonsPlayAction.js";
+import {GameButtonsRoundController} from "../controller/GameButtonsRoundController.js";
+import {GameButtonsPlayController} from "../controller/GameButtonsPlayController.js";
 
 export class ViewGame {
 
@@ -15,26 +16,28 @@ export class ViewGame {
             new ViewGameConfigurationRound();
 
         this.gameRoundController =
-            new GameRoundController(
+            new GameButtonsRoundController(
                 this.viewGameConfigurationRound, this.gameRoundAction);
 
 
+        this.gameButtonsView =
+            new GameButtonsPlayView();
+
+        this.gameButtonsAction =
+            new GameButtonsPlayAction();
+
+        this.gameButtonsController =
+            new GameButtonsPlayController(
+                this.gameButtonsView, this.gameButtonsAction, this.gameRoundAction);
 
 
-        // old - to fix
-        this.gameButtonAction =
-            new GameButtonsAction(this.gameRoundAction, this.viewGameButtons);
-
-
-        this.viewGameButtons =
-            new ViewGameButtons(this.gameButtonAction);
     }
 
     createViewGameConfigurationRound() {
         this.gameRoundController.createConfigurationRound();
     }
 
-    createViewGamePlay() {
-        this.viewGameButtons.createViewGameButtonPlay();
+    createGameButtonsConfigurationView() {
+        this.gameButtonsController.createGameButtonsView();
     }
 }

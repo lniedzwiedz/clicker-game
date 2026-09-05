@@ -10,11 +10,7 @@ import {
 import * as variablesGameButtons from "../common/variable/clickerGame/variablesGameButtons.js";
 
 
-export class ViewGameButtons {
-
-    constructor(gameButtonAction, ) {
-        this.gameButtonAction = gameButtonAction;
-    }
+export class GameButtonsPlayView {
 
     createViewGameButtonPlay() {
         this.createGameFieldPButtonMain();
@@ -39,13 +35,8 @@ export class ViewGameButtons {
     // }
 
     createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, containerGameFiledButtonsMainStartTextDisplay) {
-        // createElementButtonAndSetFunctionOnclick(gameFiledButtonMainStart, buttonMainStart, functionNameOnclickPlayGameColorStart);
-
         createElementButton(gameFiledButtonMainStart, buttonMainStart);
-        // this.setFunctionOnClickButton(buttonMainStart, this.setConfigurationButtonMainGameStart);
-        // this.gameButtonAction.setFunctionOnClickButton(buttonMainStart, functionNameOnclickPlayGameColorStart);
         setElementClassNamedAndText(buttonMainStart, variablesGameButtons.gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
-
     }
 
     createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
@@ -56,7 +47,7 @@ export class ViewGameButtons {
     createGameFieldPButtonMainStart() {
         this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStart, variablesGameButtons.gameFiledButtonMainStart);
         this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStart, variablesGameButtons.buttonMainStart, variablesGameButtons.containerGameFiledButtonsMainStartTextDisplay)
-        this.gameButtonAction.setFunctionOnCLick(variablesGameButtons.buttonMainStart);
+        // this.gameButtonAction.setFunctionOnCLick(variablesGameButtons.buttonMainStart);
     }
 
     createGameFieldPButtonMainStop() {
@@ -64,7 +55,7 @@ export class ViewGameButtons {
         if (!result) {
             this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStop, variablesGameButtons.gameFiledButtonMainStop);
             // this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.buttonMainStop, variablesGameButtons.functionNameOnclickPlayGameColorStop, variablesGameButtons.containerGameFiledButtonsMainStopTextDisplay)
-            this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.buttonMainStop, this.gameButtonAction.setConfigurationStopForPlay, variablesGameButtons.containerGameFiledButtonsMainStopTextDisplay)
+            this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.buttonMainStop, variablesGameButtons.containerGameFiledButtonsMainStopTextDisplay)
         }
     }
 

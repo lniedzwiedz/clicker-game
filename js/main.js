@@ -2,6 +2,7 @@ import {ViewMain} from "./ViewMain.js";
 import {ViewMenu} from "./menu/ViewMenu.js";
 import {ViewGame} from "./viewGame/ViewGame.js";
 import {ViewFooter} from "./footer/ViewFooter.js";
+import {GameButtonsPlayView} from "./viewGame/GameButtonsPlayView.js";
 
 
 const viewMain = new ViewMain();
@@ -14,11 +15,14 @@ viewMenu.createMenu();
 
 const viewGame = new ViewGame();
 viewGame.createViewGameConfigurationRound();
-viewGame.createViewGamePlay();
+viewGame.createGameButtonsConfigurationView();
+
+
+
 
 const viewFooter = new ViewFooter();
 viewFooter.createFooter();
 
 
 
-console.log("Clicker game: version 20260904v50_branch_class_5");
+console.log("Clicker game: version 20260904v50_branch_class_6");
