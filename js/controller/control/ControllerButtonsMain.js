@@ -26,34 +26,34 @@ export class ControllerButtonsMain {
         this.controllerButtonStop.setConfigurationAfterClick();
         this.controllerButtonStart.setConfigurationBeforeClick();
 
-        this.removeConfigurationForRoundNumber();
+        this.setConfigurationRoundNumberWhenGameStop();
 
         this.removeEventListenerOnClickButtonStop();
         this.removeEventListenerOnClickButtonClickColor();
     }
 
-    createButtonsStop() {
-        this.controllerButtonStop.createButtonsStop();
+    createButtonStop() {
+        this.controllerButtonStop.createButtonStop();
     }
 
     configureClickColor() {
         this.controllerButtonClickColor.configureButtonClickColor();
     }
 
-    getMaxClicksNumberSetByUser() {
-        return this.controllerButtonsRound.getMaxClicksNumberSetByUser();
+    getRoundNumber() {
+        return this.controllerButtonsRound.getRoundNumber();
     }
 
     setConfigurationForRoundNumber() {
         this.controllerButtonsRound.setConfigurationButtonsFinalNumberForPlay();
     }
 
-    removeConfigurationForRoundNumber() {
-        this.controllerButtonsRound.removeConfigurationButtonsFinalNumberForPlay();
+    setConfigurationRoundNumberWhenGameStop() {
+        this.controllerButtonsRound.setConfigurationRoundNumberWhenGameStop();
     }
 
     configureButtonsAfterGameOver() {
-        this.removeConfigurationForRoundNumber();
+        this.setConfigurationRoundNumberWhenGameStop();
 
         this.removeEventListenerOnClickButtonClickColor();
         this.configureClickColorGameOver();
@@ -87,8 +87,8 @@ export class ControllerButtonsMain {
         this.controllerButtonClickColor.setButtonClickColorAtStart();
     }
 
-    setButtonClickColorRandom(gameRandomColor) {
-        this.controllerButtonClickColor.setButtonClickColorRandom(gameRandomColor);
+    setButtonClickColorRandomColor(gameRandomColor) {
+        this.controllerButtonClickColor.setButtonClickColorRandomColor(gameRandomColor);
     }
 
     setConfigurationButtonsAtStart() {

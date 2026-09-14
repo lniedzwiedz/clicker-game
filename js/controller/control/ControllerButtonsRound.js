@@ -1,11 +1,9 @@
 import {
     getElementById,
-    removeElementClassNameById,
-    setElementClassNameById,
     valueToString
 } from "../../common/function/commonFunctions.js";
 
-import * as variableButtonRound from "../../common/variable/control/variableButtonRound.js";
+import * as variablesButtonRound from "../../common/variable/control/variablesButtonRound.js";
 
 
 export class ControllerButtonsRound {
@@ -21,7 +19,7 @@ export class ControllerButtonsRound {
     }
 
     createConfigurationRound() {
-        this.viewButtonsRound.createViewGameConfigurationRound();
+        this.viewButtonsRound.createContainerRoundNumberConfiguration();
         this.setButtonsConfigurationRound();
     }
 
@@ -29,7 +27,7 @@ export class ControllerButtonsRound {
 
         for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
 
-            const buttonId = variableButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber);
+            const buttonId = variablesButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumber);
             const button = getElementById(buttonId);
 
             button.addEventListener("click", (event) => {
@@ -43,13 +41,16 @@ export class ControllerButtonsRound {
         this.actionButtonsRound.setConfigurationButtonIdClickedCurrent(event);
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
 
-        removeElementClassNameById(buttonIdPrevious, variableButtonRound.menuGameConfigurationButtonCurrentNumber);
-        setElementClassNameById(currentButtonId, variableButtonRound.menuGameConfigurationButtonCurrentNumber);
+        // removeElementClassNameById(buttonIdPrevious, variablesButtonRound.buttonRoundNumberMarkCurrent);
+        // setElementClassNameById(currentButtonId, variablesButtonRound.buttonRoundNumberMarkCurrent);
+
+        this.viewButtonsRound.setStyleButtonRoundNumberAtStart(buttonIdPrevious, currentButtonId);
+
     }
 
-    getMaxClicksNumberSetByUser() {
+    getRoundNumber() {
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
-        return this.viewButtonsRound.getMaxClicksNumberSetByUser(currentButtonId);
+        return this.viewButtonsRound.getRoundNumberSetupByUser(currentButtonId);
     }
 
     setConfigurationButtonsFinalNumberForPlay() {
@@ -59,13 +60,16 @@ export class ControllerButtonsRound {
         const buttonIdPrevious = this.actionButtonsRound.getButtonIdPrevious();
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
 
-        removeElementClassNameById(buttonIdPrevious, variableButtonRound.menuGameConfigurationButtonCurrentNumber);
-        removeElementClassNameById(roundNumberFinal, variableButtonRound.menuGameConfigurationButtonChosenNumber);
-        setElementClassNameById(currentButtonId, variableButtonRound.menuGameConfigurationButtonChosenNumber);
+        // removeElementClassNameById(buttonIdPrevious, variablesButtonRound.buttonRoundNumberMarkCurrent);
+        // removeElementClassNameById(roundNumberFinal, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
+        // setElementClassNameById(currentButtonId, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
+
+        this.viewButtonsRound.setStyleButtonRoundNumberAfterGameStart(buttonIdPrevious, currentButtonId, roundNumberFinal);
     }
 
-    removeConfigurationButtonsFinalNumberForPlay() {
+    setConfigurationRoundNumberWhenGameStop() {
         const roundNumberFinal = this.actionButtonsRound.getButtonIdPMaxClicksNumberSetByUser();
-        removeElementClassNameById(roundNumberFinal, variableButtonRound.menuGameConfigurationButtonChosenNumber);
+        // removeElementClassNameById(roundNumberFinal, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
+        this.viewButtonsRound.setStyleButtonRoundNumberWhenGameStop(roundNumberFinal);
     }
 }

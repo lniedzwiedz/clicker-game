@@ -6,34 +6,34 @@ import {
     setElementClassNameById
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesButton from "../../common/variable/control/variablesButton.js";
 
 
 export class ViewButtonStop extends ViewButtons {
 
-    createGameFieldPButtonMainStop() {
-        if (!isElementsExistById(variablesGameButtons.containerGameFiledButtonsMainStop)) {
-            this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStop, variablesGameButtons.gameFiledButtonMainStop);
-            this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.buttonMainStop, variablesGameButtons.containerGameFiledButtonsMainStopTextDisplay);
+    createContainerButtonStopMain() {
+        if (!isElementsExistById(variablesButton.containerButtonStopMain)) {
+            this.createContainerButtonMain(variablesButton.containerButtonStopMain, variablesButton.buttonStopDiv);
+            this.createAndConfigureButton(variablesButton.buttonStopDiv, variablesButton.buttonStop, variablesButton.buttonStopDisplayIcon);
         }
     }
 
-    setIconColorAfterClick() {
-        this.setConfigurationButtonsAfterClick(variablesGameButtons.containerGameFiledButtonsMainStopTextDisplayId);
+    setIconColorBeforeClick() {
+        if (isElementsExistById(variablesButton.buttonStopDisplayText))
+            this.setConfigurationButtonBeforeClick(variablesButton.buttonStopDisplayText);
     }
 
-    setIconColorBeforeClick() {
-        if (isElementsExistById(variablesGameButtons.containerGameFiledButtonsMainStopTextDisplayId))
-            this.setConfigurationButtonsBeforeClick(variablesGameButtons.containerGameFiledButtonsMainStopTextDisplayId);
+    setIconColorAfterClick() {
+        this.setConfigurationButtonAfterClick(variablesButton.buttonStopDisplayText);
     }
 
     setConfigurationGameOver() {
-        this.setConfigurationButtonsBeforeClick(variablesGameButtons.containerGameFiledButtonsMainStartTextDisplayId);
-        setElementClassNameById(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.gameFiledButtonMainInactive);
+        this.setConfigurationButtonBeforeClick(variablesButton.buttonStartDisplayText);
+        setElementClassNameById(variablesButton.buttonStopDiv, variablesButton.buttonStartInactive);
     }
 
     removeConfigurationButtonStop() {
-        if (isElementsExistById(variablesGameButtons.gameFiledButtonMainStop))
-            removeElementClassNameById(variablesGameButtons.gameFiledButtonMainStop, variablesGameButtons.gameFiledButtonMainInactive);
+        if (isElementsExistById(variablesButton.buttonStopDiv))
+            removeElementClassNameById(variablesButton.buttonStopDiv, variablesButton.buttonStartInactive);
     }
 }

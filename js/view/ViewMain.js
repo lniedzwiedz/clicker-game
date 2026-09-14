@@ -3,39 +3,39 @@ import {
     createElementDiv,
     createElementDivWithTheSameIdAndClassName
 } from "../common/function/commonFunctions.js";
+
 import * as variablesMain from "../common/variable/main/variablesMain.js";
-import * as variablesGameButtons from "../common/variable/control/variablesGameButtons.js";
-import * as variablesGameStatisticsTimeGeneral
-    from "../common/variable/statistic/variablesStatisticsTime.js";
-import * as containerGameFiledStatisticsFraud from "../common/variable/statistic/variablesStatisticsFraud.js";
+import * as variablesButton from "../common/variable/control/variablesButton.js";
+import * as variablesStatisticsTime from "../common/variable/statistic/variablesStatisticsTime.js";
+import * as variablesStatisticsFraud from "../common/variable/statistic/variablesStatisticsFraud.js";
 
 export class ViewMain {
 
-    setConfigurationWebpageStart() {
+    createContainerSectionMain() {
         createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionMenu);
         createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionActions);
         createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionFooter);
     }
 
-    setContainerMainSection() {
-        this.setConfigurationWebpageStart();
-        this.createSubpageHome();
+    createContainerMainSection() {
+        this.createContainerSectionMain();
+        this.createContainerHome();
     }
 
-    createSubpageHome() {
-        this.createMainContainerHome();
-        this.createMainContainerGameElements();
+    createContainerHome() {
+        this.createContainerHomeMain();
+        this.createContainerHomeMainParts();
     }
 
-    createMainContainerHome() {
+    createContainerHomeMain() {
         createContainerMainElements(variablesMain.containerMainSectionActions, variablesMain.sectionHome, variablesMain.containerMainSectionHome, variablesMain.containerMainHome);
     }
 
-    createMainContainerGameElements() {
+    createContainerHomeMainParts() {
         createElementDivWithTheSameIdAndClassName(variablesMain.containerMainHome, variablesMain.containerGameElements);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesGameButtons.containerGameFiledButtonPlay);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesGameButtons.containerGameFiledButtonMain);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesGameStatisticsTimeGeneral.containerGameFiledStatisticsTime);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, containerGameFiledStatisticsFraud.containerGameFiledStatisticsFraud);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesButton.containerButtonClickColorMain);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesButton.containerButtonStartAndStopMain);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesStatisticsTime.containerGameFiledStatisticsTime);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesStatisticsFraud.containerGameFiledStatisticsFraud);
     }
 }

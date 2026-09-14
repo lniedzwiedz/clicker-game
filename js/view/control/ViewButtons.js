@@ -7,29 +7,29 @@ import {
     setElementClassNamedAndText
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesButton from "../../common/variable/control/variablesButton.js";
 
 export class ViewButtons {
 
-    createAndConfigureGameButton(gameFiledButtonMainStart, buttonMainStart, containerGameFiledButtonsMainStartTextDisplay) {
+    createAndConfigureButton(gameFiledButtonMainStart, buttonMainStart, containerGameFiledButtonsMainStartTextDisplay) {
         createElementButton(gameFiledButtonMainStart, buttonMainStart);
-        setElementClassNamedAndText(buttonMainStart, variablesGameButtons.gameFiledButtonMain, containerGameFiledButtonsMainStartTextDisplay);
+        setElementClassNamedAndText(buttonMainStart, variablesButton.buttonStartActive, containerGameFiledButtonsMainStartTextDisplay);
     }
 
-    createContainerGameFieldButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
-        createElementDivWithTheSameIdAndClassName(variablesGameButtons.containerGameFiledButtonsMainParts, containerGameFiledButtonsMainStart);
+    createContainerButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
+        createElementDivWithTheSameIdAndClassName(variablesButton.containerButtonStartAndStopMainParts, containerGameFiledButtonsMainStart);
         createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
     }
 
-    setConfigurationButtonsAfterClick(elementId) {
-        removeElementClassNameById(elementId, variablesGameButtons.gameFiledButtonMainTextDecorationBeforeClick);
-        setElementClassNameById(elementId, variablesGameButtons.gameFiledButtonMainTextDecorationAfterClick);
+    setConfigurationButtonBeforeClick(elementId) {
+        if (isElementsExistById(elementId)) {
+            removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconAfterClick);
+            setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconBeforeClick);
+        }
     }
 
-    setConfigurationButtonsBeforeClick(elementId) {
-        if (isElementsExistById(elementId)) {
-            removeElementClassNameById(elementId, variablesGameButtons.gameFiledButtonMainTextDecorationAfterClick);
-            setElementClassNameById(elementId, variablesGameButtons.gameFiledButtonMainTextDecorationBeforeClick);
-        }
+    setConfigurationButtonAfterClick(elementId) {
+        removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconBeforeClick);
+        setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconAfterClick);
     }
 }

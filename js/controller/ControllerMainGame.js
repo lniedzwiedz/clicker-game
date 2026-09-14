@@ -20,13 +20,13 @@ export class ControllerMainGame {
 
         const roundNumberSetupByUser =
             this.controllerButtonsMain
-                .getMaxClicksNumberSetByUser();
+                .getRoundNumber();
 
         this.game = new Game(roundNumberSetupByUser);
 
         this.controllerButtonsMain.setConfigurationForRoundNumber();
 
-        this.setConfigurationButtonStop();
+        this.createButtonStop();
 
         // ustawiamy callback FRAUD
         this.configureClickColorCounterFraud();
@@ -48,17 +48,17 @@ export class ControllerMainGame {
         this.controllerButtonsMain.setConfigurationButtonsAtStart();
     }
 
-    setConfigurationButtonStop() {
-        this.controllerButtonsMain.createButtonsStop();
+    createButtonStop() {
+        this.controllerButtonsMain.createButtonStop();
         this.configureButtonStop();
     }
 
     configureButtonStop() {
         this.controllerButtonsMain.setOnStop(() =>
-            this.setConfigurationClickForButtonStop());
+            this.handleClickStop());
     }
 
-    setConfigurationClickForButtonStop() {
+    handleClickStop() {
         this.controllerButtonsMain.setConfigurationAfterClickStop();
         this.clearClickColorTimeout();
     }
@@ -96,7 +96,7 @@ export class ControllerMainGame {
 
                 const color = this.game.getRandomColor();
 
-                this.controllerButtonsMain.setButtonClickColorRandom(color);
+                this.controllerButtonsMain.setButtonClickColorRandomColor(color);
 
                 this.game.setStartTime();
 
@@ -107,19 +107,19 @@ export class ControllerMainGame {
 
     configureClickColorCounterFraud() {
         this.controllerButtonsMain.setOnClickColor(() =>
-            this.setGameCounterFraud());
+            this.countFraudClick());
     }
 
-    setGameCounterFraud() {
+    countFraudClick() {
         this.game.playClickColorCounterFraud();
     }
 
     configureClickColorCounterTime() {
         this.controllerButtonsMain.setOnClickColor(() =>
-            this.createStatistic());
+            this.processClickColor());
     }
 
-    createStatistic() {
+    processClickColor() {
 
         if (this.game.getCountedRoundNumber() === 1)
             this.configureStatistic();
@@ -131,8 +131,11 @@ export class ControllerMainGame {
 
     configureStatistic() {
 
-        const maxClicksNumber = this.controllerButtonsMain
-            .getMaxClicksNumberSetByUser();
+        // const maxClicksNumber = this.controllerButtonsMain
+        //     .getRoundNumber();
+
+        const maxClicksNumber = this.game.getRoundNumber();
+
 
         this.controllerStatisticsMain
             .createConfigurationStatisticsMain(maxClicksNumber);

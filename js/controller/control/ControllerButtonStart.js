@@ -2,7 +2,7 @@ import {
     addEventListenerOnClickButton
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesButton from "../../common/variable/control/variablesButton.js";
 
 export class ControllerButtonStart {
 
@@ -12,34 +12,34 @@ export class ControllerButtonStart {
         this.onStart = null;
     }
 
-    createGameButtonsView() {
-        this.viewButtonStart.createGameFieldPButtonMainStart();
-        this.configureStartButton();
+    createButtonStart() {
+        this.viewButtonStart.createContainerButtonStartMain();
+        this.configureButtonStart();
     }
 
     setOnStart(onStart) {
         this.onStart = onStart;
     }
 
-    setConfigurationStartForPlay(event) {
+    handleClickStart(event) {
         if (this.onStart) {
             this.onStart();
         }
     }
 
-    configureStartButton() {
+    configureButtonStart() {
         addEventListenerOnClickButton(
-            variablesGameButtons.buttonMainStart,
-            this.setConfigurationStartForPlay,
+            variablesButton.buttonStart,
+            this.handleClickStart,
             this
         );
     }
 
-    setConfigurationAfterClick() {
-        this.viewButtonStart.setIconColorAfterClick();
-    }
-
     setConfigurationBeforeClick() {
         this.viewButtonStart.setIconColorBeforeClick();
+    }
+
+    setConfigurationAfterClick() {
+        this.viewButtonStart.setIconColorAfterClick();
     }
 }

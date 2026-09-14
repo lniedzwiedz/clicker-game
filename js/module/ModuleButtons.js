@@ -80,7 +80,7 @@ export class ModuleButtons {
     createGame() {
         this.controllerButtonsRound.createConfigurationRound();
         this.controllerButtonClickColor.createGameButtonsView();
-        this.controllerButtonStart.createGameButtonsView();
+        this.controllerButtonStart.createButtonStart();
     }
 
     getControllerButtonsMain() {

@@ -3,7 +3,7 @@ import {
     removeEventListenerOnClickButton
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesGameButtons from "../../common/variable/control/variablesButton.js";
 
 export class ControllerButtonStop {
 
@@ -14,8 +14,8 @@ export class ControllerButtonStop {
         this.buttonClickEvent = null;
     }
 
-    createButtonsStop() {
-        this.viewButtonStop.createGameFieldPButtonMainStop();
+    createButtonStop() {
+        this.viewButtonStop.createContainerButtonStopMain();
         this.configureButtonStop();
     }
 
@@ -23,7 +23,7 @@ export class ControllerButtonStop {
         this.onStop = onStop;
     }
 
-    setConfigurationStopForPlay() {
+    handleClickStop() {
         if (this.onStop) {
             this.onStop();
         }
@@ -32,8 +32,8 @@ export class ControllerButtonStop {
     configureButtonStop() {
         this.buttonClickEvent =
             addEventListenerOnClickButton(
-                variablesGameButtons.buttonMainStop,
-                this.setConfigurationStopForPlay,
+                variablesGameButtons.buttonStop,
+                this.handleClickStop,
                 this
             );
     }
@@ -41,20 +41,20 @@ export class ControllerButtonStop {
     removeEventListenerOnClickButtonStop() {
 
         removeEventListenerOnClickButton(
-            variablesGameButtons.buttonMainStop,
+            variablesGameButtons.buttonStop,
             this.buttonClickEvent
         );
 
         this.buttonClickEvent = null;
     }
 
-    setConfigurationAfterClick() {
-        this.viewButtonStop.setIconColorAfterClick();
-    }
-
     setConfigurationBeforeClick() {
         this.viewButtonStop.setIconColorBeforeClick();
         this.viewButtonStop.removeConfigurationButtonStop();
+    }
+
+    setConfigurationAfterClick() {
+        this.viewButtonStop.setIconColorAfterClick();
     }
 
     setConfigurationGameOver() {

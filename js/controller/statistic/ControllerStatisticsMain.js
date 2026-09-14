@@ -2,7 +2,7 @@ import {
     addEventListenerOnClickButton
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesButton from "../../common/variable/control/variablesButton.js";
 
 export class ControllerStatisticsMain {
 
@@ -33,7 +33,7 @@ export class ControllerStatisticsMain {
 
     configureButtonClickColor() {
         addEventListenerOnClickButton(
-            variablesGameButtons.gameFiledButtonPlay,
+            variablesButton.buttonClickColorDiv,
             this.setConfigurationCLickColor,
             this
         );

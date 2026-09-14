@@ -1,8 +1,9 @@
 export class Game {
 
-    constructor(roundNumberSetupByUser) {
-        this.roundNumberSetupByUser = roundNumberSetupByUser;
-        this.roundNumber = this.roundNumberSetupByUser;
+    constructor(roundNumber) {
+        // this.roundNumberSetupByUser = roundNumber;
+        // this.roundNumber = this.roundNumberSetupByUser;
+        this.roundNumber = roundNumber;
         this.countedRoundNumber = 0;
     }
 
@@ -30,8 +31,6 @@ export class Game {
     fraudCountedClicks = 0;
     fraudRoundElementIndexToUpdate = 0;
 
-    // timeoutButtonStop;
-
     fileWithColors = "#1A1A1D, #3B1C32, #6A1E55, #A64D79, #251B37, #372948, #FFCACA, #FFECEF, " +
         "#F3F2DA, #4E8D7C, #045762, #EA97AD, #FAD9E6, #E4AEC5, #5F7464, #243D25";
     colors = this.fileWithColors.split(", ");
@@ -45,6 +44,10 @@ export class Game {
 
     setCountedRoundNumber() {
         this.countedRoundNumber++;
+    }
+
+    getRoundNumber() {
+        return this.roundNumber;
     }
 
     getCountedRoundNumber() {

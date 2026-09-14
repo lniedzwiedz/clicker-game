@@ -1,20 +1,20 @@
 import {ViewButtons} from "./ViewButtons.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesGameButtons.js";
+import * as variablesButton from "../../common/variable/control/variablesButton.js";
 
 
 export class ViewButtonStart extends ViewButtons {
 
-    createGameFieldPButtonMainStart() {
-        this.createContainerGameFieldButtonMain(variablesGameButtons.containerGameFiledButtonsMainStart, variablesGameButtons.gameFiledButtonMainStart);
-        this.createAndConfigureGameButton(variablesGameButtons.gameFiledButtonMainStart, variablesGameButtons.buttonMainStart, variablesGameButtons.containerGameFiledButtonsMainStartTextDisplay)
-    }
-
-    setIconColorAfterClick() {
-        this.setConfigurationButtonsAfterClick(variablesGameButtons.containerGameFiledButtonsMainStartTextDisplayId);
+    createContainerButtonStartMain() {
+        this.createContainerButtonMain(variablesButton.containerButtonStartMain, variablesButton.buttonStartDiv);
+        this.createAndConfigureButton(variablesButton.buttonStartDiv, variablesButton.buttonStart, variablesButton.buttonStartDisplayIcon)
     }
 
     setIconColorBeforeClick() {
-        this.setConfigurationButtonsBeforeClick(variablesGameButtons.containerGameFiledButtonsMainStartTextDisplayId);
+        this.setConfigurationButtonBeforeClick(variablesButton.buttonStartDisplayText);
+    }
+
+    setIconColorAfterClick() {
+        this.setConfigurationButtonAfterClick(variablesButton.buttonStartDisplayText);
     }
 }
