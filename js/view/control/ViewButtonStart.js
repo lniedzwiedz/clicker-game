@@ -7,7 +7,7 @@ export class ViewButtonStart extends ViewButtons {
 
     createContainerButtonStartMain() {
         this.createContainerButtonMain(variablesButton.containerButtonStartMain, variablesButton.buttonStartDiv);
-        this.createAndConfigureButton(variablesButton.buttonStartDiv, variablesButton.buttonStart, variablesButton.buttonStartDisplayIcon)
+        this.createAndConfigureButton(variablesButton.buttonStartDiv, variablesButton.buttonStart, variablesButton.buttonStartDisplayIconPlay)
     }
 
     setIconColorBeforeClick() {

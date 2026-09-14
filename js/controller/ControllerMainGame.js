@@ -154,7 +154,7 @@ export class ControllerMainGame {
         let fraudRoundIndex = this.game
             .getFraudRoundElementIndexToUpdate();
 
-        this.controllerStatisticsMain.setGameStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
+        this.controllerStatisticsMain.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
 
         this.game.resetFraudCountedClicks();
         this.game.setFraudRoundElementIndexToUpdate();

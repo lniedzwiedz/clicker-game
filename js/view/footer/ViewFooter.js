@@ -17,13 +17,13 @@ export class ViewFooter {
     }
 
     createContainerMainFooter() {
-        createContainerMainElements(variablesMain.containerMainSectionFooter, variablesFooter.sectionFooter, variablesFooter.containerSectionFooter, variablesFooter.containerMainFooter);
-        setElementClassNameById(variablesFooter.containerSectionFooter, variablesFooter.containerSectionFooter);
+        createContainerMainElements(variablesMain.containerFooterMain, variablesFooter.sectionFooter, variablesFooter.containerFooterMainParts, variablesFooter.containerMainFooter);
+        setElementClassNameById(variablesFooter.containerFooterMainParts, variablesFooter.containerFooterMainParts);
     }
 
     createContainerFooterAuthor() {
-        createElementDivWithTheSameIdAndClassName(variablesFooter.containerMainFooter, variablesFooter.containerFooterAuthor);
-        createElementP(variablesFooter.containerFooterAuthor, variablesFooter.footerAuthor);
+        createElementDivWithTheSameIdAndClassName(variablesFooter.containerMainFooter, variablesFooter.containerFooterAuthorMain);
+        createElementP(variablesFooter.containerFooterAuthorMain, variablesFooter.footerAuthor);
         setElementClassNameSameAsIdAndSetText(variablesFooter.footerAuthor, variablesFooter.footerAuthorData);
     }
 }

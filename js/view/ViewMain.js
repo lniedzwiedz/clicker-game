@@ -12,9 +12,9 @@ import * as variablesStatisticsFraud from "../common/variable/statistic/variable
 export class ViewMain {
 
     createContainerSectionMain() {
-        createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionMenu);
-        createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionActions);
-        createElementDiv(variablesMain.containerMain, variablesMain.containerMainSectionFooter);
+        createElementDiv(variablesMain.containerMainParts, variablesMain.containerMenuMain);
+        createElementDiv(variablesMain.containerMainParts, variablesMain.containerActionsMain);
+        createElementDiv(variablesMain.containerMainParts, variablesMain.containerFooterMain);
     }
 
     createContainerMainSection() {
@@ -28,14 +28,14 @@ export class ViewMain {
     }
 
     createContainerHomeMain() {
-        createContainerMainElements(variablesMain.containerMainSectionActions, variablesMain.sectionHome, variablesMain.containerMainSectionHome, variablesMain.containerMainHome);
+        createContainerMainElements(variablesMain.containerActionsMain, variablesMain.sectionHome, variablesMain.containerHomeMainParts, variablesMain.containerGameMain);
     }
 
     createContainerHomeMainParts() {
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerMainHome, variablesMain.containerGameElements);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesButton.containerButtonClickColorMain);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesButton.containerButtonStartAndStopMain);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesStatisticsTime.containerGameFiledStatisticsTime);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameElements, variablesStatisticsFraud.containerGameFiledStatisticsFraud);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMain, variablesMain.containerGameMainParts);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesButton.containerButtonClickColorMain);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesButton.containerButtonStartAndStopMain);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesStatisticsTime.containerGameFiledStatisticsTime);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesStatisticsFraud.containerGameFiledStatisticsFraud);
     }
 }

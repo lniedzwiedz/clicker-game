@@ -20,8 +20,8 @@ import * as variablesStatisticsTime from "../../common/variable/statistic/variab
 export class ViewStatisticsFraud {
 
     createContainerStatisticsFraudSumMain() {
-        createElementDivAnaDivChild(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudBest, variablesStatisticsFraud.containerGameFiledStatisticsFraudBestParts);
-        setElementClassNameById(variablesStatisticsFraud.containerGameFiledStatisticsFraudBestParts, variablesStatisticsTime.containerGameFiledCommonParts);
+        createElementDivAnaDivChild(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts, variablesStatisticsFraud.containerStatisticsFraudSumMain, variablesStatisticsFraud.containerStatisticsFraudSumMainParts);
+        setElementClassNameById(variablesStatisticsFraud.containerStatisticsFraudSumMainParts, variablesStatisticsTime.containerGameFiledCommonParts);
     }
 
     createContainerStatisticsFraudMain(containerGameFiledStatisticsFraudParts, containerGameFiledStatisticsFraudGamePlay, fraudUpdate, gameFiledStatisticsFraudGamePlay, commonGameFiledDisplay) {
@@ -30,37 +30,37 @@ export class ViewStatisticsFraud {
     }
 
     createContainerStatisticsFraudSumUpdate() {
-        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerGameFiledStatisticsFraudBestParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudBestGamePlay, variablesStatisticsFraud.fraudCountRoundUpdateSumNumber, variablesStatisticsFraud.gameFiledStatisticsFraudBestGamePlay, variablesStatisticsTime.commonGameFiledDisplay);
-        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.gameFiledStatisticsFraudBestGamePlay, variablesStatisticsFraud.statisticsFraudBestGamePlay, variablesStatisticsTime.commonGamePlayTextUpdate);
-        setElementClassNamedAndText(variablesStatisticsFraud.statisticsFraudBestGamePlay, variablesStatisticsFraud.statisticsFraudBestUpdateNumber, variablesStatisticsFraud.statisticsFraudBestGamePlayDisplay);
+        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerStatisticsFraudSumMainParts, variablesStatisticsFraud.statisticsFraudSumDisplayUpdateNumberMain, variablesStatisticsFraud.fraudCountRoundUpdateSumNumber, variablesStatisticsFraud.statisticsFraudSumDisplayUpdateNumberMainParts, variablesStatisticsTime.commonGameFiledDisplay);
+        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.statisticsFraudSumDisplayUpdateNumberMainParts, variablesStatisticsFraud.statisticsFraudSumUpdateNumberDiv, variablesStatisticsTime.commonGamePlayTextUpdate);
+        setElementClassNamedAndText(variablesStatisticsFraud.statisticsFraudSumUpdateNumberDiv, variablesStatisticsFraud.statisticsFraudBestUpdateNumber, variablesStatisticsFraud.statisticsFraudDisplayTextSumDefault);
     }
 
-    createContainerStatisticsFraudSumTextStatic() {
-        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerGameFiledStatisticsFraudBestParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudBestText, variablesStatisticsTime.containerGameFiledCommonStaticText, variablesStatisticsFraud.gameFiledStatisticsFraudBestText, variablesStatisticsTime.commonGameFiledDisplay);
-        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.gameFiledStatisticsFraudBestText, variablesStatisticsFraud.statisticsFraudBestText, variablesStatisticsTime.commonStaticText);
-        setElementClassNameSameAsIdAndSetText(variablesStatisticsFraud.statisticsFraudBestText, variablesStatisticsFraud.statisticsFraudBestTextDisplay);
+    createContainerStatisticsFraudSumIcons() {
+        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerStatisticsFraudSumMainParts, variablesStatisticsFraud.containerStatisticsFraudSumDisplayIcons, variablesStatisticsTime.containerGameFiledCommonStaticText, variablesStatisticsFraud.statisticsFraudSumDisplayIcons, variablesStatisticsTime.commonGameFiledDisplay);
+        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.statisticsFraudSumDisplayIcons, variablesStatisticsFraud.statisticsFraudSumText, variablesStatisticsTime.commonStaticText);
+        setElementClassNameSameAsIdAndSetText(variablesStatisticsFraud.statisticsFraudSumText, variablesStatisticsFraud.statisticsFraudDisplayIconGem);
     }
 
     createContainerStatisticsFraudSum() {
         this.createContainerStatisticsFraudSumMain();
         this.createContainerStatisticsFraudSumUpdate()
-        this.createContainerStatisticsFraudSumTextStatic();
+        this.createContainerStatisticsFraudSumIcons();
     }
 
-    createContainerStatisticsFraudRoundUpdate() {
-        createElementDivWithTheSameIdAndClassName(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudCount);
-        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.containerGameFiledStatisticsFraudCount, variablesStatisticsFraud.containerGameFiledStatisticsFraudCountParts, variablesStatisticsTime.containerGameFiledCommonParts);
-        createElementDiv(variablesStatisticsFraud.containerGameFiledStatisticsFraudCountParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudCountGamePlay);
-        createElementDiv(variablesStatisticsFraud.containerGameFiledStatisticsFraudCountParts, variablesStatisticsFraud.containerGameFiledStatisticsFraudCountText);
-        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerGameFiledStatisticsFraudCountText, variablesStatisticsFraud.gameFiledStatisticsFraudCountText, variablesStatisticsTime.commonGameFiledDisplay, variablesStatisticsFraud.statisticsFraudCountText, variablesStatisticsTime.commonStaticText);
-        setElementClassNameSameAsIdAndSetText(variablesStatisticsFraud.statisticsFraudCountText, variablesStatisticsFraud.statisticsFraudCountTextDisplay);
+    createContainerStatisticsFraudRoundNumberUpdate() {
+        createElementDivWithTheSameIdAndClassName(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts, variablesStatisticsFraud.containerStatisticsFraudMain);
+        createElementDivWithIdAndSetClassName(variablesStatisticsFraud.containerStatisticsFraudMain, variablesStatisticsFraud.containerStatisticsFraudMainParts, variablesStatisticsTime.containerGameFiledCommonParts);
+        createElementDiv(variablesStatisticsFraud.containerStatisticsFraudMainParts, variablesStatisticsFraud.containerStatisticsFraudCounterUpdateMain);
+        createElementDiv(variablesStatisticsFraud.containerStatisticsFraudMainParts, variablesStatisticsFraud.containerStatisticsFraudTextNameMain);
+        this.createContainerStatisticsFraudMain(variablesStatisticsFraud.containerStatisticsFraudTextNameMain, variablesStatisticsFraud.statisticsFraudTextName, variablesStatisticsTime.commonGameFiledDisplay, variablesStatisticsFraud.statisticsFraudCountText, variablesStatisticsTime.commonStaticText);
+        setElementClassNameSameAsIdAndSetText(variablesStatisticsFraud.statisticsFraudCountText, variablesStatisticsFraud.statisticsFraudDisplayTextCounterName);
     }
 
     createGameFieldStatisticsFraud(maxClicksNumber) {
         createElementDivWithTheSameIdAndClassName(variablesStatisticsFraud.containerGameFiledStatisticsFraud, variablesStatisticsFraud.containerGameFiledStatisticsFraudParts);
         this.createContainerStatisticsFraudSum();
-        this.createContainerStatisticsFraudRoundUpdate();
-        this.createContainerStatisticsFraudCountPerRound(maxClicksNumber);
+        this.createContainerStatisticsFraudRoundNumberUpdate();
+        this.createContainerStatisticsFraudRoundNumberUpdateValue(maxClicksNumber);
     }
 
     createElementFraudCountRoundInner(parentId, childId) {
@@ -68,7 +68,7 @@ export class ViewStatisticsFraud {
         setElementClassNameById(childId, variablesStatisticsTime.commonGameFiledDisplay);
         setElementClassNameById(childId, variablesStatisticsTime.commonStaticText);
         setElementClassNameById(childId, variablesStatisticsFraud.fraudCountRoundCommon);
-        setElementTextById(childId, variablesStatisticsFraud.statisticsFraudCountNumberTextDisplaySetUp);
+        setElementTextById(childId, variablesStatisticsFraud.statisticsFraudDisplayIconWhiskeyGlass);
     }
 
     createElementFraudCountRoundMain(parentId, childId) {
@@ -77,9 +77,9 @@ export class ViewStatisticsFraud {
         setElementClassNameById(parentId, variablesStatisticsFraud.fraudCountRoundUpdateNumber);
     }
 
-    createContainerStatisticsFraudCountPerRound(maxClicksNumber) {
+    createContainerStatisticsFraudRoundNumberUpdateValue(maxClicksNumber) {
 
-        let parentId = variablesStatisticsFraud.containerGameFiledStatisticsFraudCountGamePlay;
+        let parentId = variablesStatisticsFraud.containerStatisticsFraudCounterUpdateMain;
         let fraudNumber = maxClicksNumber;
 
         let gridRowStartNumber = 1;
@@ -98,14 +98,14 @@ export class ViewStatisticsFraud {
 
         for (let i = 0; i < fraudNumber; i++) {
 
-            let childId = variablesStatisticsFraud.containerGameFiledStatisticsFraudCountGamePlay + "-" + valueToString(i);
+            let childId = variablesStatisticsFraud.containerStatisticsFraudCounterUpdateMain + "-" + valueToString(i);
             this.createElementFraudCountRoundMain(parentId, childId);
 
             let gridTemplateRowsChild = "1fr";
             let gridTemplateColumnsChild = "1fr";
             setElementStyletAsGrid(childId, gridRowStartNumberChild, gridColumnStartNumberChild, gridRowEndNumberChild, gridColumnEndNumberChild, gridTemplateRowsChild, gridTemplateColumnsChild);
 
-            let grandChildId = variablesStatisticsFraud.fraudCountRoundGamePlayUpdateNumberPrefix + valueToString(i);
+            let grandChildId = variablesStatisticsFraud.fraudCountRoundUpdateNumberPrefix + valueToString(i);
             this.createElementFraudCountRoundInner(childId, grandChildId);
 
             gridColumnStartNumberChild += 3;
@@ -113,29 +113,28 @@ export class ViewStatisticsFraud {
         }
     }
 
-    setGameStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
-        this.setGameStatisticFraudRoundCountedNumber(fraudCountedRoundNumber, fraudRoundIndex);
-        this.setGameStatisticFraudCountedSumNumber(fraudCountedSumNumber);
+    setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+        this.setStatisticFraudRoundNumberCountedValue(fraudCountedRoundNumber, fraudRoundIndex);
+        this.setStatisticFraudCountedSumValue(fraudCountedSumNumber);
     }
 
-    setGameStatisticFraudRoundCountedNumber(fraudCountedRoundNumber, fraudRoundIndex) {
+    setStatisticFraudRoundNumberCountedValue(fraudCountedRoundNumber, fraudRoundIndex) {
         let result;
         if (fraudCountedRoundNumber < 10)
-            result = valueToString(fraudCountedRoundNumber) + variablesStatisticsFraud.statisticsFraudCountNumberTextDisplayLessThanTen;
+            result = valueToString(fraudCountedRoundNumber) + variablesStatisticsFraud.statisticsFraudDisplayIconWhiskeyGlassWhenCountedNumberIsLessThanTen;
         else
             result = fraudCountedRoundNumber;
 
-        let elementId = variablesStatisticsFraud.fraudCountRoundGamePlayUpdateNumberPrefix + fraudRoundIndex;
-        let text = variablesStatisticsFraud.statisticsFraudCountNumberTextDisplay + result;
+        let elementId = variablesStatisticsFraud.fraudCountRoundUpdateNumberPrefix + fraudRoundIndex;
+        let text = variablesStatisticsFraud.statisticsFraudDisplayIconWhiskeyGlassMedia + result;
         setElementTextById(elementId, text);
     }
 
-    setGameStatisticFraudCountedSumNumber(fraudCountedSumNumber) {
-        setElementTextById(variablesStatisticsFraud.statisticsFraudBestGamePlay, fraudCountedSumNumber);
+    setStatisticFraudCountedSumValue(fraudCountedSumNumber) {
+        setElementTextById(variablesStatisticsFraud.statisticsFraudSumUpdateNumberDiv, fraudCountedSumNumber);
     }
 
-    removeGameFieldStatisticsFraud() {
-        if (isElementsExistById(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts))
-            removeElementById(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts);
+    removeContainerStatisticsFraud() {
+        if (isElementsExistById(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts)) removeElementById(variablesStatisticsFraud.containerGameFiledStatisticsFraudParts);
     }
 }

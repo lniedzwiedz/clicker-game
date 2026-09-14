@@ -23,13 +23,13 @@ export class ViewButtons {
 
     setConfigurationButtonBeforeClick(elementId) {
         if (isElementsExistById(elementId)) {
-            removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconAfterClick);
-            setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconBeforeClick);
+            removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayAfterClick);
+            setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayBeforeClick);
         }
     }
 
     setConfigurationButtonAfterClick(elementId) {
-        removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconBeforeClick);
-        setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconAfterClick);
+        removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayBeforeClick);
+        setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayAfterClick);
     }
 }

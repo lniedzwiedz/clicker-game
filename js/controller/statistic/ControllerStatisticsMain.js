@@ -43,8 +43,8 @@ export class ControllerStatisticsMain {
         this.controllerStatisticsFraud.createConfigurationGameStatisticsTimeFraud(maxClicksNumber);
     }
 
-    setGameStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
-        this.controllerStatisticsFraud.setGameStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
+    setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+        this.controllerStatisticsFraud.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
     }
 
     configureStatisticTime(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
@@ -55,12 +55,12 @@ export class ControllerStatisticsMain {
         this.controllerStatisticsTime.removeGameFieldStatisticsTime();
     }
 
-    removeGameFieldStatisticsFraud() {
-        this.controllerStatisticsFraud.removeGameFieldStatisticsFraud();
+    removeStatisticsFraud() {
+        this.controllerStatisticsFraud.removeStatisticsFraud();
     }
 
     removeContainerStatisticParts() {
         this.removeGameFieldStatisticsTime();
-        this.removeGameFieldStatisticsFraud();
+        this.removeStatisticsFraud();
     }
 }

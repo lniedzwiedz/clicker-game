@@ -14,7 +14,7 @@ export class ViewButtonStop extends ViewButtons {
     createContainerButtonStopMain() {
         if (!isElementsExistById(variablesButton.containerButtonStopMain)) {
             this.createContainerButtonMain(variablesButton.containerButtonStopMain, variablesButton.buttonStopDiv);
-            this.createAndConfigureButton(variablesButton.buttonStopDiv, variablesButton.buttonStop, variablesButton.buttonStopDisplayIcon);
+            this.createAndConfigureButton(variablesButton.buttonStopDiv, variablesButton.buttonStop, variablesButton.buttonStopDisplayIconStop);
         }
     }
 
