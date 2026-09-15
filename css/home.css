@@ -195,7 +195,8 @@
 }
 
 
-#containerGameFiled-statisticsFraud {
+/*#containerGameFiled-statisticsFraud {*/
+#containerStatisticsFraud-Main {
     display: grid;
     grid-row: 4 / 5;
     grid-column: 1 / 1;
@@ -203,7 +204,8 @@
     grid-template-columns: 1fr;
 }
 
-#containerGameFiled-statisticsFraudParts {
+/*#containerGameFiled-statisticsFraudParts {*/
+#containerStatisticsFraud-MainParts {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -211,7 +213,8 @@
     grid-template-columns: 1fr 6fr;
 }
 
-#containerGameFiled-statisticsFraudCount {
+/*#containerGameFiled-statisticsFraudCount {*/
+#containerStatisticsFraudCounter-Main {
     display: grid;
     grid-row: 2/ 3;
     grid-column: 2 / 3;
@@ -219,7 +222,16 @@
     grid-template-columns: 1fr;
 }
 
-#containerGameFiled-statisticsFraudCountText {
+#containerStatisticsFraudCounter-MainParts {
+    display: grid;
+    grid-row: 1/ 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+/*#containerGameFiled-statisticsFraudCountText {*/
+#containerStatisticsFraudCounterName-DisplayValueMain {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -227,13 +239,31 @@
     grid-template-columns: 1fr;
 }
 
-#containerGameFiled-statisticsFraudCountGamePlay {
+#containerStatisticsFraudCounterName-DisplayValueMainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+/*#containerGameFiled-statisticsFraudCountGamePlay {*/
+#containerStatisticsFraudCounterRound-Main  {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
+
+#containerStatisticsFraudCounterRound-MainParts  {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
 
 .containerGameFiled-commonParts {
     display: grid;
@@ -252,6 +282,12 @@
 }
 
 .commonGameFiledDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commonConfigurationFlex {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,6 +312,22 @@
     grid-template-columns: 1fr;
 }
 
+#containerStatisticsFraudSum-DisplayIconsMain{
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudSum-DisplayIconsMainParts{
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
 .commonStaticText {
     /*display: flex;*/
     /*align-items: center;*/
@@ -288,7 +340,7 @@
 }
 
 /*#containerGameFiled-statisticsFraudBestGamePlay {*/
-#statisticsFraudSum-DisplayUpdateValueMain {
+#containerStatisticsFraudSum-DisplayValueUpdateMain {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
@@ -296,12 +348,20 @@
     grid-template-columns: 1fr;
 }
 
-#statisticsFraudSum-DisplayUpdateValueMainParts {
+#containerStatisticsFraudSum-DisplayValueUpdateMainParts {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+}
+
+.containerStatisticsFraudSum-DisplayValueUpdateMain {
+
+}
+
+.containerStatisticsFraudSum-DisplayValueUpdateMainParts {
+
 }
 
 .commonGamePlayUpdateTextTime {
@@ -335,11 +395,11 @@
     /*color: #ac4a71;*/
     /*color: lightgoldenrodyellow;*/
     /*color: #FFFFFF;*/
-    color: #FF7E00;
+    /*color: #FF7E00;*/
     /*color: #B1B1B1;*/
-    opacity: 0.8;
-    font-weight: 600;
-    font-size: 1.7rem;
+    /*opacity: 0.8;*/
+    /*font-weight: 600;*/
+    /*font-size: 1.7rem;*/
 }
 
 .fraudCountRound {
@@ -363,29 +423,29 @@
     font-weight: 900;
 }
 
-/* text fraud counter*/
-.statisticsFraudCountText {
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    /*color: #ac4a71;*/
-    /*color: lightgoldenrodyellow;*/
-    color: #FF7E00;
-    /*color: #FFFFFF;*/
-    /*color: #B1B1B1;*/
-    /*color: #FF7E00;*/
+/*!* text fraud counter*!*/
+/*.statisticsFraudCountText {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: #000000;*/
+/*    !*color: #ac4a71;*!*/
+/*    !*color: lightgoldenrodyellow;*!*/
+/*    color: #FF7E00;*/
+/*    !*color: #FFFFFF;*!*/
+/*    !*color: #B1B1B1;*!*/
+/*    !*color: #FF7E00;*!*/
 
-    opacity: 0.8;
-    padding: 0px;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
-    font-size: 1.3rem;
-    font-weight: 200;
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
-}
+/*    opacity: 0.8;*/
+/*    padding: 0px;*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*    !*text-align: center;*!*/
+/*    font-size: 1.3rem;*/
+/*    font-weight: 200;*/
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    box-shadow: 0px 0px 1px 1px #2a1e1e;*/
+/*}*/
 
 
 .fraudCountRoundUpdateSumNumber {
@@ -450,6 +510,19 @@
     font-size: 1.2rem;
 }
 
+.statisticsFraudCounterName-DisplayValueFlex{
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0px 0px 1px 1px #2a1e1e;
+}
+
+.statisticsFraudCounterName-DisplayValue{
+    color: #FF7E00;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
 
 .fraudSumValueUpdatePerRound {
     opacity: 0.8;
@@ -458,26 +531,20 @@
 }
 
 .fa-gem {
-    /*color: #ac4a71;*/
     color: lightgoldenrodyellow;
-    /*color: #FFFFFF;*/
-    /*color: #B1B1B1;*/
-    /*color: #FF7E00;*/
     opacity: 0.9;
     font-size: 1.0rem;
 }
 
 .fa-whiskey-glass {
     color: #FFFFFF;
-    /*color: #FF7E00;*/
     opacity: 0.9;
     font-weight: 600;
     font-size: 1.0rem;
 }
 
-.fa-whiskeyGlassMainFraud {
+.fa-whiskeyGlassMain {
     color: #FFFFFF;
-    /*color: #FF7E00;*/
     opacity: 0.8;
     font-weight: 600;
     font-size: 1.5rem;
@@ -523,133 +590,133 @@
 
 @media (max-width: 1000px) {
 
-    #containerMainSectionHome {
-        display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
-    }
+    /*#containerMainSectionHome {*/
+    /*    display: grid;*/
+    /*    grid-row: 1 / 1;*/
+    /*    grid-column: 1 / 1;*/
+    /*    grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;*/
+    /*}*/
 
-    .gameFiledButtonMain {
-        width: 70%;
-        height: 50%;
-    }
+    /*.gameFiledButtonMain {*/
+    /*    width: 70%;*/
+    /*    height: 50%;*/
+    /*}*/
 }
 
 @media (max-width: 600px) {
 
-    #containerMainSectionHome {
-        display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;
-    }
+    /*#containerMainSectionHome {*/
+    /*    display: grid;*/
+    /*    grid-row: 1 / 1;*/
+    /*    grid-column: 1 / 1;*/
+    /*    grid-template-columns: 5fr 14fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 14fr 5fr;*/
+    /*}*/
 
-    .fa-playGameAction-beforeClick {
-        font-size: 1.1rem;
-    }
+    /*.fa-playGameAction-beforeClick {*/
+    /*    font-size: 1.1rem;*/
+    /*}*/
 
-    .fa-playGameAction-afterClick {
-        font-size: 1.3rem;
-    }
+    /*.fa-playGameAction-afterClick {*/
+    /*    font-size: 1.3rem;*/
+    /*}*/
 
-    .statisticsFraudBestUpdateNumber {
-        font-size: 1.1rem;
-    }
+    /*.statisticsFraudBestUpdateNumber {*/
+    /*    font-size: 1.1rem;*/
+    /*}*/
 
-    .fraudSumValueUpdatePerRound {
-        opacity: 0.8;
-        /*color: #FF7E00;*/
-        /*font-size: 0.8rem;*/
-    }
+    /*.fraudSumValueUpdatePerRound {*/
+    /*    opacity: 0.8;*/
+    /*    !*color: #FF7E00;*!*/
+    /*    !*font-size: 0.8rem;*!*/
+    /*}*/
 
-    .statisticsFraudCountText {
-        font-size: 0.9rem;
-    }
+    /*.statisticsFraudCountText {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
 
-    .statisticsFraudCountText {
-        font-size: 0.9rem;
-    }
+    /*.statisticsFraudCountText {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
 
-    .fraudCountRoundUpdateSumNumber {
-        /*width: 100%;*/
-        /*height: 100%;*/
-        /*color: #ac4a71;*/
-        /*font-size: 5rem;*/
-        /*font-weight: 900;*/
-    }
+    /*.fraudCountRoundUpdateSumNumber {*/
+    /*    !*width: 100%;*!*/
+    /*    !*height: 100%;*!*/
+    /*    !*color: #ac4a71;*!*/
+    /*    !*font-size: 5rem;*!*/
+    /*    !*font-weight: 900;*!*/
+    /*}*/
 
-    .statisticsTimeMinGamePlay {
-        font-size: 0.8rem;
-    }
+    /*.statisticsTimeMinGamePlay {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
 
-    .statisticsTimeMinText {
-        font-size: 0.5rem;
-    }
+    /*.statisticsTimeMinText {*/
+    /*    font-size: 0.5rem;*/
+    /*}*/
 
-    .statisticsTimeAvgGamePlay {
-        font-size: 0.8rem;
-    }
+    /*.statisticsTimeAvgGamePlay {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
 
-    .statisticsTimeAvgText {
-        font-size: 0.5rem;
-    }
+    /*.statisticsTimeAvgText {*/
+    /*    font-size: 0.5rem;*/
+    /*}*/
 
-    .statisticsTimeMaxGamePlay {
-        font-size: 0.8rem;
-    }
+    /*.statisticsTimeMaxGamePlay {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
 
-    .statisticsTimeMaxText {
-        font-size: 0.5rem;
-    }
+    /*.statisticsTimeMaxText {*/
+    /*    font-size: 0.5rem;*/
+    /*}*/
 
-    .statisticsTimeBestGamePlay {
-        font-size: 1.1rem;
-    }
+    /*.statisticsTimeBestGamePlay {*/
+    /*    font-size: 1.1rem;*/
+    /*}*/
 
-    .fa-clock {
-        font-size: 0.9rem;
-    }
+    /*.fa-clock {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
 
-    .fa-star {
-        font-size: 0.6rem;
-    }
+    /*.fa-star {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .fa-gem {
-        font-size: 0.6rem;
-    }
+    /*.fa-gem {*/
+    /*    font-size: 0.6rem;*/
+    /*}*/
 
-    .fa-whiskey-glass {
-        font-size: 0.4rem;
-    }
+    /*.fa-whiskey-glass {*/
+    /*    font-size: 0.4rem;*/
+    /*}*/
 
-    .fa-whiskeyGlassMainFraud {
-        font-size: 0.9rem;
-    }
+    /*.fa-whiskeyGlassMain {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
 
-    .gameFiledButtonPlayGameOver {
-        font-size: 1.1rem;
-    }
+    /*.gameFiledButtonPlayGameOver {*/
+    /*    font-size: 1.1rem;*/
+    /*}*/
 
-    .fa-clockMainBestTime {
-        font-size: 1.2rem;
-    }
+    /*.fa-clockMainBestTime {*/
+    /*    font-size: 1.2rem;*/
+    /*}*/
 
 }
 
 @media (max-width: 1000px) {
 
-    #containerMainSectionHome {
-        display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;
-    }
+    /*#containerMainSectionHome {*/
+    /*    display: grid;*/
+    /*    grid-row: 1 / 1;*/
+    /*    grid-column: 1 / 1;*/
+    /*    grid-template-columns: 8fr 11fr 13fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 13fr 11fr 8fr;*/
+    /*}*/
 
-    .gameFiledButtonMain {
-        width: 70%;
-        height: 50%;
-    }
+    /*.gameFiledButtonMain {*/
+    /*    width: 70%;*/
+    /*    height: 50%;*/
+    /*}*/
 }
 
 @media (max-device-height: 500px) {

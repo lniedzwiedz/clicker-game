@@ -36,6 +36,6 @@ export class ViewMain {
         createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesButton.containerButtonClickColorMain);
         createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesButton.containerButtonStartAndStopMain);
         createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesStatisticsTime.containerGameFiledStatisticsTime);
-        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesStatisticsFraud.containerGameFiledStatisticsFraud);
+        createElementDivWithTheSameIdAndClassName(variablesMain.containerGameMainParts, variablesStatisticsFraud.containerStatisticsFraudMain);
     }
 }

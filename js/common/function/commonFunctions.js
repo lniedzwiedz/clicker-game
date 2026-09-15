@@ -53,9 +53,14 @@ export function createElementDivWithIdAndSetClassName(parentId, childId, classNa
     setElementClassNameById(childId, className);
 }
 
-export function createElementDivWithTheSameIdAndClassName(parentId, elementIdAndClassName) {
-    createElementDiv(parentId, elementIdAndClassName);
-    setElementClassNameById(elementIdAndClassName, elementIdAndClassName);
+export function createElementDivWithTheSameIdAndClassName(parentId, childIdAndClassName) {
+    createElementDiv(parentId, childIdAndClassName);
+    setElementClassNameById(childIdAndClassName, childIdAndClassName);
+}
+
+export function createElementPWithTheSameIdAndClassName(parentId, childIdAndClassName) {
+    createElementP(parentId, childIdAndClassName);
+    setElementClassNameById(childIdAndClassName, childIdAndClassName);
 }
 
 export function createElementDivAnaDivChild(parentId, childId, grandChildId) {
