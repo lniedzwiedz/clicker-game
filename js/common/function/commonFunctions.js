@@ -35,12 +35,17 @@ export function createElementButton(parentId, childId) {
     createElement(parentId, childId, "button");
 }
 
-export function createElementP(parentId, childId) {
-    createElement(parentId, childId, "p");
-}
-
 export function createElementDiv(parentId, childId) {
     createElement(parentId, childId, "div");
+}
+
+export function createElementI(parentId, childId, iconStyle, iconClass) {
+    createElement(parentId, childId, "i");
+    getElementById(childId).classList.add(iconStyle, iconClass);
+}
+
+export function createElementP(parentId, childId) {
+    createElement(parentId, childId, "p");
 }
 
 export function createElementDivWithIdAndSetClassName(parentId, childId, className) {
