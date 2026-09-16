@@ -1,3 +1,19 @@
+
+// statistics time - main
+export const containerStatisticsTimeMain = "containerStatistics-TimeMain";
+export const containerStatisticsTimeMainParts = "containerStatistics-TimeMainParts";
+
+// statistics fraud  -> sum
+// export const containerStatisticsFraudSumMain = "containerStatisticsFraudSum-Main";
+// export const containerStatisticsFraudSumMainParts = "containerStatisticsFraudSum-MainParts";
+
+
+
+
+
+
+
+
 export const timeKindMin = "Min";
 export const timeKindAvg = "Avg";
 export const timeKindMax = "Max";
@@ -12,6 +28,8 @@ export const gameFiledStatisticsTimeKindText = "gameFiledStatisticsTimeKindText"
 export const statisticsTimeKindGamePlay = "statisticsTimeKindGamePlay";
 export const statisticsTimeKindText = "statisticsTimeKindText";
 export const statisticsTimeKindGamePlayDisplay = "0.0000 ??? ";
+
+
 export const containerGameFiledStatisticsTime = "containerGameFiled-statisticsTime";
 export const containerGameFiledStatisticsTimeParts = "containerGameFiled-statisticsTimeParts";
 

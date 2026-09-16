@@ -22,7 +22,7 @@ export class ControllerStatisticsMain {
     }
 
     createGameFieldStatisticsTime() {
-        this.controllerStatisticsTime.createGameFieldStatisticsTime();
+        this.controllerStatisticsTime.createStatisticsTime();
     }
 
     setConfigurationCLickColor(event) {

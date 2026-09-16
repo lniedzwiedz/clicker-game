@@ -7,7 +7,6 @@ import {
 import * as variablesMain from "../common/variable/main/variablesMain.js";
 import * as variablesButton from "../common/variable/control/variablesButton.js";
 import * as variablesStatisticsTime from "../common/variable/statistic/variablesStatisticsTime.js";
-import * as variablesStatisticsFraud from "../common/variable/statistic/variablesStatisticsFraud.js";
 import * as variablesFooter from "../common/variable/footer/variablesFooter.js";
 
 export class ViewMain {
@@ -15,17 +14,17 @@ export class ViewMain {
     createContainerSectionMain() {
 
         createElementDiv(
-            variablesMain.containerSectionMainParts,
-            variablesMain.containerSectionMenuMain
+            variablesMain.containerMain,
+            variablesMain.containerMainParts
         );
 
         createElementDiv(
-            variablesMain.containerSectionMainParts,
-            variablesMain.containerSectionActionsMain
+            variablesMain.containerMain,
+            variablesMain.containerHomeMain
         );
 
         createElementDiv(
-            variablesMain.containerSectionMainParts,
+            variablesMain.containerMain,
             variablesFooter.containerSectionFooterMain
         );
     }
@@ -42,7 +41,7 @@ export class ViewMain {
 
     createContainerHomeMain() {
         createContainerMainElements(
-            variablesMain.containerSectionActionsMain,
+            variablesMain.containerHomeMain,
             variablesMain.sectionHome,
             variablesMain.containerHomeMainParts,
             variablesMain.containerGameMain
@@ -68,11 +67,6 @@ export class ViewMain {
         createElementDivWithTheSameIdAndClassName(
             variablesMain.containerGameMainParts,
             variablesStatisticsTime.containerGameFiledStatisticsTime
-        );
-
-        createElementDivWithTheSameIdAndClassName(
-            variablesMain.containerGameMainParts,
-            variablesStatisticsFraud.containerStatisticsFraudMain
         );
     }
 }

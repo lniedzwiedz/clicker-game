@@ -2,7 +2,8 @@ import {ModuleButtons} from "./ModuleButtons.js";
 import {ModuleStatistics} from "./ModuleStatistics.js";
 import {ControllerMainGame} from "../controller/ControllerMainGame.js";
 
-export class GameModule {
+
+export class ModuleGame {
 
     constructor() {
 
@@ -18,6 +19,10 @@ export class GameModule {
                 this.moduleStatistics.getControllerStatisticsMain(),
             );
     }
+
+    // getControllerControllerMainGame() {
+    //     return this.controllerMainGame;
+    // }
 
     createGame() {
         this.moduleButtons.createGame();

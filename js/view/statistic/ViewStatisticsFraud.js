@@ -28,6 +28,11 @@ class ViewStatisticsFraud {
 
     createContainerStatisticsFraudMain() {
 
+        createElementDivWithTheSameIdAndClassName(
+            variablesStatisticsFraud.containerGameMainParts,
+            variablesStatisticsFraud.containerStatisticsFraudMain
+        );
+
         createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudMain,
             variablesStatisticsFraud.containerStatisticsFraudMainParts

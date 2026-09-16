@@ -1,9 +1,6 @@
-// menu
-export const sectionMenu = "sectionMenu";
-export const containerSectionMenu = "containerSectionMenu";
-export const containerMenuMain = "containerMenuMain";
-export const containerMenuMainParts = "containerMenuMainParts";
-export const containerMenuTitleMain = "containerMenuTitleMain";
-export const menuTitle = "menuTitle";
-export const menuTitleText = "menuTitleText";
-export const menuTitleTextDisplay = "Clicker Game";
+import * as variablesMain from "../main/variablesMain.js";
+
+export const containerMainParts =   variablesMain.containerMainParts;
+
+export const containerMenuMain = "containerMenu-Main";
+export const containerMenuMainParts = "containerMenu-MainParts";

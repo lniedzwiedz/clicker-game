@@ -1,0 +1,17 @@
+/*#containerMenuGameConfiguration {*/
+#containerConfiguration-Main {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+/*#containerMenuGameConfigurationParts {*/
+#containerConfiguration-MainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr  9fr;
+}

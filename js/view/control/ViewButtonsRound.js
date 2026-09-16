@@ -26,12 +26,12 @@ export class ViewButtonsRound {
     }
 
     createContainerRoundNumberConfigurationMain() {
-        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMainParts, variablesButtonRound.containerRoundNumberConfigurationMain);
-        createElementDiv(variablesButtonRound.containerRoundNumberConfigurationMain, variablesButtonRound.containerRoundNumberConfigurationMainParts);
+        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMainParts, variablesButtonRound.containerConfigurationMain);
+        createElementDiv(variablesButtonRound.containerConfigurationMain, variablesButtonRound.containerConfigurationMainParts);
     }
 
     createContainerConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
-        createElementDivAnaDivChild(variablesButtonRound.containerRoundNumberConfigurationMainParts, containerMenuGameConfigurationText, menuGameConfigurationText);
+        createElementDivAnaDivChild(variablesButtonRound.containerConfigurationMainParts, containerMenuGameConfigurationText, menuGameConfigurationText);
     }
 
     createContainerRoundNumberTitle() {
@@ -45,7 +45,7 @@ export class ViewButtonsRound {
     }
 
     createContainerMenuConfigurationGameKind() {
-        createElementDiv(variablesButtonRound.containerRoundNumberConfigurationMainParts, variablesButtonRound.containerMenuGameConfigurationGameKind);
+        createElementDiv(variablesButtonRound.containerConfigurationMainParts, variablesButtonRound.containerMenuGameConfigurationGameKind);
     }
 
     createContainersConfigurationClickNumberButton() {

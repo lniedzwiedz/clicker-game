@@ -1,4 +1,6 @@
-export const commonConfigurationFlex = "commonConfigurationFlex";
+import * as variablesMain from "../main/variablesMain.js";
+
+export const containerGameMainParts = variablesMain.containerGameMainParts;
 
 // statistics fraud - main
 export const containerStatisticsFraudMain = "containerStatisticsFraud-Main";

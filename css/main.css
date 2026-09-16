@@ -10,32 +10,24 @@ body {
     background-color: #000000;
 }
 
-.containerMain {
+#container-Main {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-rows: 12fr 85fr 3fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
-#containerSectionMenuMain {
+#container-MainParts {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-#containerSectionActionsMain {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-rows: 12fr 85fr 3fr;
+    grid-template-columns: 1fr 8fr 1fr;
 }
 
 @media (max-width: 600px) {
-    .containerMain {
-        grid-template-rows: 14fr 83fr 3fr;
-    }
+    /*.containerMain {*/
+    /*    grid-template-rows: 14fr 83fr 3fr;*/
+    /*}*/
 }

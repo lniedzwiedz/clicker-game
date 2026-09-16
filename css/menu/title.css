@@ -1,0 +1,22 @@
+#containerTitle-Main {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#title-DisplayTitleFlex {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.title-StyleTitleText {
+    margin: 0;
+    padding: 0;
+    color: #ac4a71;
+    opacity: 0.9;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
