@@ -4,10 +4,9 @@ export let cssGameFiledButtonPlayColor = "--gameFiledButtonPlayColor";
 export let gameFiledButtonPlayStartColor = "black";
 
 // container main
-export const containerMainParts = "containerMain";
-export const containerMenuMain = "containerMainSectionMenu";
-export const containerActionsMain = "containerMainSectionActions";
-export const containerFooterMain = "containerMainSectionFooter";
+export const containerSectionMainParts = "containerMain";
+export const containerSectionMenuMain = "containerSectionMenuMain";
+export const containerSectionActionsMain = "containerSectionActionsMain";
 
 // subpage HOME - game
 export const sectionHome = "sectionHome";

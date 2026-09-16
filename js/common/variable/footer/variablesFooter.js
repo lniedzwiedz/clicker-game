@@ -1,6 +1,8 @@
-export const containerFooterMainParts = "containerSectionFooter";
-export const containerMainFooter = "containerMainFooter";
-export const containerFooterAuthorMain = "containerFooterAuthor";
-export const footerAuthor = "footerAuthor";
+export const containerSectionFooterMain = "containerSectionFooterMain";
+
+export const containerFooterMain = "containerFooterMain";
+export const containerFooterMainParts = "containerFooterMainParts";
+
+export const footerAuthorDisplayTextFlex = "footerAuthor-DisplayTextFlex";
+export const footerAuthorStyleText = "footerAuthor-StyleText";
 export const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
-export const sectionFooter = "sectionFooter";

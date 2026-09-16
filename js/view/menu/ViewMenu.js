@@ -17,7 +17,7 @@ export class ViewMenu {
     }
 
     createContainerMainMenu() {
-        createContainerMainElements(variablesMain.containerMenuMain, variablesMenu.sectionMenu, variablesMenu.containerSectionMenu, variablesMenu.containerMenuMain);
+        createContainerMainElements(variablesMain.containerSectionMenuMain, variablesMenu.sectionMenu, variablesMenu.containerSectionMenu, variablesMenu.containerMenuMain);
     }
 
     createContainerMainMenuParts() {
