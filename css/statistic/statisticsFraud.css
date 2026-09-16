@@ -38,10 +38,6 @@
     grid-template-columns: 1fr;
 }
 
-.containerStatisticsFraudSum-DisplayValueUpdateMain {
-
-}
-
 #containerStatisticsFraudSum-DisplayValueUpdateMainParts {
     display: grid;
     grid-row: 1 / 1;
@@ -50,11 +46,13 @@
     grid-template-columns: 1fr;
 }
 
-.containerStatisticsFraudSum-DisplayValueUpdateMainParts {
-
+.statisticsFraudSum-DisplayValueUpdateFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.statisticsFraudSum-DisplayValue {
+.statisticsFraudSum-StyleText {
     margin: 0;
     padding: 0;
     opacity: 0.8;
@@ -76,6 +74,12 @@
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+}
+
+.statisticsFraudSum-DisplayIconsFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-gem {
@@ -130,6 +134,12 @@
     grid-template-columns: 1fr;
 }
 
+.statisticsFraudCounterRound-DisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .statisticsFraudCounterRound-StyleValueSumPerRound {
     margin: 0;
     padding: 0;
@@ -154,7 +164,13 @@
     grid-template-columns: 1fr;
 }
 
-.statisticsFraudCounterName-DisplayTextFlex {
+.statisticsFraudCounterName-DisplayNameFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statisticsFraudCounterName-StyleText {
     margin: 0;
     padding: 0;
     color: #FF7E00;

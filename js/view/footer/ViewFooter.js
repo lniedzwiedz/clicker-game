@@ -11,7 +11,7 @@ export class ViewFooter {
 
     createFooter() {
         this.createContainerMainFooter();
-        this.createContainerFooterAuthor();
+        this.createFooterAuthor();
     }
 
     createContainerMainFooter() {
@@ -27,7 +27,7 @@ export class ViewFooter {
         );
     }
 
-    createContainerFooterAuthor() {
+    createFooterAuthor() {
 
         createElementDivWithTheSameIdAndClassName(
             variablesFooter.containerFooterMainParts,

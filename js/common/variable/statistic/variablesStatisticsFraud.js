@@ -13,7 +13,7 @@ export const containerStatisticsFraudSumDisplayValueUpdateMain = "containerStati
 export const containerStatisticsFraudSumDisplayValueUpdateMainParts = "containerStatisticsFraudSum-DisplayValueUpdateMainParts";
 
 export const statisticsFraudSumDisplayValueUpdateFlex = "statisticsFraudSum-DisplayValueUpdateFlex";
-export const statisticsFraudSumDisplayValue = "statisticsFraudSum-DisplayValue";
+export const statisticsFraudSumStyleText = "statisticsFraudSum-StyleText";
 export const statisticsFraudSumDisplayDefaultText = " xxD ";
 
 
@@ -44,7 +44,8 @@ export const containerStatisticsFraudCounterRoundMainParts = "containerStatistic
 // counter round - update fraud sum per round
 export const containerStatisticsFraudCounterRoundNumberMainPrefix = "containerStatisticsFraudCounterRound-NumberMain-";
 export const containerStatisticsFraudCounterRoundNumberMainPartsPrefix = "containerStatisticsFraudCounterRound-NumberMainParts-";
-export const statisticsFraudCounterRoundDisplayFlexPrefix = "statisticsFraudCounterRound-DisplayFlex-";
+export const statisticsFraudCounterRoundDisplayFlex = "statisticsFraudCounterRound-DisplayFlex";
+export const statisticsFraudCounterRoundDisplayFlexPrefix = statisticsFraudCounterRoundDisplayFlex + "-";
 export const statisticsFraudCounterRoundDisplaySumValue = "statisticsFraudCounterRound-DisplaySumValue-";
 export const statisticsFraudCounterRoundStyleValueSumPerRound = "statisticsFraudCounterRound-StyleValueSumPerRound";
 export const statisticsFraudIconWhiskeyGlassPrefix = "statisticsFraudIconWhiskeyGlass-";
@@ -61,6 +62,6 @@ export const containerStatisticsFraudCounterNameDisplayTextMain = "containerStat
 export const containerStatisticsFraudCounterNameDisplayTextMainParts = "containerStatisticsFraudCounterName-DisplayTextMainParts";
 
 // counter name  -> text
-export const statisticsFraudCounterNameDisplayTextFlex = "statisticsFraudCounterName-DisplayTextFlex";
+export const statisticsFraudCounterNameDisplayNameFlex = "statisticsFraudCounterName-DisplayNameFlex";
 export const statisticsFraudCounterNameDisplayName = "FRAUD COUNTER";
 export const statisticsFraudCounterNameStyleText = "statisticsFraudCounterName-StyleText";

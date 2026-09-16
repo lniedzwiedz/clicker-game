@@ -15,11 +15,8 @@ import {
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsFraud from "../../common/variable/statistic/variablesStatisticsFraud.js";
-import * as variablesStatisticsTime from "../../common/variable/statistic/variablesStatisticsTime.js";
-
 
 class ViewStatisticsFraud {
-
 
     createStatisticsFraud(roundNumber) {
         this.createContainerStatisticsFraudMain();
@@ -30,9 +27,11 @@ class ViewStatisticsFraud {
     }
 
     createContainerStatisticsFraudMain() {
-        createElementDivWithTheSameIdAndClassName(
+
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudMain,
-            variablesStatisticsFraud.containerStatisticsFraudMainParts);
+            variablesStatisticsFraud.containerStatisticsFraudMainParts
+        );
     }
 
     createContainerStatisticsFraudSum() {
@@ -46,57 +45,51 @@ class ViewStatisticsFraud {
             variablesStatisticsFraud.containerStatisticsFraudMainParts,
             variablesStatisticsFraud.containerStatisticsFraudSumMain,
             variablesStatisticsFraud.containerStatisticsFraudSumMainParts);
-
-        setElementClassNameById(
-            variablesStatisticsFraud.containerStatisticsFraudSumMainParts,
-            variablesStatisticsTime.containerGameFiledCommonParts);
     }
 
     createContainerStatisticsFraudSumValueUpdate() {
 
-        createElementDivWithIdAndSetClassName(
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudSumMainParts,
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayValueUpdateMain,
         );
 
-        createElementDivWithIdAndSetClassName(
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayValueUpdateMain,
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayValueUpdateMainParts,
         );
 
-        createElementDivWithIdAndSetClassName(
+        createElementPWithTheSameIdAndClassName(
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayValueUpdateMainParts,
             variablesStatisticsFraud.statisticsFraudSumDisplayValueUpdateFlex,
-            variablesStatisticsFraud.commonConfigurationFlex
         );
 
         createElementPWithTheSameIdAndClassName(
             variablesStatisticsFraud.statisticsFraudSumDisplayValueUpdateFlex,
-            variablesStatisticsFraud.statisticsFraudSumDisplayValue
+            variablesStatisticsFraud.statisticsFraudSumStyleText
         );
 
         setElementTextById(
-            variablesStatisticsFraud.statisticsFraudSumDisplayValue,
+            variablesStatisticsFraud.statisticsFraudSumStyleText,
             variablesStatisticsFraud.statisticsFraudSumDisplayDefaultText
         );
     }
 
     createContainerStatisticsFraudSumIcons() {
 
-        createElementDivWithIdAndSetClassName(
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudSumMainParts,
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayIconsMain,
         );
 
-        createElementDivWithIdAndSetClassName(
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayIconsMain,
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayIconsMainParts,
         );
 
-        createElementDivWithIdAndSetClassName(
+        createElementDivWithTheSameIdAndClassName(
             variablesStatisticsFraud.containerStatisticsFraudSumDisplayIconsMainParts,
             variablesStatisticsFraud.statisticsFraudSumDisplayIconsFlex,
-            variablesStatisticsFraud.commonConfigurationFlex
         );
 
         createElementI(
@@ -127,6 +120,7 @@ class ViewStatisticsFraud {
     }
 
     createContainerStatisticsFraudCounter(roundNumber) {
+
         this.createContainerStatisticsFraudCounterMain()
 
         this.createContainerStatisticsFraudCounterRound(
@@ -138,7 +132,7 @@ class ViewStatisticsFraud {
 
     createContainerStatisticsFraudCounterMain() {
 
-        createElementDivWithTheSameIdAndClassName(
+        createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudMainParts,
             variablesStatisticsFraud.containerStatisticsFraudCounterMain
         );
@@ -152,6 +146,7 @@ class ViewStatisticsFraud {
     createContainerStatisticsFraudCounterRound(roundNumber) {
 
         this.createContainerStatisticsFraudCounterRoundMain();
+
         let parentId = variablesStatisticsFraud.containerStatisticsFraudCounterRoundMainParts;
 
         this.createContainerStatisticsFraudCounterRoundMainParts(
@@ -166,6 +161,7 @@ class ViewStatisticsFraud {
     }
 
     createContainerStatisticsFraudCounterRoundMain() {
+
         createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudCounterMainParts,
             variablesStatisticsFraud.containerStatisticsFraudCounterRoundMain
@@ -207,6 +203,7 @@ class ViewStatisticsFraud {
         for (let index = 0; index < roundNumber; index++) {
 
             let childId = variablesStatisticsFraud.containerStatisticsFraudCounterRoundNumberMainPrefix + valueToString(index);
+
             this.createElementFraudCountRoundMain(
                 parentId,
                 childId
@@ -235,6 +232,7 @@ class ViewStatisticsFraud {
     }
 
     createElementFraudCountRoundMain(parentId, childId) {
+
         createElementDiv(
             parentId,
             childId
@@ -244,6 +242,7 @@ class ViewStatisticsFraud {
     createElementFraudCountRoundInner(parentIdMain, index) {
 
         let childIdMainParts = variablesStatisticsFraud.containerStatisticsFraudCounterRoundNumberMainPartsPrefix + valueToString(index);
+
         createElementDiv(
             parentIdMain,
             childIdMainParts
@@ -262,14 +261,10 @@ class ViewStatisticsFraud {
         let iId = variablesStatisticsFraud.statisticsFraudIconWhiskeyGlassPrefix + valueToString(index);
         let pId = variablesStatisticsFraud.statisticsFraudCounterRoundDisplaySumValue + valueToString(index);
 
-        createElementDiv(
+        createElementDivWithIdAndSetClassName(
             childIdMainParts,
-            grandchildId
-        );
-
-        setElementClassNameById(
             grandchildId,
-            variablesStatisticsFraud.commonConfigurationFlex
+            variablesStatisticsFraud.statisticsFraudCounterRoundDisplayFlex
         );
 
         createElementI(
@@ -297,6 +292,7 @@ class ViewStatisticsFraud {
     }
 
     createContainerStatisticsFraudCounterName() {
+
         createElementDiv(
             variablesStatisticsFraud.containerStatisticsFraudCounterMainParts,
             variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMain
@@ -309,16 +305,11 @@ class ViewStatisticsFraud {
 
         createElementDivWithTheSameIdAndClassName(
             variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMainParts,
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayTextFlex
-        );
-
-        setElementClassNameById(
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayTextFlex,
-            variablesStatisticsFraud.commonConfigurationFlex
+            variablesStatisticsFraud.statisticsFraudCounterNameDisplayNameFlex
         );
 
         createElementPWithTheSameIdAndClassName(
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayTextFlex,
+            variablesStatisticsFraud.statisticsFraudCounterNameDisplayNameFlex,
             variablesStatisticsFraud.statisticsFraudCounterNameStyleText
         );
 
@@ -329,6 +320,7 @@ class ViewStatisticsFraud {
     }
 
     setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+
         this.setStatisticsFraudCounterRoundSumValue(
             fraudCountedRoundNumber,
             fraudRoundIndex
@@ -340,6 +332,7 @@ class ViewStatisticsFraud {
     }
 
     setStatisticsFraudCounterRoundSumValue(fraudCountedRoundNumber, fraudRoundIndex) {
+
         let result;
         if (fraudCountedRoundNumber < 10)
             result = valueToString(fraudCountedRoundNumber) + variablesStatisticsFraud.statisticsFraudDisplaySpace;
@@ -356,13 +349,15 @@ class ViewStatisticsFraud {
     }
 
     setStatisticFraudSumValue(fraudCountedSumNumber) {
+
         setElementTextById(
-            variablesStatisticsFraud.statisticsFraudSumDisplayValue,
+            variablesStatisticsFraud.statisticsFraudSumStyleText,
             fraudCountedSumNumber
         );
     }
 
     removeContainerStatisticsFraud() {
+
         if (isElementsExistById(variablesStatisticsFraud.containerStatisticsFraudMainParts))
             removeElementById(
                 variablesStatisticsFraud.containerStatisticsFraudMainParts
