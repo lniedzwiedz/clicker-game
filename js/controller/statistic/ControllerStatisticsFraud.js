@@ -6,13 +6,17 @@ export class ControllerStatisticsFraud {
     }
 
     createConfigurationGameStatisticsTimeFraud(maxClicksNumber) {
-        this.viewStatisticsFraud.createGameFieldStatisticsFraud(
+        this.viewStatisticsFraud.createStatisticsFraud(
             maxClicksNumber
         );
     }
 
     setStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber, fraudCountRoundIndex) {
-        this.viewStatisticsFraud.setStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber, fraudCountRoundIndex);
+        this.viewStatisticsFraud.setStatisticFraudData(
+            fraudCountedSumNumber,
+            fraudCountedNumber,
+            fraudCountRoundIndex
+        );
     }
 
     removeStatisticsFraud() {

@@ -231,7 +231,7 @@
 }
 
 /*#containerGameFiled-statisticsFraudCountText {*/
-#containerStatisticsFraudCounterName-DisplayValueMain {
+#containerStatisticsFraudCounterName-DisplayTextMain {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -239,7 +239,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudCounterName-DisplayValueMainParts {
+#containerStatisticsFraudCounterName-DisplayTextMainParts {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -362,6 +362,14 @@
 
 .containerStatisticsFraudSum-DisplayValueUpdateMainParts {
 
+}
+
+.statisticsFraudSum-DisplayValue {
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    color: #FF7E00;
+    font-size: 1.2rem;
 }
 
 .commonGamePlayUpdateTextTime {
@@ -503,20 +511,17 @@
     font-size: 1.1rem;
 }
 
-/*.statisticsFraudSumValue {*/
-.statisticsFraudSum-DisplayValue {
-    opacity: 0.8;
-    color: #FF7E00;
-    font-size: 1.2rem;
-}
 
-.statisticsFraudCounterName-DisplayValueFlex{
+
+.statisticsFraudCounterName-DisplayFlex{
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;
 }
 
-.statisticsFraudCounterName-DisplayValue{
+.statisticsFraudCounterName-StyleText{
+    margin: 0;
+    padding: 0;
     color: #FF7E00;
     opacity: 0.8;
     font-size: 0.9rem;
@@ -524,7 +529,9 @@
 }
 
 
-.fraudSumValueUpdatePerRound {
+.statisticsFraudCounterRound-StyleValueSumPerRound {
+    margin: 0;
+    padding: 0;
     opacity: 0.8;
     color: #FF7E00;
     font-size: 0.8rem;
