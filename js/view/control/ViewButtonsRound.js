@@ -1,9 +1,9 @@
 import {
     createElementButton,
     createElementDiv,
-    createElementDivAnaDivChild,
-    createElementDivWithTheSameIdAndClassName,
-    getElementAttributeValueById, removeElementClassNameById,
+    createElementDivAnaDivChild, createElementI, createElementP,
+    getElementAttributeValueById,
+    removeElementClassNameById,
     setElementAttributeValueById,
     setElementClassNameById,
     setElementClassNamedAndText,
@@ -15,59 +15,136 @@ import {
 import * as variablesMenu from "../../common/variable/menu/variablesMenu.js";
 import * as variablesStatisticsTime from "../../common/variable/statistic/variablesStatisticsTime.js";
 import * as variablesButtonRound from "../../common/variable/control/variablesButtonRound.js";
+import {containerConfigurationRoundMainPartsRowPrefix} from "../../common/variable/control/variablesButtonRound.js";
+
 
 export class ViewButtonsRound {
 
     createContainerRoundNumberConfiguration() {
         this.createContainerRoundNumberConfigurationMain();
-        this.createContainerRoundNumberTitle();
-        // createContainerMenuConfigurationGameKind();
+        this.createContainerConfigurationDecorationIcon();
         this.createContainerButtonRoundNumberMain();
     }
 
     createContainerRoundNumberConfigurationMain() {
-        createElementDivWithTheSameIdAndClassName(variablesMenu.containerMenuMainParts, variablesButtonRound.containerConfigurationMain);
-        createElementDiv(variablesButtonRound.containerConfigurationMain, variablesButtonRound.containerConfigurationMainParts);
+
+        createElementDiv(
+            variablesMenu.containerMenuMainParts,
+            variablesButtonRound.containerConfigurationMain
+        );
+
+        createElementDiv(
+            variablesButtonRound.containerConfigurationMain,
+            variablesButtonRound.containerConfigurationMainParts
+        );
     }
 
     createContainerConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
-        createElementDivAnaDivChild(variablesButtonRound.containerConfigurationMainParts, containerMenuGameConfigurationText, menuGameConfigurationText);
+
+        createElementDivAnaDivChild(
+            variablesButtonRound.containerConfigurationMainParts,
+            containerMenuGameConfigurationText,
+            menuGameConfigurationText
+        );
     }
 
-    createContainerRoundNumberTitle() {
-        this.createContainerConfiguration(variablesButtonRound.containerRoundNumberTitleMain, variablesButtonRound.buttonRoundNumberText);
-        setElementClassNamedAndText(variablesButtonRound.buttonRoundNumberText, variablesButtonRound.roundNumberIconTitleDiv, variablesButtonRound.roundNumberTitleDisplayIcon);
+    createContainerConfigurationDecorationIcon() {
+
+        createElementDivAnaDivChild(
+            variablesButtonRound.containerConfigurationMainParts,
+            variablesButtonRound.containerConfigurationDecorationIconMain,
+            variablesButtonRound.configurationDecorationIconDisplayIconFlex
+        );
+
+        setElementClassNameById(
+            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
+            variablesButtonRound.configurationDecorationIconDisplayIconFlex
+        );
+
+        createElementI(
+            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
+            variablesButtonRound.configurationDecorationIcon,
+            variablesButtonRound.containerConfigurationDecorationIconStyleSolid,
+            variablesButtonRound.containerConfigurationDecorationIconScrewdriverWrench
+        );
     }
 
     createContainerButtonRoundNumberMain() {
-        this.createContainerConfiguration(variablesButtonRound.containerButtonRoundNumberMain, variablesButtonRound.containerButtonRoundNumberMainParts);
+
+        this.createContainerConfiguration(
+            variablesButtonRound.containerConfigurationRoundMain,
+            variablesButtonRound.containerConfigurationRoundMainParts);
+
         this.createContainersConfigurationClickNumberButton();
     }
 
-    createContainerMenuConfigurationGameKind() {
-        createElementDiv(variablesButtonRound.containerConfigurationMainParts, variablesButtonRound.containerMenuGameConfigurationGameKind);
-    }
-
     createContainersConfigurationClickNumberButton() {
-        this.createContainerRoundNumberConfigurationRows();
+        // this.createContainerRoundNumberConfigurationRows();
         this.createContainerRoundNumberConfigurationRowsAll();
     }
 
-    createContainerRoundNumberConfigurationRows() {
-        createElementDivAnaDivChild(variablesButtonRound.containerButtonRoundNumberMainParts, variablesButtonRound.containerButtonRoundNumberMainRow0, variablesButtonRound.containerButtonRoundNumberMainPartRow0);
-        createElementDivAnaDivChild(variablesButtonRound.containerButtonRoundNumberMainParts, variablesButtonRound.containerButtonRoundNumberMainRow1, variablesButtonRound.containerButtonRoundNumberMainPartRow1);
+    // createContainerRoundNumberConfigurationRows() {
+    createContainerRoundNumberConfigurationRows(parentId, childId, grandchildId) {
+
+        // createElementDivAnaDivChild(
+        //     variablesButtonRound.containerConfigurationRoundMainParts,
+        //     variablesButtonRound.containerConfigurationRoundMainRow0,
+        //     variablesButtonRound.containerConfigurationRoundMainPartsRow0
+        // );
+        //
+        // createElementDivAnaDivChild(
+        //     variablesButtonRound.containerConfigurationRoundMainParts,
+        //     variablesButtonRound.containerConfigurationRoundMainRow1,
+        //     variablesButtonRound.containerConfigurationRoundMainPartsRow1
+        // );
+
+        // let childId = variablesButtonRound.containerConfigurationRoundMainRowPrefix + valueToString(rowNumber);
+        // let grandchildId = variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
+
+        createElementDivAnaDivChild(
+            parentId,
+            childId,
+            grandchildId
+        );
     }
 
     createContainerRoundNumberConfigurationRowsAll() {
 
         for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
-            this.createContainerRoundNumberConfigurationPerRow(rowNumber);
+
+            let parentId =
+                variablesButtonRound.containerConfigurationRoundMainParts;
+
+            let childId =
+                variablesButtonRound.containerConfigurationRoundMainRowPrefix
+                + valueToString(rowNumber);
+
+            let grandchildId =
+                variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix
+                + valueToString(rowNumber);
+
+            this.createContainerRoundNumberConfigurationRows(
+                parentId,
+                childId,
+                grandchildId
+            );
+
+            this.createContainerConfigurationButtonRoundMainParts(
+                grandchildId,
+                rowNumber
+            );
+
+            this.createContainerRoundNumberConfigurationPerRow(
+                grandchildId,
+                rowNumber
+            );
         }
     }
 
-    createContainerRoundNumberConfigurationPerRow(rowNumber) {
+    createContainerConfigurationButtonRoundMainParts(parentId) {
 
-        let parentId = variablesButtonRound.containerButtonRoundNumberMainPartRow + rowNumber;
+
+        // let parentId =  variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
         let clicksNumberPerRow = 5;
 
         let gridRowStartNumber = 1;
@@ -77,7 +154,39 @@ export class ViewButtonsRound {
 
         let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
         let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
-        setElementStyletAsGrid(parentId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns);
+
+        setElementStyletAsGrid(
+            parentId,
+            gridRowStartNumber,
+            gridColumnStartNumber,
+            gridRowEndNumber,
+            gridColumnEndNumber,
+            gridTemplateRows,
+            gridTemplateColumns);
+
+    }
+
+    createContainerRoundNumberConfigurationPerRow(parentId, rowNumber) {
+
+        // let parentId = variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
+        let clicksNumberPerRow = 5;
+        //
+        // let gridRowStartNumber = 1;
+        // let gridColumnStartNumber = 1;
+        // let gridRowEndNumber = 2;
+        // let gridColumnEndNumber = 2;
+        //
+        // let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
+        // let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
+        //
+        // setElementStyletAsGrid(
+        //     parentId,
+        //     gridRowStartNumber,
+        //     gridColumnStartNumber,
+        //     gridRowEndNumber,
+        //     gridColumnEndNumber,
+        //     gridTemplateRows,
+        //     gridTemplateColumns);
 
         let gridRowStartNumberChild = 2;
         let gridColumnStartNumberChild = 2;
@@ -97,14 +206,31 @@ export class ViewButtonsRound {
 
             let gridTemplateRowsChild = "1fr";
             let gridTemplateColumnsChild = "1fr";
-            setElementStyletAsGrid(childId, gridRowStartNumberChild, gridColumnStartNumberChild, gridRowEndNumberChild, gridColumnEndNumberChild, gridTemplateRowsChild, gridTemplateColumnsChild);
+
+            setElementStyletAsGrid(
+                childId,
+                gridRowStartNumberChild,
+                gridColumnStartNumberChild,
+                gridRowEndNumberChild,
+                gridColumnEndNumberChild,
+                gridTemplateRowsChild,
+                gridTemplateColumnsChild);
 
             let buttonId = variablesButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumberButton);
             let elementText = variablesButtonRound.buttonRoundNumberDisplayIcon + valueToString(clickNumberButton);
-            this.creatContainerButtonRoundNumber(childId, buttonId, clickNumberButton, elementText);
+
+            this.creatContainerButtonRoundNumber(
+                childId,
+                buttonId,
+                clickNumberButton,
+                elementText
+            );
 
             if (clickNumberButton === 5)
-                setElementClassNameById(buttonId, variablesButtonRound.buttonRoundNumberMarkCurrent);
+                setElementClassNameById(
+                    buttonId,
+                    variablesButtonRound.buttonRoundNumberMarkCurrent
+                );
 
             gridColumnStartNumberChild += 3;
             gridColumnEndNumberChild += 3;
@@ -113,28 +239,72 @@ export class ViewButtonsRound {
     }
 
     creatContainerButtonRoundNumber(parentId, buttonId, attributeValue, elementText) {
-        createElementButton(parentId, buttonId);
-        setElementAttributeValueById(buttonId, valueToString(attributeValue));
-        setElementClassNames(buttonId, variablesStatisticsTime.commonGameFiledDisplay, variablesButtonRound.buttonRoundNumber);
-        setElementClassNamedAndText(buttonId, variablesButtonRound.buttonRoundNumberText, elementText);
+
+        createElementButton(
+            parentId,
+            buttonId
+        );
+
+        setElementAttributeValueById(
+            buttonId,
+            valueToString(attributeValue)
+        );
+
+        setElementClassNames(
+            buttonId,
+            variablesStatisticsTime.commonGameFiledDisplay,
+            variablesButtonRound.buttonRoundNumber
+        );
+
+        setElementClassNamedAndText(
+            buttonId,
+            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
+            elementText
+        );
     }
 
     getRoundNumberSetupByUser(buttonIdCurrent) {
-        return getElementAttributeValueById(buttonIdCurrent);
+        return getElementAttributeValueById(
+            buttonIdCurrent
+        );
     }
 
     setStyleButtonRoundNumberAtStart(buttonIdPrevious, currentButtonId) {
-        removeElementClassNameById(buttonIdPrevious, variablesButtonRound.buttonRoundNumberMarkCurrent);
-        setElementClassNameById(currentButtonId, variablesButtonRound.buttonRoundNumberMarkCurrent);
+
+        removeElementClassNameById(
+            buttonIdPrevious,
+            variablesButtonRound.buttonRoundNumberMarkCurrent
+        );
+
+        setElementClassNameById(
+            currentButtonId,
+            variablesButtonRound.buttonRoundNumberMarkCurrent
+        );
     }
 
     setStyleButtonRoundNumberAfterGameStart(buttonIdPrevious, currentButtonId, roundNumberFinal) {
-        removeElementClassNameById(buttonIdPrevious, variablesButtonRound.buttonRoundNumberMarkCurrent);
-        removeElementClassNameById(roundNumberFinal, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
-        setElementClassNameById(currentButtonId, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
+
+        removeElementClassNameById(
+            buttonIdPrevious,
+            variablesButtonRound.buttonRoundNumberMarkCurrent)
+        ;
+
+        removeElementClassNameById(
+            roundNumberFinal,
+            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+        );
+
+        setElementClassNameById(
+            currentButtonId,
+            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+        );
     }
 
     setStyleButtonRoundNumberWhenGameStop(roundNumberFinal) {
-        removeElementClassNameById(roundNumberFinal, variablesButtonRound.menuGameConfigurationButtonChosenNumber);
+
+        removeElementClassNameById(
+            roundNumberFinal,
+            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+        );
     }
 }

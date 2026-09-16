@@ -30,7 +30,8 @@ export class ModuleButtons {
         this.controllerButtonsRound =
             new ControllerButtonsRound(
                 this.viewButtonsRound,
-                this.actionButtonsRound);
+                this.actionButtonsRound
+            );
 
 
         this.viewButtonClickColor =
@@ -42,7 +43,8 @@ export class ModuleButtons {
         this.controllerButtonClickColor =
             new ControllerButtonClickColor(
                 this.viewButtonClickColor,
-                this.actionButtonClickColor);
+                this.actionButtonClickColor
+            );
 
 
         this.viewButtonStart =
@@ -54,7 +56,8 @@ export class ModuleButtons {
         this.controllerButtonStart =
             new ControllerButtonStart(
                 this.viewButtonStart,
-                this.actionButtonStart);
+                this.actionButtonStart
+            );
 
 
         this.viewButtonStop =
@@ -66,7 +69,8 @@ export class ModuleButtons {
         this.controllerButtonStop =
             new ControllerButtonStop(
                 this.viewButtonStop,
-                this.actionButtonStop);
+                this.actionButtonStop
+            );
 
 
         this.controllerButtonsMain =
@@ -74,7 +78,8 @@ export class ModuleButtons {
                 this.controllerButtonsRound,
                 this.controllerButtonStart,
                 this.controllerButtonStop,
-                this.controllerButtonClickColor);
+                this.controllerButtonClickColor
+            );
     }
 
     createGame() {

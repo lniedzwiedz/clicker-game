@@ -7,7 +7,7 @@ import {
 import * as variablesTitle from "../../common/variable/menu/variablesTitle.js";
 
 
-export class ViewTitle{
+export class ViewTitle {
 
     createContainerTitle() {
 

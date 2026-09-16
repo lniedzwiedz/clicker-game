@@ -6,37 +6,32 @@ export const containerConfigurationMain = "containerConfiguration-Main";
 export const containerConfigurationMainParts = "containerConfiguration-MainParts";
 // export const containerRoundNumberConfigurationMainParts = "containerMenuGameConfigurationParts";
 
+export const containerConfigurationDecorationIconMain = "containerConfigurationDecorationIcon-Main";
+export const configurationDecorationIconDisplayIconFlex = "configurationDecorationIcon-DisplayIconFlex";
 
-export const containerRoundNumberTitleMain = "containerMenuGameConfigurationText";
-export const roundNumberIconTitleDiv = "menuGameConfigurationDisplay";
-export const roundNumberTitleDisplayIcon = "<i class=\"fa-solid fa-screwdriver-wrench\"></i>";
+export const configurationDecorationIcon = "configurationDecorationIcon";
+export const containerConfigurationDecorationIconScrewdriverWrench = "fa-screwdriver-wrench";
+export const containerConfigurationDecorationIconStyleSolid = "fa-solid";
+
+export const containerConfigurationRoundMain = "containerConfigurationRound-Main";
+export const containerConfigurationRoundMainParts = "containerConfigurationRound-MainParts";
+
+export const containerConfigurationRoundMainRowPrefix = "containerConfigurationRound-Main-Row-";
+export const containerConfigurationRoundMainPartsRowPrefix = "containerConfigurationRound-MainParts-Row-";
+
+
+
 
 
 export const buttonRoundNumber = "menuGameConfigurationButton";
-export const buttonRoundNumberText = "menuGameConfigurationText";
 
 
 export const buttonRoundNumberMarkCurrent = "menuGameConfigurationButtonCurrentNumber";
-// export const functionNameOnclickSetConfigurationClickNumber = "setConfigurationClickNumber";
 export const menuGameConfigurationButtonClickNumberPrefix = "menuGameConfigurationButtonClickNumber-";
-// export const menuGameConfigurationButtonClickNumberGameOn = "menuGameConfigurationButtonClickNumberGameOn";
 export const menuGameConfigurationButtonChosenNumber = "menuGameConfigurationButtonChosenNumber";
-export const menuGameConfigurationTextDisplay = "<i class=\"fa-solid fa-screwdriver-wrench\"></i>";
 
 
-export const containerMenuGameConfigurationGameKind = "containerMenuGameConfigurationGameKind";
 
-export const containerButtonRoundNumberMain = "containerMenuGameConfigurationClickNumber";
-
-export const containerButtonRoundNumberMainParts = "containerMenuGameConfigurationClickNumberParts";
-
-export const containerButtonRoundNumberMainRow0 = "containerMenuGameConfigurationClickNumber-row0";
-export const containerButtonRoundNumberMainPartRow0 = "containerMenuGameConfigurationClickNumberParts-row0";
-
-export const containerButtonRoundNumberMainRow1 = "containerMenuGameConfigurationClickNumber-row1";
-export const containerButtonRoundNumberMainPartRow1 = "containerMenuGameConfigurationClickNumberParts-row1";
-
-export const containerButtonRoundNumberMainPartRow = "containerMenuGameConfigurationClickNumberParts-row";
 
 export const buttonRoundNumberDisplayIcon = "<i class=\"fa-solid fa-computer-mouse\"></i> &nbsp &nbsp"
 export const buttonRoundNumberPrefix = "containerGameConfigurationRoundNumber-";
