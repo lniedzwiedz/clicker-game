@@ -174,95 +174,95 @@
 }
 
 /*#containerGameFiled-statisticsFraudBest {*/
-#containerStatisticsFraudSum-Main {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-Main {*/
+/*    display: grid;*/
+/*    grid-row: 2 / 3;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudSum-MainParts {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 3fr 2fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-MainParts {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 3fr 2fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-.statisticsFraudSum-DisplayUpdateValurMainParts {
+/*.statisticsFraudSum-DisplayUpdateValurMainParts {*/
 
-}
+/*}*/
 
 
 /*#containerGameFiled-statisticsFraud {*/
-#containerStatisticsFraud-Main {
-    display: grid;
-    grid-row: 4 / 5;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraud-Main {*/
+/*    display: grid;*/
+/*    grid-row: 4 / 5;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
 /*#containerGameFiled-statisticsFraudParts {*/
-#containerStatisticsFraud-MainParts {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr 9fr 1fr;
-    grid-template-columns: 1fr 6fr;
-}
+/*#containerStatisticsFraud-MainParts {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr 9fr 1fr;*/
+/*    grid-template-columns: 1fr 6fr;*/
+/*}*/
 
 /*#containerGameFiled-statisticsFraudCount {*/
-#containerStatisticsFraudCounter-Main {
-    display: grid;
-    grid-row: 2/ 3;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounter-Main {*/
+/*    display: grid;*/
+/*    grid-row: 2/ 3;*/
+/*    grid-column: 2 / 3;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudCounter-MainParts {
-    display: grid;
-    grid-row: 1/ 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounter-MainParts {*/
+/*    display: grid;*/
+/*    grid-row: 1/ 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
 /*#containerGameFiled-statisticsFraudCountText {*/
-#containerStatisticsFraudCounterName-DisplayTextMain {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounterName-DisplayTextMain {*/
+/*    display: grid;*/
+/*    grid-row: 2 / 3;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudCounterName-DisplayTextMainParts {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounterName-DisplayTextMainParts {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
 /*#containerGameFiled-statisticsFraudCountGamePlay {*/
-#containerStatisticsFraudCounterRound-Main  {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounterRound-Main  {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudCounterRound-MainParts  {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudCounterRound-MainParts  {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
 
 .containerGameFiled-commonParts {
@@ -312,21 +312,21 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudSum-DisplayIconsMain{
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-DisplayIconsMain{*/
+/*    display: grid;*/
+/*    grid-row: 2 / 3;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudSum-DisplayIconsMainParts{
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-DisplayIconsMainParts{*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
 .commonStaticText {
     /*display: flex;*/
@@ -340,37 +340,37 @@
 }
 
 /*#containerGameFiled-statisticsFraudBestGamePlay {*/
-#containerStatisticsFraudSum-DisplayValueUpdateMain {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-DisplayValueUpdateMain {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#containerStatisticsFraudSum-DisplayValueUpdateMainParts {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerStatisticsFraudSum-DisplayValueUpdateMainParts {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-.containerStatisticsFraudSum-DisplayValueUpdateMain {
+/*.containerStatisticsFraudSum-DisplayValueUpdateMain {*/
 
-}
+/*}*/
 
-.containerStatisticsFraudSum-DisplayValueUpdateMainParts {
+/*.containerStatisticsFraudSum-DisplayValueUpdateMainParts {*/
 
-}
+/*}*/
 
-.statisticsFraudSum-DisplayValue {
-    margin: 0;
-    padding: 0;
-    opacity: 0.8;
-    color: #FF7E00;
-    font-size: 1.2rem;
-}
+/*.statisticsFraudSum-DisplayValue {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    opacity: 0.8;*/
+/*    color: #FF7E00;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
 .commonGamePlayUpdateTextTime {
     width: 95%;
@@ -383,14 +383,14 @@
     box-shadow: 0px 0px 1px 1px #1f130e;
 }
 
-.fraudCountRoundCommon {
-    /*color: #ac4a71;*/
-    /*color: lightgoldenrodyellow;*/
-    opacity: 0.8;
-    /*color: #FFFFFF;*/
-    /*color: #B1B1B1;*/
-    color: #FF7E00;
-}
+/*.fraudCountRoundCommon {*/
+/*    !*color: #ac4a71;*!*/
+/*    !*color: lightgoldenrodyellow;*!*/
+/*    opacity: 0.8;*/
+/*    !*color: #FFFFFF;*!*/
+/*    !*color: #B1B1B1;*!*/
+/*    color: #FF7E00;*/
+/*}*/
 
 .statisticsFraudBestText {
     /*color: #ac4a71;*/
@@ -513,49 +513,49 @@
 
 
 
-.statisticsFraudCounterName-DisplayFlex{
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
-}
+/*.statisticsFraudCounterName-DisplayTextFlex{*/
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    box-shadow: 0px 0px 1px 1px #2a1e1e;*/
+/*}*/
 
-.statisticsFraudCounterName-StyleText{
-    margin: 0;
-    padding: 0;
-    color: #FF7E00;
-    opacity: 0.8;
-    font-size: 0.9rem;
-    font-weight: 200;
-}
+/*.statisticsFraudCounterName-StyleText{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    color: #FF7E00;*/
+/*    opacity: 0.8;*/
+/*    font-size: 0.9rem;*/
+/*    font-weight: 200;*/
+/*}*/
 
 
-.statisticsFraudCounterRound-StyleValueSumPerRound {
-    margin: 0;
-    padding: 0;
-    opacity: 0.8;
-    color: #FF7E00;
-    font-size: 0.8rem;
-}
+/*.statisticsFraudCounterRound-StyleValueSumPerRound {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    opacity: 0.8;*/
+/*    color: #FF7E00;*/
+/*    font-size: 0.8rem;*/
+/*}*/
 
-.fa-gem {
-    color: lightgoldenrodyellow;
-    opacity: 0.9;
-    font-size: 1.0rem;
-}
+/*.fa-gem {*/
+/*    color: lightgoldenrodyellow;*/
+/*    opacity: 0.9;*/
+/*    font-size: 1.0rem;*/
+/*}*/
 
-.fa-whiskey-glass {
-    color: #FFFFFF;
-    opacity: 0.9;
-    font-weight: 600;
-    font-size: 1.0rem;
-}
+/*.fa-whiskey-glass {*/
+/*    color: #FFFFFF;*/
+/*    opacity: 0.9;*/
+/*    font-weight: 600;*/
+/*    font-size: 1.0rem;*/
+/*}*/
 
-.fa-whiskeyGlassMain {
-    color: #FFFFFF;
-    opacity: 0.8;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
+/*.fa-whiskeyGlassMain {*/
+/*    color: #FFFFFF;*/
+/*    opacity: 0.8;*/
+/*    font-weight: 600;*/
+/*    font-size: 1.5rem;*/
+/*}*/
 
 /* variablesMain.js :
 -> statisticsFraudCountNumberTextDisplaySetUp/ statisticsFraudCountNumberTextDisplay

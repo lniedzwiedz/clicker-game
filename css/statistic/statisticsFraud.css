@@ -1,0 +1,164 @@
+#containerStatisticsFraud-Main {
+    display: grid;
+    grid-row: 4 / 5;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraud-MainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-columns: 1fr 6fr;
+}
+
+#containerStatisticsFraudSum-Main {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudSum-MainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 3fr 2fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudSum-DisplayValueUpdateMain {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerStatisticsFraudSum-DisplayValueUpdateMain {
+
+}
+
+#containerStatisticsFraudSum-DisplayValueUpdateMainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerStatisticsFraudSum-DisplayValueUpdateMainParts {
+
+}
+
+.statisticsFraudSum-DisplayValue {
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    color: #FF7E00;
+    font-size: 1.2rem;
+}
+
+#containerStatisticsFraudSum-DisplayIconsMain {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudSum-DisplayIconsMainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.fa-gem {
+    color: lightgoldenrodyellow;
+    opacity: 0.9;
+    font-size: 1.0rem;
+}
+
+.fa-whiskey-glass {
+    color: #FFFFFF;
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: 1.0rem;
+}
+
+.fa-whiskeyGlassMain {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#containerStatisticsFraudCounter-Main {
+    display: grid;
+    grid-row: 2/ 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudCounter-MainParts {
+    display: grid;
+    grid-row: 1/ 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudCounterRound-Main {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudCounterRound-MainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.statisticsFraudCounterRound-StyleValueSumPerRound {
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    color: #FF7E00;
+    font-size: 0.8rem;
+}
+
+#containerStatisticsFraudCounterName-DisplayTextMain {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsFraudCounterName-DisplayTextMainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.statisticsFraudCounterName-DisplayTextFlex {
+    margin: 0;
+    padding: 0;
+    color: #FF7E00;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
