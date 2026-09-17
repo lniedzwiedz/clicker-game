@@ -4,5 +4,7 @@ export class ControllerConfigurationRound {
         this.viewConfigurationRound = viewConfigurationRound;
     }
 
-
+    createContainerConfigurationRound() {
+        this.viewConfigurationRound.createContainerConfigurationRound();
+    }
 }

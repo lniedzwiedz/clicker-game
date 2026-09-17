@@ -1,5 +1,6 @@
 import {
-    createElementDiv, createElementDivAnaDivChild,
+    createElementDiv,
+    createElementDivAnaDivChild,
     setElementStyletAsGrid,
     valueToString
 } from "../../common/function/commonFunctions.js";
@@ -101,6 +102,4 @@ export class ViewConfigurationRound {
             gridTemplateColumns
         );
     }
-
-
 }

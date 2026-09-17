@@ -1,15 +1,15 @@
+import {ModuleConfiguration} from "./ModuleConfiguration.js";
 import {ModuleButtons} from "./ModuleButtons.js";
 import {ModuleStatistics} from "./ModuleStatistics.js";
 import {ControllerMainGame} from "../controller/ControllerMainGame.js";
-import {ModuleMenu} from "./ModuleMenu.js";
 
 
 export class ModuleGame {
 
     constructor() {
 
-        this.moduleMenu =
-            new ModuleMenu();
+        this.moduleConfiguration =
+            new ModuleConfiguration();
 
         this.moduleButtons =
             new ModuleButtons();
@@ -19,7 +19,7 @@ export class ModuleGame {
 
         this.controllerMainGame =
             new ControllerMainGame(
-                this.moduleMenu.getControllerModuleMenu(),
+                this.moduleConfiguration.getControllerConfiguration(),
                 this.moduleButtons.getControllerButtonsMain(),
                 this.moduleStatistics.getControllerStatisticsMain(),
             );
@@ -30,7 +30,8 @@ export class ModuleGame {
     // }
 
     createGame() {
+        this.moduleConfiguration.createConfiguration();
         this.moduleButtons.createGame();
-        this.controllerMainGame.configureStartGame();
+        // this.controllerMainGame.configureStartGame();
     }
 }

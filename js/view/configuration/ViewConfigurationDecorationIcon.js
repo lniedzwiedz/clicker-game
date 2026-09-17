@@ -2,10 +2,11 @@ import {
     createElementDivAnaDivChild,
     createElementI,
     setElementClassNameById
-} from "../../common/function/commonFunctions";
-import * as variablesConfigurationIcon from "../../common/variable/configuration/variablesConfigurationIcon";
+} from "../../common/function/commonFunctions.js";
 
-export class ViewConfigurationIcon {
+import * as variablesConfigurationIcon from "../../common/variable/configuration/variablesConfigurationIcon.js";
+
+export class ViewConfigurationDecorationIcon {
 
     createContainerConfigurationDecorationIcon() {
 
@@ -27,5 +28,4 @@ export class ViewConfigurationIcon {
             variablesConfigurationIcon.containerConfigurationDecorationIconScrewdriverWrench
         );
     }
-
 }

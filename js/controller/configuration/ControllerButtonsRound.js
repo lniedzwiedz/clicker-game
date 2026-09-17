@@ -19,7 +19,7 @@ export class ControllerButtonsRound {
     }
 
     createConfigurationRound() {
-        this.viewButtonsRound.createContainerConfiguration();
+        this.viewButtonsRound.createContainersConfigurationRoundButtons();
         this.setButtonsConfigurationRound();
     }
 

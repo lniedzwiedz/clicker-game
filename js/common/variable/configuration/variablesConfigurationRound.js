@@ -1,4 +1,4 @@
-import * as variablesConfigurationMain from "../configuration/variablesConfigurationMain";
+import * as variablesConfigurationMain from "../configuration/variablesConfigurationMain.js";
 
 
 export const containerConfigurationMainParts = variablesConfigurationMain.containerConfigurationMainParts;

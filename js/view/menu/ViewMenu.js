@@ -6,11 +6,7 @@ import * as variablesMenu from "../../common/variable/menu/variablesMenu.js";
 
 export class ViewMenu {
 
-    createMenu() {
-        this.createContainerMain();
-    }
-
-    createContainerMain() {
+    createContainerMenuMain() {
 
         createElementDiv(
             variablesMenu.containerMainParts,

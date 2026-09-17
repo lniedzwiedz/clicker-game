@@ -1,7 +1,6 @@
 export class ControllerButtonsMain {
 
-    constructor(controllerButtonsRound, controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
-        this.controllerButtonsRound = controllerButtonsRound;
+    constructor(controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
         this.controllerButtonStart = controllerButtonStart;
         this.controllerButtonStop = controllerButtonStop;
         this.controllerButtonClickColor = controllerButtonClickColor;
@@ -26,7 +25,7 @@ export class ControllerButtonsMain {
         this.controllerButtonStop.setConfigurationAfterClick();
         this.controllerButtonStart.setConfigurationBeforeClick();
 
-        this.setConfigurationRoundNumberWhenGameStop();
+        // this.setConfigurationRoundNumberWhenGameStop();
 
         this.removeEventListenerOnClickButtonStop();
         this.removeEventListenerOnClickButtonClickColor();
@@ -40,20 +39,20 @@ export class ControllerButtonsMain {
         this.controllerButtonClickColor.configureButtonClickColor();
     }
 
-    getRoundNumber() {
-        return this.controllerButtonsRound.getRoundNumber();
-    }
-
-    setConfigurationForRoundNumber() {
-        this.controllerButtonsRound.setConfigurationButtonsFinalNumberForPlay();
-    }
-
-    setConfigurationRoundNumberWhenGameStop() {
-        this.controllerButtonsRound.setConfigurationRoundNumberWhenGameStop();
-    }
+    // getRoundNumber() {
+    //     return this.controllerButtonsRound.getRoundNumber();
+    // }
+    //
+    // setConfigurationForRoundNumber() {
+    //     this.controllerButtonsRound.setConfigurationButtonsFinalNumberForPlay();
+    // }
+    //
+    // setConfigurationRoundNumberWhenGameStop() {
+    //     this.controllerButtonsRound.setConfigurationRoundNumberWhenGameStop();
+    // }
 
     configureButtonsAfterGameOver() {
-        this.setConfigurationRoundNumberWhenGameStop();
+        // this.setConfigurationRoundNumberWhenGameStop();
 
         this.removeEventListenerOnClickButtonClickColor();
         this.configureClickColorGameOver();

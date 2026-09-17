@@ -4,7 +4,7 @@ export class ControllerMenu {
         this.viewMenu = viewMenu;
     }
 
-    createMenu() {
-        this.viewMenu.createMenu();
+    createMenuMain() {
+        this.viewMenu.createContainerMenuMain();
     }
 }

@@ -1,7 +1,3 @@
-import {ViewButtonsRound} from "../view/control/ViewButtonsRound.js";
-import {ActionButtonsRound} from "../action/control/ActionButtonsRound.js";
-import {ControllerButtonsRound} from "../controller/control/ControllerButtonsRound.js";
-
 import {ViewButtonClickColor} from "../view/control/ViewButtonClickColor.js";
 import {ActionButtonClickColor} from "../action/control/ActionButtonClickColor.js";
 import {ControllerButtonClickColor} from "../controller/control/ControllerButtonClickColor.js";
@@ -20,19 +16,6 @@ import {ControllerButtonsMain} from "../controller/control/ControllerButtonsMain
 export class ModuleButtons {
 
     constructor() {
-
-        this.actionButtonsRound =
-            new ActionButtonsRound();
-
-        this.viewButtonsRound =
-            new ViewButtonsRound();
-
-        this.controllerButtonsRound =
-            new ControllerButtonsRound(
-                this.viewButtonsRound,
-                this.actionButtonsRound
-            );
-
 
         this.viewButtonClickColor =
             new ViewButtonClickColor();
@@ -75,7 +58,6 @@ export class ModuleButtons {
 
         this.controllerButtonsMain =
             new ControllerButtonsMain(
-                this.controllerButtonsRound,
                 this.controllerButtonStart,
                 this.controllerButtonStop,
                 this.controllerButtonClickColor
@@ -83,7 +65,6 @@ export class ModuleButtons {
     }
 
     createGame() {
-        this.controllerButtonsRound.createConfigurationRound();
         this.controllerButtonClickColor.createGameButtonsView();
         this.controllerButtonStart.createButtonStart();
     }
