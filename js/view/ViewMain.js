@@ -19,7 +19,7 @@ export class ViewMain {
         );
 
         createElementDiv(
-            variablesMain.containerMain,
+            variablesMain.containerMainParts,
             variablesMain.containerHomeMain
         );
 

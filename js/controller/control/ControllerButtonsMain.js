@@ -6,6 +6,11 @@ export class ControllerButtonsMain {
         this.controllerButtonClickColor = controllerButtonClickColor;
     }
 
+    createGameButtons(){
+        this.controllerButtonClickColor.createGameButtonsView();
+        this.controllerButtonStart.createButtonStart();
+    }
+
     setOnClickColor(onClickColor) {
         this.controllerButtonClickColor
             .setOnClickColor(onClickColor);

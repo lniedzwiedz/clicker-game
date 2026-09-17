@@ -65,8 +65,9 @@ export class ModuleButtons {
     }
 
     createGame() {
-        this.controllerButtonClickColor.createGameButtonsView();
-        this.controllerButtonStart.createButtonStart();
+        // this.controllerButtonClickColor.createGameButtonsView();
+        // this.controllerButtonStart.createButtonStart();
+        this.controllerButtonsMain.createGameButtons();
     }
 
     getControllerButtonsMain() {

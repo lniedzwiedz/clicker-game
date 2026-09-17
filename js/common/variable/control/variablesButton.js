@@ -1,11 +1,11 @@
-export const containerButtonClickColorMain = "containerGameFiled-buttonPlay";
-export const buttonClickColorDiv = "buttonPlay";
-export const buttonClickColorGameOver = "gameFiledButtonPlayGameOver";
-// export const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /><br /> game over";
-// export const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /> game over";
-export const buttonClickColorGameOverTextDisplay = "YOU DID WELL ! <br /> game over";
-// export const functionNameOnclickPlayGameColor = "playClickerGame";
-// export const functionNameOnclickPlayGameColorClickBeforeNewRound = "playClickerGameClickBeforeNewRound";
+// export const containerButtonClickColorMain = "containerGameFiled-buttonPlay";
+// export const buttonClickColorDiv = "buttonPlay";
+// export const buttonClickColorGameOver = "gameFiledButtonPlayGameOver";
+// // export const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /><br /> game over";
+// // export const gameFiledButtonPlayGameOverTextDisplay = "You did well ! <br /> game over";
+// export const buttonClickColorGameOverTextDisplay = "YOU DID WELL ! <br /> game over";
+// // export const functionNameOnclickPlayGameColor = "playClickerGame";
+// // export const functionNameOnclickPlayGameColorClickBeforeNewRound = "playClickerGameClickBeforeNewRound";
 
 export const containerButtonStartAndStopMain = "containerGameFiled-buttonsMain";
 export const containerButtonStartAndStopMainParts = "containerGameFiled-buttonsMainParts";

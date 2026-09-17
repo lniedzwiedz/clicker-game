@@ -30,8 +30,9 @@ export class ModuleGame {
     // }
 
     createGame() {
-        this.moduleConfiguration.createConfiguration();
-        this.moduleButtons.createGame();
+        // this.moduleConfiguration.createConfiguration();
+        // this.moduleButtons.createGame();
         // this.controllerMainGame.configureStartGame();
+        this.controllerMainGame.configureStartGame();
     }
 }

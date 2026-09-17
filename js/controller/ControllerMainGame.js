@@ -2,7 +2,8 @@ import {Game} from "../Game.js";
 
 export class ControllerMainGame {
 
-    constructor(controllerButtonsMain, controllerStatisticsMain) {
+    constructor(moduleConfiguration, controllerButtonsMain, controllerStatisticsMain) {
+        this.moduleConfiguration = moduleConfiguration;
         this.controllerButtonsMain = controllerButtonsMain;
         this.controllerStatisticsMain = controllerStatisticsMain;
         this.game = null;
@@ -10,6 +11,9 @@ export class ControllerMainGame {
     }
 
     configureStartGame() {
+        this.moduleConfiguration.createConfiguration();
+        this.controllerButtonsMain.createGame();
+
         this.controllerButtonsMain.setOnStart(() =>
             this.startGame());
     }

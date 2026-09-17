@@ -1,15 +1,15 @@
 import {ViewButtons} from "./ViewButtons.js";
 
 import {
-    createElementDiv,
     createElementButton,
     setElementClassNameById,
     setElementTextById,
-    removeElementClassNameById
+    removeElementClassNameById,
+    createElementDiv
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesButton.js";
 import * as variablesMain from "../../common/variable/main/variablesMain.js";
+import * as variablesButtonClickColor from "../../common/variable/control/variablesButtonClickColor.js";
 
 
 export class ViewButtonClickColor extends ViewButtons {
@@ -20,12 +20,16 @@ export class ViewButtonClickColor extends ViewButtons {
     }
 
     createContainerMain() {
-        createElementDiv(variablesGameButtons.containerButtonStartAndStopMain, variablesGameButtons.containerButtonStartAndStopMainParts);
+        createElementDiv(variablesButtonClickColor.containerHomeMainParts, variablesButtonClickColor.containerButtonClickColorMain);
     }
 
+    // createContainerMain() {
+    //     createElementDiv(containerButtonStartAndStopMain, variablesButtonClickColor.containerButtonStartAndStopMainParts);
+    // }
+
     createContainerParts() {
-        createElementButton(variablesGameButtons.containerButtonClickColorMain, variablesGameButtons.buttonClickColorDiv);
-        setElementClassNameById(variablesGameButtons.buttonClickColorDiv, variablesGameButtons.buttonClickColorDiv);
+        createElementButton(variablesButtonClickColor.containerButtonClickColorMain, variablesButtonClickColor.buttonClickColorDiv);
+        setElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorDiv);
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {
@@ -37,12 +41,12 @@ export class ViewButtonClickColor extends ViewButtons {
     }
 
     setConfigurationGameOver() {
-        setElementTextById(variablesGameButtons.buttonClickColorDiv, variablesGameButtons.buttonClickColorGameOverTextDisplay);
-        setElementClassNameById(variablesGameButtons.buttonClickColorDiv, variablesGameButtons.buttonClickColorGameOver);
+        setElementTextById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOverTextDisplay);
+        setElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOver);
     }
 
     removeConfigurationGameOver() {
-        setElementTextById(variablesGameButtons.buttonClickColorDiv, "");
-        removeElementClassNameById(variablesGameButtons.buttonClickColorDiv, variablesGameButtons.buttonClickColorGameOver);
+        setElementTextById(variablesButtonClickColor.buttonClickColorDiv, "");
+        removeElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOver);
     }
 }
