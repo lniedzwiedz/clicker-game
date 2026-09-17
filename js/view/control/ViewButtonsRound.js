@@ -1,7 +1,6 @@
 import {
     createElementButton,
     createElementDiv,
-    createElementDivAnaDivChild,
     createElementI,
     createElementP,
     getElementAttributeValueById,
@@ -19,121 +18,121 @@ import * as variablesButtonRound from "../../common/variable/control/variablesBu
 
 export class ViewButtonsRound {
 
-    createContainerConfiguration() {
-        this.createContainerConfigurationMain();
-        this.createContainerConfigurationDecorationIcon();
-        this.createContainerConfigurationRound();
-    }
+    // createContainerConfiguration() {
+    //     this.createContainerConfigurationMain();
+    //     this.createContainerConfigurationDecorationIcon();
+    //     this.createContainerConfigurationRound();
+    // }
 
-    createContainerConfigurationMain() {
+    // createContainerConfigurationMain() {
+    //
+    //     createElementDiv(
+    //         variablesConfigurationMain.containerMenuMainParts,
+    //         variablesConfigurationMain.containerConfigurationMain
+    //     );
+    //
+    //     createElementDiv(
+    //         variablesConfigurationMain.containerConfigurationMain,
+    //         variablesConfigurationMain.containerConfigurationMainParts
+    //     );
+    // }
 
-        createElementDiv(
-            variablesButtonRound.containerMenuMainParts,
-            variablesButtonRound.containerConfigurationMain
-        );
+    // createContainerConfigurationRoundMain() {
+    //
+    //     createElementDivAnaDivChild(
+    //         variablesConfigurationMain.containerConfigurationMainParts,
+    //         variablesButtonRound.containerConfigurationRoundMain,
+    //         variablesButtonRound.containerConfigurationRoundMainParts
+    //     );
+    // }
 
-        createElementDiv(
-            variablesButtonRound.containerConfigurationMain,
-            variablesButtonRound.containerConfigurationMainParts
-        );
-    }
+    // createContainerConfigurationDecorationIcon() {
+    //
+    //     createElementDivAnaDivChild(
+    //         variablesConfigurationIcon.containerConfigurationMainParts,
+    //         variablesConfigurationIcon.containerConfigurationDecorationIconMain,
+    //         variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex
+    //     );
+    //
+    //     setElementClassNameById(
+    //         variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex,
+    //         variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex
+    //     );
+    //
+    //     createElementI(
+    //         variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex,
+    //         variablesConfigurationIcon.configurationDecorationIcon,
+    //         variablesConfigurationIcon.containerConfigurationDecorationIconStyleSolid,
+    //         variablesConfigurationIcon.containerConfigurationDecorationIconScrewdriverWrench
+    //     );
+    // }
 
-    createContainerConfigurationRoundMain() {
+    // createContainerConfigurationRound() {
+    //     this.createContainerConfigurationRoundMain();
+    //     this.createContainersConfigurationRoundButtons();
+    // }
 
-        createElementDivAnaDivChild(
-            variablesButtonRound.containerConfigurationMainParts,
-            variablesButtonRound.containerConfigurationRoundMain,
-            variablesButtonRound.containerConfigurationRoundMainParts
-        );
-    }
+    // createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
+    //
+    //     let childId =
+    //         variablesButtonRound.containerConfigurationRoundRowMainPrefix
+    //         + valueToString(rowNumber);
+    //
+    //     let grandchildId =
+    //         variablesButtonRound.containerConfigurationRoundRowMainPartsPrefix
+    //         + valueToString(rowNumber);
+    //
+    //     createElementDiv(
+    //         childId,
+    //         grandchildId
+    //     );
+    //
+    //     let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
+    //     let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
+    //
+    //     setElementStyletAsGrid(
+    //         grandchildId,
+    //         1,
+    //         1,
+    //         2,
+    //         2,
+    //         gridTemplateRows,
+    //         gridTemplateColumns
+    //     );
+    // }
 
-    createContainerConfigurationDecorationIcon() {
-
-        createElementDivAnaDivChild(
-            variablesButtonRound.containerConfigurationMainParts,
-            variablesButtonRound.containerConfigurationDecorationIconMain,
-            variablesButtonRound.configurationDecorationIconDisplayIconFlex
-        );
-
-        setElementClassNameById(
-            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
-            variablesButtonRound.configurationDecorationIconDisplayIconFlex
-        );
-
-        createElementI(
-            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
-            variablesButtonRound.configurationDecorationIcon,
-            variablesButtonRound.containerConfigurationDecorationIconStyleSolid,
-            variablesButtonRound.containerConfigurationDecorationIconScrewdriverWrench
-        );
-    }
-
-    createContainerConfigurationRound() {
-        this.createContainerConfigurationRoundMain();
-        this.createContainersConfigurationRoundButtons();
-    }
-
-    createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
-
-        let childId =
-            variablesButtonRound.containerConfigurationRoundRowMainPrefix
-            + valueToString(rowNumber);
-
-        let grandchildId =
-            variablesButtonRound.containerConfigurationRoundRowMainPartsPrefix
-            + valueToString(rowNumber);
-
-        createElementDiv(
-            childId,
-            grandchildId
-        );
-
-        let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
-        let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
-
-        setElementStyletAsGrid(
-            grandchildId,
-            1,
-            1,
-            2,
-            2,
-            gridTemplateRows,
-            gridTemplateColumns
-        );
-    }
-
-    createContainerConfigurationRoundRowMain(rowNumber) {
-
-        let parentId =
-            variablesButtonRound.containerConfigurationRoundMainParts;
-
-        let childId =
-            variablesButtonRound.containerConfigurationRoundRowMainPrefix
-            + valueToString(rowNumber);
-
-        createElementDiv(
-            parentId,
-            childId
-        );
-
-        let gridRowStartNumber = 1 + rowNumber;
-        let gridColumnStartNumber = 1;
-        let gridRowEndNumber = 2;
-        let gridColumnEndNumber = 2 + rowNumber;
-
-        let gridTemplateRows = "1fr";
-        let gridTemplateColumns = "1fr";
-
-        setElementStyletAsGrid(
-            childId,
-            gridRowStartNumber,
-            gridColumnStartNumber,
-            gridRowEndNumber,
-            gridColumnEndNumber,
-            gridTemplateRows,
-            gridTemplateColumns
-        );
-    }
+    // createContainerConfigurationRoundRowMain(rowNumber) {
+    //
+    //     let parentId =
+    //         variablesButtonRound.containerConfigurationRoundMainParts;
+    //
+    //     let childId =
+    //         variablesButtonRound.containerConfigurationRoundRowMainPrefix
+    //         + valueToString(rowNumber);
+    //
+    //     createElementDiv(
+    //         parentId,
+    //         childId
+    //     );
+    //
+    //     let gridRowStartNumber = 1 + rowNumber;
+    //     let gridColumnStartNumber = 1;
+    //     let gridRowEndNumber = 2;
+    //     let gridColumnEndNumber = 2 + rowNumber;
+    //
+    //     let gridTemplateRows = "1fr";
+    //     let gridTemplateColumns = "1fr";
+    //
+    //     setElementStyletAsGrid(
+    //         childId,
+    //         gridRowStartNumber,
+    //         gridColumnStartNumber,
+    //         gridRowEndNumber,
+    //         gridColumnEndNumber,
+    //         gridTemplateRows,
+    //         gridTemplateColumns
+    //     );
+    // }
 
     createContainersConfigurationRoundButtons() {
 
@@ -141,14 +140,14 @@ export class ViewButtonsRound {
 
         for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
 
-            this.createContainerConfigurationRoundRowMain(
-                rowNumber
-            );
-
-            this.createContainerConfigurationRoundRowMainParts(
-                rowNumber,
-                buttonNumberPerRow
-            );
+            // this.createContainerConfigurationRoundRowMain(
+            //     rowNumber
+            // );
+            //
+            // this.createContainerConfigurationRoundRowMainParts(
+            //     rowNumber,
+            //     buttonNumberPerRow
+            // );
 
             this.createContainerConfigurationRoundButtons(
                 rowNumber,

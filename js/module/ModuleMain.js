@@ -11,17 +11,17 @@ export class ModuleMain {
 
     constructor() {
 
-        this.viewMenu =
-            new ViewMenu();
-
-        this.cntrollerMenu =
-            new ControllerMenu(this.viewMenu);
-
-        this.viewTitle =
-            new ViewTitle();
-
-        this.controllerTitle =
-            new ControllerTitle(this.viewTitle);
+        // this.viewMenu =
+        //     new ViewMenu();
+        //
+        // this.cntrollerMenu =
+        //     new ControllerMenu(this.viewMenu);
+        //
+        // this.viewTitle =
+        //     new ViewTitle();
+        //
+        // this.controllerTitle =
+        //     new ControllerTitle(this.viewTitle);
 
         this.moduleGame =
             new ModuleGame();
