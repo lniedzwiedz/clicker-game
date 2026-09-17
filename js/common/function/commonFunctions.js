@@ -17,10 +17,6 @@ export function setElementClassNameById(elementId, className) {
     getElementById(elementId).classList.add(className);
 }
 
-export function getElementsByClassName(className) {
-    return document.getElementsByClassName(className);
-}
-
 export function removeElementClassNameById(elementId, className) {
     getElementById(elementId).classList.remove(className);
 }
@@ -68,11 +64,6 @@ export function createElementDivAnaDivChild(parentId, childId, grandChildId) {
     createElementDiv(childId, grandChildId);
 }
 
-export function createElementButtonAndSetFunctionOnclick(parentId, childId, functionOnclickName) {
-    createElementButton(parentId, childId);
-    setFunctionOnclick(childId, functionOnclickName);
-}
-
 export function setElementClassNameSameAsIdAndSetText(elementId, text) {
     setElementClassNameById(elementId, elementId);
     setElementTextById(elementId, text);
@@ -84,7 +75,7 @@ export function setElementClassNamedAndText(elementId, className, text) {
 }
 
 export function setElementClassNames(elementId, classNameOne, classNameTwo) {
-    setElementClassNameById(elementId, classNameTwo);
+    setElementClassNameById(elementId, classNameOne);
     setElementClassNameById(elementId, classNameTwo);
 }
 
@@ -94,10 +85,6 @@ export function isElementsExistById(elementId) {
     if (element !== null)
         result = true;
     return result;
-}
-
-export function setElementTextByClassName(className, text) {
-    getElementsByClassName(className)[0].innerHTML = text;
 }
 
 export function setElementTextById(elementId, text) {
@@ -110,14 +97,6 @@ export function setElementAttributeValueById(elementId, value) {
 
 export function getElementAttributeValueById(elementId) {
     return getElementById(elementId).getAttribute("value");
-}
-
-export function setFunctionOnclick(elementId, functionNameOnclick) {
-    getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
-}
-
-export function removeFunctionOnclick(elementId) {
-    getElementById(elementId).removeAttribute("onclick");
 }
 
 export function setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns) {

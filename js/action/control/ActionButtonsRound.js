@@ -6,8 +6,8 @@ import * as variableButtonRound from "../../common/variable/control/variablesBut
 
 export class ActionButtonsRound {
 
-    buttonIdPrevious = variableButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5)
-    buttonIdCurrent = variableButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(5);
+    buttonIdPrevious = variableButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(5)
+    buttonIdCurrent = variableButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(5);
     buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
 
     setConfigurationButtonIdClickedCurrent(event) {

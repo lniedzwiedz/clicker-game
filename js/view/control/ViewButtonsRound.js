@@ -1,35 +1,34 @@
 import {
     createElementButton,
     createElementDiv,
-    createElementDivAnaDivChild, createElementI, createElementP,
+    createElementDivAnaDivChild,
+    createElementI,
+    createElementP,
     getElementAttributeValueById,
     removeElementClassNameById,
     setElementAttributeValueById,
     setElementClassNameById,
-    setElementClassNamedAndText,
     setElementClassNames,
     setElementStyletAsGrid,
+    setElementTextById,
     valueToString
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesMenu from "../../common/variable/menu/variablesMenu.js";
-import * as variablesStatisticsTime from "../../common/variable/statistic/variablesStatisticsTime.js";
 import * as variablesButtonRound from "../../common/variable/control/variablesButtonRound.js";
-import {containerConfigurationRoundMainPartsRowPrefix} from "../../common/variable/control/variablesButtonRound.js";
 
 
 export class ViewButtonsRound {
 
-    createContainerRoundNumberConfiguration() {
-        this.createContainerRoundNumberConfigurationMain();
+    createContainerConfiguration() {
+        this.createContainerConfigurationMain();
         this.createContainerConfigurationDecorationIcon();
-        this.createContainerButtonRoundNumberMain();
+        this.createContainerConfigurationRound();
     }
 
-    createContainerRoundNumberConfigurationMain() {
+    createContainerConfigurationMain() {
 
         createElementDiv(
-            variablesMenu.containerMenuMainParts,
+            variablesButtonRound.containerMenuMainParts,
             variablesButtonRound.containerConfigurationMain
         );
 
@@ -39,12 +38,12 @@ export class ViewButtonsRound {
         );
     }
 
-    createContainerConfiguration(containerMenuGameConfigurationText, menuGameConfigurationText) {
+    createContainerConfigurationRoundMain() {
 
         createElementDivAnaDivChild(
             variablesButtonRound.containerConfigurationMainParts,
-            containerMenuGameConfigurationText,
-            menuGameConfigurationText
+            variablesButtonRound.containerConfigurationRoundMain,
+            variablesButtonRound.containerConfigurationRoundMainParts
         );
     }
 
@@ -69,139 +68,115 @@ export class ViewButtonsRound {
         );
     }
 
-    createContainerButtonRoundNumberMain() {
-
-        this.createContainerConfiguration(
-            variablesButtonRound.containerConfigurationRoundMain,
-            variablesButtonRound.containerConfigurationRoundMainParts);
-
-        this.createContainersConfigurationClickNumberButton();
+    createContainerConfigurationRound() {
+        this.createContainerConfigurationRoundMain();
+        this.createContainersConfigurationRoundButtons();
     }
 
-    createContainersConfigurationClickNumberButton() {
-        // this.createContainerRoundNumberConfigurationRows();
-        this.createContainerRoundNumberConfigurationRowsAll();
-    }
+    createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
 
-    // createContainerRoundNumberConfigurationRows() {
-    createContainerRoundNumberConfigurationRows(parentId, childId, grandchildId) {
+        let childId =
+            variablesButtonRound.containerConfigurationRoundRowMainPrefix
+            + valueToString(rowNumber);
 
-        // createElementDivAnaDivChild(
-        //     variablesButtonRound.containerConfigurationRoundMainParts,
-        //     variablesButtonRound.containerConfigurationRoundMainRow0,
-        //     variablesButtonRound.containerConfigurationRoundMainPartsRow0
-        // );
-        //
-        // createElementDivAnaDivChild(
-        //     variablesButtonRound.containerConfigurationRoundMainParts,
-        //     variablesButtonRound.containerConfigurationRoundMainRow1,
-        //     variablesButtonRound.containerConfigurationRoundMainPartsRow1
-        // );
+        let grandchildId =
+            variablesButtonRound.containerConfigurationRoundRowMainPartsPrefix
+            + valueToString(rowNumber);
 
-        // let childId = variablesButtonRound.containerConfigurationRoundMainRowPrefix + valueToString(rowNumber);
-        // let grandchildId = variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
-
-        createElementDivAnaDivChild(
-            parentId,
+        createElementDiv(
             childId,
             grandchildId
         );
-    }
-
-    createContainerRoundNumberConfigurationRowsAll() {
-
-        for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
-
-            let parentId =
-                variablesButtonRound.containerConfigurationRoundMainParts;
-
-            let childId =
-                variablesButtonRound.containerConfigurationRoundMainRowPrefix
-                + valueToString(rowNumber);
-
-            let grandchildId =
-                variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix
-                + valueToString(rowNumber);
-
-            this.createContainerRoundNumberConfigurationRows(
-                parentId,
-                childId,
-                grandchildId
-            );
-
-            this.createContainerConfigurationButtonRoundMainParts(
-                grandchildId,
-                rowNumber
-            );
-
-            this.createContainerRoundNumberConfigurationPerRow(
-                grandchildId,
-                rowNumber
-            );
-        }
-    }
-
-    createContainerConfigurationButtonRoundMainParts(parentId) {
-
-
-        // let parentId =  variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
-        let clicksNumberPerRow = 5;
-
-        let gridRowStartNumber = 1;
-        let gridColumnStartNumber = 1;
-        let gridRowEndNumber = 2;
-        let gridColumnEndNumber = 2;
 
         let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
-        let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
+        let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
 
         setElementStyletAsGrid(
+            grandchildId,
+            1,
+            1,
+            2,
+            2,
+            gridTemplateRows,
+            gridTemplateColumns
+        );
+    }
+
+    createContainerConfigurationRoundRowMain(rowNumber) {
+
+        let parentId =
+            variablesButtonRound.containerConfigurationRoundMainParts;
+
+        let childId =
+            variablesButtonRound.containerConfigurationRoundRowMainPrefix
+            + valueToString(rowNumber);
+
+        createElementDiv(
             parentId,
+            childId
+        );
+
+        let gridRowStartNumber = 1 + rowNumber;
+        let gridColumnStartNumber = 1;
+        let gridRowEndNumber = 2;
+        let gridColumnEndNumber = 2 + rowNumber;
+
+        let gridTemplateRows = "1fr";
+        let gridTemplateColumns = "1fr";
+
+        setElementStyletAsGrid(
+            childId,
             gridRowStartNumber,
             gridColumnStartNumber,
             gridRowEndNumber,
             gridColumnEndNumber,
             gridTemplateRows,
-            gridTemplateColumns);
-
+            gridTemplateColumns
+        );
     }
 
-    createContainerRoundNumberConfigurationPerRow(parentId, rowNumber) {
+    createContainersConfigurationRoundButtons() {
 
-        // let parentId = variablesButtonRound.containerConfigurationRoundMainPartsRowPrefix + valueToString(rowNumber);
-        let clicksNumberPerRow = 5;
-        //
-        // let gridRowStartNumber = 1;
-        // let gridColumnStartNumber = 1;
-        // let gridRowEndNumber = 2;
-        // let gridColumnEndNumber = 2;
-        //
-        // let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
-        // let gridTemplateColumns = " repeat(" + clicksNumberPerRow + ", 1fr 38fr 1fr)";
-        //
-        // setElementStyletAsGrid(
-        //     parentId,
-        //     gridRowStartNumber,
-        //     gridColumnStartNumber,
-        //     gridRowEndNumber,
-        //     gridColumnEndNumber,
-        //     gridTemplateRows,
-        //     gridTemplateColumns);
+        let buttonNumberPerRow = 5;
+
+        for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
+
+            this.createContainerConfigurationRoundRowMain(
+                rowNumber
+            );
+
+            this.createContainerConfigurationRoundRowMainParts(
+                rowNumber,
+                buttonNumberPerRow
+            );
+
+            this.createContainerConfigurationRoundButtons(
+                rowNumber,
+                buttonNumberPerRow
+            );
+        }
+    }
+
+    createContainerConfigurationRoundButtons(rowNumber, buttonNumberPerRow) {
+
+        let parentId =
+            variablesButtonRound.containerConfigurationRoundRowMainPartsPrefix
+            + valueToString(rowNumber);
 
         let gridRowStartNumberChild = 2;
         let gridColumnStartNumberChild = 2;
         let gridRowEndNumberChild = 3;
         let gridColumnEndNumberChild = 3;
 
-        let clickNumberButton = 1;
+        let buttonRoundNumber = 0;
+        buttonRoundNumber = buttonNumberPerRow * rowNumber + 1;
 
-        if (rowNumber === 1) {
-            clickNumberButton = clicksNumberPerRow + 1;
-        }
+        for (let number = 0; number < buttonNumberPerRow; number++) {
 
-        for (let i = 0; i < clicksNumberPerRow; i++) {
+            let childId =
+                variablesButtonRound.containerConfigurationRoundButtonRoundMainPrefix
+                + valueToString(buttonRoundNumber);
 
-            let childId = variablesButtonRound.buttonRoundNumberPrefix + rowNumber + "-button-" + i;
             createElementDiv(parentId, childId);
 
             let gridTemplateRowsChild = "1fr";
@@ -216,29 +191,36 @@ export class ViewButtonsRound {
                 gridTemplateRowsChild,
                 gridTemplateColumnsChild);
 
-            let buttonId = variablesButtonRound.menuGameConfigurationButtonClickNumberPrefix + valueToString(clickNumberButton);
-            let elementText = variablesButtonRound.buttonRoundNumberDisplayIcon + valueToString(clickNumberButton);
+            let buttonId = variablesButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(buttonRoundNumber);
 
-            this.creatContainerButtonRoundNumber(
+            this.creatContainerConfigurationRoundButton(
                 childId,
                 buttonId,
-                clickNumberButton,
-                elementText
+                buttonRoundNumber
             );
 
-            if (clickNumberButton === 5)
+            if (buttonRoundNumber === 5) {
                 setElementClassNameById(
                     buttonId,
-                    variablesButtonRound.buttonRoundNumberMarkCurrent
+                    variablesButtonRound.configurationRoundButtonRoundCurrentNumber
                 );
+            }
 
             gridColumnStartNumberChild += 3;
             gridColumnEndNumberChild += 3;
-            clickNumberButton += 1;
+            buttonRoundNumber += 1;
         }
     }
 
-    creatContainerButtonRoundNumber(parentId, buttonId, attributeValue, elementText) {
+    creatContainerConfigurationRoundButton(parentId, buttonId, buttonRoundNumber) {
+
+        let iconId =
+            variablesButtonRound.configurationRoundButtonIconPrefix
+            + valueToString(buttonRoundNumber);
+
+        let pId =
+            variablesButtonRound.configurationRoundButtonRoundTextPrefix
+            + valueToString(buttonRoundNumber);
 
         createElementButton(
             parentId,
@@ -247,19 +229,31 @@ export class ViewButtonsRound {
 
         setElementAttributeValueById(
             buttonId,
-            valueToString(attributeValue)
+            valueToString(buttonRoundNumber)
         );
 
         setElementClassNames(
             buttonId,
-            variablesStatisticsTime.commonGameFiledDisplay,
-            variablesButtonRound.buttonRoundNumber
+            variablesButtonRound.configurationRoundDisplayButtonRoundFlex,
+            variablesButtonRound.configurationRoundButtonRoundStyle
         );
 
-        setElementClassNamedAndText(
+        createElementI(
             buttonId,
-            variablesButtonRound.configurationDecorationIconDisplayIconFlex,
-            elementText
+            iconId,
+            variablesButtonRound.configurationRoundButtonRoundIconStyleSolid,
+            variablesButtonRound.configurationRoundButtonRoundIconComputerMouse
+        );
+
+        createElementP(
+            buttonId,
+            pId
+        );
+
+        setElementTextById(
+            pId,
+            variablesButtonRound.configurationRoundButtonRoundTextSpace
+            + valueToString(buttonRoundNumber)
         );
     }
 
@@ -273,12 +267,12 @@ export class ViewButtonsRound {
 
         removeElementClassNameById(
             buttonIdPrevious,
-            variablesButtonRound.buttonRoundNumberMarkCurrent
+            variablesButtonRound.configurationRoundButtonRoundCurrentNumber
         );
 
         setElementClassNameById(
             currentButtonId,
-            variablesButtonRound.buttonRoundNumberMarkCurrent
+            variablesButtonRound.configurationRoundButtonRoundCurrentNumber
         );
     }
 
@@ -286,17 +280,17 @@ export class ViewButtonsRound {
 
         removeElementClassNameById(
             buttonIdPrevious,
-            variablesButtonRound.buttonRoundNumberMarkCurrent)
+            variablesButtonRound.configurationRoundButtonRoundCurrentNumber)
         ;
 
         removeElementClassNameById(
             roundNumberFinal,
-            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+            variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
 
         setElementClassNameById(
             currentButtonId,
-            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+            variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
     }
 
@@ -304,7 +298,7 @@ export class ViewButtonsRound {
 
         removeElementClassNameById(
             roundNumberFinal,
-            variablesButtonRound.menuGameConfigurationButtonChosenNumber
+            variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
     }
 }

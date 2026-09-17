@@ -3,7 +3,6 @@
     --gameFiledButtonPlayColor: #000000;
 }
 
-/*#containerSectionActionsMain {*/
 #containerHome-Main {
     display: grid;
     grid-row: 2 / 3;
@@ -12,7 +11,6 @@
     grid-template-columns: 1fr;
 }
 
-/*#containerMainSectionHome {*/
 #containerHome-MainParts {
     display: grid;
     grid-row: 1 / 1;
@@ -47,9 +45,6 @@
 
 .containerGameFiled-buttonPlay {
     border-radius: 0.45rem;
-    /*box-shadow: 0 0px 17px 9px #FFFFFF;*/
-    /*box-shadow: 0 0px 17px 9px #FFFFFF,*/
-    /*            inset 0 0px 17px 9px #FFFFFF;*/
     opacity: 0.8;
 }
 
@@ -58,22 +53,13 @@
     border: 0;
     border-radius: 0.45rem;
     box-shadow: 0 0px 17px 9px lightgoldenrodyellow;
-    /*box-shadow: 0 0px 17px 9px #2c3e3a;*/
-    /*box-shadow: inset 0 0px 17px 9px #FFFFFF;*/
-    /*box-shadow: 0 0px 17px 9px #FFFFFF,*/
-    /*inset 0 0px 17px 9px #FFFFFF;*/
-    /*box-shadow: 0 0px 9px 9px #FFFFFF, inset 0 0px 9px 7px #FFFFFF;*/
-    /*box-shadow: 0 0px 9px 9px #2c3e3a, inset 0 0px 9px 7px  #2c3e3a;*/
 }
 
 .gameFiledButtonPlayGameOver {
     background-color: #000000;
-    /*color: #000000;*/
     color: lightgoldenrodyellow;
-    /*text-shadow: 4px -1px 20px #FFFFFF;*/
     font-weight: 900;
     font-size: 1.7rem;
-
 }
 
 #containerGameFiled-buttonsMain {
@@ -135,22 +121,6 @@
     justify-content: left;
 }
 
-/*#containerGameFiled-statisticsTime {*/
-/*    display: grid;*/
-/*    grid-row: 3 / 4;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-/*#containerGameFiled-statisticsTimeParts {*/
-/*    display: grid;*/
-/*    grid-row: 1 / 1;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: 1fr 9fr 1fr;*/
-/*    grid-template-columns: 1fr repeat(3, 2fr);*/
-/*}*/
-
 #containerGameFiled-statisticsTimeBest {
     display: grid;
     grid-row: 2 / 3;
@@ -183,8 +153,6 @@
     grid-template-columns: 1fr;
 }
 
-
-
 .containerGameFiled-commonParts {
     display: grid;
     grid-row: 1 / 1;
@@ -213,35 +181,12 @@
     justify-content: center;
 }
 
-.commonGamePlayUpdateText {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*width: 100%;*/
-    /*height: 50%;*/
-    /*text-align: center;*/
-    /*border: 0;*/
-    /*padding: 0;*/
-}
-
 .containerGameFiled-commonStaticText {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-}
-
-
-.commonStaticText {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*width: 100%;*/
-    /*height: 50%;*/
-    /*text-align: center;*/
-    /*border: 0;*/
-    /*padding: 0;*/
 }
 
 .commonGamePlayUpdateTextTime {
@@ -256,52 +201,8 @@
 }
 
 .statisticsFraudBestText {
-    /*color: #ac4a71;*/
-    /*color: lightgoldenrodyellow;*/
     opacity: 0.9;
     font-weight: 600;
-}
-
-.statisticsFraudBestUpdateNumber {
-    /*color: #ac4a71;*/
-    /*color: lightgoldenrodyellow;*/
-    /*color: #FFFFFF;*/
-    /*color: #FF7E00;*/
-    /*color: #B1B1B1;*/
-    /*opacity: 0.8;*/
-    /*font-weight: 600;*/
-    /*font-size: 1.7rem;*/
-}
-
-.fraudCountRound {
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*border: none;*/
-    /*background-color: #000000;*/
-    /*color: #ac4a71;*/
-    /*padding: 0px;*/
-    /*font-weight: 200;*/
-    /*border-radius: 0.45rem;*/
-    /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
-}
-
-.fraudCountRoundUpdateNumber {
-    /*color: #232323;*/
-    font-size: 1.3rem;
-    font-weight: 900;
-}
-
-
-
-.fraudCountRoundUpdateSumNumber {
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*color: #ac4a71;*/
-    /*font-size: 5rem;*/
-    /*font-weight: 900;*/
 }
 
 .statisticsTimeMinGamePlay {

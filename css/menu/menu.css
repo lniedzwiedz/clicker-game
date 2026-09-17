@@ -14,10 +14,11 @@
     grid-template-columns: 0fr 30fr 70fr 0fr;
 }
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
-
+.menuGameConfigurationButtonClickNumberGameOn {
+    opacity: 0.5;
+}
 
 .menuGameConfigurationDisplay {
     display: flex;
@@ -26,52 +27,6 @@
 
 }
 
-
-
-
-
-.menuGameConfigurationButton {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: #2c3e3a;
-    /*color: #ac4a71;*/
-    /*color: #ac4a71;*/
-    color: #FFFFFF;
-    opacity: 0.5;
-    padding: 0px;
-    /*font-size: 0.9rem;*/
-    font-size: 0.8rem;
-    font-weight: 200;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
-}
-
-.menuGameConfigurationButtonCurrentNumber {
-    box-shadow: 0px 0px 3px 1px #FFFFFF;
-    opacity: 0.8;
-}
-
-.menuGameConfigurationButtonClickNumberGameOn {
-    opacity: 0.5;
-}
-
-.menuGameConfigurationButtonChosenNumber {
-    color: #e9a610;
-    opacity: 1;
-    box-shadow: 0px 0px 3px 1px #e9a610;
-}
-
-#containerMenuGameConfigurationGameKind {
-    display: grid;
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
 
 
 
