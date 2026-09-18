@@ -13,7 +13,7 @@ import {
     valueToString
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesButtonRound from "../../common/variable/control/variablesButtonRound.js";
+import * as variablesButtonRound from "../../common/variable/configuration/variablesButtonRound.js";
 
 
 export class ViewButtonsRound {

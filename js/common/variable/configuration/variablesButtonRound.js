@@ -1,4 +1,4 @@
-import * as variablesConfigurationRound  from "../configuration/variablesConfigurationRound.js";
+import * as variablesConfigurationRound from "./variablesConfigurationRound.js";
 
 
 export const containerConfigurationRoundRowMainPartsPrefix = variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefix;

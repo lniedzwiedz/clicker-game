@@ -3,7 +3,7 @@ import {
     removeEventListenerOnClickButton
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesGameButtons from "../../common/variable/control/variablesButton.js";
+import * as variablesGameButtons from "../../common/variable/control/variablesGameState.js";
 
 export class ControllerButtonStop {
 

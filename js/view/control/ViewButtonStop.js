@@ -6,7 +6,7 @@ import {
     setElementClassNameById
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesButton from "../../common/variable/control/variablesButton.js";
+import * as variablesButton from "../../common/variable/control/variablesGameState.js";
 
 
 export class ViewButtonStop extends ViewButtons {

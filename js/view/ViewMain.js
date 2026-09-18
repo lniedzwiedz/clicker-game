@@ -1,82 +1,43 @@
 import {
-    createContainerMainElements,
-    createElementDiv,
-    createElementDivWithTheSameIdAndClassName
+    createElementDiv
 } from "../common/function/commonFunctions.js";
 
 import * as variablesMain from "../common/variable/main/variablesMain.js";
-import * as variablesButton from "../common/variable/control/variablesButton.js";
-import * as variablesStatisticsTime from "../common/variable/statistic/variablesStatisticsTime.js";
 import * as variablesFooter from "../common/variable/footer/variablesFooter.js";
+
 
 export class ViewMain {
 
-    createContainerSectionMain() {
+    createContainerMainSection() {
+        this.createContainerHomeMain();
+        this.createContainerHomeMainParts();
+    }
+
+    createContainerHomeMain() {
 
         createElementDiv(
             variablesMain.containerMain,
             variablesMain.containerMainParts
         );
 
+        // to do - remove - move to home Main
         createElementDiv(
             variablesMain.containerMainParts,
             variablesMain.containerHomeMain
         );
 
+        // to do - remove - move to footer
         createElementDiv(
             variablesMain.containerMain,
             variablesFooter.containerSectionFooterMain
         );
     }
 
-    createContainerMainSection() {
-        this.createContainerSectionMain();
-        this.createContainerHome();
-    }
-
-    createContainerHome() {
-        this.createContainerHomeMain();
-        this.createContainerHomeMainParts();
-    }
-
-    createContainerHomeMain() {
-        // createContainerMainElements(
-        //     variablesMain.containerHomeMain,
-        //     variablesMain.sectionHome,
-        //     variablesMain.containerHomeMainParts,
-        //     variablesMain.containerGameMain
-        // );
-
-        // createElementDiv(
-        //     variablesMain.containerHomeMain,
-        //     variablesMain.sectionHome,
-        // );
+    createContainerHomeMainParts() {
 
         createElementDiv(
             variablesMain.containerHomeMain,
             variablesMain.containerHomeMainParts,
         );
-    }
-
-    createContainerHomeMainParts() {
-        // createElementDivWithTheSameIdAndClassName(
-        //     variablesMain.containerGameMain,
-        //     variablesMain.containerGameMainParts
-        // );
-
-        // createElementDivWithTheSameIdAndClassName(
-        //     variablesMain.containerGameMainParts,
-        //     variablesButton.containerButtonClickColorMain
-        // );
-
-        // createElementDivWithTheSameIdAndClassName(
-        //     variablesMain.containerGameMainParts,
-        //     variablesButton.containerButtonStartAndStopMain
-        // );
-
-        // createElementDivWithTheSameIdAndClassName(
-        //     variablesMain.containerGameMainParts,
-        //     variablesStatisticsTime.containerGameFiledStatisticsTime
-        // );
     }
 }

@@ -2,7 +2,7 @@ import {
     addEventListenerOnClickButton
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesButton from "../../common/variable/control/variablesButton.js";
+import * as variablesButton from "../../common/variable/control/variablesGameState.js";
 
 export class ControllerButtonStart {
 
@@ -13,7 +13,7 @@ export class ControllerButtonStart {
     }
 
     createButtonStart() {
-        this.viewButtonStart.createContainerButtonStartMain();
+        this.viewButtonStart.createContainerButtonStart();
         this.configureButtonStart();
     }
 
@@ -29,6 +29,7 @@ export class ControllerButtonStart {
 
     configureButtonStart() {
         addEventListenerOnClickButton(
+            // to do - fix variable
             variablesButton.buttonStart,
             this.handleClickStart,
             this

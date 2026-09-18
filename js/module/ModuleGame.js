@@ -1,6 +1,8 @@
 import {ModuleConfiguration} from "./ModuleConfiguration.js";
 import {ModuleButtons} from "./ModuleButtons.js";
+import {ModuleGameState} from "./ModuleGameState.js";
 import {ModuleStatistics} from "./ModuleStatistics.js";
+
 import {ControllerMainGame} from "../controller/ControllerMainGame.js";
 
 
@@ -14,6 +16,9 @@ export class ModuleGame {
         this.moduleButtons =
             new ModuleButtons();
 
+        this.moduleGameState =
+            new ModuleGameState();
+
         this.moduleStatistics =
             new ModuleStatistics();
 
@@ -21,6 +26,7 @@ export class ModuleGame {
             new ControllerMainGame(
                 this.moduleConfiguration.getControllerConfiguration(),
                 this.moduleButtons.getControllerButtonsMain(),
+                this.moduleGameState.getControllerGameStateMain(),
                 this.moduleStatistics.getControllerStatisticsMain(),
             );
     }

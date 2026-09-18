@@ -13,4 +13,4 @@ const viewFooter = new ViewFooter();
 viewFooter.createFooter();
 
 
-console.log("Clicker game: version 20260918v50_branch_class_33");
+console.log("Clicker game: version 20260918v50_branch_class_34");

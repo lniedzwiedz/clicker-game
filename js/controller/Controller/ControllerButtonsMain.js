@@ -1,14 +1,18 @@
 export class ControllerButtonsMain {
 
-    constructor(controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
-        this.controllerButtonStart = controllerButtonStart;
-        this.controllerButtonStop = controllerButtonStop;
+    // constructor(controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
+    //     this.controllerButtonStart = controllerButtonStart;
+    //     this.controllerButtonStop = controllerButtonStop;
+    //     this.controllerButtonClickColor = controllerButtonClickColor;
+    // }
+
+    constructor(controllerButtonClickColor) {
         this.controllerButtonClickColor = controllerButtonClickColor;
     }
 
-    createGameButtons(){
+    createGameButtons() {
         this.controllerButtonClickColor.createGameButtonsView();
-        this.controllerButtonStart.createButtonStart();
+        // this.controllerButtonStart.createButtonStart();
     }
 
     setOnClickColor(onClickColor) {
@@ -16,29 +20,28 @@ export class ControllerButtonsMain {
             .setOnClickColor(onClickColor);
     }
 
-    setOnStart(onStart) {
-        this.controllerButtonStart
-            .setOnStart(onStart);
-    }
-
-    setOnStop(onStop) {
-        this.controllerButtonStop
-            .setOnStop(onStop);
-    }
+    // setOnStart(onStart) {
+    //     this.controllerButtonStart
+    //         .setOnStart(onStart);
+    // }
+    //
+    // setOnStop(onStop) {
+    //     this.controllerButtonStop
+    //         .setOnStop(onStop);
+    // }
 
     setConfigurationAfterClickStop() {
-        this.controllerButtonStop.setConfigurationAfterClick();
-        this.controllerButtonStart.setConfigurationBeforeClick();
+        // this.controllerButtonStop.setConfigurationAfterClick();
+        // this.controllerButtonStart.setConfigurationBeforeClick();
 
-        // this.setConfigurationRoundNumberWhenGameStop();
 
-        this.removeEventListenerOnClickButtonStop();
+        // this.removeEventListenerOnClickButtonStop();
         this.removeEventListenerOnClickButtonClickColor();
     }
 
-    createButtonStop() {
-        this.controllerButtonStop.createButtonStop();
-    }
+    // createButtonStop() {
+    //     this.controllerButtonStop.createButtonStop();
+    // }
 
     configureClickColor() {
         this.controllerButtonClickColor.configureButtonClickColor();
@@ -61,31 +64,31 @@ export class ControllerButtonsMain {
 
         this.removeEventListenerOnClickButtonClickColor();
         this.configureClickColorGameOver();
-        this.setIconsColorAfterGameOver();
+        // this.setIconsColorAfterGameOver();
 
-        this.setConfigurationButtonStopGameOver();
+        // this.setConfigurationButtonStopGameOver();
     }
 
     removeEventListenerOnClickButtonClickColor() {
         this.controllerButtonClickColor.removeEventListenerOnClickButtonClickColor();
     }
 
-    removeEventListenerOnClickButtonStop() {
-        this.controllerButtonStop.removeEventListenerOnClickButtonStop();
-    }
+    // removeEventListenerOnClickButtonStop() {
+    //     this.controllerButtonStop.removeEventListenerOnClickButtonStop();
+    // }
 
     configureClickColorGameOver() {
         this.controllerButtonClickColor.configureClickColorGameOver();
     }
 
-    setIconsColorAfterGameOver() {
-        this.controllerButtonStart.setConfigurationBeforeClick();
-        this.controllerButtonStop.setConfigurationBeforeClick();
-    }
+    // setIconsColorAfterGameOver() {
+    //     this.controllerButtonStart.setConfigurationBeforeClick();
+    //     this.controllerButtonStop.setConfigurationBeforeClick();
+    // }
 
-    setConfigurationButtonStopGameOver() {
-        this.controllerButtonStop.setConfigurationGameOver();
-    }
+    // setConfigurationButtonStopGameOver() {
+    //     this.controllerButtonStop.setConfigurationGameOver();
+    // }
 
     setButtonClickColorAtStart() {
         this.controllerButtonClickColor.setButtonClickColorAtStart();
@@ -97,7 +100,7 @@ export class ControllerButtonsMain {
 
     setConfigurationButtonsAtStart() {
         this.controllerButtonClickColor.removeConfigurationGameOver();
-        this.controllerButtonStart.setConfigurationAfterClick();
-        this.controllerButtonStop.setConfigurationBeforeClick();
+        // this.controllerButtonStart.setConfigurationAfterClick();
+        // this.controllerButtonStop.setConfigurationBeforeClick();
     }
 }

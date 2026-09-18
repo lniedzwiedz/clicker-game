@@ -7,29 +7,29 @@ import {
     setElementClassNamedAndText
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesButton from "../../common/variable/control/variablesButton.js";
+import * as variablesButtonGameState from "../../common/variable/control/variablesGameState.js";
 
 export class ViewButtons {
 
     createAndConfigureButton(gameFiledButtonMainStart, buttonMainStart, containerGameFiledButtonsMainStartTextDisplay) {
         createElementButton(gameFiledButtonMainStart, buttonMainStart);
-        setElementClassNamedAndText(buttonMainStart, variablesButton.buttonStartActive, containerGameFiledButtonsMainStartTextDisplay);
+        setElementClassNamedAndText(buttonMainStart, variablesButtonGameState.buttonStartActive, containerGameFiledButtonsMainStartTextDisplay);
     }
 
     createContainerButtonMain(containerGameFiledButtonsMainStart, gameFiledButtonMainStart) {
-        createElementDivWithTheSameIdAndClassName(variablesButton.containerButtonStartAndStopMainParts, containerGameFiledButtonsMainStart);
+        createElementDivWithTheSameIdAndClassName(variablesButtonGameState.containerGameStateMainParts, containerGameFiledButtonsMainStart);
         createElementDivWithTheSameIdAndClassName(containerGameFiledButtonsMainStart, gameFiledButtonMainStart);
     }
 
     setConfigurationButtonBeforeClick(elementId) {
         if (isElementsExistById(elementId)) {
-            removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayAfterClick);
-            setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayBeforeClick);
+            removeElementClassNameById(elementId, variablesButtonGameState.buttonStartDisplayIconPlayAfterClick);
+            setElementClassNameById(elementId, variablesButtonGameState.buttonStartDisplayIconPlayBeforeClick);
         }
     }
 
     setConfigurationButtonAfterClick(elementId) {
-        removeElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayBeforeClick);
-        setElementClassNameById(elementId, variablesButton.buttonStartDisplayIconPlayAfterClick);
+        removeElementClassNameById(elementId, variablesButtonGameState.buttonStartDisplayIconPlayBeforeClick);
+        setElementClassNameById(elementId, variablesButtonGameState.buttonStartDisplayIconPlayAfterClick);
     }
 }

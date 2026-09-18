@@ -14,7 +14,7 @@ import * as variablesButtonClickColor from "../../common/variable/control/variab
 
 export class ViewButtonClickColor extends ViewButtons {
 
-    createButton() {
+    createButtonCLickColor() {
         this.createContainerMain();
         this.createContainerParts();
     }
@@ -22,10 +22,6 @@ export class ViewButtonClickColor extends ViewButtons {
     createContainerMain() {
         createElementDiv(variablesButtonClickColor.containerHomeMainParts, variablesButtonClickColor.containerButtonClickColorMain);
     }
-
-    // createContainerMain() {
-    //     createElementDiv(containerButtonStartAndStopMain, variablesButtonClickColor.containerButtonStartAndStopMainParts);
-    // }
 
     createContainerParts() {
         createElementButton(variablesButtonClickColor.containerButtonClickColorMain, variablesButtonClickColor.buttonClickColorDisplayFlex);

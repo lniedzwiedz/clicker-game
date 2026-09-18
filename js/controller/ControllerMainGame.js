@@ -2,16 +2,18 @@ import {Game} from "../Game.js";
 
 export class ControllerMainGame {
 
-    constructor(moduleConfiguration, controllerButtonsMain, controllerStatisticsMain) {
-        this.moduleConfiguration = moduleConfiguration;
+    constructor(controllerConfigurationMain, controllerButtonsMain, controllerGameStateMain, controllerStatisticsMain) {
+        this.controllerConfigurationMain = controllerConfigurationMain;
         this.controllerButtonsMain = controllerButtonsMain;
+        this.controllerGameStateMain = controllerGameStateMain;
         this.controllerStatisticsMain = controllerStatisticsMain;
         this.game = null;
         this.clickColorTimeout = null;
     }
 
     configureStartGame() {
-        this.moduleConfiguration.createConfiguration();
+        this.controllerConfigurationMain.createConfiguration();
+        this.controllerGameStateMain.createGameState();
         this.controllerButtonsMain.createGameButtons();
 
         this.controllerButtonsMain.setOnStart(() =>
