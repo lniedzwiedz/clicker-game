@@ -12,7 +12,7 @@ export class ControllerMainGame {
 
     configureStartGame() {
         this.moduleConfiguration.createConfiguration();
-        this.controllerButtonsMain.createGame();
+        this.controllerButtonsMain.createGameButtons();
 
         this.controllerButtonsMain.setOnStart(() =>
             this.startGame());

@@ -28,8 +28,8 @@ export class ViewButtonClickColor extends ViewButtons {
     // }
 
     createContainerParts() {
-        createElementButton(variablesButtonClickColor.containerButtonClickColorMain, variablesButtonClickColor.buttonClickColorDiv);
-        setElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorDiv);
+        createElementButton(variablesButtonClickColor.containerButtonClickColorMain, variablesButtonClickColor.buttonClickColorDisplayFlex);
+        setElementClassNameById(variablesButtonClickColor.buttonClickColorDisplayFlex, variablesButtonClickColor.buttonClickColorDisplayFlex);
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {
@@ -41,12 +41,12 @@ export class ViewButtonClickColor extends ViewButtons {
     }
 
     setConfigurationGameOver() {
-        setElementTextById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOverTextDisplay);
-        setElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOver);
+        setElementTextById(variablesButtonClickColor.buttonClickColorDisplayFlex, variablesButtonClickColor.buttonClickColorDisplayTextGameOver);
+        setElementClassNameById(variablesButtonClickColor.buttonClickColorDisplayFlex, variablesButtonClickColor.buttonClickColorStyleGameOver);
     }
 
     removeConfigurationGameOver() {
-        setElementTextById(variablesButtonClickColor.buttonClickColorDiv, "");
-        removeElementClassNameById(variablesButtonClickColor.buttonClickColorDiv, variablesButtonClickColor.buttonClickColorGameOver);
+        setElementTextById(variablesButtonClickColor.buttonClickColorDisplayFlex, "");
+        removeElementClassNameById(variablesButtonClickColor.buttonClickColorDisplayFlex, variablesButtonClickColor.buttonClickColorStyleGameOver);
     }
 }

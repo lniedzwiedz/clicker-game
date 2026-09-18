@@ -40,33 +40,43 @@ export class ViewMain {
     }
 
     createContainerHomeMain() {
-        createContainerMainElements(
+        // createContainerMainElements(
+        //     variablesMain.containerHomeMain,
+        //     variablesMain.sectionHome,
+        //     variablesMain.containerHomeMainParts,
+        //     variablesMain.containerGameMain
+        // );
+
+        // createElementDiv(
+        //     variablesMain.containerHomeMain,
+        //     variablesMain.sectionHome,
+        // );
+
+        createElementDiv(
             variablesMain.containerHomeMain,
-            variablesMain.sectionHome,
             variablesMain.containerHomeMainParts,
-            variablesMain.containerGameMain
         );
     }
 
     createContainerHomeMainParts() {
-        createElementDivWithTheSameIdAndClassName(
-            variablesMain.containerGameMain,
-            variablesMain.containerGameMainParts
-        );
+        // createElementDivWithTheSameIdAndClassName(
+        //     variablesMain.containerGameMain,
+        //     variablesMain.containerGameMainParts
+        // );
 
-        createElementDivWithTheSameIdAndClassName(
-            variablesMain.containerGameMainParts,
-            variablesButton.containerButtonClickColorMain
-        );
+        // createElementDivWithTheSameIdAndClassName(
+        //     variablesMain.containerGameMainParts,
+        //     variablesButton.containerButtonClickColorMain
+        // );
 
-        createElementDivWithTheSameIdAndClassName(
-            variablesMain.containerGameMainParts,
-            variablesButton.containerButtonStartAndStopMain
-        );
+        // createElementDivWithTheSameIdAndClassName(
+        //     variablesMain.containerGameMainParts,
+        //     variablesButton.containerButtonStartAndStopMain
+        // );
 
-        createElementDivWithTheSameIdAndClassName(
-            variablesMain.containerGameMainParts,
-            variablesStatisticsTime.containerGameFiledStatisticsTime
-        );
+        // createElementDivWithTheSameIdAndClassName(
+        //     variablesMain.containerGameMainParts,
+        //     variablesStatisticsTime.containerGameFiledStatisticsTime
+        // );
     }
 }

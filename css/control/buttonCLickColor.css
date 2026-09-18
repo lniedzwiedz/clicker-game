@@ -1,0 +1,37 @@
+/*#containerGameFiled-buttonPlay {*/
+#containerButtonClickColor-Main {
+    display: grid;
+    /*grid-row: 1 / 2;*/
+    /*grid-column: 1 / 1;*/
+    grid-row: 2 / 3;
+    grid-column: 2 / 10;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerButtonClickColor-Main {
+/*.containerGameFiled-buttonPlay {*/
+    border-radius: 0.45rem;
+    opacity: 0.8;
+}
+
+#buttonClickColor-DisplayFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonClickColor-DisplayFlex {
+    background-color: var(--gameFiledButtonPlayColor);
+    border: 0;
+    border-radius: 0.45rem;
+    box-shadow: 0 0 17px 9px lightgoldenrodyellow;
+}
+
+/*.gameFiledButtonPlayGameOver {*/
+.buttonClickColor-StyleGameOver {
+    background-color: #000000;
+    color: lightgoldenrodyellow;
+    font-weight: 900;
+    font-size: 1.7rem;
+}
