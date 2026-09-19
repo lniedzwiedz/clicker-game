@@ -3,14 +3,17 @@ import {ViewFooter} from "./view/footer/ViewFooter.js";
 import {ModuleMain} from "./module/ModuleMain.js";
 
 
-const viewMain = new ViewMain();
-viewMain.createContainerMainSection();
+// const viewMain = new ViewMain();
+// viewMain.createContainerMainSection();
+//
+// const moduleMain = new ModuleMain();
+// moduleMain.createGame();
+//
+// const viewFooter = new ViewFooter();
+// viewFooter.createFooter();
 
 const moduleMain = new ModuleMain();
-moduleMain.createGame();
-
-const viewFooter = new ViewFooter();
-viewFooter.createFooter();
+moduleMain.getControllerMain().create();
 
 
-console.log("Clicker game: version 20260918v50_branch_class_34");
+console.log("Clicker game: version 20260918v50_branch_class_35");

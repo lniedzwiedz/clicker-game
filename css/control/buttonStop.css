@@ -1,0 +1,44 @@
+/*#containerGameFiled-buttonsMainStop {*/
+#containerButtonStop-Main {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+/*#gameFiledButtonMainStop {*/
+#buttonStop-DisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonStop-Style {
+    background-color: #2c3e3a;
+    opacity: 0.7;
+    border: 0;
+    padding: 0;
+    border-radius: 0.45rem;
+    box-shadow: 0px 0px 1px 1px #1f130e;
+}
+
+/*.fa-playGameAction-beforeClick {*/
+.buttonStop-IconStop-StyleBeforeClick {
+    color: #FFFFFF;
+    /*opacity: 0.7;*/
+    font-size: 1.3rem;
+}
+
+/*.fa-playGameAction-afterClick {*/
+.buttonStop-IconStop-StyleAfterClick {
+    color: #e9a610;
+    /*opacity: 1;*/
+    /*font-size: 1.3rem;*/
+    font-size: 1.7rem;
+}
+
+
+.buttonStop-Inactive{
+    opacity: 0.5;
+}

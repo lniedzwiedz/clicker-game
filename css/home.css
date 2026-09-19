@@ -47,23 +47,23 @@
     box-shadow: 0px 0px 1px 1px #1f130e;
 }
 
-.gameFiledButtonMain-inactive {
-    opacity: 0.5;
-}
+/*.gameFiledButtonMain-inactive {*/
+/*    opacity: 0.5;*/
+/*}*/
 
-#containerGameFiled-buttonsMainStop {
-    display: grid;
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerGameFiled-buttonsMainStop {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 2;*/
+/*    grid-column: 3 / 4;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-#gameFiledButtonMainStop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*#gameFiledButtonMainStop {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
 #containerGameFiled-statisticsTimeBest {
     display: grid;

@@ -16,7 +16,10 @@ export class ControllerMainGame {
         this.controllerGameStateMain.createGameState();
         this.controllerButtonsMain.createGameButtons();
 
-        this.controllerButtonsMain.setOnStart(() =>
+        // this.controllerButtonsMain.setOnStart(() =>
+        //     this.startGame());
+
+        this.controllerGameStateMain.setOnStart(() =>
             this.startGame());
     }
 
@@ -24,13 +27,18 @@ export class ControllerMainGame {
 
         this.setConfigurationGameAtStart();
 
+        // const roundNumberSetupByUser =
+        //     this.controllerButtonsMain
+        //         .getRoundNumber();
+
         const roundNumberSetupByUser =
-            this.controllerButtonsMain
+            this.controllerConfigurationMain
                 .getRoundNumber();
 
         this.game = new Game(roundNumberSetupByUser);
 
-        this.controllerButtonsMain.setConfigurationForRoundNumber();
+        // this.controllerButtonsMain.setConfigurationForRoundNumber();
+        this.controllerConfigurationMain.setConfigurationForRoundNumber();
 
         this.createButtonStop();
 
@@ -51,21 +59,25 @@ export class ControllerMainGame {
 
     setConfigurationGameAtStart() {
         this.controllerStatisticsMain.removeContainerStatisticParts();
-        this.controllerButtonsMain.setConfigurationButtonsAtStart();
+        // this.controllerButtonsMain.setConfigurationButtonsAtStart();
+        this.controllerGameStateMain.setConfigurationButtonsAtStart();
     }
 
     createButtonStop() {
-        this.controllerButtonsMain.createButtonStop();
+        // this.controllerButtonsMain.createButtonStop();
+        this.controllerGameStateMain.createButtonStop();
         this.configureButtonStop();
     }
 
     configureButtonStop() {
-        this.controllerButtonsMain.setOnStop(() =>
+        // this.controllerButtonsMain.setOnStop(() =>
+        this.controllerGameStateMain.setOnStop(() =>
             this.handleClickStop());
     }
 
     handleClickStop() {
-        this.controllerButtonsMain.setConfigurationAfterClickStop();
+        // this.controllerButtonsMain.setConfigurationAfterClickStop();
+        this.controllerGameStateMain.setConfigurationAfterClickStop();
         this.clearClickColorTimeout();
     }
 

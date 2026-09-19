@@ -8,8 +8,8 @@
 
 #containerFooterMain {
     display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
     grid-template-rows: 1fr;
     grid-template-columns: 15fr 70fr 15fr;
 }

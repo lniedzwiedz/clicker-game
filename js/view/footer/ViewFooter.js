@@ -6,18 +6,21 @@ import {
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesFooter from "../../common/variable/footer/variablesFooter.js";
+import * as variablesMain from "../../common/variable/variablesMain.js";
+import {containerMainParts} from "../../common/variable/footer/variablesFooter.js";
 
 export class ViewFooter {
 
     createFooter() {
-        this.createContainerMainFooter();
+        this.createContainerFooterMain();
         this.createFooterAuthor();
     }
 
-    createContainerMainFooter() {
+    createContainerFooterMain() {
+
 
         createElementDiv(
-            variablesFooter.containerSectionFooterMain,
+            variablesFooter.containerMainParts,
             variablesFooter.containerFooterMain
         );
 

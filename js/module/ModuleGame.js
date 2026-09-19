@@ -1,7 +1,7 @@
-import {ModuleConfiguration} from "./ModuleConfiguration.js";
-import {ModuleButtons} from "./ModuleButtons.js";
-import {ModuleGameState} from "./ModuleGameState.js";
-import {ModuleStatistics} from "./ModuleStatistics.js";
+import {ModuleConfiguration} from "./home/configuration/ModuleConfiguration.js";
+import {ModuleButtons} from "./home/play/ModuleButtons.js";
+import {ModuleGameState} from "./home/stateGame/ModuleGameState.js";
+import {ModuleStatistics} from "./home/statistic/ModuleStatistics.js";
 
 import {ControllerMainGame} from "../controller/ControllerMainGame.js";
 
@@ -31,14 +31,7 @@ export class ModuleGame {
             );
     }
 
-    // getControllerControllerMainGame() {
-    //     return this.controllerMainGame;
-    // }
-
-    createGame() {
-        // this.moduleConfiguration.createConfiguration();
-        // this.moduleButtons.createGame();
-        // this.controllerMainGame.configureStartGame();
-        this.controllerMainGame.configureStartGame();
+    getControllerMainGame() {
+        return this.controllerMainGame;
     }
 }

@@ -1,4 +1,8 @@
-export const containerSectionFooterMain = "containerSectionFooterMain";
+import * as variablesMain from "../variablesMain.js";
+
+
+export const containerMainParts = variablesMain.containerMainParts;
+
 
 export const containerFooterMain = "containerFooterMain";
 export const containerFooterMainParts = "containerFooterMainParts";

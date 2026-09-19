@@ -1,7 +1,7 @@
 #containerStatisticsFraud-Main {
     display: grid;
-    grid-row: 4 / 5;
-    grid-column: 1 / 1;
+    grid-row: 6 / 7;
+    grid-column: 2 / 10;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
