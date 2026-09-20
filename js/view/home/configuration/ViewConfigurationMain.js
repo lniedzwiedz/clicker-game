@@ -4,7 +4,7 @@ import {
 
 import * as variablesConfigurationMain from "../../../common/variable/home/configuration/variablesConfigurationMain.js";
 
-export class ViewConfiguration {
+export class ViewConfigurationMain {
 
     createContainerConfigurationMain() {
 

@@ -2,24 +2,24 @@ import {Game} from "../../../Game.js";
 
 export class ControllerMainGame {
 
-    constructor(controllerConfigurationMain, controllerButtonsMain, controllerGameStateMain, controllerStatisticsMain) {
-        this.controllerConfigurationMain = controllerConfigurationMain;
-        this.controllerButtonsMain = controllerButtonsMain;
-        this.controllerGameStateMain = controllerGameStateMain;
-        this.controllerStatisticsMain = controllerStatisticsMain;
+    constructor(controllerConfigurationCoordinator, controllerButtonsCoordinator, controllerGameStateCoordinator, controllerStatisticsCoordinator) {
+        this.controllerConfigurationCoordinator = controllerConfigurationCoordinator;
+        this.controllerButtonsCoordinator = controllerButtonsCoordinator;
+        this.controllerGameStateCoordinator = controllerGameStateCoordinator;
+        this.controllerStatisticsCoordinator = controllerStatisticsCoordinator;
         this.game = null;
         this.clickColorTimeout = null;
     }
 
     configureStartGame() {
-        this.controllerConfigurationMain.createConfiguration();
-        this.controllerGameStateMain.createGameState();
-        this.controllerButtonsMain.createGameButtons();
+        this.controllerConfigurationCoordinator.createConfiguration();
+        this.controllerGameStateCoordinator.createGameState();
+        this.controllerButtonsCoordinator.createGameButtons();
 
         // this.controllerButtonsMain.setOnStart(() =>
         //     this.startGame());
 
-        this.controllerGameStateMain.setOnStart(() =>
+        this.controllerGameStateCoordinator.setOnStart(() =>
             this.startGame());
     }
 
@@ -32,13 +32,13 @@ export class ControllerMainGame {
         //         .getRoundNumber();
 
         const roundNumberSetupByUser =
-            this.controllerConfigurationMain
+            this.controllerConfigurationCoordinator
                 .getRoundNumber();
 
         this.game = new Game(roundNumberSetupByUser);
 
         // this.controllerButtonsMain.setConfigurationForRoundNumber();
-        this.controllerConfigurationMain.setConfigurationForRoundNumber();
+        this.controllerConfigurationCoordinator.setConfigurationForRoundNumber();
 
         this.createButtonStop();
 
@@ -46,11 +46,11 @@ export class ControllerMainGame {
         this.configureClickColorCounterFraud();
 
         // DODAJEMY LISTENER TYLKO RAZ
-        this.controllerButtonsMain
+        this.controllerButtonsCoordinator
             .configureClickColor();
 
         // tutaj ustawienie początkowego koloru
-        this.controllerButtonsMain
+        this.controllerButtonsCoordinator
             .setButtonClickColorAtStart();
 
         // pierwsza runda / druga runda / trzecia runda / .......
@@ -58,26 +58,26 @@ export class ControllerMainGame {
     }
 
     setConfigurationGameAtStart() {
-        this.controllerStatisticsMain.removeContainerStatisticParts();
+        this.controllerStatisticsCoordinator.removeContainerStatisticParts();
         // this.controllerButtonsMain.setConfigurationButtonsAtStart();
-        this.controllerGameStateMain.setConfigurationButtonsAtStart();
+        this.controllerGameStateCoordinator.setConfigurationButtonsAtStart();
     }
 
     createButtonStop() {
         // this.controllerButtonsMain.createButtonStop();
-        this.controllerGameStateMain.createButtonStop();
+        this.controllerGameStateCoordinator.createButtonStop();
         this.configureButtonStop();
     }
 
     configureButtonStop() {
         // this.controllerButtonsMain.setOnStop(() =>
-        this.controllerGameStateMain.setOnStop(() =>
+        this.controllerGameStateCoordinator.setOnStop(() =>
             this.handleClickStop());
     }
 
     handleClickStop() {
         // this.controllerButtonsMain.setConfigurationAfterClickStop();
-        this.controllerGameStateMain.setConfigurationAfterClickStop();
+        this.controllerGameStateCoordinator.setConfigurationAfterClickStop();
         this.clearClickColorTimeout();
     }
 
@@ -114,7 +114,7 @@ export class ControllerMainGame {
 
                 const color = this.game.getRandomColor();
 
-                this.controllerButtonsMain.setButtonClickColorRandomColor(color);
+                this.controllerButtonsCoordinator.setButtonClickColorRandomColor(color);
 
                 this.game.setStartTime();
 
@@ -124,7 +124,7 @@ export class ControllerMainGame {
     }
 
     configureClickColorCounterFraud() {
-        this.controllerButtonsMain.setOnClickColor(() =>
+        this.controllerButtonsCoordinator.setOnClickColor(() =>
             this.countFraudClick());
     }
 
@@ -133,7 +133,7 @@ export class ControllerMainGame {
     }
 
     configureClickColorCounterTime() {
-        this.controllerButtonsMain.setOnClickColor(() =>
+        this.controllerButtonsCoordinator.setOnClickColor(() =>
             this.processClickColor());
     }
 
@@ -155,7 +155,7 @@ export class ControllerMainGame {
         const maxClicksNumber = this.game.getRoundNumber();
 
 
-        this.controllerStatisticsMain
+        this.controllerStatisticsCoordinator
             .createConfigurationStatisticsMain(maxClicksNumber);
     }
 
@@ -172,7 +172,7 @@ export class ControllerMainGame {
         let fraudRoundIndex = this.game
             .getFraudRoundElementIndexToUpdate();
 
-        this.controllerStatisticsMain.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
+        this.controllerStatisticsCoordinator.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
 
         this.game.resetFraudCountedClicks();
         this.game.setFraudRoundElementIndexToUpdate();
@@ -194,7 +194,7 @@ export class ControllerMainGame {
         let statisticTimeInSecondsBest =
             this.game.getStatisticTimeInSecondsBest();
 
-        this.controllerStatisticsMain.configureStatisticTime(
+        this.controllerStatisticsCoordinator.configureStatisticTime(
             statisticTimeInSecondsMin,
             statisticTimeInSecondsAvg,
             statisticTimeInSecondsMax,
@@ -203,6 +203,6 @@ export class ControllerMainGame {
     }
 
     gameOver() {
-        this.controllerButtonsMain.configureButtonsAfterGameOver();
+        this.controllerButtonsCoordinator.configureButtonsAfterGameOver();
     }
 }

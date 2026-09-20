@@ -5,7 +5,7 @@ import {ControllerStatisticsTime} from "../../../controller/home/statistic/Contr
 import ViewStatisticsFraud from "../../../view/home/statistic/ViewStatisticsFraud.js";
 import {ControllerStatisticsFraud} from "../../../controller/home/statistic/ControllerStatisticsFraud.js";
 
-import {ControllerStatisticsMain} from "../../../controller/home/statistic/ControllerStatisticsMain.js";
+import {ControllerStatisticsCoordinator} from "../../../controller/home/statistic/ControllerStatisticsCoordinator.js";
 
 import {ActionStatisticsFraud} from "../../../action/statistic/ActionStatisticsFraud.js";
 
@@ -38,13 +38,13 @@ export class ModuleStatistics {
                 this.actionStatisticsFraud);
 
 
-        this.controllerStatisticsMain =
-            new ControllerStatisticsMain(
+        this.controllerStatisticsCoordinator =
+            new ControllerStatisticsCoordinator(
                 this.controllerStatisticsTime,
                 this.controllerStatisticsFraud);
     }
 
-    getControllerStatisticsMain() {
-        return this.controllerStatisticsMain;
+    getControllerStatisticsCoordinator() {
+        return this.controllerStatisticsCoordinator;
     }
 }

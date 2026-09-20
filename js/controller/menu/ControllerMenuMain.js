@@ -1,20 +1,10 @@
 export class ControllerMenuMain {
 
-    constructor(viewMenuMain, controllerTitle) {
-        this.viewMenuMain = viewMenuMain;
-        this.controllerTitle = controllerTitle;
-    }
-
-    createMenu() {
-        this.createMenuMain();
-        this.createTitle();
+    constructor(viewMenuMain) {
+        this.viewMenuMain = viewMenuMain
     }
 
     createMenuMain() {
         this.viewMenuMain.createMenuMain();
-    }
-
-    createTitle() {
-        this.controllerTitle.createTitle();
     }
 }

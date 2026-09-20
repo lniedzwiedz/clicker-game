@@ -5,7 +5,7 @@ import {
 import * as variablesGameState from "../../../common/variable/home/gameState/variablesGameState.js";
 
 
-export class ViewGameState {
+export class ViewGameStateMain {
 
     createGameStateMain() {
         this.createContainerGameStateMain();

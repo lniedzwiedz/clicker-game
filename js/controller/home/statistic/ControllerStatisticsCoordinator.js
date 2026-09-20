@@ -5,7 +5,7 @@ import {
 import * as variablesButtonClickColor from "../../../common/variable/home/play/variablesButtonClickColor.js";
 
 
-export class ControllerStatisticsMain {
+export class ControllerStatisticsCoordinator {
 
     constructor(controllerStatisticsTime, controllerStatisticsFraud) {
         this.controllerStatisticsTime = controllerStatisticsTime;

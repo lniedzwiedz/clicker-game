@@ -1,3 +1,11 @@
+#containerAuthor-Main {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
 #footerAuthor-DisplayTextFlex {
     display: flex;
     align-items: center;

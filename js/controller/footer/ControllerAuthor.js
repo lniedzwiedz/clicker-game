@@ -4,8 +4,7 @@ export class ControllerAuthor {
         this.viewAuthor = viewAuthor;
     }
 
-    createAuthor(){
+    createAuthor() {
         this.viewAuthor.createAuthor();
     }
-
 }

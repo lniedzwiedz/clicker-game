@@ -1,30 +1,36 @@
 import {
-    createElementDiv, createElementDivWithTheSameIdAndClassName, createElementP, setElementClassNameSameAsIdAndSetText
+    createElementDiv,
+    createElementP,
+    setElementClassNameSameAsIdAndSetText
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesAuthor from "../../common/variable/footer/variablesAuthor.js";
 
 
-export class ViewAuthor{
+export class ViewAuthor {
 
-    createAuthor(){
-        this.createAuthorMain();
+    createAuthor() {
+        this.createContainerAuthorMain();
+        this.createElementAuthorMain();
         this.createAuthorText();
     }
 
-    createAuthorMain(){
+    createContainerAuthorMain() {
 
         createElementDiv(
             variablesAuthor.containerFooterMainParts,
+            variablesAuthor.containerAuthorMain
+        );
+    }
+
+    createElementAuthorMain() {
+        createElementDiv(
+            variablesAuthor.containerAuthorMain,
             variablesAuthor.footerAuthorDisplayTextFlex
         );
     }
 
-    createAuthorParts(){
-
-    }
-
-    createAuthorText(){
+    createAuthorText() {
 
         createElementP(
             variablesAuthor.footerAuthorDisplayTextFlex,
@@ -36,23 +42,4 @@ export class ViewAuthor{
             variablesAuthor.footerAuthorText
         );
     }
-
-
-    // createFooterAuthor() {
-    //
-    //     createElementDivWithTheSameIdAndClassName(
-    //         variablesAuthor.containerFooterMainParts,
-    //         variablesAuthor.footerAuthorDisplayTextFlex
-    //     );
-    //
-    //     createElementP(
-    //         variablesAuthor.footerAuthorDisplayTextFlex,
-    //         variablesAuthor.footerAuthorStyleText
-    //     );
-    //
-    //     setElementClassNameSameAsIdAndSetText(
-    //         variablesAuthor.footerAuthorStyleText,
-    //         variablesAuthor.footerAuthorData
-    //     );
-    // }
 }

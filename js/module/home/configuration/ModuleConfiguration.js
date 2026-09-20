@@ -1,5 +1,5 @@
-import {ViewConfiguration} from "../../../view/home/configuration/ViewConfiguration.js";
-import {ControllerConfiguration} from "../../../controller/home/configuration/ControllerConfiguration.js";
+import {ViewConfigurationMain} from "../../../view/home/configuration/ViewConfigurationMain.js";
+import {ControllerConfigurationMain} from "../../../controller/home/configuration/ControllerConfigurationMain.js";
 
 import {ViewConfigurationDecorationIcon} from "../../../view/home/configuration/ViewConfigurationDecorationIcon.js";
 import {
@@ -13,28 +13,30 @@ import {ViewButtonsRound} from "../../../view/home/configuration/ViewButtonsRoun
 import {ActionButtonsRound} from "../../../action/control/ActionButtonsRound.js";
 import {ControllerButtonsRound} from "../../../controller/home/configuration/ControllerButtonsRound.js";
 
-import {ControllerConfigurationMain} from "../../../controller/home/configuration/ControllerConfigurationMain.js";
+import {
+    ControllerConfigurationCoordinator
+} from "../../../controller/home/configuration/ControllerConfigurationCoordinator.js";
 
 
 export class ModuleConfiguration {
 
     constructor() {
 
-        this.viewConfiguration =
-            new ViewConfiguration();
+        this.viewConfigurationMain =
+            new ViewConfigurationMain();
 
         this.controllerConfiguration =
-            new ControllerConfiguration(
-                this.viewConfiguration
+            new ControllerConfigurationMain(
+                this.viewConfigurationMain
             );
 
 
-        this.viewConfigurationIcon =
+        this.viewConfigurationDecorationIcon =
             new ViewConfigurationDecorationIcon();
 
         this.controllerConfigurationDecorationIcon =
             new ControllerConfigurationDecorationIcon(
-                this.viewConfigurationIcon
+                this.viewConfigurationDecorationIcon
             );
 
 
@@ -60,8 +62,8 @@ export class ModuleConfiguration {
             );
 
 
-        this.controllerConfigurationMain =
-            new ControllerConfigurationMain(
+        this.controllerConfigurationCoordinator =
+            new ControllerConfigurationCoordinator(
                 this.controllerConfiguration,
                 this.controllerConfigurationDecorationIcon,
                 this.controllerConfigurationRound,
@@ -69,7 +71,7 @@ export class ModuleConfiguration {
             );
     }
 
-    getControllerConfiguration() {
-        return this.controllerConfigurationMain;
+    getControllerConfigurationCoordinator() {
+        return this.controllerConfigurationCoordinator;
     }
 }

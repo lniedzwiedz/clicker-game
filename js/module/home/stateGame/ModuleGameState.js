@@ -1,5 +1,5 @@
-import {ViewGameState} from "../../../view/home/control/ViewGameState.js";
-import {ControllerGameState} from "../../../controller/home/gameState/ControllerGameState.js";
+import {ViewGameStateMain} from "../../../view/home/control/ViewGameStateMain.js";
+import {ControllerGameStateMain} from "../../../controller/home/gameState/ControllerGameStateMain.js";
 
 import {ViewButtonStart} from "../../../view/home/control/ViewButtonStart.js";
 import {ControllerButtonStart} from "../../../controller/home/gameState/ControllerButtonStart.js";
@@ -7,19 +7,19 @@ import {ControllerButtonStart} from "../../../controller/home/gameState/Controll
 import {ViewButtonStop} from "../../../view/home/control/ViewButtonStop.js";
 import {ControllerButtonStop} from "../../../controller/home/gameState/ControllerButtonStop.js";
 
-import {ControllerGameStateMain} from "../../../controller/home/gameState/ControllerGameStateMain.js";
+import {ControllerGameStateCoordinator} from "../../../controller/home/gameState/ControllerGameStateCoordinator.js";
 
 
 export class ModuleGameState {
 
     constructor() {
 
-        this.viewGameState =
-            new ViewGameState();
+        this.viewGameStateMain =
+            new ViewGameStateMain();
 
-        this.controllerGameState =
-            new ControllerGameState(
-                this.viewGameState
+        this.controllerGameStateMain =
+            new ControllerGameStateMain(
+                this.viewGameStateMain
             );
 
 
@@ -41,15 +41,15 @@ export class ModuleGameState {
             );
 
 
-        this.controllerGameStateMain =
-            new ControllerGameStateMain(
-                this.controllerGameState,
+        this.controllerGameStateCoordinator =
+            new ControllerGameStateCoordinator(
+                this.controllerGameStateMain,
                 this.controllerButtonStart,
                 this.controllerButtonStop
             );
     }
 
-    getControllerGameStateMain() {
-        return this.controllerGameStateMain;
+    getControllerGameStateCoordinator() {
+        return this.controllerGameStateCoordinator;
     }
 }

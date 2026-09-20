@@ -4,9 +4,9 @@ import {ModuleHome} from "./home/ModuleHome.js";
 import {ModuleMenu} from "./menu/ModuleMenu.js";
 import {ModuleFooter} from "./footer/ModuleFooter.js";
 
-import {ModuleGame} from "./ModuleGame.js";
+import {ModuleGame} from "./play/ModuleGame.js";
 
-import {ControllerMain} from "../controller/ControllerMain.js";
+import {ControllerCoordinator} from "../controller/ControllerCoordinator.js";
 
 
 export class ModuleMain {
@@ -15,7 +15,6 @@ export class ModuleMain {
 
         this.viewMain =
             new ViewMain();
-
 
         this.moduleMenu =
             new ModuleMenu();
@@ -31,12 +30,12 @@ export class ModuleMain {
             new ModuleGame();
 
 
-        this.controllerMain =
-            new ControllerMain(
+        this.controllerCoordinator =
+            new ControllerCoordinator(
                 this.viewMain,
-                this.moduleMenu.getControllerMenuMain(),
+                this.moduleMenu.getControllerMenuCoordinator(),
                 this.moduleHome.getControllerHomeMain(),
-                this.moduleFooter.getControllerFooterMain(),
+                this.moduleFooter.getControllerFooterCoordinator(),
                 this.moduleGame.getControllerMainGame()
             );
     }
@@ -45,7 +44,7 @@ export class ModuleMain {
     //     return this.controllerMain;
     // }
 
-    create(){
-        this.controllerMain.create();
+    create() {
+        this.controllerCoordinator.create();
     }
 }
