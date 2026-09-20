@@ -13,15 +13,15 @@ import * as variablesButtonClickColor from "../../../common/variable/home/button
 export class ViewButtonClick {
 
     createButtonCLickColor() {
-        this.createContainerMain();
-        this.createContainerParts();
+        this.createContainerButtonCLickMain();
+        this.createContainerButtonCLickMainParts();
     }
 
-    createContainerMain() {
+    createContainerButtonCLickMain() {
         createElementDiv(variablesButtonClickColor.containerHomeMainParts, variablesButtonClickColor.containerButtonClickMain);
     }
 
-    createContainerParts() {
+    createContainerButtonCLickMainParts() {
         createElementButton(variablesButtonClickColor.containerButtonClickMain, variablesButtonClickColor.buttonClickDisplayFlex);
         setElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickDisplayFlex);
     }
@@ -35,7 +35,7 @@ export class ViewButtonClick {
     }
 
     setConfigurationGameOver() {
-        setElementTextById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonColorDisplayTextGameOver);
+        setElementTextById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickDisplayTextGameOver);
         setElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickStyleGameOver);
     }
 

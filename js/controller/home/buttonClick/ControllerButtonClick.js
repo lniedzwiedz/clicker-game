@@ -3,7 +3,7 @@ import {
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonClickColor from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
+import * as variablesButtonClick from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
 
 
 export class ControllerButtonClick {
@@ -32,7 +32,7 @@ export class ControllerButtonClick {
     configureButtonClickColor() {
         this.buttonClickEvent =
             addEventListenerOnClickButton(
-                variablesButtonClickColor.buttonClickDisplayFlex,
+                variablesButtonClick.buttonClickDisplayFlex,
                 this.setConfiguration,
                 this
             );
@@ -41,7 +41,7 @@ export class ControllerButtonClick {
     removeEventListenerOnClickButtonClickColor() {
 
         removeEventListenerOnClickButton(
-            variablesButtonClickColor.buttonClickDisplayFlex,
+            variablesButtonClick.buttonClickDisplayFlex,
             this.buttonClickEvent
         );
 

@@ -1,4 +1,4 @@
-import {ViewButtonClick} from "../../../view/home/control/ViewButtonClick.js";
+import {ViewButtonClick} from "../../../view/home/buttonClick/ViewButtonClick.js";
 import {ActionButtonClick} from "../../../action/control/ActionButtonClick.js";
 import {ControllerButtonClick} from "../../../controller/home/buttonClick/ControllerButtonClick.js";
 

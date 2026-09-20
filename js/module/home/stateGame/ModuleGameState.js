@@ -1,10 +1,10 @@
-import {ViewGameStateMain} from "../../../view/home/control/ViewGameStateMain.js";
+import {ViewGameStateMain} from "../../../view/home/gameState/ViewGameStateMain.js";
 import {ControllerGameStateMain} from "../../../controller/home/gameState/ControllerGameStateMain.js";
 
-import {ViewButtonStart} from "../../../view/home/control/ViewButtonStart.js";
+import {ViewButtonStart} from "../../../view/home/gameState/ViewButtonStart.js";
 import {ControllerButtonStart} from "../../../controller/home/gameState/ControllerButtonStart.js";
 
-import {ViewButtonStop} from "../../../view/home/control/ViewButtonStop.js";
+import {ViewButtonStop} from "../../../view/home/gameState/ViewButtonStop.js";
 import {ControllerButtonStop} from "../../../controller/home/gameState/ControllerButtonStop.js";
 
 import {ControllerGameStateCoordinator} from "../../../controller/home/gameState/ControllerGameStateCoordinator.js";

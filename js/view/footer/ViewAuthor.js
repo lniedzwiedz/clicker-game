@@ -39,7 +39,7 @@ export class ViewAuthor {
 
         setElementClassNameSameAsIdAndSetText(
             variablesAuthor.footerAuthorStyleText,
-            variablesAuthor.footerAuthorText
+            variablesAuthor.footerAuthorDisplayText
         );
     }
 }
