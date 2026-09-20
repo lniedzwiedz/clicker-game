@@ -1,21 +1,29 @@
-import {ViewHome} from "../../view/home/ViewHome.js";
+import {ViewHomeMain} from "../../view/home/ViewHomeMain.js";
 import {ControllerHomeMain} from "../../controller/home/ControllerHomeMain.js";
 
-export class ModuleHome{
+import {ControllerHomeCoordinator} from "../../controller/home/ControllerHomeCoordinator.js";
+
+
+export class ModuleHome {
 
 
     constructor() {
 
         this.viewHome =
-            new ViewHome();
+            new ViewHomeMain();
 
         this.controllerHomeMain =
             new ControllerHomeMain(
-                this.viewHome,
+                this.viewHome
+            );
+
+        this.controllerHomeCoordinator =
+            new ControllerHomeCoordinator(
+                this.controllerHomeMain,
             );
     }
 
-    getControllerHomeMain(){
-        return this.controllerHomeMain;
+    getControllerHomeCoordinator() {
+        return this.controllerHomeCoordinator;
     }
 }

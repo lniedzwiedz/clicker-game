@@ -2,7 +2,7 @@ import {
     addEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonClickColor from "../../../common/variable/home/play/variablesButtonClickColor.js";
+import * as variablesButtonClickColor from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
 
 
 export class ControllerStatisticsCoordinator {
@@ -34,7 +34,7 @@ export class ControllerStatisticsCoordinator {
 
     configureButtonClickColor() {
         addEventListenerOnClickButton(
-            variablesButtonClickColor.buttonClickColorDisplayFlex,
+            variablesButtonClickColor.buttonClickDisplayFlex,
             this.setConfigurationCLickColor,
             this
         );

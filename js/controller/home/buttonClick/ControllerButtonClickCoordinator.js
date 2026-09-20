@@ -1,4 +1,4 @@
-export class ControllerButtonsMain {
+export class ControllerButtonClickCoordinator {
 
     // constructor(controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
     //     this.controllerButtonStart = controllerButtonStart;
@@ -6,17 +6,17 @@ export class ControllerButtonsMain {
     //     this.controllerButtonClickColor = controllerButtonClickColor;
     // }
 
-    constructor(controllerButtonClickColor) {
-        this.controllerButtonClickColor = controllerButtonClickColor;
+    constructor(controllerButtonClick) {
+        this.controllerButtonClick = controllerButtonClick;
     }
 
     createGameButtons() {
-        this.controllerButtonClickColor.createGameButtonsView();
+        this.controllerButtonClick.createGameButtonsView();
         // this.controllerButtonStart.createButtonStart();
     }
 
     setOnClickColor(onClickColor) {
-        this.controllerButtonClickColor
+        this.controllerButtonClick
             .setOnClickColor(onClickColor);
     }
 
@@ -44,7 +44,7 @@ export class ControllerButtonsMain {
     // }
 
     configureClickColor() {
-        this.controllerButtonClickColor.configureButtonClickColor();
+        this.controllerButtonClick.configureButtonClickColor();
     }
 
     // getRoundNumber() {
@@ -70,7 +70,7 @@ export class ControllerButtonsMain {
     }
 
     removeEventListenerOnClickButtonClickColor() {
-        this.controllerButtonClickColor.removeEventListenerOnClickButtonClickColor();
+        this.controllerButtonClick.removeEventListenerOnClickButtonClickColor();
     }
 
     // removeEventListenerOnClickButtonStop() {
@@ -78,7 +78,7 @@ export class ControllerButtonsMain {
     // }
 
     configureClickColorGameOver() {
-        this.controllerButtonClickColor.configureClickColorGameOver();
+        this.controllerButtonClick.configureClickColorGameOver();
     }
 
     // setIconsColorAfterGameOver() {
@@ -91,15 +91,15 @@ export class ControllerButtonsMain {
     // }
 
     setButtonClickColorAtStart() {
-        this.controllerButtonClickColor.setButtonClickColorAtStart();
+        this.controllerButtonClick.setButtonClickColorAtStart();
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {
-        this.controllerButtonClickColor.setButtonClickColorRandomColor(gameRandomColor);
+        this.controllerButtonClick.setButtonClickColorRandomColor(gameRandomColor);
     }
 
     setConfigurationButtonsAtStart() {
-        this.controllerButtonClickColor.removeConfigurationGameOver();
+        this.controllerButtonClick.removeConfigurationGameOver();
         // this.controllerButtonStart.setConfigurationAfterClick();
         // this.controllerButtonStop.setConfigurationBeforeClick();
     }

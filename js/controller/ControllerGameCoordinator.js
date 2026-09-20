@@ -1,6 +1,6 @@
-import {Game} from "../../../Game.js";
+import {Game} from "../Game.js";
 
-export class ControllerMainGame {
+export class ControllerGameCoordinator {
 
     constructor(controllerConfigurationCoordinator, controllerButtonsCoordinator, controllerGameStateCoordinator, controllerStatisticsCoordinator) {
         this.controllerConfigurationCoordinator = controllerConfigurationCoordinator;

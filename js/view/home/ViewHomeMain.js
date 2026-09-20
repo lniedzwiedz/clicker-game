@@ -5,19 +5,24 @@ import {
 import * as variablesHome from "../../common/variable/home/variablesHome.js";
 
 
-export class ViewHome{
+export class ViewHomeMain {
 
-    createHome() {
+    createHomeMain() {
         this.createContainerHomeMain();
         this.createContainerHomeParts();
     }
 
     createContainerHomeMain() {
-        createElementDiv(variablesHome.containerMainParts, variablesHome.containerHomeMain);
+        createElementDiv(
+            variablesHome.containerMainParts,
+            variablesHome.containerHomeMain
+        );
     }
 
     createContainerHomeParts() {
-        createElementDiv(variablesHome.containerHomeMain, variablesHome.containerHomeMainParts);
+        createElementDiv(
+            variablesHome.containerHomeMain,
+            variablesHome.containerHomeMainParts
+        );
     }
-
 }

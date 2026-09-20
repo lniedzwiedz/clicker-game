@@ -3,10 +3,10 @@ import {
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButton from "../../../common/variable/home/gameState/variablesGameState.js";
-import * as variablesButtonClickColor from "../../../common/variable/home/play/variablesButtonClickColor.js";
+import * as variablesButtonClickColor from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
 
-export class ControllerButtonClickColor {
+
+export class ControllerButtonClick {
 
     constructor(viewButtonClickColor, actionButtonClickColor) {
         this.viewButtonClickColor = viewButtonClickColor;
@@ -32,7 +32,7 @@ export class ControllerButtonClickColor {
     configureButtonClickColor() {
         this.buttonClickEvent =
             addEventListenerOnClickButton(
-                variablesButtonClickColor.buttonClickColorDisplayFlex,
+                variablesButtonClickColor.buttonClickDisplayFlex,
                 this.setConfiguration,
                 this
             );
@@ -41,7 +41,7 @@ export class ControllerButtonClickColor {
     removeEventListenerOnClickButtonClickColor() {
 
         removeEventListenerOnClickButton(
-            variablesButtonClickColor.buttonClickColorDisplayFlex,
+            variablesButtonClickColor.buttonClickDisplayFlex,
             this.buttonClickEvent
         );
 

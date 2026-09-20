@@ -25,7 +25,7 @@ export class ModuleConfiguration {
         this.viewConfigurationMain =
             new ViewConfigurationMain();
 
-        this.controllerConfiguration =
+        this.controllerConfigurationMain =
             new ControllerConfigurationMain(
                 this.viewConfigurationMain
             );
@@ -64,7 +64,7 @@ export class ModuleConfiguration {
 
         this.controllerConfigurationCoordinator =
             new ControllerConfigurationCoordinator(
-                this.controllerConfiguration,
+                this.controllerConfigurationMain,
                 this.controllerConfigurationDecorationIcon,
                 this.controllerConfigurationRound,
                 this.controllerButtonsRound,
