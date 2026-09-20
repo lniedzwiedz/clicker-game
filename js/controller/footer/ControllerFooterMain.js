@@ -1,10 +1,20 @@
 export class ControllerFooterMain {
 
-    constructor(viewFooter) {
-        this.viewFooter = viewFooter;
+    constructor(viewFooterMain, controllerAuthor) {
+        this.viewFooterMain = viewFooterMain;
+        this.controllerAuthor = controllerAuthor
     }
 
     createFooter(){
-        this.viewFooter.createFooter();
+        this.createFooterMain();
+        this.createAuthor();
+    }
+
+    createFooterMain(){
+        this.viewFooterMain.createFooterMain();
+    }
+
+    createAuthor(){
+        this.controllerAuthor.createAuthor();
     }
 }

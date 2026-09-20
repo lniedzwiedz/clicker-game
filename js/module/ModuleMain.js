@@ -41,7 +41,11 @@ export class ModuleMain {
             );
     }
 
-    getControllerMain(){
-        return this.controllerMain;
+    // getControllerMain(){
+    //     return this.controllerMain;
+    // }
+
+    create(){
+        this.controllerMain.create();
     }
 }

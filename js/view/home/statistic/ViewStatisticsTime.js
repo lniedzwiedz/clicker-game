@@ -1,20 +1,12 @@
 import {
     createElementDiv,
-    createElementDivWithIdAndSetClassName,
-    createElementDivWithTheSameIdAndClassName,
     isElementsExistById,
     removeElementById,
-    setElementClassNameById,
-    setElementClassNames,
-    setElementClassNameSameAsIdAndSetText,
     setElementTextById
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsTime from "../../../common/variable/home/statistic/variablesStatisticsTime.js";
-import {containerHomeMainParts} from "../../../common/variable/home/statistic/variablesStatisticsTime.js";
 
-
-let newContainerGameFiledStatisticsTimeKindParts;
 
 export class ViewStatisticsTime {
 

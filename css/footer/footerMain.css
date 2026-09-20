@@ -1,0 +1,36 @@
+#containerFooter-Main {
+    display: grid;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerFooter-Main :hover {
+    /*background-color: #000000;*/
+    /*!*color: #ac4a71;*!*/
+    /*color: lightgoldenrodyellow;*/
+    /*opacity: 0.7;*/
+    /*font-size: 0.9rem;*/
+    /*box-shadow: 0px 0px 1px 1px #1f130e;*/
+}
+
+#containerFooter-MainParts {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 9fr 1fr;
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-device-height: 500px) {
+
+}

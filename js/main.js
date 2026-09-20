@@ -1,19 +1,7 @@
-import {ViewMain} from "./view/ViewMain.js";
-import {ViewFooter} from "./view/footer/ViewFooter.js";
 import {ModuleMain} from "./module/ModuleMain.js";
 
-
-// const viewMain = new ViewMain();
-// viewMain.createContainerMainSection();
-//
-// const moduleMain = new ModuleMain();
-// moduleMain.createGame();
-//
-// const viewFooter = new ViewFooter();
-// viewFooter.createFooter();
-
 const moduleMain = new ModuleMain();
-moduleMain.getControllerMain().create();
+moduleMain.create();
 
 
-console.log("Clicker game: version 20260918v50_branch_class_35");
+console.log("Clicker game: version 20260918v50_branch_class_36");

@@ -1,0 +1,15 @@
+#footerAuthor-DisplayTextFlex {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footerAuthor-StyleText {
+    /*margin: auto 0;*/
+    margin: 0;
+    padding: 0;
+    color: #ac4a71;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    font-weight: 500;
+}

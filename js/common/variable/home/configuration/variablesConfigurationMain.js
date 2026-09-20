@@ -1,4 +1,4 @@
-import * as variablesMenu from "../../menu/variablesMenu.js";
+import * as variablesMenu from "../../menu/variablesMenuMain.js";
 
 
 export const containerMenuMainParts = variablesMenu.containerMenuMainParts;

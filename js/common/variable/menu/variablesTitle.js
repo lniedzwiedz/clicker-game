@@ -1,6 +1,6 @@
-import * as variablesMenu from "./variablesMenu.js";
+import * as variablesMenuMain from "./variablesMenuMain.js";
 
-export const containerMenuMainParts = variablesMenu.containerMenuMainParts;
+export const containerMenuMainParts = variablesMenuMain.containerMenuMainParts;
 
 export const containerTitleMain = "containerTitle-Main";
 export const titleDisplayTitleFlex = "title-DisplayTitleFlex";

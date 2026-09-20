@@ -3,7 +3,7 @@ import {ModuleButtons} from "./home/play/ModuleButtons.js";
 import {ModuleGameState} from "./home/stateGame/ModuleGameState.js";
 import {ModuleStatistics} from "./home/statistic/ModuleStatistics.js";
 
-import {ControllerMainGame} from "../controller/ControllerMainGame.js";
+import {ControllerMainGame} from "../controller/home/play/ControllerMainGame.js";
 
 
 export class ModuleGame {

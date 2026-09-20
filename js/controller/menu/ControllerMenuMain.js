@@ -1,7 +1,7 @@
 export class ControllerMenuMain {
 
-    constructor(controllerMenu, controllerTitle) {
-        this.controllerMenu = controllerMenu;
+    constructor(viewMenuMain, controllerTitle) {
+        this.viewMenuMain = viewMenuMain;
         this.controllerTitle = controllerTitle;
     }
 
@@ -11,7 +11,7 @@ export class ControllerMenuMain {
     }
 
     createMenuMain() {
-        this.controllerMenu.createMenuMain();
+        this.viewMenuMain.createMenuMain();
     }
 
     createTitle() {

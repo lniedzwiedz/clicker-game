@@ -2,11 +2,11 @@ import {
     createElementDiv
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesMenu from "../../common/variable/menu/variablesMenu.js";
+import * as variablesMenu from "../../common/variable/menu/variablesMenuMain.js";
 
-export class ViewMenu {
+export class ViewMenuMain {
 
-    createContainerMenuMain() {
+    createMenuMain() {
 
         createElementDiv(
             variablesMenu.containerMainParts,
