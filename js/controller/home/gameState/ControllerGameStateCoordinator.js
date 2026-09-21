@@ -33,24 +33,64 @@ export class ControllerGameStateCoordinator {
             .setOnStop(onStop);
     }
 
-    setConfigurationAfterClickStop() {
-        this.controllerButtonStop.setConfigurationAfterClick();
-        this.controllerButtonStart.setConfigurationBeforeClick();
+    // START -----------------
 
+    setConfigurationGameStateButtonsAfterClickButtonStart(){
 
-        this.removeEventListenerOnClickButtonStop();
-        // this.removeEventListenerOnClickButtonClickColor();
+        this.setConfigurationButtonStartAfterClickButtonStart();
+        this.setConfigurationButtonStopAfterClickButtonStart();
     }
 
-    removeEventListenerOnClickButtonStop() {
+    setConfigurationButtonStartAfterClickButtonStart() {
+        this.controllerButtonStart.setConfigurationIconStartAfterClick();
+    }
+
+    setConfigurationButtonStopAfterClickButtonStart() {
+        this.controllerButtonStop.setConfigurationIconStopBeforeClick();
         this.controllerButtonStop.removeEventListenerOnClickButtonStop();
     }
 
-    setConfigurationButtonsAtStart() {
-        // this.controllerButtonClickColor.removeConfigurationGameOver();
-        this.controllerButtonStart.setConfigurationAfterClick();
-        this.controllerButtonStop.setConfigurationBeforeClick();
+
+    // STOP -----------------
+
+    setConfigurationGameStateButtonsAfterClickButtonStop() {
+        // this.controllerButtonStop.setConfigurationIconStopAfterClick();
+        // this.controllerButtonStart.setConfigurationIconStartBeforeClick();
+
+
+        // this.removeEventListenerOnClickButtonStop();
+        // this.removeEventListenerOnClickButtonClickColor();
+
+        this.setConfigurationButtonStartAfterClickButtonStop();
+        this.setConfigurationButtonStopAfterClickButtonStop();
     }
+
+    setConfigurationButtonStartAfterClickButtonStop() {
+        this.controllerButtonStart.setConfigurationIconStartBeforeClick();
+    }
+
+    setConfigurationButtonStopAfterClickButtonStop() {
+        this.controllerButtonStop.setConfigurationIconStopAfterClick();
+        this.controllerButtonStop.removeEventListenerOnClickButtonStop();
+    }
+
+
+    // removeEventListenerOnClickButtonStop() {
+    //     this.controllerButtonStop.removeEventListenerOnClickButtonStop();
+    // }
+
+    // setConfigurationGameStateButtonsAfterClickButtonStart(){
+    //     this.setConfigurationButtonIconsAtStart();
+    //
+    //     // setConfigurationGameStateButtonsAfterClickButtonStart
+    // }
+
+    setConfigurationButtonIconsAtStart() {
+        // this.controllerButtonClickColor.removeConfigurationGameOver();
+        // this.controllerButtonStart.setConfigurationIconStartAfterClick();
+        // this.controllerButtonStop.setConfigurationIconStopAfterClick();
+    }
+
 
     configureButtonsAfterGameOver() {
         // this.setConfigurationRoundNumberWhenGameStop();
@@ -63,11 +103,11 @@ export class ControllerGameStateCoordinator {
     }
 
     setIconsColorAfterGameOver() {
-        this.controllerButtonStart.setConfigurationBeforeClick();
-        this.controllerButtonStop.setConfigurationBeforeClick();
+        this.controllerButtonStart.setConfigurationIconStartBeforeClick();
+        this.controllerButtonStop.setConfigurationIconStopBeforeClick();
     }
 
     setConfigurationButtonStopGameOver() {
-        this.controllerButtonStop.setConfigurationGameOver();
+        this.controllerButtonStop.setIconStopStyleForGameOver();
     }
 }

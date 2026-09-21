@@ -2,10 +2,9 @@ import {
     createElementButton,
     createElementDiv,
     createElementI,
-    getElementById,
     isElementsExistById,
     removeElementClassNameById,
-    setElementClassNameById,
+    addElementClassNameById,
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonStop from "../../../common/variable/home/gameState/variablesButtonStop.js";
@@ -39,7 +38,7 @@ export class ViewButtonStop {
             variablesButtonStop.buttonStopDisplayFlex
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             variablesButtonStop.buttonStopDisplayFlex,
             variablesButtonStop.buttonStopStyle
         );
@@ -53,59 +52,67 @@ export class ViewButtonStop {
             variablesButtonStop.buttonStopIconStop
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
         );
     }
 
-    setIconColorBeforeClick() {
+    setIconStopStyleBeforeClick() {
 
-        let elementId =
-            getElementById(
-                variablesButtonStop.buttonStopIconStopId
-            );
+        if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)) {
 
-        if (isElementsExistById(elementId)) {
             removeElementClassNameById(
-                elementId,
+                variablesButtonStop.buttonStopIconStopId,
                 variablesButtonStop.buttonStopIconStopStyleAfterClick
             );
+
+            addElementClassNameById(
+                variablesButtonStop.buttonStopIconStopId,
+                variablesButtonStop.buttonStopIconStopStyleBeforeClick
+            );
+
+
         }
     }
 
-    setIconColorAfterClick() {
+    setIconStopStyleAfterClick() {
+
+        if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)){
+            removeElementClassNameById(
+                variablesButtonStop.buttonStopIconStopId,
+                variablesButtonStop.buttonStopIconStopStyleBeforeClick
+            );
+
+            addElementClassNameById(
+                variablesButtonStop.buttonStopIconStopId,
+                variablesButtonStop.buttonStopIconStopStyleAfterClick
+            );
+        }
+
+    }
+
+    setIconStopStyleForGameOver() {
 
         removeElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
-            variablesButtonStop.buttonStopIconStopStyleBeforeClick
+            variablesButtonStop.buttonStopIconStopStyleAfterClick
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
-            variablesButtonStop.buttonStopIconStopStyleAfterClick
-        );
-    }
-
-    setConfigurationGameOver() {
-
-        removeElementClassNameById(
-            variablesButtonStop.buttonStopDisplayFlex,
-            variablesButtonStop.buttonStopIconStopStyleAfterClick
-        );
-
-        setElementClassNameById(
-            variablesButtonStop.buttonStopDisplayFlex,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
         );
     }
 
-    removeConfigurationButtonStop() {
-        if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex))
+    removeButtonStopStyleInactive() {
+
+        if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
 
             removeElementClassNameById(
                 variablesButtonStop.buttonStopDisplayFlex,
                 variablesButtonStop.buttonStopInactive
             );
+        }
     }
 }

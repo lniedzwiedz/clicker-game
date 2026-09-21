@@ -4,7 +4,7 @@ export class Game {
         // this.roundNumberSetupByUser = roundNumber;
         // this.roundNumber = this.roundNumberSetupByUser;
         this.roundNumber = roundNumber;
-        this.countedRoundNumber = 0;
+        this.nextRoundNumber = 0;
     }
 
     randomColor = "#ac4a71";
@@ -39,11 +39,11 @@ export class Game {
 
 
     isGameRunning() {
-        return this.countedRoundNumber < this.roundNumber;
+        return this.nextRoundNumber < this.roundNumber;
     }
 
-    setCountedRoundNumber() {
-        this.countedRoundNumber++;
+    setNextRoundNumber() {
+        this.nextRoundNumber++;
     }
 
     getRoundNumber() {
@@ -51,7 +51,7 @@ export class Game {
     }
 
     getCountedRoundNumber() {
-        return this.countedRoundNumber;
+        return this.nextRoundNumber;
     }
 
     playClickColorCounterFraud() {
@@ -214,7 +214,7 @@ export class Game {
     }
 
     setStatisticTimeInMillisecondsAvg() {
-        this.statisticTimeInMillisecondsAvg = this.statisticTimeInMillisecondsSum / this.countedRoundNumber;
+        this.statisticTimeInMillisecondsAvg = this.statisticTimeInMillisecondsSum / this.nextRoundNumber;
     }
 
     setStatisticTimeInMillisecondsMax() {

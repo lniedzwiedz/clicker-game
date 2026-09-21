@@ -13,7 +13,7 @@ export function removeElementById(elementId) {
     }
 }
 
-export function setElementClassNameById(elementId, className) {
+export function addElementClassNameById(elementId, className) {
     getElementById(elementId).classList.add(className);
 }
 
@@ -46,17 +46,17 @@ export function createElementP(parentId, childId) {
 
 export function createElementDivWithIdAndSetClassName(parentId, childId, className) {
     createElementDiv(parentId, childId);
-    setElementClassNameById(childId, className);
+    addElementClassNameById(childId, className);
 }
 
 export function createElementDivWithTheSameIdAndClassName(parentId, childIdAndClassName) {
     createElementDiv(parentId, childIdAndClassName);
-    setElementClassNameById(childIdAndClassName, childIdAndClassName);
+    addElementClassNameById(childIdAndClassName, childIdAndClassName);
 }
 
 export function createElementPWithTheSameIdAndClassName(parentId, childIdAndClassName) {
     createElementP(parentId, childIdAndClassName);
-    setElementClassNameById(childIdAndClassName, childIdAndClassName);
+    addElementClassNameById(childIdAndClassName, childIdAndClassName);
 }
 
 export function createElementDivAnaDivChild(parentId, childId, grandChildId) {
@@ -65,18 +65,18 @@ export function createElementDivAnaDivChild(parentId, childId, grandChildId) {
 }
 
 export function setElementClassNameSameAsIdAndSetText(elementId, text) {
-    setElementClassNameById(elementId, elementId);
+    addElementClassNameById(elementId, elementId);
     setElementTextById(elementId, text);
 }
 
 export function setElementClassNamedAndText(elementId, className, text) {
-    setElementClassNameById(elementId, className);
+    addElementClassNameById(elementId, className);
     setElementTextById(elementId, text);
 }
 
 export function setElementClassNames(elementId, classNameOne, classNameTwo) {
-    setElementClassNameById(elementId, classNameOne);
-    setElementClassNameById(elementId, classNameTwo);
+    addElementClassNameById(elementId, classNameOne);
+    addElementClassNameById(elementId, classNameTwo);
 }
 
 export function isElementsExistById(elementId) {

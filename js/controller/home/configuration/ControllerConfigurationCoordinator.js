@@ -35,15 +35,16 @@ export class ControllerConfigurationCoordinator {
     }
 
     setConfigurationForRoundNumber() {
-        this.controllerButtonsRound.setConfigurationButtonsFinalNumberForPlay();
+        this.controllerButtonsRound.setConfigurationRoundButtons();
     }
 
-    setConfigurationRoundNumberWhenGameStop() {
-        this.controllerButtonsRound.setConfigurationRoundNumberWhenGameStop();
+    setConfigurationRoundButtonsAfterClickButtonStop() {
+        // to do -> ??? remove
+        this.controllerButtonsRound.setConfigurationRoundButtons();
     }
 
     setConfigurationGameOver() {
-        this.setConfigurationRoundNumberWhenGameStop();
+        // this.setConfigurationRoundNumberWhenGameStop();
 
         // this.removeEventListenerOnClickButtonClickColor();
         // this.configureClickColorGameOver();

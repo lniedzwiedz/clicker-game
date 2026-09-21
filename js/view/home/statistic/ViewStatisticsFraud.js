@@ -8,7 +8,7 @@ import {
     createElementPWithTheSameIdAndClassName,
     isElementsExistById,
     removeElementById,
-    setElementClassNameById,
+    addElementClassNameById,
     setElementStyletAsGrid,
     setElementTextById,
     valueToString
@@ -111,7 +111,7 @@ class ViewStatisticsFraud {
             variablesStatisticsFraud.statisticsFraudSumIconWhiskeyGlass
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             variablesStatisticsFraud.statisticsFraudSumIconMiddle,
             variablesStatisticsFraud.statisticsFraudSumIconStyleWhiskeyGlassMain
         );
@@ -289,7 +289,7 @@ class ViewStatisticsFraud {
             variablesStatisticsFraud.statisticsFraudDisplayIconWhiskeyGlassAndSpace
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             pId,
             variablesStatisticsFraud.statisticsFraudCounterRoundStyleValueSumPerRound
         );

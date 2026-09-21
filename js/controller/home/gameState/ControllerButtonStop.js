@@ -1,5 +1,5 @@
 import {
-    addEventListenerOnClickButton,
+    addEventListenerOnClickButton, isElementsExistById,
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
@@ -31,34 +31,43 @@ export class ControllerButtonStop {
     }
 
     configureButtonStop() {
-        this.buttonClickEvent =
-            addEventListenerOnClickButton(
-                variablesButtonStop.buttonStopDisplayFlex,
-                this.handleClickStop,
-                this
-            );
+
+        if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+
+            this.buttonClickEvent =
+                addEventListenerOnClickButton(
+                    variablesButtonStop.buttonStopDisplayFlex,
+                    this.handleClickStop,
+                    this
+                );
+        }
     }
 
     removeEventListenerOnClickButtonStop() {
 
-        removeEventListenerOnClickButton(
-            variablesButtonStop.buttonStopDisplayFlex,
-            this.buttonClickEvent
-        );
+        if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+
+            removeEventListenerOnClickButton(
+                variablesButtonStop.buttonStopDisplayFlex,
+                this.buttonClickEvent
+            );
+        }
+
 
         this.buttonClickEvent = null;
     }
 
-    setConfigurationBeforeClick() {
-        this.viewButtonStop.setIconColorBeforeClick();
-        this.viewButtonStop.removeConfigurationButtonStop();
+    setConfigurationIconStopBeforeClick() {
+        this.viewButtonStop.setIconStopStyleBeforeClick();
+        // ??
+        this.viewButtonStop.removeButtonStopStyleInactive();
     }
 
-    setConfigurationAfterClick() {
-        this.viewButtonStop.setIconColorAfterClick();
+    setConfigurationIconStopAfterClick() {
+        this.viewButtonStop.setIconStopStyleAfterClick();
     }
 
     setConfigurationGameOver() {
-        this.viewButtonStop.setConfigurationGameOver();
+        this.viewButtonStop.setIconStopStyleForGameOver();
     }
 }

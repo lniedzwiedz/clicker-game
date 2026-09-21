@@ -50,7 +50,7 @@ export class ControllerButtonsRound {
         return this.viewButtonsRound.getRoundNumberSetupByUser(currentButtonId);
     }
 
-    setConfigurationButtonsFinalNumberForPlay() {
+    setConfigurationRoundButtons() {
 
         const roundNumberFinal = this.actionButtonsRound.getButtonIdPMaxClicksNumberSetByUser();
         this.actionButtonsRound.setButtonIdPMaxClicksNumberSetByUser();

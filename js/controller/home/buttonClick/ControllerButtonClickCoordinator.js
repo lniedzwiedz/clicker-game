@@ -90,8 +90,8 @@ export class ControllerButtonClickCoordinator {
     //     this.controllerButtonStop.setConfigurationGameOver();
     // }
 
-    setButtonClickColorAtStart() {
-        this.controllerButtonClick.setButtonClickColorAtStart();
+    setButtonClickColor() {
+        this.controllerButtonClick.setButtonClickColor();
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {

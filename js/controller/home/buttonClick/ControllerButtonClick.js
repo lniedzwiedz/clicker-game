@@ -49,11 +49,11 @@ export class ControllerButtonClick {
     }
 
     configureClickColorGameOver() {
-        this.viewButtonClickColor.setConfigurationGameOver();
+        this.viewButtonClickColor.setConfigurationButtonClickColorGameOver();
     }
 
-    setButtonClickColorAtStart() {
-        this.viewButtonClickColor.setButtonClickColorAtStart();
+    setButtonClickColor() {
+        this.viewButtonClickColor.setButtonClickColor();
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {

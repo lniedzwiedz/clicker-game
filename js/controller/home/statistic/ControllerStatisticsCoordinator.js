@@ -17,7 +17,7 @@ export class ControllerStatisticsCoordinator {
         this.onStart = onStart;
     }
 
-    createConfigurationStatisticsMain(maxClicksNumber) {
+    createConfigurationStatistics(maxClicksNumber) {
         this.createGameFieldStatisticsTime();
         this.createConfigurationStatisticsFraud(maxClicksNumber);
     }
@@ -60,7 +60,8 @@ export class ControllerStatisticsCoordinator {
         this.controllerStatisticsFraud.removeStatisticsFraud();
     }
 
-    removeContainerStatisticParts() {
+    removeStatistics() {
+        // to do -> remove main not main part container
         this.removeGameFieldStatisticsTime();
         this.removeStatisticsFraud();
     }

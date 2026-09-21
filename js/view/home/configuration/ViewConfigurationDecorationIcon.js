@@ -1,7 +1,7 @@
 import {
     createElementDivAnaDivChild,
     createElementI,
-    setElementClassNameById
+    addElementClassNameById
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesConfigurationIcon from "../../../common/variable/home/configuration/variablesConfigurationIcon.js";
@@ -16,7 +16,7 @@ export class ViewConfigurationDecorationIcon {
             variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex,
             variablesConfigurationIcon.configurationDecorationIconDisplayIconFlex
         );

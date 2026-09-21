@@ -1,6 +1,6 @@
 import {
     createElementButton,
-    setElementClassNameById,
+    addElementClassNameById,
     setElementTextById,
     removeElementClassNameById,
     createElementDiv
@@ -23,20 +23,20 @@ export class ViewButtonClick {
 
     createContainerButtonCLickMainParts() {
         createElementButton(variablesButtonClickColor.containerButtonClickMain, variablesButtonClickColor.buttonClickDisplayFlex);
-        setElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickDisplayFlex);
+        addElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickDisplayFlex);
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {
         variablesMain.rootVariables.style.setProperty(variablesMain.cssGameFiledButtonPlayColor, gameRandomColor);
     }
 
-    setButtonClickColorAtStart() {
+    setButtonClickColor() {
         this.setButtonClickColorRandomColor(variablesMain.gameFiledButtonPlayStartColor);
     }
 
-    setConfigurationGameOver() {
+    setConfigurationButtonClickColorGameOver() {
         setElementTextById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickDisplayTextGameOver);
-        setElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickStyleGameOver);
+        addElementClassNameById(variablesButtonClickColor.buttonClickDisplayFlex, variablesButtonClickColor.buttonClickStyleGameOver);
     }
 
     removeConfigurationGameOver() {

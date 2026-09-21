@@ -6,7 +6,7 @@ import {
     getElementAttributeValueById,
     removeElementClassNameById,
     setElementAttributeValueById,
-    setElementClassNameById,
+    addElementClassNameById,
     setElementClassNames,
     setElementStyletAsGrid,
     setElementTextById,
@@ -74,7 +74,7 @@ export class ViewButtonsRound {
             );
 
             if (buttonRoundNumber === 5) {
-                setElementClassNameById(
+                addElementClassNameById(
                     buttonId,
                     variablesButtonRound.configurationRoundButtonRoundCurrentNumber
                 );
@@ -144,7 +144,7 @@ export class ViewButtonsRound {
             variablesButtonRound.configurationRoundButtonRoundCurrentNumber
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             currentButtonId,
             variablesButtonRound.configurationRoundButtonRoundCurrentNumber
         );
@@ -162,7 +162,7 @@ export class ViewButtonsRound {
             variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
 
-        setElementClassNameById(
+        addElementClassNameById(
             currentButtonId,
             variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
