@@ -5,17 +5,12 @@ export class ControllerGameCoordinator {
         this.ControllerButtonClickCoordinator = ControllerButtonClickCoordinator;
         this.controllerGameStateCoordinator = controllerGameStateCoordinator;
         this.controllerStatisticsCoordinator = controllerStatisticsCoordinator;
-        this.game = null;
-        this.clickColorTimeout = null;
     }
 
     configureGame() {
         this.controllerConfigurationCoordinator.createConfiguration();
         this.controllerGameStateCoordinator.createGameState();
         this.ControllerButtonClickCoordinator.createGameButtons();
-
-        // this.controllerGameStateCoordinator.setOnStart(() =>
-        //     this.startGame());
     }
 
     setOnStart(onStart) {
@@ -23,79 +18,29 @@ export class ControllerGameCoordinator {
             .setOnStart(onStart);
     }
 
+    configureGameStart() {
 
-    setOnClickColor(onClickColor) {
-        this.ControllerButtonClickCoordinator
-            .setOnClickColor(onClickColor);
+        console.log("1");
+
+        this.controllerConfigurationCoordinator.configureRoundAtStart();
+
+        this.controllerGameStateCoordinator.configureGameStateButtonsAtStart();
+
+        this.controllerStatisticsCoordinator.configureStatisticsAtStart();
+
     }
-
-    // setConfigurationForRoundNumber(){
-    //     this.controllerConfigurationCoordinator.setConfigurationForRoundNumber();
-    // }
 
     getRoundNumber(){
        return this.controllerConfigurationCoordinator
             .getRoundNumber();
     }
 
-    // startGame() {
-    //
-    //     this.setConfigurationGameAtStart();
-    //
-    //     // const roundNumberSetupByUser =
-    //     //     this.controllerButtonsMain
-    //     //         .getRoundNumber();
-    //     //
-    //     // const roundNumberSetupByUser =
-    //     //     this.controllerConfigurationCoordinator
-    //     //         .getRoundNumber();
-    //
-    //     // this.game = new Game(roundNumberSetupByUser);
-    //
-    //     // this.controllerButtonsMain.setConfigurationForRoundNumber();
-    //
-    //     // this.setConfigurationGameAtStart();
-    //
-    //     // //this.controllerConfigurationCoordinator.setConfigurationForRoundNumber();
-    //
-    //     // this.createButtonStop();
-    //
-    //     // ustawiamy callback FRAUD
-    //     // this.configureClickColorCounterFraud();
-    //
-    //     // DODAJEMY LISTENER TYLKO RAZ
-    //     this.controllerButtonsCoordinator
-    //         .configureClickColor();
-    //
-    //     // tutaj ustawienie początkowego koloru
-    //     this.controllerButtonsCoordinator
-    //         .setButtonClickColorAtStart();
-    //
-    //     // pierwsza runda / druga runda / trzecia runda / .......
-    //     // this.startRound();
-    // }
-
     setButtonClickColorRandomColor(color){
         this.ControllerButtonClickCoordinator.setButtonClickColorRandomColor(color);
     }
 
-
-    configureGameStart() {
-``
-        this.controllerConfigurationCoordinator.setConfigurationForRoundNumber();
-
-        this.controllerGameStateCoordinator.setConfigurationGameStateButtonsAfterClickButtonStart();
-        // this.createButtonStop();
-        this.controllerStatisticsCoordinator.removeStatistics();
-        // this.controllerButtonsMain.setConfigurationButtonsAtStart();
-
-
-    }
-
     createButtonStop() {
-        // this.controllerButtonsMain.createButtonStop();
         this.controllerGameStateCoordinator.createButtonStop();
-        // this.configureButtonStop();
     }
 
     setOnStop(onStop) {
@@ -103,86 +48,24 @@ export class ControllerGameCoordinator {
             .setOnStop(onStop);
     }
 
-    // configureButtonStop() {
-    //     // this.controllerButtonsMain.setOnStop(() =>
-    //     this.controllerGameStateCoordinator.setOnStop(() =>
-    //         this.handleClickStop());
-    // }
+    configureGameStateButtonsAtStop(){
+        this.controllerConfigurationCoordinator.configureRoundButtonsAfterClickStop();
+        this.controllerGameStateCoordinator.configureGameStateButtonsAfterClickStop();
+    }
 
-    // handleClickStop() {
-    //     // this.controllerButtonsMain.setConfigurationAfterClickStop();
-    //     this.controllerConfigurationCoordinator.setConfigurationRoundButtonsAfterClickButtonStop();
-    //     this.controllerGameStateCoordinator.setConfigurationGameStateButtonsAfterClickButtonStop();
-    //     // this.clearClickColorTimeout();
-    // }
+    setOnClickColor(onClickColor) {
+        this.ControllerButtonClickCoordinator
+            .setOnClickColor(onClickColor);
+    }
 
-    // clearClickColorTimeout() {
-    //
-    //     if (this.clickColorTimeout) {
-    //         clearTimeout(this.clickColorTimeout);
-    //         this.clickColorTimeout = null;
-    //     }
-    // }
-
-
-    setConfigurationAfterClickButtonStop(){
-        this.controllerConfigurationCoordinator.setConfigurationRoundButtonsAfterClickButtonStop();
-        this.controllerGameStateCoordinator.setConfigurationGameStateButtonsAfterClickButtonStop();
-
+    configureClickColor(){
+        this.ControllerButtonClickCoordinator.configureClickColor();
     }
 
     setButtonClickColor(){
         this.ControllerButtonClickCoordinator.setButtonClickColor();
     }
 
-    // startRound() {
-    //
-    //     if (!this.game.isGameRunning()) {
-    //         this.gameOver();
-    //         return;
-    //     }
-    //
-    //     this.game.setCountedRoundNumber();
-    //
-    //     this.configureClickColorCounterFraud();
-    //
-    //     this.game.playClickColorCounterTime();
-    //
-    //     this.runClickColorTimeout();
-    // }
-
-    // runClickColorTimeout() {
-    //
-    //     const timeout =
-    //         this.game.getRandomTimeBeforeChangeColor();
-    //
-    //     this.clickColorTimeout =
-    //         setTimeout(() => {
-    //
-    //             const color = this.game.getRandomColor();
-    //
-    //             this.controllerButtonsCoordinator.setButtonClickColorRandomColor(color);
-    //
-    //             this.game.setStartTime();
-    //
-    //             this.configureClickColorCounterTime();
-    //
-    //         }, timeout);
-    // }
-
-    // configureClickColorCounterFraud() {
-    //     this.controllerButtonsCoordinator.setOnClickColor(() =>
-    //         this.countFraudClick());
-    // }
-
-    // countFraudClick() {
-    //     this.game.playClickColorCounterFraud();
-    // }
-
-    // configureClickColorCounterTime() {
-    //     this.controllerButtonsCoordinator.setOnClickColor(() =>
-    //         this.processClickColor());
-    // }
 
 
 
@@ -190,60 +73,26 @@ export class ControllerGameCoordinator {
         this.controllerStatisticsCoordinator.createConfigurationStatistics(roundNumber);
     }
 
-    configureClickColor(){
-        this.ControllerButtonClickCoordinator.configureClickColor();
-    }
-
     updateStatisticFraud(
-        fraudCountedRoundNumber,
-        fraudCountedSumNumber,
-        fraudRoundIndex) {
+        fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
 
-        // this.game.setFraudCountedSum();
-        //
-        // let fraudCountedRoundNumber = this.game
-        //     .getFraudCountedClicks();
-        //
-        // let fraudCountedSumNumber = this.game
-        //     .getFraudCountedSum();
-        //
-        // let fraudRoundIndex = this.game
-        //     .getFraudRoundElementIndexToUpdate();
-
-        this.controllerStatisticsCoordinator.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
-
-        // this.game.resetFraudCountedClicks();
-        // this.game.setFraudRoundElementIndexToUpdate();
+        this.controllerStatisticsCoordinator.setStatisticFraudData(
+            fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
+        );
     }
 
-    updateStatisticTime(   statisticTimeInSecondsMin,
-                           statisticTimeInSecondsAvg,
-                           statisticTimeInSecondsMax,
-                           statisticTimeInSecondsBest) {
-
-        // this.game.setConfigurationTime();
-        //
-        // let statisticTimeInSecondsMin =
-        //     this.game.getStatisticTimeInSecondsMin();
-        //
-        // let statisticTimeInSecondsAvg =
-        //     this.game.getStatisticTimeInSecondsAvg();
-        //
-        // let statisticTimeInSecondsMax =
-        //     this.game.getStatisticTimeInSecondsMax();
-        //
-        // let statisticTimeInSecondsBest =
-        //     this.game.getStatisticTimeInSecondsBest();
+    updateStatisticTime(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
 
         this.controllerStatisticsCoordinator.configureStatisticTime(
-            statisticTimeInSecondsMin,
-            statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax,
-            statisticTimeInSecondsBest
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax, statisticTimeInSecondsBest
         );
     }
 
     gameOver() {
         this.ControllerButtonClickCoordinator.configureButtonsAfterGameOver();
     }
+
 }

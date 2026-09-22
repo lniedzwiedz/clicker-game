@@ -54,7 +54,7 @@ export class Game {
         return this.nextRoundNumber;
     }
 
-    playClickColorCounterFraud() {
+    playCounterFraud() {
         this.fraudCountedClicks++;
     }
 

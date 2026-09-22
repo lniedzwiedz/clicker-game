@@ -60,7 +60,7 @@ export class ControllerStatisticsCoordinator {
         this.controllerStatisticsFraud.removeStatisticsFraud();
     }
 
-    removeStatistics() {
+    configureStatisticsAtStart() {
         // to do -> remove main not main part container
         this.removeGameFieldStatisticsTime();
         this.removeStatisticsFraud();

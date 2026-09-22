@@ -29,6 +29,7 @@ export class ViewButtonStart {
     }
 
     createButtonStartMain() {
+
         createElementButton(
             variablesButtonStart.containerButtonStartMain,
             variablesButtonStart.buttonStartDisplayFlex
@@ -58,7 +59,7 @@ export class ViewButtonStart {
         this.addIconPlayStyleBeforeClick();
     }
 
-    createIconPlay(){
+    createIconPlay() {
 
         createElementI(
             variablesButtonStart.buttonStartDisplayFlex,
@@ -68,86 +69,54 @@ export class ViewButtonStart {
         );
     }
 
-
     setIconStartStyleBeforeClick() {
-        // if (isElementsExistById(variablesButtonStart.buttonStarIconPlayId)) {
-
-            // removeElementClassNameById(
-            //     variablesButtonStart.buttonStarIconPlayId,
-            //     variablesButtonStart.buttonStartIconPlayStyleAfterClick
-            // );
-
-            this.removeIconPlayStyleAfterClick();
-            this.addIconPlayStyleBeforeClick();
-
-            // this.removeIconPlayStyleBeforeClick();
-            // this.addIconPlayStyleAfterClick()
-        // }
+        this.removeIconPlayStyleAfterClick();
+        this.addIconPlayStyleBeforeClick();
     }
 
     setIconStartStyleAfterClick() {
-
-        // removeElementClassNameById(
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleBeforeClick
-        // );
-
         this.removeIconPlayStyleBeforeClick();
-
-        // addElementClassNameById(
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleAfterClick
-        // );
-
         this.addIconPlayStyleAfterClick();
-    }
+        // console.log("setIconStartStyleAfterClick ");
 
-    addIconPlayStyleBeforeClick(){
-
-        addElementClassNameById(
-            variablesButtonStart.buttonStarIconPlayId,
-            variablesButtonStart.buttonStartIconPlayStyleBeforeClick
-        );
-    }
-
-    removeIconPlayStyleBeforeClick(){
-
-        removeElementClassNameById(
-            variablesButtonStart.buttonStarIconPlayId,
-            variablesButtonStart.buttonStartIconPlayStyleBeforeClick
-        );
-    }
-
-    addIconPlayStyleAfterClick(){
-
-        addElementClassNameById(
-            variablesButtonStart.buttonStarIconPlayId,
-            variablesButtonStart.buttonStartIconPlayStyleAfterClick
-        );
-    }
-
-    removeIconPlayStyleAfterClick(){
-
-        removeElementClassNameById(
-            variablesButtonStart.buttonStarIconPlayId,
-            variablesButtonStart.buttonStartIconPlayStyleAfterClick
-        );
+        // this.removeIconPlayStyleAfterClick()
+        // this.addIconPlayStyleBeforeClick();
     }
 
     setIconStartStyleForGameOver() {
-
-        // removeElementClassNameById(
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleAfterClick
-        // );
-
         this.removeIconPlayStyleAfterClick()
-
-        // addElementClassNameById(
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleBeforeClick
-        // );
-
         this.addIconPlayStyleBeforeClick();
+    }
+
+    addIconPlayStyleBeforeClick() {
+
+        addElementClassNameById(
+            variablesButtonStart.buttonStarIconPlayId,
+            variablesButtonStart.buttonStartIconPlayStyleBeforeClick
+        );
+    }
+
+    removeIconPlayStyleBeforeClick() {
+
+        removeElementClassNameById(
+            variablesButtonStart.buttonStarIconPlayId,
+            variablesButtonStart.buttonStartIconPlayStyleBeforeClick
+        );
+    }
+
+    addIconPlayStyleAfterClick() {
+
+        addElementClassNameById(
+            variablesButtonStart.buttonStarIconPlayId,
+            variablesButtonStart.buttonStartIconPlayStyleAfterClick
+        );
+    }
+
+    removeIconPlayStyleAfterClick() {
+
+        removeElementClassNameById(
+            variablesButtonStart.buttonStarIconPlayId,
+            variablesButtonStart.buttonStartIconPlayStyleAfterClick
+        );
     }
 }

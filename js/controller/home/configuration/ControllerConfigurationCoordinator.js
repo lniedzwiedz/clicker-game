@@ -34,13 +34,14 @@ export class ControllerConfigurationCoordinator {
         return this.controllerButtonsRound.getRoundNumber();
     }
 
-    setConfigurationForRoundNumber() {
-        this.controllerButtonsRound.setConfigurationRoundButtons();
+    configureRoundAtStart() {
+        console.log("38 1  controler configuf cooredi");
+        this.controllerButtonsRound.setConfigurationRoundButtonsAtStart();
     }
 
-    setConfigurationRoundButtonsAfterClickButtonStop() {
+    configureRoundButtonsAfterClickStop() {
         // to do -> ??? remove
-        this.controllerButtonsRound.setConfigurationRoundButtons();
+        this.controllerButtonsRound.setConfigurationRoundButtonsAtStop();
     }
 
     setConfigurationGameOver() {

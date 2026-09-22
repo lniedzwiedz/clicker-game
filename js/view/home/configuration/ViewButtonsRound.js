@@ -150,28 +150,34 @@ export class ViewButtonsRound {
         );
     }
 
-    setStyleButtonRoundNumberAfterGameStart(buttonIdPrevious, currentButtonId, roundNumberFinal) {
-
-        removeElementClassNameById(
-            buttonIdPrevious,
-            variablesButtonRound.configurationRoundButtonRoundCurrentNumber)
-        ;
-
-        removeElementClassNameById(
-            roundNumberFinal,
-            variablesButtonRound.configurationRoundButtonRoundChosenNumber
-        );
+    addButtonRoundStyleCurrentNumber(elementId) {
 
         addElementClassNameById(
-            currentButtonId,
+            elementId,
+            variablesButtonRound.configurationRoundButtonRoundCurrentNumber
+        );
+    }
+
+    removeButtonRoundStyleCurrentNumber(elementId) {
+
+        removeElementClassNameById(
+            elementId,
+            variablesButtonRound.configurationRoundButtonRoundCurrentNumber
+        );
+    }
+
+    removeButtonRoundStyleChosenNumber(elementId) {
+
+        removeElementClassNameById(
+            elementId,
             variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
     }
 
-    setStyleButtonRoundNumberWhenGameStop(roundNumberFinal) {
+    addButtonRoundStyleChosenNumber(elementId) {
 
-        removeElementClassNameById(
-            roundNumberFinal,
+        addElementClassNameById(
+            elementId,
             variablesButtonRound.configurationRoundButtonRoundChosenNumber
         );
     }

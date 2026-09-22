@@ -52,15 +52,23 @@ export class ControllerButtonStop {
                 this.buttonClickEvent
             );
         }
-
-
         this.buttonClickEvent = null;
     }
 
     setConfigurationIconStopBeforeClick() {
         this.viewButtonStop.setIconStopStyleBeforeClick();
-        // ??
-        this.viewButtonStop.removeButtonStopStyleInactive();
+
+        // this.viewButtonStop.removeButtonStopStyleInactive();
+    }
+
+    setConfigurationButtonStopAfterClickButtonStart() {
+        this.setConfigurationIconStopBeforeClick();
+    }
+
+    setConfigurationButtonStopAfterClickButtonStop() {
+        this.setConfigurationIconStopAfterClick();
+        this.removeEventListenerOnClickButtonStop();
+
     }
 
     setConfigurationIconStopAfterClick() {

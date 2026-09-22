@@ -37,6 +37,14 @@ export class ControllerButtonStart {
         );
     }
 
+    setConfigurationButtonStartAfterClickButtonStart(){
+        this.setConfigurationIconStartAfterClick();
+    }
+
+    setConfigurationButtonStartAfterClickButtonStop(){
+        this.setConfigurationIconStartBeforeClick();
+    }
+
     setConfigurationIconStartBeforeClick() {
         this.viewButtonStart.setIconStartStyleBeforeClick();
     }
