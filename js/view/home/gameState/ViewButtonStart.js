@@ -42,20 +42,7 @@ export class ViewButtonStart {
     }
 
     createButtonStartIconPlay() {
-        // createElementI(
-        //     variablesButtonStart.buttonStartDisplayFlex,
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleSolid,
-        //     variablesButtonStart.buttonStartIconPlay
-        // );
-
         this.createIconPlay();
-
-        // addElementClassNameById(
-        //     variablesButtonStart.buttonStarIconPlayId,
-        //     variablesButtonStart.buttonStartIconPlayStyleBeforeClick
-        // );
-
         this.addIconPlayStyleBeforeClick();
     }
 
@@ -77,10 +64,6 @@ export class ViewButtonStart {
     setIconStartStyleAfterClick() {
         this.removeIconPlayStyleBeforeClick();
         this.addIconPlayStyleAfterClick();
-        // console.log("setIconStartStyleAfterClick ");
-
-        // this.removeIconPlayStyleAfterClick()
-        // this.addIconPlayStyleBeforeClick();
     }
 
     setIconStartStyleForGameOver() {

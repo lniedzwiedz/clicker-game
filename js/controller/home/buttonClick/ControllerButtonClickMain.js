@@ -3,10 +3,10 @@ import {
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonClick from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
+import * as variablesButtonClick from "../../../common/variable/home/buttonClick/variablesButtonClickMain.js";
 
 
-export class ControllerButtonClick {
+export class ControllerButtonClickMain {
 
     constructor(viewButtonClickColor, actionButtonClickColor) {
         this.viewButtonClickColor = viewButtonClickColor;
@@ -48,9 +48,9 @@ export class ControllerButtonClick {
         this.buttonClickEvent = null;
     }
 
-    configureClickColorGameOver() {
-        this.viewButtonClickColor.setConfigurationButtonClickColorGameOver();
-    }
+    // configureClickColorGameOver() {
+    //     this.viewButtonClickColor.setConfigurationButtonClickGameOver();
+    // }
 
     setButtonClickColor() {
         this.viewButtonClickColor.setButtonClickColor();

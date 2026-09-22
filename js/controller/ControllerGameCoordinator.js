@@ -10,7 +10,7 @@ export class ControllerGameCoordinator {
     configureGame() {
         this.controllerConfigurationCoordinator.createConfiguration();
         this.controllerGameStateCoordinator.createGameState();
-        this.ControllerButtonClickCoordinator.createGameButtons();
+        this.ControllerButtonClickCoordinator.createButtonClick();
     }
 
     setOnStart(onStart) {

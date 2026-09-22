@@ -1,34 +1,22 @@
 export class ControllerButtonClickCoordinator {
 
-    // constructor(controllerButtonStart, controllerButtonStop, controllerButtonClickColor) {
-    //     this.controllerButtonStart = controllerButtonStart;
-    //     this.controllerButtonStop = controllerButtonStop;
-    //     this.controllerButtonClickColor = controllerButtonClickColor;
-    // }
-
-    constructor(controllerButtonClick) {
-        this.controllerButtonClick = controllerButtonClick;
+    constructor(controllerButtonClickMain, controllerButtonClickColor, controllerButtonClickText) {
+        this.controllerButtonClickMain = controllerButtonClickMain;
+        this.controllerButtonClickColor = controllerButtonClickColor;
+        this.controllerButtonClickText = controllerButtonClickText
     }
 
-    createGameButtons() {
-        this.controllerButtonClick.createGameButtonsView();
+    createButtonClick() {
+        this.controllerButtonClickMain.createGameButtonsView();
         // this.controllerButtonStart.createButtonStart();
     }
 
     setOnClickColor(onClickColor) {
-        this.controllerButtonClick
+        this.controllerButtonClickMain
             .setOnClickColor(onClickColor);
     }
 
-    // setOnStart(onStart) {
-    //     this.controllerButtonStart
-    //         .setOnStart(onStart);
-    // }
-    //
-    // setOnStop(onStop) {
-    //     this.controllerButtonStop
-    //         .setOnStop(onStop);
-    // }
+
 
     setConfigurationAfterClickStop() {
         // this.controllerButtonStop.setConfigurationAfterClick();
@@ -39,25 +27,13 @@ export class ControllerButtonClickCoordinator {
         this.removeEventListenerOnClickButtonClickColor();
     }
 
-    // createButtonStop() {
-    //     this.controllerButtonStop.createButtonStop();
-    // }
+
 
     configureClickColor() {
-        this.controllerButtonClick.configureButtonClickColor();
+        this.controllerButtonClickMain.configureButtonClickColor();
     }
 
-    // getRoundNumber() {
-    //     return this.controllerButtonsRound.getRoundNumber();
-    // }
-    //
-    // setConfigurationForRoundNumber() {
-    //     this.controllerButtonsRound.setConfigurationButtonsFinalNumberForPlay();
-    // }
-    //
-    // setConfigurationRoundNumberWhenGameStop() {
-    //     this.controllerButtonsRound.setConfigurationRoundNumberWhenGameStop();
-    // }
+
 
     configureButtonsAfterGameOver() {
         // this.setConfigurationRoundNumberWhenGameStop();
@@ -70,36 +46,26 @@ export class ControllerButtonClickCoordinator {
     }
 
     removeEventListenerOnClickButtonClickColor() {
-        this.controllerButtonClick.removeEventListenerOnClickButtonClickColor();
+        this.controllerButtonClickMain.removeEventListenerOnClickButtonClickColor();
     }
 
-    // removeEventListenerOnClickButtonStop() {
-    //     this.controllerButtonStop.removeEventListenerOnClickButtonStop();
-    // }
 
     configureClickColorGameOver() {
-        this.controllerButtonClick.configureClickColorGameOver();
+        // this.controllerButtonClickMain.configureClickColorGameOver();
+        this.controllerButtonClickText.createButtonCLickTextGameOver();
     }
 
-    // setIconsColorAfterGameOver() {
-    //     this.controllerButtonStart.setConfigurationBeforeClick();
-    //     this.controllerButtonStop.setConfigurationBeforeClick();
-    // }
-
-    // setConfigurationButtonStopGameOver() {
-    //     this.controllerButtonStop.setConfigurationGameOver();
-    // }
 
     setButtonClickColor() {
-        this.controllerButtonClick.setButtonClickColor();
+        this.controllerButtonClickMain.setButtonClickColor();
     }
 
     setButtonClickColorRandomColor(gameRandomColor) {
-        this.controllerButtonClick.setButtonClickColorRandomColor(gameRandomColor);
+        this.controllerButtonClickMain.setButtonClickColorRandomColor(gameRandomColor);
     }
 
     setConfigurationButtonsAtStart() {
-        this.controllerButtonClick.removeConfigurationGameOver();
+        this.controllerButtonClickMain.removeConfigurationGameOver();
         // this.controllerButtonStart.setConfigurationAfterClick();
         // this.controllerButtonStop.setConfigurationBeforeClick();
     }

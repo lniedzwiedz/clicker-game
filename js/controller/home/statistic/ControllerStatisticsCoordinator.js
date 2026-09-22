@@ -2,7 +2,7 @@ import {
     addEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonClickColor from "../../../common/variable/home/buttonClick/variablesButtonClick.js";
+import * as variablesButtonClickColor from "../../../common/variable/home/buttonClick/variablesButtonClickMain.js";
 
 
 export class ControllerStatisticsCoordinator {

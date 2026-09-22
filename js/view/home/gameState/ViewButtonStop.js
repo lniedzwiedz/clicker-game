@@ -15,6 +15,7 @@ export class ViewButtonStop {
     createContainerButtonStop() {
 
         if (!isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+
             this.createContainerButtonStopMain();
             this.createButtonStop();
         }
@@ -46,20 +47,7 @@ export class ViewButtonStop {
     }
 
     createButtonStopIcon() {
-        // createElementI(
-        //     variablesButtonStop.buttonStopDisplayFlex,
-        //     variablesButtonStop.buttonStopIconStopId,
-        //     variablesButtonStop.buttonStopIconStopStyleSolid,
-        //     variablesButtonStop.buttonStopIconStop
-        // );
-
         this.createIconStop();
-
-        // addElementClassNameById(
-        //     variablesButtonStop.buttonStopIconStopId,
-        //     variablesButtonStop.buttonStopIconStopStyleBeforeClick
-        // );
-
         this.addIconStopStyleBeforeClick();
     }
 
@@ -72,24 +60,13 @@ export class ViewButtonStop {
             variablesButtonStop.buttonStopIconStop
         );
     }
+
     setIconStopStyleBeforeClick() {
 
         if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)) {
 
-            // removeElementClassNameById(
-            //     variablesButtonStop.buttonStopIconStopId,
-            //     variablesButtonStop.buttonStopIconStopStyleAfterClick
-            // );
-
             this.removeIconStopStyleAfterClick();
-
-            // addElementClassNameById(
-            //     variablesButtonStop.buttonStopIconStopId,
-            //     variablesButtonStop.buttonStopIconStopStyleBeforeClick
-            // );
-
             this.addIconStopStyleBeforeClick();
-
         }
     }
 
@@ -97,49 +74,14 @@ export class ViewButtonStop {
 
         if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)){
 
-            // removeElementClassNameById(
-            //     variablesButtonStop.buttonStopIconStopId,
-            //     variablesButtonStop.buttonStopIconStopStyleBeforeClick
-            // );
-
             this.removeIconStopStyleBeforeClick();
-
-            // addElementClassNameById(
-            //     variablesButtonStop.buttonStopIconStopId,
-            //     variablesButtonStop.buttonStopIconStopStyleAfterClick
-            // );
-
             this.addIconStopStyleAfterClick();
         }
-
     }
 
     setIconStopStyleForGameOver() {
-
-        // removeElementClassNameById(
-        //     variablesButtonStop.buttonStopIconStopId,
-        //     variablesButtonStop.buttonStopIconStopStyleAfterClick
-        // );
-
         this.removeIconStopStyleAfterClick();
-
-        // addElementClassNameById(
-        //     variablesButtonStop.buttonStopIconStopId,
-        //     variablesButtonStop.buttonStopIconStopStyleBeforeClick
-        // );
-
         this.addIconStopStyleBeforeClick();
-    }
-
-    removeButtonStopStyleInactive() {
-
-        if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
-
-            removeElementClassNameById(
-                variablesButtonStop.buttonStopDisplayFlex,
-                variablesButtonStop.buttonStopInactive
-            );
-        }
     }
 
     addIconStopStyleBeforeClick(){
@@ -172,5 +114,16 @@ export class ViewButtonStop {
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleAfterClick
         );
+    }
+
+    removeButtonStopStyleInactive() {
+
+        if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
+
+            removeElementClassNameById(
+                variablesButtonStop.buttonStopDisplayFlex,
+                variablesButtonStop.buttonStopInactive
+            );
+        }
     }
 }
