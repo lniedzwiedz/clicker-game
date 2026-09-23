@@ -1,6 +1,8 @@
 import {
     addElementClassNameById,
-    createElementP, removeElementById,
+    createElementP,
+    isElementsExistById,
+    removeElementById,
     setElementTextById
 } from "../../../common/function/commonFunctions.js";
 
@@ -10,14 +12,8 @@ import * as variablesButtonGameText from "../../../common/variable/home/game/var
 export class ViewButtonGameText {
 
     createConfigurationButtonGameTextGameOver() {
-
         this.createButtonGameP();
         this.setButtonGameStyleTextGameOver();
-
-        // this.setButtonGameText(
-        //     variablesButtonGameText.buttonClickDisplayTextGameOver
-        // );
-
         this.setButtonGameTextGameOver();
     }
 
@@ -25,20 +21,20 @@ export class ViewButtonGameText {
 
         createElementP(
             variablesButtonGameText.buttonClickDisplayFlex,
-            variablesButtonGameText.buttonClickTextId
+            variablesButtonGameText.buttonGameTextId
         );
     }
 
     setButtonGameTextGameOver() {
         this.setButtonGameText(
-            variablesButtonGameText.buttonClickDisplayTextGameOver
+            variablesButtonGameText.buttonGameDisplayTextGameOver
         );
     }
 
     setButtonGameText(text) {
 
         setElementTextById(
-            variablesButtonGameText.buttonClickTextId,
+            variablesButtonGameText.buttonGameTextId,
             text
         );
     }
@@ -46,15 +42,17 @@ export class ViewButtonGameText {
     setButtonGameStyleTextGameOver() {
 
         addElementClassNameById(
-            variablesButtonGameText.buttonClickTextId,
-            variablesButtonGameText.buttonClickStyleTextGameOver
+            variablesButtonGameText.buttonGameTextId,
+            variablesButtonGameText.buttonGameStyleTextGameOver
         );
     }
 
     removeConfigurationButtonGameTextGameOver() {
 
-        removeElementById(
-            variablesButtonGameText.buttonClickTextId
-        );
+        if (isElementsExistById(variablesButtonGameText.buttonGameTextId)) {
+            removeElementById(
+                variablesButtonGameText.buttonGameTextId
+            );
+        }
     }
 }

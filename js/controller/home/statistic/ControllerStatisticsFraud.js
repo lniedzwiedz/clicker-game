@@ -5,9 +5,9 @@ export class ControllerStatisticsFraud {
         this.actionStatisticsFraud = actionStatisticsFraud;
     }
 
-    createConfigurationGameStatisticsTimeFraud(maxClicksNumber) {
+    createConfigurationGameStatisticsTimeFraud(gameRoundCount) {
         this.viewStatisticsFraud.createStatisticsFraud(
-            maxClicksNumber
+            gameRoundCount
         );
     }
 

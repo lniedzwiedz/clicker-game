@@ -1,7 +1,7 @@
 import {
     createElementButton,
     addElementClassNameById,
-    createElementDiv
+    createElementDiv, removeElementClassNameById, addElementClassNames
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonGameMain from "../../../common/variable/home/game/variablesButtonGameMain.js";
@@ -10,21 +10,21 @@ import * as variablesButtonGameMain from "../../../common/variable/home/game/var
 export class ViewButtonGameMain {
 
     createContainerButtonGame() {
-        this.createContainerButtonCLickMain();
-        this.createButtonCLick();
+        this.createContainerButtonGameMain();
+        this.createButtonGame();
     }
 
-    createContainerButtonCLickMain() {
+    createContainerButtonGameMain() {
         createElementDiv(
             variablesButtonGameMain.containerHomeMainParts,
             variablesButtonGameMain.containerButtonGameMain);
     }
 
-    createButtonCLick() {
-        this.createButtonCLickMain();
+    createButtonGame() {
+        this.createButtonGameMain();
     }
 
-    createButtonCLickMain() {
+    createButtonGameMain() {
 
         createElementButton(
             variablesButtonGameMain.containerButtonGameMain,
@@ -36,4 +36,20 @@ export class ViewButtonGameMain {
             variablesButtonGameMain.buttonGameStyle
         );
     }
+
+    // setButtonGameStyleGameOver() {
+    //
+    //     addElementClassNameById(
+    //         variablesButtonGameMain.buttonGameDisplayFlex,
+    //         variablesButtonGameMain.buttonGameStyleGameOver
+    //     );
+    // }
+    //
+    // removeButtonGameStyleGameOver() {
+    //
+    //     removeElementClassNameById(
+    //         variablesButtonGameMain.buttonGameDisplayFlex,
+    //         variablesButtonGameMain.buttonGameStyleGameOver
+    //     );
+    // }
 }

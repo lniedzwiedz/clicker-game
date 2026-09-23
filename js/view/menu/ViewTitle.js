@@ -1,7 +1,7 @@
 import {
     createElementDiv,
     createElementP,
-    setElementClassNamedAndText
+    addElementClassNamedAndText
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesTitle from "../../common/variable/menu/variablesTitle.js";
@@ -38,7 +38,7 @@ export class ViewTitle {
             variablesTitle.titleStyleTitleText
         );
 
-        setElementClassNamedAndText(
+        addElementClassNamedAndText(
             variablesTitle.titleStyleTitleText,
             variablesTitle.titleStyleTitleText,
             variablesTitle.titleDisplayName

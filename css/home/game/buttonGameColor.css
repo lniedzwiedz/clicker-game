@@ -4,11 +4,6 @@
     justify-content: center;
 }
 
-/*.buttonClick-DisplayFlex {*/
-.buttonGame-Style {
-    /*background-color: var(--gameFiledButtonPlayColor);*/
-    background-color: var(--cssButtonGameColor);
-    border: 0;
-    border-radius: 0.45rem;
-    box-shadow: 0 0 17px 9px lightgoldenrodyellow;
+.buttonGame-Style-BackgroundColor {
+    background-color: var(--cssButtonGameStyleBackgroundColor);
 }

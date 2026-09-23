@@ -7,7 +7,7 @@ import {
     removeElementClassNameById,
     setElementAttributeValueById,
     addElementClassNameById,
-    setElementClassNames,
+    addElementClassNames,
     setElementStyletAsGrid,
     setElementTextById,
     valueToString
@@ -106,7 +106,7 @@ export class ViewButtonsRound {
             valueToString(buttonRoundNumber)
         );
 
-        setElementClassNames(
+        addElementClassNames(
             buttonId,
             variablesButtonRound.configurationRoundDisplayButtonRoundFlex,
             variablesButtonRound.configurationRoundButtonRoundStyle

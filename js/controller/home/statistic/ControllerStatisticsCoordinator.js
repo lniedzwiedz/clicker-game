@@ -17,9 +17,9 @@ export class ControllerStatisticsCoordinator {
         this.onStart = onStart;
     }
 
-    createConfigurationStatistics(maxClicksNumber) {
-        this.createGameFieldStatisticsTime();
-        this.createConfigurationStatisticsFraud(maxClicksNumber);
+    createConfigurationStatistics(gameRoundCount) {
+        // this.createGameFieldStatisticsTime();
+        this.createConfigurationStatisticsFraud(gameRoundCount);
     }
 
     createGameFieldStatisticsTime() {
@@ -40,8 +40,8 @@ export class ControllerStatisticsCoordinator {
         );
     }
 
-    createConfigurationStatisticsFraud(maxClicksNumber) {
-        this.controllerStatisticsFraud.createConfigurationGameStatisticsTimeFraud(maxClicksNumber);
+    createConfigurationStatisticsFraud(gameRoundCount) {
+        this.controllerStatisticsFraud.createConfigurationGameStatisticsTimeFraud(gameRoundCount);
     }
 
     setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {

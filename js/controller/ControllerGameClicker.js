@@ -17,6 +17,10 @@ export class ControllerGameClicker {
 
     startGame() {
 
+        this.clearClickTimeout();
+
+        this.removeConfigurationGameOver();
+
         this.configureButtonStopAfterStart();
 
         this.controllerGameCoordinator
@@ -60,7 +64,7 @@ export class ControllerGameClicker {
         this.configureButtonStop();
     }
 
-    createButtonStop(){
+    createButtonStop() {
 
         this.controllerGameCoordinator
             .createButtonStop();
@@ -82,7 +86,7 @@ export class ControllerGameClicker {
         this.clearClickTimeout();
     }
 
-    configureButtonStopAtStop(){
+    configureButtonStopAtStop() {
 
         this.controllerGameCoordinator
             .configureGameStateButtonsAtStop();
@@ -100,12 +104,13 @@ export class ControllerGameClicker {
     startRound() {
 
         if (!this.game.isGameRunning()) {
-            this.controllerGameCoordinator.gameOver();
+            // this.controllerGameCoordinator.gameOver();
+            this.gameOver();
             return;
         }
 
         this.game
-            .setNextRoundNumber();
+            .setCurrentRoundNumber();
 
         this.configureCounterFraud();
 
@@ -142,7 +147,7 @@ export class ControllerGameClicker {
     }
 
     countFraud() {
-        this.game.playCounterFraud();
+        this.game.setFraudCountedClicks();
     }
 
     configureCounterReactionTime() {
@@ -152,14 +157,15 @@ export class ControllerGameClicker {
 
     processClickColor() {
 
-        const roundNumber = this.game.getRoundNumber();
+        if (this.game.getCurrentRoundNumber() === 1) {
 
-        if (roundNumber === 1){
             this.controllerGameCoordinator
-                .configureStatisticAtStart(roundNumber);
+                .configureStatisticAtStart(
+                    this.game.getGameRoundCount()
+                );
         }
 
-        this.setStatisticsTime();
+        // this.setStatisticsTime();
         this.setStatisticFraud();
 
         // next round 2, 3, 4 ...
@@ -210,5 +216,13 @@ export class ControllerGameClicker {
             statisticTimeInSecondsMax,
             statisticTimeInSecondsBest
         );
+    }
+
+    gameOver() {
+        this.controllerGameCoordinator.gameOver();
+    }
+
+    removeConfigurationGameOver() {
+        this.controllerGameCoordinator.removeConfigurationGameOver();
     }
 }

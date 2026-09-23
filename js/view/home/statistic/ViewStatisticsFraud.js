@@ -18,11 +18,11 @@ import * as variablesStatisticsFraud from "../../../common/variable/home/statist
 
 class ViewStatisticsFraud {
 
-    createStatisticsFraud(roundNumber) {
+    createStatisticsFraud(gameRoundCount) {
         this.createContainerStatisticsFraudMain();
         this.createContainerStatisticsFraudSum();
         this.createContainerStatisticsFraudCounter(
-            roundNumber
+            gameRoundCount
         );
     }
 
@@ -124,12 +124,12 @@ class ViewStatisticsFraud {
         );
     }
 
-    createContainerStatisticsFraudCounter(roundNumber) {
+    createContainerStatisticsFraudCounter(gameRoundCount) {
 
         this.createContainerStatisticsFraudCounterMain()
 
         this.createContainerStatisticsFraudCounterRound(
-            roundNumber
+            gameRoundCount
         );
 
         this.createContainerStatisticsFraudCounterName();
@@ -148,7 +148,7 @@ class ViewStatisticsFraud {
         );
     }
 
-    createContainerStatisticsFraudCounterRound(roundNumber) {
+    createContainerStatisticsFraudCounterRound(gameRoundCount) {
 
         this.createContainerStatisticsFraudCounterRoundMain();
 
@@ -156,12 +156,12 @@ class ViewStatisticsFraud {
 
         this.createContainerStatisticsFraudCounterRoundMainParts(
             parentId,
-            roundNumber
+            gameRoundCount
         );
 
         this.createContainerStatisticsFraudCounterRoundNumber(
             parentId,
-            roundNumber
+            gameRoundCount
         );
     }
 
@@ -178,7 +178,7 @@ class ViewStatisticsFraud {
         );
     }
 
-    createContainerStatisticsFraudCounterRoundMainParts(parentId, roundNumber) {
+    createContainerStatisticsFraudCounterRoundMainParts(parentId, gameRoundCount) {
 
         let gridRowStartNumber = 1;
         let gridColumnStartNumber = 1;
@@ -186,7 +186,7 @@ class ViewStatisticsFraud {
         let gridColumnEndNumber = 2;
 
         let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
-        let gridTemplateColumns = "repeat(" + roundNumber + ", 1fr 100fr 1fr)";
+        let gridTemplateColumns = "repeat(" + gameRoundCount + ", 1fr 100fr 1fr)";
 
         setElementStyletAsGrid(
             parentId,
@@ -198,14 +198,14 @@ class ViewStatisticsFraud {
             gridTemplateColumns);
     }
 
-    createContainerStatisticsFraudCounterRoundNumber(parentId, roundNumber) {
+    createContainerStatisticsFraudCounterRoundNumber(parentId, gameRoundCount) {
 
         let gridRowStartNumberChild = 2;
         let gridColumnStartNumberChild = 2;
         let gridRowEndNumberChild = 3;
         let gridColumnEndNumberChild = 3;
 
-        for (let index = 0; index < roundNumber; index++) {
+        for (let index = 0; index < gameRoundCount; index++) {
 
             let childId = variablesStatisticsFraud.containerStatisticsFraudCounterRoundNumberMainPrefix + valueToString(index);
 

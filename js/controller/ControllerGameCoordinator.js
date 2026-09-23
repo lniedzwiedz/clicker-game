@@ -28,13 +28,13 @@ export class ControllerGameCoordinator {
 
     }
 
-    getRoundNumber(){
-       return this.controllerConfigurationCoordinator
+    getRoundNumber() {
+        return this.controllerConfigurationCoordinator
             .getRoundNumber();
     }
 
-    setButtonClickColorRandomColor(color){
-        this.controllerButtonGameCoordinator.setButtonClickColorRandomColor(color);
+    setButtonClickColorRandomColor(color) {
+        // this.controllerButtonGameCoordinator.setButtonClickColorRandomColor(color);
     }
 
     createButtonStop() {
@@ -46,7 +46,7 @@ export class ControllerGameCoordinator {
             .setOnStop(onStop);
     }
 
-    configureGameStateButtonsAtStop(){
+    configureGameStateButtonsAtStop() {
         this.controllerConfigurationCoordinator.configureRoundButtonsAfterClickStop();
         this.controllerGameStateCoordinator.configureGameStateButtonsAfterClickStop();
     }
@@ -56,19 +56,16 @@ export class ControllerGameCoordinator {
             .setOnGame(onGame);
     }
 
-    configureButtonGameListener(){
+    configureButtonGameListener() {
         this.controllerButtonGameCoordinator.addButtonGameListener();
     }
 
-    setButtonGameColor(roundColor){
+    setButtonGameColor(roundColor) {
         this.controllerButtonGameCoordinator.setButtonGameColor(roundColor);
     }
 
-
-
-
-    configureStatisticAtStart(roundNumber) {
-        this.controllerStatisticsCoordinator.createConfigurationStatistics(roundNumber);
+    configureStatisticAtStart(gameRoundCount) {
+        this.controllerStatisticsCoordinator.createConfigurationStatistics(gameRoundCount);
     }
 
     updateStatisticFraud(
@@ -93,4 +90,7 @@ export class ControllerGameCoordinator {
         this.controllerButtonGameCoordinator.configureButtonGameAfterGameOver();
     }
 
+    removeConfigurationGameOver() {
+        this.controllerButtonGameCoordinator.resetConfigurationButtonGameAfterGameOver();
+    }
 }

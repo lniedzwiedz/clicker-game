@@ -48,7 +48,11 @@ export class ControllerButtonGameMain {
         this.buttonGameEvent = null;
     }
 
-    removeConfigurationGameOver() {
-        this.viewButtonGameMain.removeButtonGameTextGameOver();
-    }
+    // setButtonGameStyleGameOver(){
+    //     this.viewButtonGameMain.setButtonGameStyleGameOver();
+    // }
+
+    // removeButtonGameStyleGameOver() {
+    //     this.viewButtonGameMain.removeButtonGameStyleGameOver();
+    // }
 }

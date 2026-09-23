@@ -64,17 +64,17 @@ export function createElementDivAnaDivChild(parentId, childId, grandChildId) {
     createElementDiv(childId, grandChildId);
 }
 
-export function setElementClassNameSameAsIdAndSetText(elementId, text) {
+export function addElementClassNameSameAsIdAndSetText(elementId, text) {
     addElementClassNameById(elementId, elementId);
     setElementTextById(elementId, text);
 }
 
-export function setElementClassNamedAndText(elementId, className, text) {
+export function addElementClassNamedAndText(elementId, className, text) {
     addElementClassNameById(elementId, className);
     setElementTextById(elementId, text);
 }
 
-export function setElementClassNames(elementId, classNameOne, classNameTwo) {
+export function addElementClassNames(elementId, classNameOne, classNameTwo) {
     addElementClassNameById(elementId, classNameOne);
     addElementClassNameById(elementId, classNameTwo);
 }
@@ -140,5 +140,18 @@ export function removeEventListenerOnClickButton(buttonId, buttonClick) {
     button.removeEventListener(
         "click",
         buttonClick
+    );
+}
+
+export function getDocumentQuerySelectorRoot() {
+    return document.querySelector(":root");
+}
+
+export function setElementStyleByDocumentQuerySelectorRoot(CSSVariableName, CSSVariableValue) {
+
+    getDocumentQuerySelectorRoot()
+        .style.setProperty(
+        CSSVariableName,
+        CSSVariableValue
     );
 }

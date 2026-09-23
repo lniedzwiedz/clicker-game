@@ -8,6 +8,8 @@ export class ControllerButtonGameCoordinator {
 
     createButtonGame() {
         this.controllerButtonGameMain.createButtonGameMain();
+        this.controllerButtonGameColor.setButtonGameBackgroundColorClass();
+        this.controllerButtonGameColor.setButtonGameBackgroundColorAtStart();
     }
 
     setOnGame(onGame) {
@@ -15,7 +17,7 @@ export class ControllerButtonGameCoordinator {
             .setOnGame(onGame);
     }
 
-    setButtonGameColor(roundColor){
+    setButtonGameColor(roundColor) {
         this.controllerButtonGameColor.setButtonGameColorForRound(roundColor);
     }
 
@@ -29,36 +31,49 @@ export class ControllerButtonGameCoordinator {
     // }
 
 
-
     addButtonGameListener() {
         this.controllerButtonGameMain.addButtonGameClickListener();
     }
 
     configureButtonGameAfterGameOver() {
-        // this.setConfigurationRoundNumberWhenGameStop();
-
         this.removeClickGameListener();
-        // this.setIconsColorAfterGameOver();
-
-        // this.setConfigurationButtonStopGameOver();
-
-        this.controllerButtonClickText.createButtonGameTextGameOver();
-
+        this.createButtonGameTextGameOver();
+        this.setButtonGameStyleGameOver();
     }
 
     removeClickGameListener() {
         this.controllerButtonGameMain.removeButtonGameClickListener();
     }
 
+    createButtonGameTextGameOver() {
+        this.controllerButtonClickText.createButtonGameTextGameOver();
+    }
+
+    setButtonGameStyleGameOver() {
+        this.controllerButtonGameColor.setConfigurationButtonGameColorForGameOver();
+    }
+
+    resetConfigurationButtonGameAfterGameOver() {
+        this.removeButtonGameTextGameOver();
+        this.removeButtonGameStyleGameOver();
+    }
+
+    removeButtonGameStyleGameOver() {
+        this.controllerButtonGameColor.setButtonGameBackgroundColorAtStart();
+    }
+
+    removeButtonGameTextGameOver() {
+        this.controllerButtonClickText.removeButtonGameTextGameOver();
+    }
 
 
     // setButtonClickColor() {
     //     this.controllerButtonGameMain.setButtonGameColor();
     // }
 
-    setButtonClickColorRandomColor(gameRandomColor) {
-        this.controllerButtonGameMain.setButtonClickColorRandomColor(gameRandomColor);
-    }
+    // setButtonClickColorRandomColor(gameRandomColor) {
+    //     // this.controllerButtonGameMain.setButtonClickColorRandomColor(gameRandomColor);
+    // }
 
     // setConfigurationButtonsAtStart() {
     //     this.controllerButtonGameMain.removeConfigurationGameOver();

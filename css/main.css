@@ -1,7 +1,8 @@
 :root {
     --colorMain: #ac4a71;
     /*--gameFiledButtonPlayColor: #000000;*/
-    --cssButtonGameColor: #000000;
+    /*--cssButtonGameStyleBackgroundColor: #000000;*/
+    --cssButtonGameStyleBackgroundColor: pink;
 }
 
 body {
@@ -33,7 +34,5 @@ body {
 }
 
 @media (max-width: 600px) {
-    /*.containerMain {*/
-    /*    grid-template-rows: 14fr 83fr 3fr;*/
-    /*}*/
+
 }

@@ -1,7 +1,7 @@
 import {
     createElementDiv,
     createElementP,
-    setElementClassNameSameAsIdAndSetText
+    addElementClassNameSameAsIdAndSetText
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesAuthor from "../../common/variable/footer/variablesAuthor.js";
@@ -37,7 +37,7 @@ export class ViewAuthor {
             variablesAuthor.footerAuthorStyleText
         );
 
-        setElementClassNameSameAsIdAndSetText(
+        addElementClassNameSameAsIdAndSetText(
             variablesAuthor.footerAuthorStyleText,
             variablesAuthor.footerAuthorDisplayText
         );

@@ -1,10 +1,8 @@
 export class Game {
 
-    constructor(roundNumber) {
-        // this.roundNumberSetupByUser = roundNumber;
-        // this.roundNumber = this.roundNumberSetupByUser;
-        this.roundNumber = roundNumber;
-        this.nextRoundNumber = 0;
+    constructor(gameRoundCount) {
+        this.gameRoundCount = gameRoundCount;
+        this.currentRoundNumber = 0;
     }
 
     randomColor = "#ac4a71";
@@ -39,22 +37,22 @@ export class Game {
 
 
     isGameRunning() {
-        return this.nextRoundNumber < this.roundNumber;
+        return this.currentRoundNumber < this.gameRoundCount;
     }
 
-    setNextRoundNumber() {
-        this.nextRoundNumber++;
+    setCurrentRoundNumber() {
+        this.currentRoundNumber++;
     }
 
-    getRoundNumber() {
-        return this.roundNumber;
+    getGameRoundCount() {
+        return this.gameRoundCount;
     }
 
-    getCountedRoundNumber() {
-        return this.nextRoundNumber;
+    getCurrentRoundNumber() {
+        return this.currentRoundNumber;
     }
 
-    playCounterFraud() {
+    setFraudCountedClicks() {
         this.fraudCountedClicks++;
     }
 
@@ -214,7 +212,7 @@ export class Game {
     }
 
     setStatisticTimeInMillisecondsAvg() {
-        this.statisticTimeInMillisecondsAvg = this.statisticTimeInMillisecondsSum / this.nextRoundNumber;
+        this.statisticTimeInMillisecondsAvg = this.statisticTimeInMillisecondsSum / this.currentRoundNumber;
     }
 
     setStatisticTimeInMillisecondsMax() {
