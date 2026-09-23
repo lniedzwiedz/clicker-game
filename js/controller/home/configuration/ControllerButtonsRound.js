@@ -55,10 +55,7 @@ export class ControllerButtonsRound {
         const roundNumberFinal = this.actionButtonsRound.getButtonIdPMaxClicksNumberSetByUser();
         this.actionButtonsRound.setButtonIdPMaxClicksNumberSetByUser();
 
-        // const buttonIdPrevious = this.actionButtonsRound.getButtonIdPrevious();
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
-
-        // this.viewButtonsRound.setStyleButtonRoundNumberAfterClickButtonStart(buttonIdPrevious, currentButtonId, roundNumberFinal);
         this.setStyleButtonRoundNumberAfterClickButtonStart(currentButtonId, roundNumberFinal);
     }
 
@@ -68,9 +65,6 @@ export class ControllerButtonsRound {
 
         // const buttonIdPrevious = this.actionButtonsRound.getButtonIdPrevious();
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
-
-        console.log(" 1 roundNumberFinal = " + roundNumberFinalId);
-
         this.setStyleButtonRoundNumberAfterClickButtonStop(currentButtonId, roundNumberFinalId);
     }
 

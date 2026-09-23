@@ -1,8 +1,8 @@
 export class ControllerGameCoordinator {
 
-    constructor(controllerConfigurationCoordinator, ControllerButtonClickCoordinator, controllerGameStateCoordinator, controllerStatisticsCoordinator) {
+    constructor(controllerConfigurationCoordinator, controllerButtonGameCoordinator, controllerGameStateCoordinator, controllerStatisticsCoordinator) {
         this.controllerConfigurationCoordinator = controllerConfigurationCoordinator;
-        this.ControllerButtonClickCoordinator = ControllerButtonClickCoordinator;
+        this.controllerButtonGameCoordinator = controllerButtonGameCoordinator;
         this.controllerGameStateCoordinator = controllerGameStateCoordinator;
         this.controllerStatisticsCoordinator = controllerStatisticsCoordinator;
     }
@@ -10,7 +10,7 @@ export class ControllerGameCoordinator {
     configureGame() {
         this.controllerConfigurationCoordinator.createConfiguration();
         this.controllerGameStateCoordinator.createGameState();
-        this.ControllerButtonClickCoordinator.createButtonClick();
+        this.controllerButtonGameCoordinator.createButtonGame();
     }
 
     setOnStart(onStart) {
@@ -19,8 +19,6 @@ export class ControllerGameCoordinator {
     }
 
     configureGameStart() {
-
-        console.log("1");
 
         this.controllerConfigurationCoordinator.configureRoundAtStart();
 
@@ -36,7 +34,7 @@ export class ControllerGameCoordinator {
     }
 
     setButtonClickColorRandomColor(color){
-        this.ControllerButtonClickCoordinator.setButtonClickColorRandomColor(color);
+        this.controllerButtonGameCoordinator.setButtonClickColorRandomColor(color);
     }
 
     createButtonStop() {
@@ -53,17 +51,17 @@ export class ControllerGameCoordinator {
         this.controllerGameStateCoordinator.configureGameStateButtonsAfterClickStop();
     }
 
-    setOnClickColor(onClickColor) {
-        this.ControllerButtonClickCoordinator
-            .setOnClickColor(onClickColor);
+    setOnGame(onGame) {
+        this.controllerButtonGameCoordinator
+            .setOnGame(onGame);
     }
 
-    configureClickColor(){
-        this.ControllerButtonClickCoordinator.configureClickColor();
+    configureButtonGameListener(){
+        this.controllerButtonGameCoordinator.addButtonGameListener();
     }
 
-    setButtonClickColor(){
-        this.ControllerButtonClickCoordinator.setButtonClickColor();
+    setButtonGameColor(roundColor){
+        this.controllerButtonGameCoordinator.setButtonGameColor(roundColor);
     }
 
 
@@ -92,7 +90,7 @@ export class ControllerGameCoordinator {
     }
 
     gameOver() {
-        this.ControllerButtonClickCoordinator.configureButtonsAfterGameOver();
+        this.controllerButtonGameCoordinator.configureButtonGameAfterGameOver();
     }
 
 }

@@ -1,5 +1,5 @@
 import {ModuleConfiguration} from "./home/configuration/ModuleConfiguration.js";
-import {ModuleButtonClick} from "./home/buttonClick/ModuleButtonClick.js";
+import {ModuleButtonGame} from "./home/game/ModuleButtonGame.js";
 import {ModuleGameState} from "./home/stateGame/ModuleGameState.js";
 import {ModuleStatistics} from "./home/statistic/ModuleStatistics.js";
 
@@ -13,8 +13,8 @@ export class ModuleGame {
         this.moduleConfiguration =
             new ModuleConfiguration();
 
-        this.moduleButtonClick =
-            new ModuleButtonClick();
+        this.moduleButtonGame =
+            new ModuleButtonGame();
 
         this.moduleGameState =
             new ModuleGameState();
@@ -25,7 +25,7 @@ export class ModuleGame {
         this.controllerGameCoordinator =
             new ControllerGameCoordinator(
                 this.moduleConfiguration.getControllerConfigurationCoordinator(),
-                this.moduleButtonClick.getControllerButtonClickCoordinator(),
+                this.moduleButtonGame.getControllerButtonGameCoordinator(),
                 this.moduleGameState.getControllerGameStateCoordinator(),
                 this.moduleStatistics.getControllerStatisticsCoordinator(),
             );

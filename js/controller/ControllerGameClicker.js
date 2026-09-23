@@ -1,12 +1,12 @@
 import {Game} from "../Game.js";
 
-export class ControllerClickerGame {
+export class ControllerGameClicker {
 
     constructor(controllerGameCoordinator) {
         this.controllerGameCoordinator = controllerGameCoordinator
     }
 
-    startClickerGame() {
+    startGameClicker() {
 
         this.controllerGameCoordinator
             .configureGame();
@@ -17,7 +17,7 @@ export class ControllerClickerGame {
 
     startGame() {
 
-        this.createButtonStop();
+        this.configureButtonStopAfterStart();
 
         this.controllerGameCoordinator
             .configureGameStart();
@@ -30,27 +30,40 @@ export class ControllerClickerGame {
         this.game =
             new Game(roundNumber);
 
-        // ustawiamy callback FRAUD
-        this.configureCounterFraud();
 
         // DODAJEMY LISTENER TYLKO RAZ
         this.controllerGameCoordinator
-            .configureClickColor();
+            .configureButtonGameListener();
 
-        // tutaj ustawienie koloru
-        this.controllerGameCoordinator
-            .setButtonClickColor();
+        // ustawiamy callback FRAUD
+        this.configureCounterFraud();
 
-        // pierwsza runda / druga runda / trzecia runda / .......
+        // // DODAJEMY LISTENER TYLKO RAZ
+        // this.controllerGameCoordinator
+        //     .configureButtonGameListener();
+
+        // // tutaj ustawienie koloru
+        // this.controllerGameCoordinator
+        //     .setButtonGameColorForRound();
+
+        // round 1
         this.startRound();
     }
 
-    createButtonStop() {
+    configureButtonStopAfterStart() {
+
+        // this.controllerGameCoordinator
+        //     .createButtonStop();
+
+        this.createButtonStop();
+
+        this.configureButtonStop();
+    }
+
+    createButtonStop(){
 
         this.controllerGameCoordinator
             .createButtonStop();
-
-        this.configureButtonStop();
     }
 
     configureButtonStop() {
@@ -61,10 +74,18 @@ export class ControllerClickerGame {
 
     handleClickStop() {
 
-        this.controllerGameCoordinator
-            .configureGameStateButtonsAtStop();
+        // this.controllerGameCoordinator
+        //     .configureGameStateButtonsAtStop();
+
+        this.configureButtonStopAtStop();
 
         this.clearClickTimeout();
+    }
+
+    configureButtonStopAtStop(){
+
+        this.controllerGameCoordinator
+            .configureGameStateButtonsAtStop();
     }
 
     clearClickTimeout() {
@@ -102,20 +123,21 @@ export class ControllerClickerGame {
         this.clickColorTimeout =
             setTimeout(() => {
 
-                const color =
+                const randomColor =
                     this.game.getRandomColor();
 
-                this.controllerGameCoordinator.setButtonClickColorRandomColor(color);
+                // this.controllerGameCoordinator.setButtonClickColorRandomColor(randomColor);
+                this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
                 this.game.setStartTime();
 
-                this.configureClickColorCounterTime();
+                this.configureCounterReactionTime();
 
             }, timeout);
     }
 
     configureCounterFraud() {
-        this.controllerGameCoordinator.setOnClickColor(() =>
+        this.controllerGameCoordinator.setOnGame(() =>
             this.countFraud());
     }
 
@@ -123,8 +145,8 @@ export class ControllerClickerGame {
         this.game.playCounterFraud();
     }
 
-    configureClickColorCounterTime() {
-        this.controllerGameCoordinator.setOnClickColor(() =>
+    configureCounterReactionTime() {
+        this.controllerGameCoordinator.setOnGame(() =>
             this.processClickColor());
     }
 
@@ -140,6 +162,7 @@ export class ControllerClickerGame {
         this.setStatisticsTime();
         this.setStatisticFraud();
 
+        // next round 2, 3, 4 ...
         this.startRound();
     }
 

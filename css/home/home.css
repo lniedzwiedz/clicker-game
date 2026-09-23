@@ -1,7 +1,8 @@
-:root {
-    --colorMain: #ac4a71;
-    --gameFiledButtonPlayColor: #000000;
-}
+/*:root {*/
+/*    --colorMain: #ac4a71;*/
+/*    !*--gameFiledButtonPlayColor: #000000;*!*/
+/*    --cssButtonGameColor: #000000;*/
+/*}*/
 
 #containerHome-Main {
     display: grid;

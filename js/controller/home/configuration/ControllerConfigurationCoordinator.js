@@ -35,7 +35,6 @@ export class ControllerConfigurationCoordinator {
     }
 
     configureRoundAtStart() {
-        console.log("38 1  controler configuf cooredi");
         this.controllerButtonsRound.setConfigurationRoundButtonsAtStart();
     }
 

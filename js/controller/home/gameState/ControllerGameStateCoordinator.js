@@ -47,6 +47,12 @@ export class ControllerGameStateCoordinator {
     }
 
     configureGameStateButtonsAfterClickStop() {
+        // this.configureButtonStartAfterClickStop();
+        // this.configureButtonStopAfterClickStop();
+
+
+
+
         this.configureButtonStartAfterClickStop();
         this.configureButtonStopAfterClickStop();
     }

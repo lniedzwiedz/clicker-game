@@ -1,6 +1,6 @@
 import {ModuleGame} from "./ModuleGame.js";
 
-import {ControllerClickerGame} from "../controller/ControllerClickerGame.js";
+import {ControllerGameClicker} from "../controller/ControllerGameClicker.js";
 
 
 class ModuleClickerGame {
@@ -11,7 +11,7 @@ class ModuleClickerGame {
             new ModuleGame();
 
         this.controllerClickerGame =
-            new ControllerClickerGame(
+            new ControllerGameClicker(
                 this.moduleGame.getControllerGameCoordinator()
             );
     }

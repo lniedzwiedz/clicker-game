@@ -1,10 +1,7 @@
-import * as home from "../variablesHome.js";
+import * as variablesButtonClickMain from "./variablesButtonGameMain.js";
 
 
-export const containerHomeMainParts = home.containerHomeMainParts;
-
-export const containerButtonClickMain = "containerButtonClick-Main";
-export const buttonClickDisplayFlex = "buttonClick-DisplayFlex";
+export const buttonClickDisplayFlex = variablesButtonClickMain.buttonGameDisplayFlex
 
 export const buttonClickTextId = "buttonClick-TextId";
 export const buttonClickDisplayDefaultText = "";

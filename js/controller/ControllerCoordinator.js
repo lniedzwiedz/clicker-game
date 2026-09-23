@@ -44,6 +44,6 @@ export class ControllerCoordinator {
     // }
 
     createModuleClickerGame() {
-        this.controllerGameClicker.startClickerGame();
+        this.controllerGameClicker.startGameClicker();
     }
 }

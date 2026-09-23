@@ -15,7 +15,7 @@ export class ControllerButtonStart {
 
     createButtonStart() {
         this.viewButtonStart.createContainerButtonStart();
-        this.configureButtonStart();
+        this.addClickStartListener();
     }
 
     setOnStart(onStart) {
@@ -28,7 +28,7 @@ export class ControllerButtonStart {
         }
     }
 
-    configureButtonStart() {
+    addClickStartListener() {
         addEventListenerOnClickButton(
             // to do - fix variable
             variablesButtonStart.buttonStartDisplayFlex,

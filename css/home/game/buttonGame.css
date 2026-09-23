@@ -1,0 +1,13 @@
+/*#containerButtonClick-Main {*/
+#containerButtonGame-Main {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 2 / 10;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerButtonGame-Main {
+    border-radius: 0.45rem;
+    opacity: 0.8;
+}

@@ -17,7 +17,7 @@ export class ControllerButtonStop {
 
     createButtonStop() {
         this.viewButtonStop.createContainerButtonStop();
-        this.configureButtonStop();
+        this.addClickStopListener();
     }
 
     setOnStop(onStop) {
@@ -30,7 +30,7 @@ export class ControllerButtonStop {
         }
     }
 
-    configureButtonStop() {
+    addClickStopListener() {
 
         if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
 
@@ -43,7 +43,7 @@ export class ControllerButtonStop {
         }
     }
 
-    removeEventListenerOnClickButtonStop() {
+    removeClickStopListener() {
 
         if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
 
@@ -67,7 +67,7 @@ export class ControllerButtonStop {
 
     setConfigurationButtonStopAfterClickButtonStop() {
         this.setConfigurationIconStopAfterClick();
-        this.removeEventListenerOnClickButtonStop();
+        this.removeClickStopListener();
 
     }
 
