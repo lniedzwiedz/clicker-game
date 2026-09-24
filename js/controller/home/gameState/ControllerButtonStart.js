@@ -14,8 +14,12 @@ export class ControllerButtonStart {
     }
 
     createButtonStart() {
-        this.viewButtonStart.createContainerButtonStart();
+        this.createContainerButtonStart();
         this.addClickStartListener();
+    }
+
+    createContainerButtonStart(){
+        this.viewButtonStart.createContainerButtonStart();
     }
 
     setOnStart(onStart) {

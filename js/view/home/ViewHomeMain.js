@@ -7,9 +7,9 @@ import * as variablesHome from "../../common/variable/home/variablesHome.js";
 
 export class ViewHomeMain {
 
-    createHomeMain() {
+    createContainerSectionHomeMain() {
         this.createContainerHomeMain();
-        this.createContainerHomeParts();
+        this.createContainerHomeMainParts();
     }
 
     createContainerHomeMain() {
@@ -19,7 +19,7 @@ export class ViewHomeMain {
         );
     }
 
-    createContainerHomeParts() {
+    createContainerHomeMainParts() {
         createElementDiv(
             variablesHome.containerHomeMainId,
             variablesHome.containerHomeMainPartsId

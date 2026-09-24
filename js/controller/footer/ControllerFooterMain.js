@@ -5,6 +5,6 @@ export class ControllerFooterMain {
     }
 
     createFooterMain() {
-        this.viewFooterMain.createFooterMain();
+        this.viewFooterMain.createContainerSectionFooterMain();
     }
 }

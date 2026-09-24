@@ -6,13 +6,13 @@
     grid-template-columns: 1fr;
 }
 
-.footerAuthor-StyleDisplayFlex {
+.author-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: left;
 }
 
-.footerAuthor-StyleText {
+.author-StyleText {
     /*margin: auto 0;*/
     margin: 0;
     padding: 0;

@@ -49,7 +49,7 @@ export class ControllerButtonGameCoordinator {
         this.controllerButtonGameColor.setConfigurationButtonGameColorForGameOver();
     }
 
-    resetConfigurationButtonGameText() {
+    removeConfigurationGameOver() {
         this.removeButtonGameText();
         this.removeButtonGameStyleGameOver();
     }

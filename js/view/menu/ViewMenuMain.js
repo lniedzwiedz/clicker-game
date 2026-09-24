@@ -4,17 +4,26 @@ import {
 
 import * as variablesMenu from "../../common/variable/menu/variablesMenuMain.js";
 
+
 export class ViewMenuMain {
 
-    createMenuMain() {
+    createContainerSectionMenuMain() {
+        this.createContainerMenuMain();
+        this.createContainerMenuMainParts();
+    }
+
+    createContainerMenuMain() {
 
         createElementDiv(
-            variablesMenu.containerMainParts,
-            variablesMenu.containerMenuMain
+            variablesMenu.containerMainPartsId,
+            variablesMenu.containerMenuMainId
         );
+    }
+
+    createContainerMenuMainParts() {
 
         createElementDiv(
-            variablesMenu.containerMenuMain,
+            variablesMenu.containerMenuMainId,
             variablesMenu.containerMenuMainPartsId
         );
     }

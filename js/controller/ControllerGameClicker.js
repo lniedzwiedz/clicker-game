@@ -99,8 +99,6 @@ export class ControllerGameClicker {
 
         if (!this.game.isGameRunning()) {
             this.gameOver();
-
-            console.log(" ?????? ");
             return;
         }
 

@@ -1,17 +1,20 @@
 export class ControllerConfigurationCoordinator {
 
-    constructor(controllerConfiguration, controllerConfigurationDecoration, controllerConfigurationRound, controllerButtonsRound) {
+    // constructor(controllerConfiguration, controllerConfigurationDecoration, controllerConfigurationRound, controllerButtonsRound) {
+    constructor(controllerConfiguration, controllerConfigurationDecoration, controllerRoundCoordinator) {
         this.controllerConfiguration = controllerConfiguration;
         this.controllerConfigurationDecoration = controllerConfigurationDecoration;
-        this.controllerConfigurationRound = controllerConfigurationRound;
-        this.controllerButtonsRound = controllerButtonsRound;
+        // this.controllerConfigurationRound = controllerConfigurationRound;
+        // this.controllerButtonsRound = controllerButtonsRound;
+        this.controllerRoundCoordinator = controllerRoundCoordinator;
     }
 
     createConfiguration() {
         this.createConfigurationMain();
         this.createConfigurationDecoration();
-        this.createConfigurationRoundMain();
-        this.createConfigurationButtonsRound();
+        // this.createConfigurationRoundMain();
+        // this.createConfigurationdButtonsRound();
+        this.createConfigurationRound();
     }
 
     createConfigurationMain() {
@@ -22,27 +25,23 @@ export class ControllerConfigurationCoordinator {
         this.controllerConfigurationDecoration.createConfigurationDecoration();
     }
 
-    createConfigurationRoundMain() {
-        this.controllerConfigurationRound.createConfigurationRoundMain();
-    }
-
-    createConfigurationButtonsRound() {
-        this.controllerButtonsRound.createConfigurationRound()
+    createConfigurationRound(){
+        this.controllerRoundCoordinator.createConfigurationRound();
     }
 
     getRoundNumber() {
-        return this.controllerButtonsRound.getRoundNumber();
+        return this.controllerRoundCoordinator.getRoundNumber();
     }
 
-    configureRoundAtStart() {
-        this.controllerButtonsRound.setConfigurationRoundButtonsAtStart();
+    configureConfigurationAtStart() {
+        this.controllerRoundCoordinator.configureConfigurationAtStart();
     }
 
-    configureConfigurationAfterClickStop() {
-        this.controllerButtonsRound.setConfigurationRoundButtonsAtStop();
+    configureConfigurationAtStop() {
+        this.controllerRoundCoordinator.configureConfigurationAtStop();
     }
 
     configureConfigurationForGameOver(){
-        this.controllerButtonsRound.setConfigurationButtonsRoundForGameOver();
+        this.controllerRoundCoordinator.configureConfigurationForGameOver();
     }
 }

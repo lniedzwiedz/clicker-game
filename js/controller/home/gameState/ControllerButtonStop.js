@@ -17,8 +17,12 @@ export class ControllerButtonStop {
     }
 
     createButtonStop() {
-        this.viewButtonStop.createContainerButtonStop();
+        this.createContainerButtonStop();
         this.addClickStopListener();
+    }
+
+    createContainerButtonStop() {
+        this.viewButtonStop.createContainerButtonStop();
     }
 
     setOnStop(onStop) {
@@ -81,8 +85,16 @@ export class ControllerButtonStop {
     }
 
     setConfigurationButtonStopForGameOver() {
-        this.viewButtonStop.setIconStopStyleForGameOver();
-        this.viewButtonStop.setButtonStopStyleInactive();
+        this.setIconStopStyleForGameOver();
+        this.setButtonStopStyleInactive();
         this.removeClickStopListener();
+    }
+
+    setIconStopStyleForGameOver() {
+        this.viewButtonStop.setIconStopStyleForGameOver();
+    }
+
+    setButtonStopStyleInactive() {
+        this.viewButtonStop.setButtonStopStyleInactive();
     }
 }

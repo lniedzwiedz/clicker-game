@@ -1,7 +1,8 @@
 import {
     createElementDiv,
     createElementP,
-    addElementClassNamedAndText
+    addElementClassNamedAndText,
+    addElementClassNameById
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesTitle from "../../common/variable/menu/variablesTitle.js";
@@ -11,37 +12,42 @@ export class ViewTitle {
 
     createContainerTitle() {
         this.createContainerTitleMain();
-        this.createElementTitleMain();
+        this.createContainerTitleMainParts();
         this.createTitleText();
     }
 
     createContainerTitleMain() {
 
         createElementDiv(
-            variablesTitle.containerMenuMainParts,
-            variablesTitle.containerTitleMain
+            variablesTitle.containerMenuMainPartsId,
+            variablesTitle.containerTitleMainId
         );
     }
 
-    createElementTitleMain() {
+    createContainerTitleMainParts() {
 
         createElementDiv(
-            variablesTitle.containerTitleMain,
-            variablesTitle.titleDisplayTitleFlex
+            variablesTitle.containerTitleMainId,
+            variablesTitle.titleId
+        );
+
+        addElementClassNameById(
+            variablesTitle.titleId,
+            variablesTitle.titleStyleDisplayFlex
         );
     }
 
     createTitleText() {
 
         createElementP(
-            variablesTitle.titleDisplayTitleFlex,
-            variablesTitle.titleStyleTitleText
+            variablesTitle.titleId,
+            variablesTitle.titleTextId
         );
 
         addElementClassNamedAndText(
-            variablesTitle.titleStyleTitleText,
-            variablesTitle.titleStyleTitleText,
-            variablesTitle.titleDisplayName
+            variablesTitle.titleTextId,
+            variablesTitle.titleStyleText,
+            variablesTitle.titleText
         );
     }
 }

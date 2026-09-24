@@ -1,4 +1,4 @@
-export class ControllerConfigurationRound {
+export class ControllerRoundMain {
 
     constructor(viewConfigurationRound) {
         this.viewConfigurationRound = viewConfigurationRound;

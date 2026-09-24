@@ -12,7 +12,7 @@ export class ViewButtonGameColor {
     setButtonGameBackgroundColorClass() {
 
         addElementClassNameById(
-            variablesButtonGameColor.buttonGameDisplayFlex,
+            variablesButtonGameColor.buttonGameId,
             variablesButtonGameColor.buttonGameStyleBackgroundColor
         )
     }

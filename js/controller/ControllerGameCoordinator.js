@@ -20,7 +20,7 @@ export class ControllerGameCoordinator {
 
     configureGameStart() {
 
-        this.controllerConfigurationCoordinator.configureRoundAtStart();
+        this.controllerConfigurationCoordinator.configureConfigurationAtStart();
 
         this.controllerGameStateCoordinator.configureGameStateButtonsAtStart();
 
@@ -49,7 +49,7 @@ export class ControllerGameCoordinator {
     }
 
     configureConfigurationsAtStop() {
-        this.controllerConfigurationCoordinator.configureConfigurationAfterClickStop();
+        this.controllerConfigurationCoordinator.configureConfigurationAtStop();
     }
 
     configureButtonGameAtStop() {
@@ -97,12 +97,12 @@ export class ControllerGameCoordinator {
     }
 
     gameOver() {
+        this.controllerConfigurationCoordinator.configureConfigurationForGameOver();
         this.controllerButtonGameCoordinator.configureButtonGameForGameOver();
         this.controllerGameStateCoordinator.configureGameStateForGameOver();
-        this.controllerConfigurationCoordinator.configureConfigurationForGameOver();
     }
 
     removeConfigurationGameOver() {
-        this.controllerButtonGameCoordinator.resetConfigurationButtonGameText();
+        this.controllerButtonGameCoordinator.removeConfigurationGameOver();
     }
 }

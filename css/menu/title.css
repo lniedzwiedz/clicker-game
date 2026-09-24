@@ -6,13 +6,13 @@
     grid-template-columns: 1fr;
 }
 
-#title-DisplayTitleFlex {
+#title-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: left;
 }
 
-.title-StyleTitleText {
+.title-StyleText {
     margin: 0;
     padding: 0;
     color: #ac4a71;

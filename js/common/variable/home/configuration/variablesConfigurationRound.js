@@ -1,10 +1,10 @@
 import * as variablesConfigurationMain from "./variablesConfigurationMain.js";
 
 
-export const containerConfigurationMainParts = variablesConfigurationMain.containerConfigurationMainPartsId;
+export const containerConfigurationMainPartsId = variablesConfigurationMain.containerConfigurationMainPartsId;
 
-export const containerConfigurationRoundMain = "containerConfigurationRound-Main";
-export const containerConfigurationRoundMainParts = "containerConfigurationRound-MainParts";
+export const containerConfigurationRoundMainId = "containerConfigurationRound-Main";
+export const containerConfigurationRoundMainPartsId = "containerConfigurationRound-MainParts";
 
-export const containerConfigurationRoundRowMainPrefix = "containerConfigurationRound-RowMain-";
-export const containerConfigurationRoundRowMainPartsPrefix = "containerConfigurationRound-RowMainParts-";
+export const containerConfigurationRoundRowMainPrefixId = "containerConfigurationRound-RowMain-";
+export const containerConfigurationRoundRowMainPartsPrefixId = "containerConfigurationRound-RowMainParts-";

@@ -18,9 +18,9 @@ export class ViewConfigurationRound {
     createContainerConfigurationRoundMain() {
 
         createElementDivAnaDivChild(
-            variablesConfigurationRound.containerConfigurationMainParts,
-            variablesConfigurationRound.containerConfigurationRoundMain,
-            variablesConfigurationRound.containerConfigurationRoundMainParts
+            variablesConfigurationRound.containerConfigurationMainPartsId,
+            variablesConfigurationRound.containerConfigurationRoundMainId,
+            variablesConfigurationRound.containerConfigurationRoundMainPartsId
         );
     }
 
@@ -44,10 +44,10 @@ export class ViewConfigurationRound {
     createContainerConfigurationRoundRowMain(rowNumber) {
 
         let parentId =
-            variablesConfigurationRound.containerConfigurationRoundMainParts;
+            variablesConfigurationRound.containerConfigurationRoundMainPartsId;
 
         let childId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPrefix
+            variablesConfigurationRound.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber);
 
         createElementDiv(
@@ -77,11 +77,11 @@ export class ViewConfigurationRound {
     createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
 
         let childId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPrefix
+            variablesConfigurationRound.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber);
 
         let grandchildId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefix
+            variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber);
 
         createElementDiv(

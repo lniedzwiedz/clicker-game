@@ -5,6 +5,6 @@ export class ControllerAuthor {
     }
 
     createAuthor() {
-        this.viewAuthor.createAuthor();
+        this.viewAuthor.createContainerAuthor();
     }
 }

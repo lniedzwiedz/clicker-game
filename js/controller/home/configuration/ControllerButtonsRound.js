@@ -47,7 +47,7 @@ export class ControllerButtonsRound {
 
     getRoundNumber() {
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
-        return this.viewButtonsRound.getRoundNumberSetupByUser(currentButtonId);
+        return this.viewButtonsRound.getRoundNumberChosenNumber(currentButtonId);
     }
 
     setConfigurationRoundButtonsAtStart() {

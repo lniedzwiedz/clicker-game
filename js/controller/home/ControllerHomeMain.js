@@ -5,6 +5,6 @@ export class ControllerHomeMain {
     }
 
     createHomeMain() {
-        this.viewHomeMain.createHomeMain();
+        this.viewHomeMain.createContainerSectionHomeMain();
     }
 }

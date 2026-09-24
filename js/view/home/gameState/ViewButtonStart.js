@@ -35,11 +35,6 @@ export class ViewButtonStart {
             variablesButtonStart.containerButtonStartMainId,
             variablesButtonStart.buttonStartId
         );
-        //
-        // addElementClassNameById(
-        //     variablesButtonStart.buttonStartId,
-        //     variablesButtonStart.buttonStartStyle
-        // );
 
         addElementClassNames(
             variablesButtonStart.buttonStartId,

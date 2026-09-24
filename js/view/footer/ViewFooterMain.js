@@ -7,7 +7,7 @@ import * as variablesFooterMain from "../../common/variable/footer/variablesFoot
 
 export class ViewFooterMain {
 
-    createFooterMain() {
+    createContainerSectionFooterMain() {
         this.createContainerFooterMain();
         this.createContainerFooterMainParts();
     }
@@ -20,7 +20,7 @@ export class ViewFooterMain {
         );
     }
 
-    createContainerFooterMainParts(){
+    createContainerFooterMainParts() {
         createElementDiv(
             variablesFooterMain.containerFooterMainId,
             variablesFooterMain.containerFooterMainPartsId

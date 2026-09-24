@@ -5,6 +5,6 @@ export class ControllerMenuMain {
     }
 
     createMenuMain() {
-        this.viewMenuMain.createMenuMain();
+        this.viewMenuMain.createContainerSectionMenuMain();
     }
 }

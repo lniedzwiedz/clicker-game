@@ -1,4 +1,4 @@
-export class ControllerConfigurationDecoration {
+export class ControllerDecoration {
 
     constructor(viewConfigurationDecoration) {
         this.viewConfigurationDecoration = viewConfigurationDecoration;

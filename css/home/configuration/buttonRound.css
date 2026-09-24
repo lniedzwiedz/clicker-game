@@ -14,30 +14,6 @@
     grid-template-columns: 1fr  9fr;
 }
 
-/*#containerConfigurationDecoration-Main {*/
-/*    display: grid;*/
-/*    grid-row: 1 / 2;*/
-/*    grid-column: 1 / 2;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-/*.configurationDecoration-DisplayIconFlex {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*.fa-screwdriver-wrench {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    color: #FFFFFF;*/
-/*    opacity: 0.7;*/
-/*    font-weight: 600;*/
-/*    font-size: 1.8rem;*/
-/*    text-shadow: 0px 0px 40px #EC7998;*/
-/*}*/
-
 #containerConfigurationRound-Main {
     display: grid;
     grid-row: 1 / 2;
@@ -54,13 +30,13 @@
     grid-template-columns: 1fr;
 }
 
-.configurationRound-DisplayButtonRoundFlex {
+.configurationRound-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.configurationRound-ButtonRound-Style {
+.buttonRound-Style {
     border: none;
     background-color: #2c3e3a;
     color: #FFFFFF;
@@ -72,13 +48,13 @@
     /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
 }
 
-.configurationRound-ButtonRound-CurrentNumber {
+.buttonRound-CurrentNumber {
     border-radius: 0.45rem;
     box-shadow: 0px 0px 3px 1px #FFFFFF;
     opacity: 0.8;
 }
 
-.configurationRound-ButtonRound-ChosenNumber {
+.buttonRound-ChosenNumber {
     color: #e9a610;
     opacity: 1;
     box-shadow: 0px 0px 3px 1px #e9a610;
