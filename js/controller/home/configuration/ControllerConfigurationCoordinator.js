@@ -38,18 +38,11 @@ export class ControllerConfigurationCoordinator {
         this.controllerButtonsRound.setConfigurationRoundButtonsAtStart();
     }
 
-    configureRoundButtonsAfterClickStop() {
-        // to do -> ??? remove
+    configureConfigurationAfterClickStop() {
         this.controllerButtonsRound.setConfigurationRoundButtonsAtStop();
     }
 
-    setConfigurationGameOver() {
-        // this.setConfigurationRoundNumberWhenGameStop();
-
-        // this.removeEventListenerOnClickButtonClickColor();
-        // this.configureClickColorGameOver();
-        // this.setIconsColorAfterGameOver();
-
-        // this.setConfigurationButtonStopGameOver();
+    configureConfigurationForGameOver(){
+        this.controllerButtonsRound.setConfigurationButtonsRoundForGameOver();
     }
 }

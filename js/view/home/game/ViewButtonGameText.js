@@ -7,9 +7,33 @@ import {
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonGameText from "../../../common/variable/home/game/variablesButtonGameText.js";
+import {
+    buttonGameDisplayTextGameStopped,
+    buttonGameStyleTextGameStopped
+} from "../../../common/variable/home/game/variablesButtonGameText.js";
 
 
 export class ViewButtonGameText {
+
+    createConfigurationButtonGameTextStopped() {
+        this.createButtonGameP();
+        this.setButtonGameTextGameStopped();
+        this.setButtonGameStyleTextGameStopped();
+    }
+
+    setButtonGameTextGameStopped() {
+        this.setButtonGameText(
+            variablesButtonGameText.buttonGameDisplayTextGameStopped
+        );
+    }
+
+    setButtonGameStyleTextGameStopped() {
+
+        addElementClassNameById(
+            variablesButtonGameText.buttonGameTextId,
+            variablesButtonGameText.buttonGameStyleTextGameStopped
+        );
+    }
 
     createConfigurationButtonGameTextGameOver() {
         this.createButtonGameP();
@@ -17,25 +41,9 @@ export class ViewButtonGameText {
         this.setButtonGameTextGameOver();
     }
 
-    createButtonGameP() {
-
-        createElementP(
-            variablesButtonGameText.buttonClickDisplayFlex,
-            variablesButtonGameText.buttonGameTextId
-        );
-    }
-
     setButtonGameTextGameOver() {
         this.setButtonGameText(
             variablesButtonGameText.buttonGameDisplayTextGameOver
-        );
-    }
-
-    setButtonGameText(text) {
-
-        setElementTextById(
-            variablesButtonGameText.buttonGameTextId,
-            text
         );
     }
 
@@ -47,7 +55,7 @@ export class ViewButtonGameText {
         );
     }
 
-    removeConfigurationButtonGameTextGameOver() {
+    removeConfigurationButtonGameText() {
 
         if (isElementsExistById(variablesButtonGameText.buttonGameTextId)) {
             removeElementById(
@@ -55,4 +63,21 @@ export class ViewButtonGameText {
             );
         }
     }
+
+    createButtonGameP() {
+
+        createElementP(
+            variablesButtonGameText.buttonClickDisplayFlex,
+            variablesButtonGameText.buttonGameTextId
+        );
+    }
+
+    setButtonGameText(text) {
+
+        setElementTextById(
+            variablesButtonGameText.buttonGameTextId,
+            text
+        );
+    }
+
 }

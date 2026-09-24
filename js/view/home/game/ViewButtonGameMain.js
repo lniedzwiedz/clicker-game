@@ -1,7 +1,7 @@
 import {
     createElementButton,
     addElementClassNameById,
-    createElementDiv, removeElementClassNameById, addElementClassNames
+    createElementDiv
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonGameMain from "../../../common/variable/home/game/variablesButtonGameMain.js";
@@ -36,20 +36,4 @@ export class ViewButtonGameMain {
             variablesButtonGameMain.buttonGameStyle
         );
     }
-
-    // setButtonGameStyleGameOver() {
-    //
-    //     addElementClassNameById(
-    //         variablesButtonGameMain.buttonGameDisplayFlex,
-    //         variablesButtonGameMain.buttonGameStyleGameOver
-    //     );
-    // }
-    //
-    // removeButtonGameStyleGameOver() {
-    //
-    //     removeElementClassNameById(
-    //         variablesButtonGameMain.buttonGameDisplayFlex,
-    //         variablesButtonGameMain.buttonGameStyleGameOver
-    //     );
-    // }
 }

@@ -30,11 +30,6 @@ export class ViewButtonGameColor {
     }
 
     setButtonGameColor(roundColor) {
-        // variablesButtonGameColor.rootVariables.style.
-        // setProperty(
-        //     variablesButtonGameColor.varCSSButtonGameStyleBackgroundColor,
-        //     roundColor
-        // );
 
         setElementStyleByDocumentQuerySelectorRoot(
             variablesButtonGameColor.varCSSButtonGameStyleBackgroundColor,

@@ -4,11 +4,15 @@ export class ControllerButtonGameText {
         this.viewButtonGameText = viewButtonGameText;
     }
 
+    createButtonGameTextGameStopped() {
+        this.viewButtonGameText.createConfigurationButtonGameTextStopped();
+    }
+
     createButtonGameTextGameOver() {
         this.viewButtonGameText.createConfigurationButtonGameTextGameOver();
     }
 
-    removeButtonGameTextGameOver() {
-        this.viewButtonGameText.removeConfigurationButtonGameTextGameOver();
+    removeButtonGameText() {
+        this.viewButtonGameText.removeConfigurationButtonGameText();
     }
 }

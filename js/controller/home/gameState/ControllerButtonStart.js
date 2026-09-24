@@ -52,4 +52,9 @@ export class ControllerButtonStart {
     setConfigurationIconStartAfterClick() {
         this.viewButtonStart.setIconStartStyleAfterClick();
     }
+
+    setConfigurationButtonStartForGameOver(){
+        this.viewButtonStart.setIconStartStyleForGameOver();
+        // this.viewButtonStart.dddddddd()
+    }
 }

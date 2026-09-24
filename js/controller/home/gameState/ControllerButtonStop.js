@@ -51,21 +51,28 @@ export class ControllerButtonStop {
                 variablesButtonStop.buttonStopDisplayFlex,
                 this.buttonClickEvent
             );
+
+            this.buttonClickEvent = null;
         }
-        this.buttonClickEvent = null;
+
+    }
+
+    setConfigurationButtonStopAfterClickButtonStart() {
+
+        this.setConfigurationIconStopBeforeClick();
+        this.removeButtonStopStyleInactive();
     }
 
     setConfigurationIconStopBeforeClick() {
         this.viewButtonStop.setIconStopStyleBeforeClick();
-
-        // this.viewButtonStop.removeButtonStopStyleInactive();
     }
 
-    setConfigurationButtonStopAfterClickButtonStart() {
-        this.setConfigurationIconStopBeforeClick();
+    removeButtonStopStyleInactive(){
+        this.viewButtonStop.removeButtonStopStyleInactive();
     }
 
     setConfigurationButtonStopAfterClickButtonStop() {
+
         this.setConfigurationIconStopAfterClick();
         this.removeClickStopListener();
 
@@ -75,7 +82,10 @@ export class ControllerButtonStop {
         this.viewButtonStop.setIconStopStyleAfterClick();
     }
 
-    setConfigurationGameOver() {
+    setConfigurationButtonStopForGameOver() {
         this.viewButtonStop.setIconStopStyleForGameOver();
+        this.viewButtonStop.setButtonStopStyleInactive();
+
+        this.removeClickStopListener();
     }
 }

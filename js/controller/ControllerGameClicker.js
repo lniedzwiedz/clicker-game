@@ -17,11 +17,11 @@ export class ControllerGameClicker {
 
     startGame() {
 
-        this.clearClickTimeout();
+        this.clearTimeoutAfterChangeColor();
 
         this.removeConfigurationGameOver();
 
-        this.configureButtonStopAfterStart();
+        this.configureButtonStopAfterClickStart();
 
         this.controllerGameCoordinator
             .configureGameStart();
@@ -42,22 +42,12 @@ export class ControllerGameClicker {
         // ustawiamy callback FRAUD
         this.configureCounterFraud();
 
-        // // DODAJEMY LISTENER TYLKO RAZ
-        // this.controllerGameCoordinator
-        //     .configureButtonGameListener();
-
-        // // tutaj ustawienie koloru
-        // this.controllerGameCoordinator
-        //     .setButtonGameColorForRound();
 
         // round 1
         this.startRound();
     }
 
-    configureButtonStopAfterStart() {
-
-        // this.controllerGameCoordinator
-        //     .createButtonStop();
+    configureButtonStopAfterClickStart() {
 
         this.createButtonStop();
 
@@ -83,16 +73,20 @@ export class ControllerGameClicker {
 
         this.configureButtonStopAtStop();
 
-        this.clearClickTimeout();
+        this.clearTimeoutAfterChangeColor();
     }
 
     configureButtonStopAtStop() {
 
+        // this.controllerGameCoordinator
+        //     .configureGameStateButtonsAtStop();
+
         this.controllerGameCoordinator
-            .configureGameStateButtonsAtStop();
+            .configureGameStop();
     }
 
-    clearClickTimeout() {
+    // method temp name, after -> abc change name
+    clearTimeoutAfterChangeColor() {
 
         if (this.clickColorTimeout) {
 
@@ -104,8 +98,9 @@ export class ControllerGameClicker {
     startRound() {
 
         if (!this.game.isGameRunning()) {
-            // this.controllerGameCoordinator.gameOver();
             this.gameOver();
+
+            console.log(" ?????? ");
             return;
         }
 
@@ -131,7 +126,6 @@ export class ControllerGameClicker {
                 const randomColor =
                     this.game.getRandomColor();
 
-                // this.controllerGameCoordinator.setButtonClickColorRandomColor(randomColor);
                 this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
                 this.game.setStartTime();
@@ -165,11 +159,14 @@ export class ControllerGameClicker {
                 );
         }
 
+
         // this.setStatisticsTime();
         this.setStatisticFraud();
 
         // next round 2, 3, 4 ...
         this.startRound();
+
+
     }
 
     setStatisticFraud() {

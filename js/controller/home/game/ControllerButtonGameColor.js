@@ -4,19 +4,24 @@ export class ControllerButtonGameColor {
         this.viewButtonGameColor = viewButtonGameColor;
     }
 
+    setButtonGameColorAtStart() {
+        this.setButtonGameBackgroundColorClass();
+        this.setButtonGameBackgroundColorAtStart();
+    }
+
     setButtonGameBackgroundColorClass() {
         this.viewButtonGameColor.setButtonGameBackgroundColorClass();
     }
 
-    setButtonGameColorForRound(roundColor) {
-        this.viewButtonGameColor.setButtonGameBackgroundColorForRound(roundColor)
+    setButtonGameBackgroundColorAtStart() {
+        this.viewButtonGameColor.setButtonGameBackgroundColorAtStart();
     }
 
-    setButtonGameBackgroundColorAtStart() {
-        this.viewButtonGameColor.setButtonGameBackgroundColorAtStart()
+    setButtonGameColorForRound(roundColor) {
+        this.viewButtonGameColor.setButtonGameBackgroundColorForRound(roundColor);
     }
 
     setConfigurationButtonGameColorForGameOver() {
-        this.viewButtonGameColor.setConfigurationButtonGameColorForGameOver()
+        this.viewButtonGameColor.setConfigurationButtonGameColorForGameOver();
     }
 }

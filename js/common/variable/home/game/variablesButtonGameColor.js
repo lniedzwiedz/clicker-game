@@ -1,9 +1,6 @@
-// import * as variablesMain from "../../variablesMain.js";
 import * as variablesButtonGameMain from "./variablesButtonGameMain.js";
 
 
-// CSS variable
-// export let rootVariables = variablesMain.rootVariables;
 export let varCSSButtonGameStyleBackgroundColor = "--cssButtonGameStyleBackgroundColor";
 
 export const buttonGameDisplayFlex = variablesButtonGameMain.buttonGameDisplayFlex;

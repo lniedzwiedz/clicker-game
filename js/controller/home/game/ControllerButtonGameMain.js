@@ -15,7 +15,7 @@ export class ControllerButtonGameMain {
         this.buttonGameEvent = null;
     }
 
-    createButtonGameMain() {
+    createButtonGameMainAtStart() {
         this.viewButtonGameMain.createContainerButtonGame();
     }
 

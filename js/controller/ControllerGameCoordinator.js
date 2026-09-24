@@ -33,10 +33,6 @@ export class ControllerGameCoordinator {
             .getRoundNumber();
     }
 
-    setButtonClickColorRandomColor(color) {
-        // this.controllerButtonGameCoordinator.setButtonClickColorRandomColor(color);
-    }
-
     createButtonStop() {
         this.controllerGameStateCoordinator.createButtonStop();
     }
@@ -46,10 +42,24 @@ export class ControllerGameCoordinator {
             .setOnStop(onStop);
     }
 
-    configureGameStateButtonsAtStop() {
-        this.controllerConfigurationCoordinator.configureRoundButtonsAfterClickStop();
-        this.controllerGameStateCoordinator.configureGameStateButtonsAfterClickStop();
+    configureGameStop() {
+        this.configureConfigurationsAtStop();
+        this.configureButtonGameAtStop();
+        this.configureGameStateAtStop();
     }
+
+    configureConfigurationsAtStop() {
+        this.controllerConfigurationCoordinator.configureConfigurationAfterClickStop();
+    }
+
+    configureButtonGameAtStop() {
+        this.controllerButtonGameCoordinator.configureButtonGameAtStop();
+    }
+
+    configureGameStateAtStop() {
+        this.controllerGameStateCoordinator.configureGameStateAtStop();
+    }
+
 
     setOnGame(onGame) {
         this.controllerButtonGameCoordinator
@@ -87,10 +97,12 @@ export class ControllerGameCoordinator {
     }
 
     gameOver() {
-        this.controllerButtonGameCoordinator.configureButtonGameAfterGameOver();
+        this.controllerButtonGameCoordinator.configureButtonGameForGameOver();
+        this.controllerGameStateCoordinator.configureGameStateForGameOver();
+        this.controllerConfigurationCoordinator.configureConfigurationForGameOver();
     }
 
     removeConfigurationGameOver() {
-        this.controllerButtonGameCoordinator.resetConfigurationButtonGameAfterGameOver();
+        this.controllerButtonGameCoordinator.resetConfigurationButtonGameText();
     }
 }

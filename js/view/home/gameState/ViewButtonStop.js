@@ -116,6 +116,17 @@ export class ViewButtonStop {
         );
     }
 
+    setButtonStopStyleInactive() {
+
+        // if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
+
+           addElementClassNameById(
+                variablesButtonStop.buttonStopDisplayFlex,
+                variablesButtonStop.buttonStopInactive
+            );
+        // }
+    }
+
     removeButtonStopStyleInactive() {
 
         if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){

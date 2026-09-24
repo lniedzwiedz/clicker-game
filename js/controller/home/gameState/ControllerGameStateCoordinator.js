@@ -46,12 +46,7 @@ export class ControllerGameStateCoordinator {
             .setOnStop(onStop);
     }
 
-    configureGameStateButtonsAfterClickStop() {
-        // this.configureButtonStartAfterClickStop();
-        // this.configureButtonStopAfterClickStop();
-
-
-
+    configureGameStateAtStop() {
 
         this.configureButtonStartAfterClickStop();
         this.configureButtonStopAfterClickStop();
@@ -65,22 +60,16 @@ export class ControllerGameStateCoordinator {
         this.controllerButtonStop.setConfigurationButtonStopAfterClickButtonStop();
     }
 
-    configureButtonsAfterGameOver() {
-        // this.setConfigurationRoundNumberWhenGameStop();
-
-        // this.removeEventListenerOnClickButtonClickColor();
-        // this.configureClickColorGameOver();
-        this.setIconsColorAfterGameOver();
-
-        this.setConfigurationButtonStopGameOver();
+    configureGameStateForGameOver() {
+        this.setConfigurationButtonStartForGameOver();
+        this.setConfigurationButtonStopForGameOver();
     }
 
-    setIconsColorAfterGameOver() {
-        this.controllerButtonStart.setConfigurationIconStartBeforeClick();
-        this.controllerButtonStop.setConfigurationIconStopBeforeClick();
-    }
+    setConfigurationButtonStartForGameOver() {
+        this.controllerButtonStart.setConfigurationButtonStartForGameOver();
+   }
 
-    setConfigurationButtonStopGameOver() {
-        this.controllerButtonStop.setIconStopStyleForGameOver();
+    setConfigurationButtonStopForGameOver() {
+        this.controllerButtonStop.setConfigurationButtonStopForGameOver();
     }
 }
