@@ -47,12 +47,4 @@ export class ControllerButtonGameMain {
 
         this.buttonGameEvent = null;
     }
-
-    // setButtonGameStyleGameOver(){
-    //     this.viewButtonGameMain.setButtonGameStyleGameOver();
-    // }
-
-    // removeButtonGameStyleGameOver() {
-    //     this.viewButtonGameMain.removeButtonGameStyleGameOver();
-    // }
 }

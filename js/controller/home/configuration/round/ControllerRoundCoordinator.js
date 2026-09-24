@@ -30,7 +30,7 @@ export class ControllerRoundCoordinator {
         this.controllerButtonsRound.setConfigurationRoundButtonsAtStop();
     }
 
-    configureConfigurationForGameOver(){
+    configureConfigurationForGameOver() {
         this.controllerButtonsRound.setConfigurationButtonsRoundForGameOver();
     }
 }

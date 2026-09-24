@@ -1,9 +1,9 @@
 import {
     getElementById,
     valueToString
-} from "../../../common/function/commonFunctions.js";
+} from "../../../../common/function/commonFunctions.js";
 
-import * as variablesButtonRound from "../../../common/variable/home/configuration/variablesButtonRound.js";
+import * as variablesButtonRound from "../../../../common/variable/home/configuration/variablesButtonRound.js";
 
 
 export class ControllerButtonsRound {
@@ -94,10 +94,10 @@ export class ControllerButtonsRound {
         const currentButtonId = this.actionButtonsRound.getButtonIdCurrent();
 
         // round number - new round number mark
-       this.setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId);
+        this.setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId);
     }
 
-    setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId){
+    setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId) {
         this.viewButtonsRound.removeButtonRoundStyleChosenNumber(roundNumberFinalId);
         this.viewButtonsRound.addButtonRoundStyleCurrentNumber(currentButtonId);
     }

@@ -14,7 +14,6 @@ import {
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonRound from "../../../common/variable/home/configuration/variablesButtonRound.js";
-import {buttonRoundIconComputerMouse} from "../../../common/variable/home/configuration/variablesButtonRound.js";
 
 
 export class ViewButtonsRound {
@@ -66,13 +65,6 @@ export class ViewButtonsRound {
                 gridTemplateRowsChild,
                 gridTemplateColumnsChild);
 
-            // let buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(buttonRoundNumber);
-
-            // this.creatContainerConfigurationRoundButton(
-            //     childId,
-            //     buttonRoundNumber
-            // );
-
             this.createButtonRound(
                 childId,
                 roundNumber
@@ -91,66 +83,7 @@ export class ViewButtonsRound {
         }
     }
 
-    // // creatContainerConfigurationRoundButton(parentId, buttonId, roundNumber) {
-    // creatContainerConfigurationRoundButton(parentId, roundNumber) {
-    //
-    //     // let iconId =
-    //     //     variablesButtonRound.buttonRoundIconComputerMousePrefixId
-    //     //     + valueToString(roundNumber);
-    //     //
-    //     // let pId =
-    //     //     variablesButtonRound.buttonRoundTextId
-    //     //     + valueToString(roundNumber);
-    //
-    //     // createElementButton(
-    //     //     parentId,
-    //     //     buttonId
-    //     // );
-    //     //
-    //     // setElementAttributeValueById(
-    //     //     buttonId,
-    //     //     valueToString(roundNumber)
-    //     // );
-    //     //
-    //     // addElementClassNames(
-    //     //     buttonId,
-    //     //     variablesButtonRound.configurationRoundStyleDisplayFlex,
-    //     //     variablesButtonRound.buttonRoundStyle
-    //     // );
-    //
-    //
-    //     // this.createButtonRoundMain(parentId, buttonId, roundNumber);
-    //
-    //     // createElementI(
-    //     //     buttonId,
-    //     //     iconId,
-    //     //     variablesButtonRound.buttonRoundIconComputerMouseStyleSolid,
-    //     //     variablesButtonRound.buttonRoundIconComputerMouse
-    //     // );
-    //
-    //     // this.createIconComputerMouse(buttonId, iconId);
-    //
-    //     // createElementP(
-    //     //     buttonId,
-    //     //     pId
-    //     // );
-    //     //
-    //     // setElementTextById(
-    //     //     pId,
-    //     //     variablesButtonRound.buttonRoundTextSpace
-    //     //     + valueToString(roundNumber)
-    //     // );
-    //
-    //     // this.createButtonRoundText(buttonId, pId, roundNumber);
-    //
-    //     // let buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber);
-    //
-    //     this.createButtonRound(parentId, roundNumber);
-    // }
-
     createButtonRound(parentId, roundNumber) {
-
-        // let buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber);
 
         this.createButtonRoundMain(parentId, roundNumber);
         this.createIconComputerMouse(roundNumber);
@@ -256,6 +189,4 @@ export class ViewButtonsRound {
             variablesButtonRound.buttonRoundChosenNumber
         );
     }
-
-
 }

@@ -4,12 +4,6 @@ import {ControllerConfigurationMain} from "../../../controller/home/configuratio
 import {ViewConfigurationDecoration} from "../../../view/home/configuration/ViewConfigurationDecoration.js";
 import {ControllerDecoration} from "../../../controller/home/configuration/ControllerDecoration.js";
 
-import {ViewConfigurationRound} from "../../../view/home/configuration/ViewConfigurationRound.js";
-import {ControllerRoundMain} from "../../../controller/home/configuration/ControllerRoundMain.js";
-
-import {ViewButtonsRound} from "../../../view/home/configuration/ViewButtonsRound.js";
-import {ActionButtonsRound} from "../../../action/control/ActionButtonsRound.js";
-import {ControllerButtonsRound} from "../../../controller/home/configuration/ControllerButtonsRound.js";
 
 import {
     ControllerConfigurationCoordinator
@@ -40,27 +34,6 @@ export class ModuleConfiguration {
             );
 
 
-        // this.viewConfigurationRound =
-        //     new ViewConfigurationRound();
-        //
-        // this.controllerConfigurationRound =
-        //     new ControllerRoundMain(
-        //         this.viewConfigurationRound
-        //     );
-        //
-        //
-        // this.viewButtonsRound =
-        //     new ViewButtonsRound();
-        //
-        // this.actionButtonsRound =
-        //     new ActionButtonsRound();
-        //
-        // this.controllerButtonsRound =
-        //     new ControllerButtonsRound(
-        //         this.viewButtonsRound,
-        //         this.actionButtonsRound
-        //     );
-
         this.moduleConfigurationRound =
             new ModuleConfigurationRound();
 
@@ -69,8 +42,6 @@ export class ModuleConfiguration {
             new ControllerConfigurationCoordinator(
                 this.controllerConfigurationMain,
                 this.controllerConfigurationDecoration,
-                // this.controllerConfigurationRound,
-                // this.controllerButtonsRound,
                 this.moduleConfigurationRound.getControllerRoundCoordinator(),
             );
     }

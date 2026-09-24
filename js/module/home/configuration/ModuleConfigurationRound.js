@@ -1,11 +1,11 @@
 import {ViewConfigurationRound} from "../../../view/home/configuration/ViewConfigurationRound.js";
-import {ControllerRoundMain} from "../../../controller/home/configuration/ControllerRoundMain.js";
+import {ControllerRoundMain} from "../../../controller/home/configuration/round/ControllerRoundMain.js";
 
 import {ViewButtonsRound} from "../../../view/home/configuration/ViewButtonsRound.js";
 import {ActionButtonsRound} from "../../../action/control/ActionButtonsRound.js";
-import {ControllerButtonsRound} from "../../../controller/home/configuration/ControllerButtonsRound.js";
+import {ControllerButtonsRound} from "../../../controller/home/configuration/round/ControllerButtonsRound.js";
 
-import {ControllerRoundCoordinator} from "../../../controller/home/configuration/ControllerRoundCoordinator.js";
+import {ControllerRoundCoordinator} from "../../../controller/home/configuration/round/ControllerRoundCoordinator.js";
 
 export class ModuleConfigurationRound {
 

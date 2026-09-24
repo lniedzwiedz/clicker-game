@@ -5,7 +5,8 @@ import {
     valueToString
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesConfigurationRound from "../../../common/variable/home/configuration/variablesConfigurationRound.js";
+import * as variablesConfigurationRound
+    from "../../../common/variable/home/configuration/variablesConfigurationRound.js";
 
 
 export class ViewConfigurationRound {
