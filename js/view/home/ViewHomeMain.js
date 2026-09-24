@@ -14,15 +14,15 @@ export class ViewHomeMain {
 
     createContainerHomeMain() {
         createElementDiv(
-            variablesHome.containerMainParts,
-            variablesHome.containerHomeMain
+            variablesHome.containerMainPartsId,
+            variablesHome.containerHomeMainId
         );
     }
 
     createContainerHomeParts() {
         createElementDiv(
-            variablesHome.containerHomeMain,
-            variablesHome.containerHomeMainParts
+            variablesHome.containerHomeMainId,
+            variablesHome.containerHomeMainPartsId
         );
     }
 }

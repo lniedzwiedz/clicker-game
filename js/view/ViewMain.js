@@ -14,8 +14,8 @@ export class ViewMain {
     createContainerMainParts() {
 
         createElementDiv(
-            variablesMain.containerMain,
-            variablesMain.containerMainParts
+            variablesMain.containerMainId,
+            variablesMain.containerMainPartsId
         );
     }
 }

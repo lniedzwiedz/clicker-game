@@ -1,9 +1,10 @@
 import * as variablesFooterMain from "./variablesFooterMain.js";
 
-export const containerFooterMainParts = variablesFooterMain.containerFooterMainParts;
+export const containerFooterMainParts = variablesFooterMain.containerFooterMainPartsId;
 
-export const containerAuthorMain = "containerAuthor-Main";
-export const footerAuthorDisplayTextFlex = "footerAuthor-DisplayTextFlex";
+export const containerAuthorMainId = "containerAuthor-Main";
+export const footerAuthorId = "footerAuthor";
+export const footerAuthorStyleDisplayFlex = "footerAuthor-StyleDisplayFlex";
 
-export const footerAuthorStyleText = "footerAuthor-StyleText";
-export const footerAuthorDisplayText = "Copyright &copy 2026 Liliana Niedźwiedź";
+export const footerAuthorTextId = "footerAuthor-TextId";
+export const footerAuthorText = "Copyright &copy 2026 Liliana Niedźwiedź";

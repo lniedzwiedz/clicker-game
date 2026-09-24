@@ -34,7 +34,7 @@ export class ControllerStatisticsCoordinator {
 
     configureButtonClickColor() {
         addEventListenerOnClickButton(
-            variablesButtonClickColor.buttonGameDisplayFlex,
+            variablesButtonClickColor.buttonGameId,
             this.setConfigurationCLickColor,
             this
         );

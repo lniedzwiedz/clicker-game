@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 }
 
-#footerAuthor-DisplayTextFlex {
+.footerAuthor-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: left;

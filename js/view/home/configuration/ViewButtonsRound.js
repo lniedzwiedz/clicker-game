@@ -48,7 +48,7 @@ export class ViewButtonsRound {
         for (let number = 0; number < buttonNumberPerRow; number++) {
 
             let childId =
-                variablesButtonRound.containerConfigurationRoundButtonRoundMainPrefix
+                variablesButtonRound.containerConfigurationRoundButtonRoundPrefixId
                 + valueToString(buttonRoundNumber);
 
             createElementDiv(parentId, childId);
@@ -65,7 +65,7 @@ export class ViewButtonsRound {
                 gridTemplateRowsChild,
                 gridTemplateColumnsChild);
 
-            let buttonId = variablesButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(buttonRoundNumber);
+            let buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(buttonRoundNumber);
 
             this.creatContainerConfigurationRoundButton(
                 childId,
@@ -89,11 +89,11 @@ export class ViewButtonsRound {
     creatContainerConfigurationRoundButton(parentId, buttonId, buttonRoundNumber) {
 
         let iconId =
-            variablesButtonRound.configurationRoundButtonIconPrefix
+            variablesButtonRound.configurationRoundButtonIconPrefixId
             + valueToString(buttonRoundNumber);
 
         let pId =
-            variablesButtonRound.configurationRoundButtonRoundTextPrefix
+            variablesButtonRound.buttonRoundTextPrefixId
             + valueToString(buttonRoundNumber);
 
         createElementButton(

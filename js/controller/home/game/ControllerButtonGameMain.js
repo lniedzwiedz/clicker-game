@@ -32,7 +32,7 @@ export class ControllerButtonGameMain {
     addButtonGameClickListener() {
         this.buttonGameEvent =
             addEventListenerOnClickButton(
-                variablesButtonGameMain.buttonGameDisplayFlex,
+                variablesButtonGameMain.buttonGameId,
                 this.handleClickGame,
                 this
             );
@@ -41,7 +41,7 @@ export class ControllerButtonGameMain {
     removeButtonGameClickListener() {
 
         removeEventListenerOnClickButton(
-            variablesButtonGameMain.buttonGameDisplayFlex,
+            variablesButtonGameMain.buttonGameId,
             this.buttonGameEvent
         );
 

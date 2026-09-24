@@ -13,10 +13,10 @@ export class ViewGameStateMain {
     }
 
     createContainerGameStateMain() {
-        createElementDiv(variablesGameState.containerHomeMainParts, variablesGameState.containerGameStateMain);
+        createElementDiv(variablesGameState.containerHomeMainPartsId, variablesGameState.containerGameStateMainId);
     }
 
     createContainerGameStateMainParts() {
-        createElementDiv(variablesGameState.containerGameStateMain, variablesGameState.containerGameStateMainParts);
+        createElementDiv(variablesGameState.containerGameStateMainId, variablesGameState.containerGameStateMainPartsId);
     }
 }

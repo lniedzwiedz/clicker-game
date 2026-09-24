@@ -1,32 +1,32 @@
 export class ControllerConfigurationCoordinator {
 
-    constructor(controllerConfiguration, controllerConfigurationDecorationIcon, controllerConfigurationRound, controllerButtonsRound) {
+    constructor(controllerConfiguration, controllerConfigurationDecoration, controllerConfigurationRound, controllerButtonsRound) {
         this.controllerConfiguration = controllerConfiguration;
-        this.controllerConfigurationDecorationIcon = controllerConfigurationDecorationIcon;
+        this.controllerConfigurationDecoration = controllerConfigurationDecoration;
         this.controllerConfigurationRound = controllerConfigurationRound;
         this.controllerButtonsRound = controllerButtonsRound;
     }
 
     createConfiguration() {
         this.createConfigurationMain();
-        this.createConfigurationDecorationIcon();
-        this.createContainerConfigurationRound();
-        this.createConfigurationRound();
+        this.createConfigurationDecoration();
+        this.createConfigurationRoundMain();
+        this.createConfigurationButtonsRound();
     }
 
     createConfigurationMain() {
         this.controllerConfiguration.createConfigurationMain();
     }
 
-    createConfigurationDecorationIcon() {
-        this.controllerConfigurationDecorationIcon.createConfigurationDecorationIcon();
+    createConfigurationDecoration() {
+        this.controllerConfigurationDecoration.createConfigurationDecoration();
     }
 
-    createContainerConfigurationRound() {
-        this.controllerConfigurationRound.createContainerConfigurationRound();
+    createConfigurationRoundMain() {
+        this.controllerConfigurationRound.createConfigurationRoundMain();
     }
 
-    createConfigurationRound() {
+    createConfigurationButtonsRound() {
         this.controllerButtonsRound.createConfigurationRound()
     }
 

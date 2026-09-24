@@ -1,10 +1,10 @@
 import {ViewConfigurationMain} from "../../../view/home/configuration/ViewConfigurationMain.js";
 import {ControllerConfigurationMain} from "../../../controller/home/configuration/ControllerConfigurationMain.js";
 
-import {ViewConfigurationDecorationIcon} from "../../../view/home/configuration/ViewConfigurationDecorationIcon.js";
+import {ViewConfigurationDecoration} from "../../../view/home/configuration/ViewConfigurationDecoration.js";
 import {
-    ControllerConfigurationDecorationIcon
-} from "../../../controller/home/configuration/ControllerConfigurationDecorationIcon.js";
+    ControllerConfigurationDecoration
+} from "../../../controller/home/configuration/ControllerConfigurationDecoration.js";
 
 import {ViewConfigurationRound} from "../../../view/home/configuration/ViewConfigurationRound.js";
 import {ControllerConfigurationRound} from "../../../controller/home/configuration/ControllerConfigurationRound.js";
@@ -31,12 +31,12 @@ export class ModuleConfiguration {
             );
 
 
-        this.viewConfigurationDecorationIcon =
-            new ViewConfigurationDecorationIcon();
+        this.viewConfigurationDecoration =
+            new ViewConfigurationDecoration();
 
-        this.controllerConfigurationDecorationIcon =
-            new ControllerConfigurationDecorationIcon(
-                this.viewConfigurationDecorationIcon
+        this.controllerConfigurationDecoration =
+            new ControllerConfigurationDecoration(
+                this.viewConfigurationDecoration
             );
 
 
@@ -65,7 +65,7 @@ export class ModuleConfiguration {
         this.controllerConfigurationCoordinator =
             new ControllerConfigurationCoordinator(
                 this.controllerConfigurationMain,
-                this.controllerConfigurationDecorationIcon,
+                this.controllerConfigurationDecoration,
                 this.controllerConfigurationRound,
                 this.controllerButtonsRound,
             );

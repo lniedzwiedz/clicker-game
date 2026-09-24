@@ -5,6 +5,7 @@ import {
     isElementsExistById,
     removeElementClassNameById,
     addElementClassNameById,
+    addElementClassNames,
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonStop from "../../../common/variable/home/gameState/variablesButtonStop.js";
@@ -14,7 +15,7 @@ export class ViewButtonStop {
 
     createContainerButtonStop() {
 
-        if (!isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+        if (!isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
 
             this.createContainerButtonStopMain();
             this.createButtonStop();
@@ -23,8 +24,8 @@ export class ViewButtonStop {
 
     createContainerButtonStopMain() {
         createElementDiv(
-            variablesButtonStop.containerGameStateMainParts,
-            variablesButtonStop.containerButtonStopMain
+            variablesButtonStop.containerGameStateMainPartsId,
+            variablesButtonStop.containerButtonStopMainId
         );
     }
 
@@ -36,12 +37,18 @@ export class ViewButtonStop {
     createButtonStopMain() {
 
         createElementButton(
-            variablesButtonStop.containerButtonStopMain,
-            variablesButtonStop.buttonStopDisplayFlex
+            variablesButtonStop.containerButtonStopMainId,
+            variablesButtonStop.buttonStopId
         );
 
-        addElementClassNameById(
-            variablesButtonStop.buttonStopDisplayFlex,
+        // addElementClassNameById(
+        //     variablesButtonStop.buttonStopId,
+        //     variablesButtonStop.buttonStopStyle
+        // );
+
+        addElementClassNames(
+            variablesButtonStop.buttonStopId,
+            variablesButtonStop.buttonStopStyleDisplayFlex,
             variablesButtonStop.buttonStopStyle
         );
     }
@@ -54,7 +61,7 @@ export class ViewButtonStop {
     createIconStop(){
 
         createElementI(
-            variablesButtonStop.buttonStopDisplayFlex,
+            variablesButtonStop.buttonStopId,
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleSolid,
             variablesButtonStop.buttonStopIconStop
@@ -121,19 +128,19 @@ export class ViewButtonStop {
         // if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
 
            addElementClassNameById(
-                variablesButtonStop.buttonStopDisplayFlex,
-                variablesButtonStop.buttonStopInactive
+                variablesButtonStop.buttonStopId,
+                variablesButtonStop.buttonStopStyleInactive
             );
         // }
     }
 
     removeButtonStopStyleInactive() {
 
-        if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
+        if (isElementsExistById(variablesButtonStop.buttonStopId)){
 
             removeElementClassNameById(
-                variablesButtonStop.buttonStopDisplayFlex,
-                variablesButtonStop.buttonStopInactive
+                variablesButtonStop.buttonStopId,
+                variablesButtonStop.buttonStopStyleInactive
             );
         }
     }

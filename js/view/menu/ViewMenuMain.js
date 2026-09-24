@@ -15,7 +15,7 @@ export class ViewMenuMain {
 
         createElementDiv(
             variablesMenu.containerMenuMain,
-            variablesMenu.containerMenuMainParts
+            variablesMenu.containerMenuMainPartsId
         );
     }
 }

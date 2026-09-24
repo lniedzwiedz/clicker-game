@@ -1,2 +1,2 @@
-export const containerMain = "container-Main";
-export const containerMainParts = "container-MainParts";
+export const containerMainId = "container-Main";
+export const containerMainPartsId = "container-MainParts";

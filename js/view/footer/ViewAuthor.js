@@ -1,17 +1,18 @@
 import {
     createElementDiv,
     createElementP,
-    addElementClassNameSameAsIdAndSetText
+    addElementClassNameSameAsIdAndSetText, addElementClassNameById
 } from "../../common/function/commonFunctions.js";
 
 import * as variablesAuthor from "../../common/variable/footer/variablesAuthor.js";
+import {footerAuthorStyleDisplayFlex} from "../../common/variable/footer/variablesAuthor.js";
 
 
 export class ViewAuthor {
 
     createAuthor() {
         this.createContainerAuthorMain();
-        this.createElementAuthorMain();
+        this.createContainerAuthorMainParts();
         this.createAuthorText();
     }
 
@@ -19,27 +20,32 @@ export class ViewAuthor {
 
         createElementDiv(
             variablesAuthor.containerFooterMainParts,
-            variablesAuthor.containerAuthorMain
+            variablesAuthor.containerAuthorMainId
         );
     }
 
-    createElementAuthorMain() {
+    createContainerAuthorMainParts() {
         createElementDiv(
-            variablesAuthor.containerAuthorMain,
-            variablesAuthor.footerAuthorDisplayTextFlex
+            variablesAuthor.containerAuthorMainId,
+            variablesAuthor.footerAuthorId
+        );
+
+        addElementClassNameById(
+            variablesAuthor.footerAuthorId,
+            variablesAuthor.footerAuthorStyleDisplayFlex
         );
     }
 
     createAuthorText() {
 
         createElementP(
-            variablesAuthor.footerAuthorDisplayTextFlex,
-            variablesAuthor.footerAuthorStyleText
+            variablesAuthor.footerAuthorId,
+            variablesAuthor.footerAuthorTextId
         );
 
         addElementClassNameSameAsIdAndSetText(
-            variablesAuthor.footerAuthorStyleText,
-            variablesAuthor.footerAuthorDisplayText
+            variablesAuthor.footerAuthorTextId,
+            variablesAuthor.footerAuthorText
         );
     }
 }

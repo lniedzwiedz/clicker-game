@@ -1,9 +1,9 @@
 import * as variablesMain from "../variablesMain.js";
 
 
-export const containerMainParts = variablesMain.containerMainParts;
+export const containerMainPartsId = variablesMain.containerMainPartsId;
 
 
 // container home
-export const containerHomeMain = "containerHome-Main";
-export const containerHomeMainParts = "containerHome-MainParts";
+export const containerHomeMainId = "containerHome-Main";
+export const containerHomeMainPartsId = "containerHome-MainParts";

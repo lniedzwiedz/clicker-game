@@ -1,12 +1,12 @@
 import * as variablesButtonGameMain from "./variablesButtonGameMain.js";
 
 
-export const buttonClickDisplayFlex = variablesButtonGameMain.buttonGameDisplayFlex
+export const buttonGameId = variablesButtonGameMain.buttonGameId
 
-export const buttonGameTextId = "buttonClick-TextId";
+export const buttonGameTextId = "buttonGame-TextId";
 
 export const buttonGameStyleTextGameStopped = "buttonGame-Style-TextGameStopped";
-export const buttonGameDisplayTextGameStopped = "GAME STOPPED";
+export const buttonGameTextGameStopped = "GAME STOPPED";
 
 export const buttonGameStyleTextGameOver = "buttonGame-Style-TextGameOver";
-export const buttonGameDisplayTextGameOver = "YOU DID WELL ! <br /> game over";
+export const buttonGameTextGameOver = "YOU DID WELL ! <br /> game over";

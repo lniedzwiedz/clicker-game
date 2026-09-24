@@ -6,8 +6,8 @@ import * as variableButtonRound from "../../common/variable/home/configuration/v
 
 export class ActionButtonsRound {
 
-    buttonIdPrevious = variableButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(5)
-    buttonIdCurrent = variableButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(5);
+    buttonIdPrevious = variableButtonRound.buttonRoundPrefixId + valueToString(5)
+    buttonIdCurrent = variableButtonRound.buttonRoundPrefixId + valueToString(5);
     buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
 
     setConfigurationButtonIdClickedCurrent(event) {

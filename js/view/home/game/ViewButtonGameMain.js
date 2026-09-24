@@ -1,7 +1,7 @@
 import {
     createElementButton,
-    addElementClassNameById,
-    createElementDiv
+    createElementDiv,
+    addElementClassNames
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonGameMain from "../../../common/variable/home/game/variablesButtonGameMain.js";
@@ -16,8 +16,9 @@ export class ViewButtonGameMain {
 
     createContainerButtonGameMain() {
         createElementDiv(
-            variablesButtonGameMain.containerHomeMainParts,
-            variablesButtonGameMain.containerButtonGameMain);
+            variablesButtonGameMain.containerHomeMainPartsId,
+            variablesButtonGameMain.containerButtonGameMainId
+        );
     }
 
     createButtonGame() {
@@ -27,12 +28,13 @@ export class ViewButtonGameMain {
     createButtonGameMain() {
 
         createElementButton(
-            variablesButtonGameMain.containerButtonGameMain,
-            variablesButtonGameMain.buttonGameDisplayFlex
+            variablesButtonGameMain.containerButtonGameMainId,
+            variablesButtonGameMain.buttonGameId
         );
 
-        addElementClassNameById(
-            variablesButtonGameMain.buttonGameDisplayFlex,
+        addElementClassNames(
+            variablesButtonGameMain.buttonGameId,
+            variablesButtonGameMain.buttonGameStyleDisplayFlex,
             variablesButtonGameMain.buttonGameStyle
         );
     }

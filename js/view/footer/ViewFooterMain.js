@@ -15,15 +15,15 @@ export class ViewFooterMain {
     createContainerFooterMain() {
 
         createElementDiv(
-            variablesFooterMain.containerMainParts,
-            variablesFooterMain.containerFooterMain
+            variablesFooterMain.containerMainPartsId,
+            variablesFooterMain.containerFooterMainId
         );
     }
 
     createContainerFooterMainParts(){
         createElementDiv(
-            variablesFooterMain.containerFooterMain,
-            variablesFooterMain.containerFooterMainParts
+            variablesFooterMain.containerFooterMainId,
+            variablesFooterMain.containerFooterMainPartsId
         );
     }
 }

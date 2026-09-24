@@ -7,10 +7,6 @@ import {
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonGameText from "../../../common/variable/home/game/variablesButtonGameText.js";
-import {
-    buttonGameDisplayTextGameStopped,
-    buttonGameStyleTextGameStopped
-} from "../../../common/variable/home/game/variablesButtonGameText.js";
 
 
 export class ViewButtonGameText {
@@ -23,7 +19,7 @@ export class ViewButtonGameText {
 
     setButtonGameTextGameStopped() {
         this.setButtonGameText(
-            variablesButtonGameText.buttonGameDisplayTextGameStopped
+            variablesButtonGameText.buttonGameTextGameStopped
         );
     }
 
@@ -43,7 +39,7 @@ export class ViewButtonGameText {
 
     setButtonGameTextGameOver() {
         this.setButtonGameText(
-            variablesButtonGameText.buttonGameDisplayTextGameOver
+            variablesButtonGameText.buttonGameTextGameOver
         );
     }
 
@@ -67,7 +63,7 @@ export class ViewButtonGameText {
     createButtonGameP() {
 
         createElementP(
-            variablesButtonGameText.buttonClickDisplayFlex,
+            variablesButtonGameText.buttonGameId,
             variablesButtonGameText.buttonGameTextId
         );
     }

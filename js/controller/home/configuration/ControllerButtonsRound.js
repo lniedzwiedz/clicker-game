@@ -27,7 +27,7 @@ export class ControllerButtonsRound {
 
         for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
 
-            const buttonId = variablesButtonRound.configurationRoundDisplayButtonRoundFlexPrefix + valueToString(clickNumber);
+            const buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(clickNumber);
             const button = getElementById(buttonId);
 
             button.addEventListener("click", (event) => {
@@ -88,7 +88,6 @@ export class ControllerButtonsRound {
         this.viewButtonsRound.addButtonRoundStyleCurrentNumber(currentButtonId);
     }
 
-
     setConfigurationButtonsRoundForGameOver() {
 
         const roundNumberFinalId = this.actionButtonsRound.getButtonIdPMaxClicksNumberSetByUser();
@@ -96,7 +95,6 @@ export class ControllerButtonsRound {
 
         // round number - new round number mark
        this.setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId);
-
     }
 
     setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId){

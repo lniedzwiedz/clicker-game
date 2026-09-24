@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 }
 
-#buttonStop-DisplayFlex {
+.buttonStop-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: center;

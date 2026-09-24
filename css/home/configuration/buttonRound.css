@@ -14,29 +14,29 @@
     grid-template-columns: 1fr  9fr;
 }
 
-#containerConfigurationDecorationIcon-Main {
-    display: grid;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+/*#containerConfigurationDecoration-Main {*/
+/*    display: grid;*/
+/*    grid-row: 1 / 2;*/
+/*    grid-column: 1 / 2;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: 1fr;*/
+/*}*/
 
-.configurationDecorationIcon-DisplayIconFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.configurationDecoration-DisplayIconFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
-.fa-screwdriver-wrench {
-    margin: 0;
-    padding: 0;
-    color: #FFFFFF;
-    opacity: 0.7;
-    font-weight: 600;
-    font-size: 1.8rem;
-    text-shadow: 0px 0px 40px #EC7998;
-}
+/*.fa-screwdriver-wrench {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 0.7;*/
+/*    font-weight: 600;*/
+/*    font-size: 1.8rem;*/
+/*    text-shadow: 0px 0px 40px #EC7998;*/
+/*}*/
 
 #containerConfigurationRound-Main {
     display: grid;

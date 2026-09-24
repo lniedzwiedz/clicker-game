@@ -9,13 +9,13 @@ export class ViewConfigurationMain {
     createContainerConfigurationMain() {
 
         createElementDiv(
-            variablesConfigurationMain.containerMenuMainParts,
-            variablesConfigurationMain.containerConfigurationMain
+            variablesConfigurationMain.containerMenuMainPartsId,
+            variablesConfigurationMain.containerConfigurationMainId
         );
 
         createElementDiv(
-            variablesConfigurationMain.containerConfigurationMain,
-            variablesConfigurationMain.containerConfigurationMainParts
+            variablesConfigurationMain.containerConfigurationMainId,
+            variablesConfigurationMain.containerConfigurationMainPartsId
         );
     }
 }

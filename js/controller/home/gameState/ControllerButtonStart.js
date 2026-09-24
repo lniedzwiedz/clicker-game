@@ -30,18 +30,17 @@ export class ControllerButtonStart {
 
     addClickStartListener() {
         addEventListenerOnClickButton(
-            // to do - fix variable
-            variablesButtonStart.buttonStartDisplayFlex,
+            variablesButtonStart.buttonStartId,
             this.handleClickStart,
             this
         );
     }
 
-    setConfigurationButtonStartAfterClickButtonStart(){
+    setConfigurationButtonStartAfterClickButtonStart() {
         this.setConfigurationIconStartAfterClick();
     }
 
-    setConfigurationButtonStartAfterClickButtonStop(){
+    setConfigurationButtonStartAfterClickButtonStop() {
         this.setConfigurationIconStartBeforeClick();
     }
 
@@ -53,8 +52,7 @@ export class ControllerButtonStart {
         this.viewButtonStart.setIconStartStyleAfterClick();
     }
 
-    setConfigurationButtonStartForGameOver(){
+    setConfigurationButtonStartForGameOver() {
         this.viewButtonStart.setIconStartStyleForGameOver();
-        // this.viewButtonStart.dddddddd()
     }
 }

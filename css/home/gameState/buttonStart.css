@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 }
 
-#buttonStart-DisplayFlex {
+#buttonStart-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: center;

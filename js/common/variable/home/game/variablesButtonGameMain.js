@@ -1,10 +1,9 @@
 import * as home from "../variablesHome.js";
 
 
-export const containerHomeMainParts = home.containerHomeMainParts;
+export const containerHomeMainPartsId = home.containerHomeMainPartsId;
+export const containerButtonGameMainId = "containerButtonGame-Main";
 
-export const containerButtonGameMain = "containerButtonGame-Main";
-export const buttonGameDisplayFlex = "buttonGame-DisplayFlex";
-
+export const buttonGameId = "buttonGame";
+export const buttonGameStyleDisplayFlex = "buttonGame-StyleDisplayFlex";
 export const buttonGameStyle = "buttonGame-Style";
-// export const buttonGameStyleGameOver = "buttonGame-Style-GameOver";

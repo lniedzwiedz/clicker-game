@@ -1,5 +1,6 @@
 import {
-    addEventListenerOnClickButton, isElementsExistById,
+    addEventListenerOnClickButton,
+    isElementsExistById,
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
@@ -32,11 +33,11 @@ export class ControllerButtonStop {
 
     addClickStopListener() {
 
-        if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+        if (isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
 
             this.buttonClickEvent =
                 addEventListenerOnClickButton(
-                    variablesButtonStop.buttonStopDisplayFlex,
+                    variablesButtonStop.buttonStopId,
                     this.handleClickStop,
                     this
                 );
@@ -45,20 +46,18 @@ export class ControllerButtonStop {
 
     removeClickStopListener() {
 
-        if (isElementsExistById(variablesButtonStop.containerButtonStopMain)) {
+        if (isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
 
             removeEventListenerOnClickButton(
-                variablesButtonStop.buttonStopDisplayFlex,
+                variablesButtonStop.buttonStopId,
                 this.buttonClickEvent
             );
 
             this.buttonClickEvent = null;
         }
-
     }
 
     setConfigurationButtonStopAfterClickButtonStart() {
-
         this.setConfigurationIconStopBeforeClick();
         this.removeButtonStopStyleInactive();
     }
@@ -67,12 +66,11 @@ export class ControllerButtonStop {
         this.viewButtonStop.setIconStopStyleBeforeClick();
     }
 
-    removeButtonStopStyleInactive(){
+    removeButtonStopStyleInactive() {
         this.viewButtonStop.removeButtonStopStyleInactive();
     }
 
     setConfigurationButtonStopAfterClickButtonStop() {
-
         this.setConfigurationIconStopAfterClick();
         this.removeClickStopListener();
 
@@ -85,7 +83,6 @@ export class ControllerButtonStop {
     setConfigurationButtonStopForGameOver() {
         this.viewButtonStop.setIconStopStyleForGameOver();
         this.viewButtonStop.setButtonStopStyleInactive();
-
         this.removeClickStopListener();
     }
 }

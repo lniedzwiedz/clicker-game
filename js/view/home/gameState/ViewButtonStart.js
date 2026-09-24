@@ -4,6 +4,7 @@ import {
     createElementI,
     removeElementClassNameById,
     addElementClassNameById,
+    addElementClassNames,
 } from "../../../common/function/commonFunctions.js";
 
 import * as variablesButtonStart from "../../../common/variable/home/gameState/variablesButtonStart.js";
@@ -18,8 +19,8 @@ export class ViewButtonStart {
 
     createContainerButtonStartMain() {
         createElementDiv(
-            variablesButtonStart.containerGameStateMainParts,
-            variablesButtonStart.containerButtonStartMain
+            variablesButtonStart.containerGameStateMainPartsId,
+            variablesButtonStart.containerButtonStartMainId
         );
     }
 
@@ -31,12 +32,18 @@ export class ViewButtonStart {
     createButtonStartMain() {
 
         createElementButton(
-            variablesButtonStart.containerButtonStartMain,
-            variablesButtonStart.buttonStartDisplayFlex
+            variablesButtonStart.containerButtonStartMainId,
+            variablesButtonStart.buttonStartId
         );
+        //
+        // addElementClassNameById(
+        //     variablesButtonStart.buttonStartId,
+        //     variablesButtonStart.buttonStartStyle
+        // );
 
-        addElementClassNameById(
-            variablesButtonStart.buttonStartDisplayFlex,
+        addElementClassNames(
+            variablesButtonStart.buttonStartId,
+            variablesButtonStart.buttonStartStyleDisplayFlex,
             variablesButtonStart.buttonStartStyle
         );
     }
@@ -49,7 +56,7 @@ export class ViewButtonStart {
     createIconPlay() {
 
         createElementI(
-            variablesButtonStart.buttonStartDisplayFlex,
+            variablesButtonStart.buttonStartId,
             variablesButtonStart.buttonStarIconPlayId,
             variablesButtonStart.buttonStartIconPlayStyleSolid,
             variablesButtonStart.buttonStartIconPlay
