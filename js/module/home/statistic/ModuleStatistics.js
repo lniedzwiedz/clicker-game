@@ -1,9 +1,9 @@
 import {ViewStatisticsTimePrimary} from "../../../view/home/statistic/time/ViewStatisticsTimePrimary.js";
 import {ActionStatisticsTime} from "../../../action/statistic/ActionStatisticsTime.js";
-import {ControllerStatisticsTimeMain} from "../../../controller/home/statistic/time/ControllerStatisticsTimeMain.js";
+import {ControllerStatisticsTimePrimary} from "../../../controller/home/statistic/time/ControllerStatisticsTimePrimary.js";
 
 import ViewStatisticsFraudPrimary from "../../../view/home/statistic/fraud/ViewStatisticsFraudPrimary.js";
-import {ControllerStatisticsFraudMain} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudMain.js";
+import {ControllerStatisticsFraudPrimary} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudPrimary.js";
 
 
 import {ActionStatisticsFraud} from "../../../action/statistic/ActionStatisticsFraud.js";
@@ -25,7 +25,7 @@ export class ModuleStatistics {
         //     new ActionStatisticsTime();
         //
         // this.controllerStatisticsTime =
-        //     new ControllerStatisticsTimeMain(
+        //     new ControllerStatisticsTimePrimary(
         //         this.viewStatisticsTime,
         //         this.actionStatisticsTime);
 
@@ -37,7 +37,7 @@ export class ModuleStatistics {
         //     new ActionStatisticsFraud();
         //
         // this.controllerStatisticsFraudMain =
-        //     new ControllerStatisticsFraudMain(
+        //     new ControllerStatisticsFraudPrimary(
         //         this.viewStatisticsFraudMain,
         //         this.actionStatisticsFraud);
 

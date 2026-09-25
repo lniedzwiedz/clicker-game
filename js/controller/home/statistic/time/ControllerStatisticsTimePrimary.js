@@ -1,4 +1,4 @@
-export class ControllerStatisticsTimeMain {
+export class ControllerStatisticsTimePrimary {
 
     constructor(viewStatisticsTimePrimary, actionStatisticsTime) {
         this.viewStatisticsTimePrimary = viewStatisticsTimePrimary;

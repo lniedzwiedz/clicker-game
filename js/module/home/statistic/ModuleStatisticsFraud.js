@@ -1,10 +1,10 @@
 import ViewStatisticsFraudPrimary from "../../../view/home/statistic/fraud/ViewStatisticsFraudPrimary.js";
-import {ControllerStatisticsFraudMain} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudMain.js";
+import {ControllerStatisticsFraudPrimary} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudPrimary.js";
 
-import {ViewStatisticsFraudTotal} from "../../../view/home/statistic/fraud/ViewStatisticsFraudTotal.js";
+import {ViewStatisticsFraudSummary} from "../../../view/home/statistic/fraud/ViewStatisticsFraudSummary.js";
 import {
-    ControllerStatisticsFraudTotal
-} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudTotal.js";
+    ControllerStatisticsFraudSummary
+} from "../../../controller/home/statistic/fraud/ControllerStatisticsFraudSummary.js";
 
 import {ViewStatisticsFraudHistory} from "../../../view/home/statistic/fraud/ViewStatisticsFraudHistory.js";
 import {
@@ -24,17 +24,17 @@ export class ModuleStatisticsFraud {
             new ViewStatisticsFraudPrimary();
 
         this.controllerStatisticsFraudMain =
-            new ControllerStatisticsFraudMain(
+            new ControllerStatisticsFraudPrimary(
                 this.viewStatisticsFraudMain
             );
 
 
-        this.viewStatisticsFraudTotal =
-            new ViewStatisticsFraudTotal();
+        this.viewStatisticsFraudSummary =
+            new ViewStatisticsFraudSummary();
 
-        this.controllerStatisticsFraudTotal =
-            new ControllerStatisticsFraudTotal(
-                this.viewStatisticsFraudTotal
+        this.controllerStatisticsFraudSummary =
+            new ControllerStatisticsFraudSummary(
+                this.viewStatisticsFraudSummary
             );
 
 
@@ -50,7 +50,7 @@ export class ModuleStatisticsFraud {
         this.controllerStatisticsFraudCoordinator =
             new ControllerStatisticsFraudCoordinator(
                 this.controllerStatisticsFraudMain,
-                this.controllerStatisticsFraudTotal,
+                this.controllerStatisticsFraudSummary,
                 this.controllerStatisticsFraudHistory
             );
     }

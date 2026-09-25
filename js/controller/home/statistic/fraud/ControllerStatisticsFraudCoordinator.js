@@ -8,7 +8,7 @@ export class ControllerStatisticsFraudCoordinator{
 
     createStatisticsFraud(gameRoundCount) {
         this.createStatisticsFraudPrimary();
-        this.creatStatisticsFraudTotal();
+        this.creatStatisticsFraudSummary();
         this.createStatisticsFraudHistory(gameRoundCount);
     }
 
@@ -16,26 +16,26 @@ export class ControllerStatisticsFraudCoordinator{
         this.controllerStatisticsFraudMain.createStatisticsFraudPrimary();
     }
 
-    creatStatisticsFraudTotal(){
-        this.controllerStatisticsFraudTotal.creatStatisticsFraudTotal();
+    creatStatisticsFraudSummary(){
+        this.controllerStatisticsFraudTotal.creatStatisticsFraudSummary();
     }
 
     createStatisticsFraudHistory(gameRoundCount){
-        this.controllerStatisticsFraudHistory.creatStatisticsFraudTime(gameRoundCount);
+        this.controllerStatisticsFraudHistory.creatStatisticsFraudHistory(gameRoundCount);
     }
 
 
     updateStatisticFraud(fraudCountedRoundNumber, fraudTotalValue, fraudRoundIndex){
-        this.updateStatisticFraudTotal(fraudTotalValue);
+        this.updateStatisticsFraudSummaryTotalValue(fraudTotalValue);
         this.updateStatisticFraudHistory(fraudCountedRoundNumber, fraudRoundIndex);
     }
 
-    updateStatisticFraudTotal(fraudTotalValue){
-        this.controllerStatisticsFraudTotal.setFraudTotalValue(fraudTotalValue);
+    updateStatisticsFraudSummaryTotalValue(fraudTotalValue){
+        this.controllerStatisticsFraudTotal.setStatisticsFraudSummaryTotalValue(fraudTotalValue);
     }
 
     updateStatisticFraudHistory(fraudCountedRoundNumber, fraudRoundIndex){
-        // this.controllerStatisticsFraudHistory.setFraudTotalValue(fraudCountedRoundNumber, fraudRoundIndex);
+        // this.controllerStatisticsFraudTotal.setFraudTotalValue(fraudCountedRoundNumber, fraudRoundIndex);
     }
 
 }

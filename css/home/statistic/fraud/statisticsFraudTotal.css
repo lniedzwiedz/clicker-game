@@ -14,7 +14,7 @@
     grid-template-columns: 1fr;
 }
 
-#statisticsFraudSummary-TotalValueMain {
+#containerStatisticsFraudSummary-TotalValueMain {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
@@ -22,21 +22,13 @@
     grid-template-columns: 1fr;
 }
 
-/*#containerStatisticsFraudSummary-TotalValueMainParts {*/
-/*    display: grid;*/
-/*    grid-row: 1 / 1;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-.statisticsFraudSummary-TotalValue-StyleDisplayFlex {
+.statisticsFraudSummaryTotalValue-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.statisticsFraudSummary-TotalValue-StyleText {
+.statisticsFraudSummaryTotalValue-StyleText {
     margin: 0;
     padding: 0;
     opacity: 0.8;
@@ -52,15 +44,7 @@
     grid-template-columns: 1fr;
 }
 
-/*#containerStatisticsFraudSummary-IconsMainParts {*/
-/*    display: grid;*/
-/*    grid-row: 1 / 1;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-.statisticsFraudSummary-Icons-StyleDisplayFlex {
+.statisticsFraudSummaryIcons-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: center;

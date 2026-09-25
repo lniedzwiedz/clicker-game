@@ -4,11 +4,11 @@ export class ControllerStatisticsFraudHistory {
         this.viewStatisticsFraudHistory = viewStatisticsFraudHistory;
     }
 
-    creatStatisticsFraudTime(gameRoundCount){
-        this.viewStatisticsFraudHistory.createContainerSectionStatisticsFraudTime(gameRoundCount);
+    creatStatisticsFraudHistory(gameRoundCount){
+        this.viewStatisticsFraudHistory.createContainerStatisticsFraudHistory(gameRoundCount);
     }
 
-    setFraudTimeValue(fraudTotalValue){
-        this.viewStatisticsFraudHistory.setFraudTotalValue(fraudTotalValue);
-    }
+    // setFraudTimeValue(fraudTotalValue){
+    //     // this.viewStatisticsFraudHistory.setFraudTotalValue(fraudTotalValue);
+    // }
 }

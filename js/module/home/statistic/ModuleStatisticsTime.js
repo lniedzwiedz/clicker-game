@@ -1,6 +1,6 @@
 import {ViewStatisticsTimePrimary} from "../../../view/home/statistic/time/ViewStatisticsTimePrimary.js";
 import {ActionStatisticsTime} from "../../../action/statistic/ActionStatisticsTime.js";
-import {ControllerStatisticsTimeMain} from "../../../controller/home/statistic/time/ControllerStatisticsTimeMain.js";
+import {ControllerStatisticsTimePrimary} from "../../../controller/home/statistic/time/ControllerStatisticsTimePrimary.js";
 
 import {ViewStatisticsTimeBest} from "../../../view/home/statistic/time/ViewStatisticsTimeBest.js";
 import {ControllerStatisticsTimeBest} from "../../../controller/home/statistic/time/controllerStatisticsTimeBest.js";
@@ -26,7 +26,7 @@ export class ModuleStatisticsTime {
             new ActionStatisticsTime();
 
         this.controllerStatisticsTimeMain =
-            new ControllerStatisticsTimeMain(
+            new ControllerStatisticsTimePrimary(
                 this.viewStatisticsTimePrimary,
                 this.actionStatisticsTime
             );

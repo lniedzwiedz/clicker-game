@@ -1,4 +1,4 @@
-export class ControllerStatisticsFraudMain {
+export class ControllerStatisticsFraudPrimary {
 
     constructor(viewStatisticsFraud) {
         this.viewStatisticsFraud = viewStatisticsFraud;

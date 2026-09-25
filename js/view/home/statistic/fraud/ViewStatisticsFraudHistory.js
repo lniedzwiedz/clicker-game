@@ -11,66 +11,74 @@ import {
     valueToString
 } from "../../../../common/function/commonFunctions.js";
 
-import * as variablesStatisticsFraud from "../../../../common/variable/home/statistic/fraud/variablesStatisticsFraudPrimary.js";
+import * as variablesStatisticsFraudHistory
+    from "../../../../common/variable/home/statistic/fraud/variablesStatisticsFraudHistory.js";
 
 
 export class ViewStatisticsFraudHistory {
 
-    createContainerSectionStatisticsFraudTime(gameRoundCount) {
+    createContainerStatisticsFraudHistory(gameRoundCount) {
 
-        this.createContainerStatisticsFraudCounterMain()
+        this.createContainerStatisticsFraudHistoryPrimary();
+        this.createContainerHistoryRound(gameRoundCount);
 
-        this.createContainerStatisticsFraudCounterRound(
-            gameRoundCount
-        );
-
-        this.createContainerStatisticsFraudCounterName();
+        this.createContainerHistoryName();
     }
 
-    createContainerStatisticsFraudCounterMain() {
+    createContainerStatisticsFraudHistoryPrimary() {
+        this.createContainerStatisticsFraudHistoryMain();
+        this.createContainerStatisticsFraudHistoryMainParts();
+    }
+
+    createContainerStatisticsFraudHistoryMain() {
 
         createElementDiv(
-            variablesStatisticsFraud.statisticsFraudMainPartsId,
-            variablesStatisticsFraud.containerStatisticsFraudCounterMain
-        );
-
-        createElementDiv(
-            variablesStatisticsFraud.containerStatisticsFraudCounterMain,
-            variablesStatisticsFraud.containerStatisticsFraudCounterMainParts
+            variablesStatisticsFraudHistory.containerStatisticsFraudMainPartsId,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryMainId
         );
     }
 
-    createContainerStatisticsFraudCounterRound(gameRoundCount) {
+    createContainerStatisticsFraudHistoryMainParts() {
 
-        this.createContainerStatisticsFraudCounterRoundMain();
-
-        let parentId = variablesStatisticsFraud.containerStatisticsFraudCounterRoundMainParts;
-
-        this.createContainerStatisticsFraudCounterRoundMainParts(
-            parentId,
-            gameRoundCount
-        );
-
-        this.createContainerStatisticsFraudCounterRoundNumber(
-            parentId,
-            gameRoundCount
+        createElementDiv(
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryMainId,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryMainPartsId
         );
     }
 
-    createContainerStatisticsFraudCounterRoundMain() {
+    createContainerHistoryRound(gameRoundCount) {
+
+        this.createContainerHistoryRoundPrimary(gameRoundCount);
+        this.createContainerHistoryRoundNumberPrimary(gameRoundCount);
+    }
+
+    createContainerHistoryRoundPrimary(gameRoundCount) {
+
+        this.createContainerStatisticsFraudHistoryRoundMain();
+        this.createContainerStatisticsFraudHistoryRoundMainParts();
+        this.createContainerStatisticsFraudHistoryRoundMainPartsGrid(gameRoundCount);
+    }
+
+    createContainerStatisticsFraudHistoryRoundMain() {
 
         createElementDiv(
-            variablesStatisticsFraud.containerStatisticsFraudCounterMainParts,
-            variablesStatisticsFraud.containerStatisticsFraudCounterRoundMain
-        );
-
-        createElementDiv(
-            variablesStatisticsFraud.containerStatisticsFraudCounterRoundMain,
-            variablesStatisticsFraud.containerStatisticsFraudCounterRoundMainParts
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryMainPartsId,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryRoundMainId
         );
     }
 
-    createContainerStatisticsFraudCounterRoundMainParts(parentId, gameRoundCount) {
+    createContainerStatisticsFraudHistoryRoundMainParts() {
+
+        createElementDiv(
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryRoundMainId,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryRoundMainPartsId
+        );
+    }
+
+
+    createContainerStatisticsFraudHistoryRoundMainPartsGrid(gameRoundCount) {
+
+        let parentId = variablesStatisticsFraudHistory.containerStatisticsFraudHistoryRoundMainPartsId;
 
         let gridRowStartNumber = 1;
         let gridColumnStartNumber = 1;
@@ -90,7 +98,9 @@ export class ViewStatisticsFraudHistory {
             gridTemplateColumns);
     }
 
-    createContainerStatisticsFraudCounterRoundNumber(parentId, gameRoundCount) {
+    createContainerHistoryRoundNumberPrimary(gameRoundCount) {
+
+        let parentId = variablesStatisticsFraudHistory.containerStatisticsFraudHistoryRoundMainPartsId;
 
         let gridRowStartNumberChild = 2;
         let gridColumnStartNumberChild = 2;
@@ -99,28 +109,35 @@ export class ViewStatisticsFraudHistory {
 
         for (let index = 0; index < gameRoundCount; index++) {
 
-            let childId = variablesStatisticsFraud.containerStatisticsFraudCounterRoundNumberMainPrefix + valueToString(index);
+            let childId = variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + valueToString(index);
 
-            this.createElementFraudCountRoundMain(
-                parentId,
-                childId
-            );
+            // this.createContainerHistoryRoundNumberMain(
+            //     parentId,
+            //     childId
+            // );
 
-            let gridTemplateRowsChild = "1fr";
-            let gridTemplateColumnsChild = "1fr";
+            this.createContainerHistoryRoundNumberMain(parentId, childId);
 
-            setElementStyletAsGrid(
+            // let gridTemplateRowsChild = "1fr";
+            // let gridTemplateColumnsChild = "1fr";
+            //
+            // setElementStyletAsGrid(
+            //     childId,
+            //     gridRowStartNumberChild,
+            //     gridColumnStartNumberChild,
+            //     gridRowEndNumberChild,
+            //     gridColumnEndNumberChild,
+            //     gridTemplateRowsChild,
+            //     gridTemplateColumnsChild);
+
+            this.createContainerHistoryRoundNumberMainPartsGrid(
                 childId,
-                gridRowStartNumberChild,
-                gridColumnStartNumberChild,
-                gridRowEndNumberChild,
-                gridColumnEndNumberChild,
-                gridTemplateRowsChild,
-                gridTemplateColumnsChild);
+                gridRowStartNumberChild, gridColumnStartNumberChild,
+                gridRowEndNumberChild, gridColumnEndNumberChild,)
 
-            this.createElementFraudCountRoundInner(
-                childId,
-                index
+
+            this.containerStatisticsFraudCounterRoundNumberMainParts(
+                valueToString(index)
             );
 
             gridColumnStartNumberChild += 3;
@@ -128,7 +145,7 @@ export class ViewStatisticsFraudHistory {
         }
     }
 
-    createElementFraudCountRoundMain(parentId, childId) {
+    createContainerHistoryRoundNumberMain(parentId, childId) {
 
         createElementDiv(
             parentId,
@@ -136,83 +153,183 @@ export class ViewStatisticsFraudHistory {
         );
     }
 
-    createElementFraudCountRoundInner(parentIdMain, index) {
+    createContainerHistoryRoundNumberMainPartsGrid(childId,
+                                                   gridRowStartNumberChild, gridColumnStartNumberChild,
+                                                   gridRowEndNumberChild, gridColumnEndNumberChild,) {
 
-        let childIdMainParts = variablesStatisticsFraud.containerStatisticsFraudCounterRoundNumberMainPartsPrefix + valueToString(index);
-
-        createElementDiv(
-            parentIdMain,
-            childIdMainParts
-        );
+        let gridTemplateRowsChild = "1fr";
+        let gridTemplateColumnsChild = "1fr";
 
         setElementStyletAsGrid(
-            childIdMainParts,
+            childId,
+            gridRowStartNumberChild,
+            gridColumnStartNumberChild,
+            gridRowEndNumberChild,
+            gridColumnEndNumberChild,
+            gridTemplateRowsChild,
+            gridTemplateColumnsChild);
+    }
+
+
+    containerStatisticsFraudCounterRoundNumberMainParts(index) {
+
+        // let childIdMainParts = variablesStatisticsFraudHistory.containerStatisticsFraudCounterRoundNumberMainPartsPrefix + valueToString(index);
+
+        // createElementDiv(
+        //     parentIdMain,
+        //     childIdMainParts
+        // );
+
+        // setElementStyletAsGrid(
+        //     childIdMainParts,
+        //     1,
+        //     1,
+        //     2,
+        //     2,
+        //     "1fr",
+        //     "1fr");
+
+        this.containerHistoryRoundNumberMainPartsPrimary(index);
+
+        // let grandchildId = variablesStatisticsFraudHistory.statisticsFraudCounterRoundDisplayFlexPrefix + valueToString(index);
+        // let iId = variablesStatisticsFraudHistory.statisticsFraudIconWhiskeyGlassPrefix + valueToString(index);
+        // let pId = variablesStatisticsFraudHistory.statisticsFraudCounterRoundDisplaySumValuePrefix + valueToString(index);
+
+        // createElementDivWithIdAndSetClassName(
+        //     childIdMainParts,
+        //     grandchildId,
+        //     variablesStatisticsFraudHistory.statisticsFraudCounterRoundDisplayFlex
+        // );
+
+        // createElementI(
+        //     grandchildId,
+        //     iId,
+        //     variablesStatisticsFraudHistory.statisticsFraudSumIconStyleSolid,
+        //     variablesStatisticsFraudHistory.statisticsFraudSumIconWhiskeyGlass
+        // );
+        //
+        // createElementP(
+        //     grandchildId,
+        //     pId
+        // );
+        //
+        // setElementTextById(
+        //     pId,
+        //     variablesStatisticsFraudHistory.statisticsFraudDisplayIconWhiskeyGlassAndSpace
+        // );
+        //
+        // addElementClassNameById(
+        //     pId,
+        //     variablesStatisticsFraudHistory.statisticsFraudCounterRoundStyleValueSumPerRound
+        // );
+
+        // this.createContainerHistoryRoundValue(childIdMainParts, index);
+        this.createContainerHistoryRoundValue(index);
+    }
+
+    containerHistoryRoundNumberMainPartsPrimary(index) {
+        this.containerHistoryRoundNumberMain(index);
+        this.containerHistoryRoundNumberMainPartsGrid(index);
+
+    }
+
+    containerHistoryRoundNumberMain(index) {
+
+        createElementDiv(
+            variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + index,
+            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
+        );
+    }
+
+    containerHistoryRoundNumberMainPartsGrid(index) {
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
             1,
             1,
             2,
             2,
             "1fr",
             "1fr");
+    }
 
-        let grandchildId = variablesStatisticsFraud.statisticsFraudCounterRoundDisplayFlexPrefix + valueToString(index);
-        let iId = variablesStatisticsFraud.statisticsFraudIconWhiskeyGlassPrefix + valueToString(index);
-        let pId = variablesStatisticsFraud.statisticsFraudCounterRoundDisplaySumValue + valueToString(index);
+    createContainerHistoryRoundValue(index) {
+        this.createContainerHistoryRoundValueMain(index);
+        this.createHistoryIconWhiskeyGlass(index);
+        this.createHistoryRoundValueText(index);
+
+    }
+
+    createContainerHistoryRoundValueMain(index) {
 
         createElementDivWithIdAndSetClassName(
-            childIdMainParts,
-            grandchildId,
-            variablesStatisticsFraud.statisticsFraudCounterRoundDisplayFlex
+            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
+            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
+            variablesStatisticsFraudHistory.historyRoundNumberStyleDisplayFlex
         );
+    }
+
+    createHistoryIconWhiskeyGlass(index) {
 
         createElementI(
-            grandchildId,
-            iId,
-            variablesStatisticsFraud.statisticsFraudSumIconStyleSolid,
-            variablesStatisticsFraud.statisticsFraudSumIconWhiskeyGlass
+            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
+            variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
+            variablesStatisticsFraudHistory.statisticsFraudSumIconStyleSolid,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryRoundIconWhiskeyGlass
         );
+    }
+
+    createHistoryRoundValueText(index) {
+
+        let pId = variablesStatisticsFraudHistory.historyRoundNumberTextIdIdPrefix + index
 
         createElementP(
-            grandchildId,
+            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
             pId
         );
 
         setElementTextById(
             pId,
-            variablesStatisticsFraud.statisticsFraudDisplayIconWhiskeyGlassAndSpace
+            variablesStatisticsFraudHistory.historyRoundNumberTextSpaceAfterIconWhiskeyGlassAndSpace
         );
 
         addElementClassNameById(
             pId,
-            variablesStatisticsFraud.statisticsFraudCounterRoundStyleValueSumPerRound
+            variablesStatisticsFraudHistory.historyRoundNumberStyleText
         );
-
     }
 
-    createContainerStatisticsFraudCounterName() {
+
+    createContainerHistoryName() {
 
         createElementDiv(
-            variablesStatisticsFraud.containerStatisticsFraudCounterMainParts,
-            variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMain
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryMainPartsId,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameDisplayTextMain
         );
 
         createElementDiv(
-            variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMain,
-            variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMainParts
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameDisplayTextMain,
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameDisplayTextMainParts
         );
 
         createElementDivWithTheSameIdAndClassName(
-            variablesStatisticsFraud.containerStatisticsFraudCounterNameDisplayTextMainParts,
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayNameFlex
+            variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameDisplayTextMainParts,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameDisplayNameFlex
         );
 
         createElementPWithTheSameIdAndClassName(
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayNameFlex,
-            variablesStatisticsFraud.statisticsFraudCounterNameStyleText
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameDisplayNameFlex,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameStyleText
         );
 
         setElementTextById(
-            variablesStatisticsFraud.statisticsFraudCounterNameStyleText,
-            variablesStatisticsFraud.statisticsFraudCounterNameDisplayName
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameStyleText,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameDisplayName
         );
+    }
+
+    updateStatisticsFraudSCounterValue() {
+
+
     }
 }
