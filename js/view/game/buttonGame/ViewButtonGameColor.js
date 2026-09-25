@@ -1,0 +1,45 @@
+import {
+    addElementClassNameById,
+    setElementStyleByDocumentQuerySelectorRoot
+} from "../../../common/function/commonFunctions.js";
+
+import * as variablesButtonGameColor from "../../../common/variable/game/buttonGame/variablesButtonGameColor.js";
+
+
+export class ViewButtonGameColor {
+
+
+    setButtonGameBackgroundColorClass() {
+
+        addElementClassNameById(
+            variablesButtonGameColor.buttonGameId,
+            variablesButtonGameColor.buttonGameStyleBackgroundColor
+        )
+    }
+
+    setButtonGameBackgroundColorAtStart() {
+
+        setElementStyleByDocumentQuerySelectorRoot(
+            variablesButtonGameColor.varCSSButtonGameStyleBackgroundColor,
+            variablesButtonGameColor.buttonGameStyleInitialBackgroundColor
+        );
+    }
+
+    setButtonGameBackgroundColorForRound(roundColor) {
+        this.setButtonGameColor(roundColor);
+    }
+
+    setButtonGameColor(roundColor) {
+
+        setElementStyleByDocumentQuerySelectorRoot(
+            variablesButtonGameColor.varCSSButtonGameStyleBackgroundColor,
+            roundColor
+        )
+    }
+
+    setConfigurationButtonGameColorForGameOver() {
+        this.setButtonGameColor(
+            variablesButtonGameColor.buttonGameStyleBackgroundColorGameOver
+        );
+    }
+}

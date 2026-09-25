@@ -1,8 +1,8 @@
 import {ViewFooterMain} from "../../view/footer/ViewFooterMain.js";
-import {ControllerFooterMain} from "../../controller/footer/ControllerFooterMain.js";
+import {ControllerFooterPrimary} from "../../controller/footer/ControllerFooterPrimary.js";
 
-import {ViewAuthor} from "../../view/footer/ViewAuthor.js";
-import {ControllerAuthor} from "../../controller/footer/ControllerAuthor.js";
+import {ViewFooterAuthor} from "../../view/footer/ViewFooterAuthor.js";
+import {ControllerFooterAuthor} from "../../controller/footer/ControllerFooterAuthor.js";
 
 import {ControllerFooterCoordinator} from "../../controller/footer/ControllerFooterCoordinator.js";
 
@@ -15,16 +15,16 @@ export class ModuleFooter {
             new ViewFooterMain();
 
         this.controllerFooterMain =
-            new ControllerFooterMain(
+            new ControllerFooterPrimary(
                 this.viewFooterMain
             );
 
 
         this.viewAuthor =
-            new ViewAuthor();
+            new ViewFooterAuthor();
 
         this.controllerAuthor =
-            new ControllerAuthor(
+            new ControllerFooterAuthor(
                 this.viewAuthor
             );
 

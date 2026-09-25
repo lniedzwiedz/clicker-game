@@ -1,0 +1,62 @@
+import {
+    addEventListenerOnClickButton
+} from "../../../common/function/commonFunctions.js";
+
+import * as variablesButtonStart from "../../../common/variable/game/gameState/variablesGameStateButtonStart.js";
+
+
+export class ControllerGameStateButtonStart {
+
+    constructor(viewButtonStart, actionButtonStart) {
+        this.viewButtonStart = viewButtonStart;
+        this.actionButtonStart = actionButtonStart;
+        this.onStart = null;
+    }
+
+    createButtonStart() {
+        this.createContainerButtonStart();
+        this.addClickStartListener();
+    }
+
+    createContainerButtonStart() {
+        this.viewButtonStart.createContainerButtonStart();
+    }
+
+    setOnStart(onStart) {
+        this.onStart = onStart;
+    }
+
+    handleClickStart(event) {
+        if (this.onStart) {
+            this.onStart();
+        }
+    }
+
+    addClickStartListener() {
+        addEventListenerOnClickButton(
+            variablesButtonStart.buttonStartId,
+            this.handleClickStart,
+            this
+        );
+    }
+
+    setConfigurationButtonStartAfterClickButtonStart() {
+        this.setConfigurationIconStartAfterClick();
+    }
+
+    setConfigurationButtonStartAfterClickButtonStop() {
+        this.setConfigurationIconStartBeforeClick();
+    }
+
+    setConfigurationIconStartBeforeClick() {
+        this.viewButtonStart.setIconStartStyleBeforeClick();
+    }
+
+    setConfigurationIconStartAfterClick() {
+        this.viewButtonStart.setIconStartStyleAfterClick();
+    }
+
+    setConfigurationButtonStartForGameOver() {
+        this.viewButtonStart.setIconStartStyleForGameOver();
+    }
+}

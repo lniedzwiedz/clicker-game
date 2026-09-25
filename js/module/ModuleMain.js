@@ -1,11 +1,11 @@
-import {ViewMain} from "../view/ViewMain.js";
-import {ControllerMain} from "../controller/ControllerMain.js";
+import {ViewPrimary} from "../view/ViewPrimary.js";
+import {ControllerPrimary} from "../controller/ControllerPrimary.js";
 
 import {ModuleHome} from "./home/ModuleHome.js";
 import {ModuleMenu} from "./menu/ModuleMenu.js";
 import {ModuleFooter} from "./footer/ModuleFooter.js";
 
-import ModuleClickerGame from "./ModuleClickerGame.js";
+import ModuleClickerGame from "./game/ModuleClickerGame.js";
 
 import {ControllerCoordinator} from "../controller/ControllerCoordinator.js";
 
@@ -16,10 +16,10 @@ export class ModuleMain {
     constructor() {
 
         this.viewMain =
-            new ViewMain();
+            new ViewPrimary();
 
         this.controllerMain =
-            new ControllerMain(this.viewMain);
+            new ControllerPrimary(this.viewMain);
 
 
         this.moduleMenu =

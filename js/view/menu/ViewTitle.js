@@ -5,7 +5,7 @@ import {
     addElementClassNameById
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesTitle from "../../common/variable/menu/variablesTitle.js";
+import * as variablesTitle from "../../common/variable/menu/variablesMenuTitle.js";
 
 
 export class ViewTitle {

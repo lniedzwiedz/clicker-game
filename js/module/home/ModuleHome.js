@@ -1,5 +1,5 @@
-import {ViewHomeMain} from "../../view/home/ViewHomeMain.js";
-import {ControllerHomeMain} from "../../controller/home/ControllerHomeMain.js";
+import {ViewHomePrimary} from "../../view/home/ViewHomePrimary.js";
+import {ControllerHomePrimary} from "../../controller/home/ControllerHomePrimary.js";
 
 import {ControllerHomeCoordinator} from "../../controller/home/ControllerHomeCoordinator.js";
 
@@ -10,10 +10,10 @@ export class ModuleHome {
     constructor() {
 
         this.viewHome =
-            new ViewHomeMain();
+            new ViewHomePrimary();
 
         this.controllerHomeMain =
-            new ControllerHomeMain(
+            new ControllerHomePrimary(
                 this.viewHome
             );
 
