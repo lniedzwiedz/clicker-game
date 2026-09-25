@@ -24,7 +24,7 @@ export class ControllerGameCoordinator {
 
         this.controllerGameStateCoordinator.configureGameStateButtonsAtStart();
 
-        this.controllerStatisticsCoordinator.configureStatisticsAtStart();
+        // this.controllerStatisticsCoordinator.configureStatisticsAtStart();
 
     }
 
@@ -43,12 +43,12 @@ export class ControllerGameCoordinator {
     }
 
     configureGameStop() {
-        this.configureConfigurationsAtStop();
+        this.configureConfigurationAtStop();
         this.configureButtonGameAtStop();
         this.configureGameStateAtStop();
     }
 
-    configureConfigurationsAtStop() {
+    configureConfigurationAtStop() {
         this.controllerConfigurationCoordinator.configureConfigurationAtStop();
     }
 
@@ -75,15 +75,21 @@ export class ControllerGameCoordinator {
     }
 
     configureStatisticAtStart(gameRoundCount) {
-        this.controllerStatisticsCoordinator.createConfigurationStatistics(gameRoundCount);
+        this.controllerStatisticsCoordinator.createStatistics(gameRoundCount);
     }
 
-    updateStatisticFraud(
+    updateStatistic(
         fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
 
-        this.controllerStatisticsCoordinator.setStatisticFraudData(
+        // this.controllerStatisticsCoordinator.updateStatisticFraud(
+        //     fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
+        // );
+
+        this.controllerStatisticsCoordinator.updateStatistic(
             fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
         );
+
+
     }
 
     updateStatisticTime(

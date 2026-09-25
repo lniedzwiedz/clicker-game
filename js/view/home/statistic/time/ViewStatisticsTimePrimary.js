@@ -3,18 +3,22 @@ import {
     isElementsExistById,
     removeElementById,
     setElementTextById
-} from "../../../common/function/commonFunctions.js";
+} from "../../../../common/function/commonFunctions.js";
 
-import * as variablesStatisticsTime from "../../../common/variable/home/statistic/variablesStatisticsTime.js";
+import * as variablesStatisticsTime from "../../../../common/variable/home/statistic/time/variablesStatisticsTimePrimary.js";
 
 
-export class ViewStatisticsTime {
+export class ViewStatisticsTimePrimary {
 
     // createCSSVariableName(baseVariableName, partToSwitch) {
     //     let timeKind = "Kind";
     //     return baseVariableName.replace(timeKind, partToSwitch);
     // }
 
+    createContainerStatisticsTimePrimary(){
+
+
+    }
 
     createStatisticsTime() {
 

@@ -1,68 +1,91 @@
-import {
-    addEventListenerOnClickButton
-} from "../../../common/function/commonFunctions.js";
-
-import * as variablesButtonClickColor from "../../../common/variable/home/game/variablesButtonGameMain.js";
-
-
 export class ControllerStatisticsCoordinator {
 
-    constructor(controllerStatisticsTime, controllerStatisticsFraud) {
-        this.controllerStatisticsTime = controllerStatisticsTime;
-        this.controllerStatisticsFraud = controllerStatisticsFraud;
+    constructor(controllerStatisticsTimeCoordinator, controllerStatisticsFraudCoordinator) {
+        this.controllerStatisticsTimeCoordinator = controllerStatisticsTimeCoordinator;
+        this.controllerStatisticsFraudCoordinator = controllerStatisticsFraudCoordinator;
         this.onStart = null;
     }
 
-    setOnStart(onStart) {
-        this.onStart = onStart;
+    // setOnStart(onStart) {
+    //     this.onStart = onStart;
+    // }
+
+    createStatistics(gameRoundCount) {
+       // this.createStatisticTime(gameRoundCount);
+       this.createStatisticFraud(gameRoundCount);
     }
 
-    createConfigurationStatistics(gameRoundCount) {
-        // this.createGameFieldStatisticsTime();
-        this.createConfigurationStatisticsFraud(gameRoundCount);
+    createStatisticFraud(gameRoundCount){
+        this.controllerStatisticsFraudCoordinator.createStatisticsFraud(gameRoundCount);
     }
 
-    createGameFieldStatisticsTime() {
-        this.controllerStatisticsTime.createStatisticsTime();
+    // createStatisticTime(gameRoundCount){
+    //     this.controllerStatisticsTimeCoordinator.createStatisticsTime(gameRoundCount);
+    // }
+
+    updateStatistic(
+        fraudCountedRoundNumber, fraudTotalValue, fraudRoundIndex){
+
+        this.updateStatisticFraud(
+            fraudCountedRoundNumber, fraudTotalValue, fraudRoundIndex
+        );
+
+        // this.updateStatisticTime();
     }
 
-    setConfigurationCLickColor(event) {
-        if (this.onStart) {
-            this.onStart();
-        }
-    }
+    updateStatisticFraud(
+        fraudCountedRoundNumber, fraudTotalValue, fraudRoundIndex){
 
-    configureButtonClickColor() {
-        addEventListenerOnClickButton(
-            variablesButtonClickColor.buttonGameId,
-            this.setConfigurationCLickColor,
-            this
+        this.controllerStatisticsFraudCoordinator.updateStatisticFraud(
+            fraudCountedRoundNumber, fraudTotalValue, fraudRoundIndex
         );
     }
 
-    createConfigurationStatisticsFraud(gameRoundCount) {
-        this.controllerStatisticsFraud.createConfigurationGameStatisticsTimeFraud(gameRoundCount);
+    updateStatisticTime(){
+        // this.controllerStatisticsTimeCoordinator.updateStatisticTime();
     }
 
-    setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
-        this.controllerStatisticsFraud.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
-    }
+    // createGameFieldStatisticsTime() {
+    //     this.controllerStatisticsTime.createStatisticsTime();
+    // }
 
-    configureStatisticTime(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
-        this.controllerStatisticsTime.setGameStatisticTimeData(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest);
-    }
+    // setConfigurationCLickColor(event) {
+    //     if (this.onStart) {
+    //         this.onStart();
+    //     }
+    // }
 
-    removeGameFieldStatisticsTime() {
-        this.controllerStatisticsTime.removeGameFieldStatisticsTime();
-    }
+    // configureButtonClickColor() {
+    //     addEventListenerOnClickButton(
+    //         variablesButtonClickColor.buttonGameId,
+    //         this.setConfigurationCLickColor,
+    //         this
+    //     );
+    // }
 
-    removeStatisticsFraud() {
-        this.controllerStatisticsFraud.removeStatisticsFraud();
-    }
+    // createConfigurationStatisticsFraud(gameRoundCount) {
+    //     this.controllerStatisticsFraudCoordinator.createConfigurationGameStatisticsTimeFraud(gameRoundCount);
+    // }
 
-    configureStatisticsAtStart() {
-        // to do -> remove main not main part container
-        this.removeGameFieldStatisticsTime();
-        this.removeStatisticsFraud();
-    }
+    // setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+    //     this.controllerStatisticsFraud.setStatisticFraudData(fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex);
+    // }
+    //
+    // configureStatisticTime(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+    //     this.controllerStatisticsTime.setGameStatisticTimeData(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest);
+    // }
+    //
+    // removeGameFieldStatisticsTime() {
+    //     this.controllerStatisticsTime.removeGameFieldStatisticsTime();
+    // }
+    //
+    // removeStatisticsFraud() {
+    //     this.controllerStatisticsFraud.removeStatisticsFraud();
+    // }
+    //
+    // configureStatisticsAtStart() {
+    //     // to do -> remove main not main part container
+    //     // this.removeGameFieldStatisticsTime();
+    //     this.removeStatisticsFraud();
+    // }
 }

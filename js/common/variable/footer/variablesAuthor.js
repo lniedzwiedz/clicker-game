@@ -1,5 +1,6 @@
 import * as variablesFooterMain from "./variablesFooterMain.js";
 
+
 export const containerFooterMainPartsId = variablesFooterMain.containerFooterMainPartsId;
 
 export const containerAuthorMainId = "containerAuthor-Main";

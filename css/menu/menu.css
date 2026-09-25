@@ -14,21 +14,6 @@
     grid-template-columns: 0fr 30fr 70fr 0fr;
 }
 
-
-/*to do - to remove*/
-.menuGameConfigurationButtonClickNumberGameOn {
-    opacity: 0.5;
-}
-
-/*to do - to remove*/
-.menuGameConfigurationDisplay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
 @media (max-width: 600px) {
 
 }

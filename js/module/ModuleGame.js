@@ -27,7 +27,7 @@ export class ModuleGame {
                 this.moduleConfiguration.getControllerConfigurationCoordinator(),
                 this.moduleButtonGame.getControllerButtonGameCoordinator(),
                 this.moduleGameState.getControllerGameStateCoordinator(),
-                this.moduleStatistics.getControllerStatisticsCoordinator(),
+                this.moduleStatistics.getControllerStatisticsCoordinator()
             );
     }
 

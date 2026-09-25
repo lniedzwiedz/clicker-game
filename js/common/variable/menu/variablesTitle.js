@@ -1,5 +1,6 @@
 import * as variablesMenuMain from "./variablesMenuMain.js";
 
+
 export const containerMenuMainPartsId = variablesMenuMain.containerMenuMainPartsId;
 
 export const containerTitleMainId = "containerTitle-Main";

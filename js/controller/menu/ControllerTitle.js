@@ -1,10 +1,10 @@
-export  class ControllerTitle{
+export class ControllerTitle {
 
     constructor(viewTitle) {
         this.viewTitle = viewTitle;
     }
 
-    createTitle(){
+    createTitle() {
         this.viewTitle.createContainerTitle();
     }
 }
