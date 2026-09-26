@@ -6,7 +6,7 @@ export class ControllerGameClicker {
         this.controllerGameCoordinator = controllerGameCoordinator
     }
 
-    startGameClicker() {
+    createGameClicker() {
 
         this.controllerGameCoordinator
             .configureGame();

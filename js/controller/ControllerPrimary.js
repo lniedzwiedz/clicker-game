@@ -1,10 +1,10 @@
 export class ControllerPrimary {
 
-    constructor(viewMain) {
-        this.viewMain = viewMain;
+    constructor(viewPrimary) {
+        this.viewPrimary = viewPrimary;
     }
 
-    createMain() {
-        this.viewMain.createMain();
+    createViewPrimary() {
+        this.viewPrimary.createContainerViewPrimary();
     }
 }

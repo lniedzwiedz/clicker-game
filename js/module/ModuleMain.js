@@ -10,16 +10,17 @@ import ModuleClickerGame from "./game/ModuleClickerGame.js";
 import {ControllerCoordinator} from "../controller/ControllerCoordinator.js";
 
 
-
 export class ModuleMain {
 
     constructor() {
 
-        this.viewMain =
+        this.viewPrimary =
             new ViewPrimary();
 
-        this.controllerMain =
-            new ControllerPrimary(this.viewMain);
+        this.controllerPrimary =
+            new ControllerPrimary(
+                this.viewPrimary
+            );
 
 
         this.moduleMenu =
@@ -31,30 +32,21 @@ export class ModuleMain {
         this.moduleFooter =
             new ModuleFooter();
 
-
-        // this.moduleGame =
-        //     new ModuleGame();
-
         this.moduleClickerGame =
             new ModuleClickerGame();
 
 
         this.controllerCoordinator =
             new ControllerCoordinator(
-                this.controllerMain,
+                this.controllerPrimary,
                 this.moduleMenu.getControllerMenuCoordinator(),
                 this.moduleHome.getControllerHomeCoordinator(),
                 this.moduleFooter.getControllerFooterCoordinator(),
-                // this.moduleGame.getControllerGameCoordinator()
                 this.moduleClickerGame.getControllerGameClicker()
             );
     }
 
-    // getControllerMain(){
-    //     return this.controllerMain;
-    // }
-
-    create() {
+    start() {
         this.controllerCoordinator.create();
     }
 }

@@ -1,7 +1,7 @@
 export class ControllerCoordinator {
 
-    constructor(controllerMain, controllerMenuCoordinator, controllerHomeCoordinator, controllerFooterCoordinator, controllerGameClicker) {
-        this.controllerMain = controllerMain;
+    constructor(controllerPrimary, controllerMenuCoordinator, controllerHomeCoordinator, controllerFooterCoordinator, controllerGameClicker) {
+        this.controllerPrimary = controllerPrimary;
         this.controllerMenuCoordinator = controllerMenuCoordinator;
         this.controllerHomeCoordinator = controllerHomeCoordinator;
         this.controllerFooterCoordinator = controllerFooterCoordinator;
@@ -9,15 +9,15 @@ export class ControllerCoordinator {
     }
 
     create() {
-        this.createMain();
-        this.createMainParts();
+        this.createViewPrimary();
+        this.createViewPrimaryParts();
     }
 
-    createMain() {
-        this.controllerMain.createMain();
+    createViewPrimary() {
+        this.controllerPrimary.createViewPrimary();
     }
 
-    createMainParts() {
+    createViewPrimaryParts() {
         this.createModuleMenu();
         this.createModuleHome();
         this.createModuleFooter();
@@ -37,6 +37,6 @@ export class ControllerCoordinator {
     }
 
     createModuleClickerGame() {
-        this.controllerGameClicker.startGameClicker();
+        this.controllerGameClicker.createGameClicker();
     }
 }
