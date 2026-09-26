@@ -8,6 +8,9 @@ export class ControllerStatisticsFraudPrimary {
         this.viewStatisticsFraudPrimary.createContainerStatisticsFraudPrimary();
     }
 
+    removeStatisticsFraudPrimary() {
+        this.viewStatisticsFraudPrimary.removeContainerStatisticsFraudPrimary();
+    }
 
     // setStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber, fraudCountRoundIndex) {
     //     this.viewStatisticsFraud.setStatisticFraudData(
@@ -15,9 +18,5 @@ export class ControllerStatisticsFraudPrimary {
     //         fraudCountedNumber,
     //         fraudCountRoundIndex
     //     );
-    // }
-    //
-    // removeStatisticsFraud() {
-    //     this.viewStatisticsFraud.removeContainerStatisticsFraud();
     // }
 }

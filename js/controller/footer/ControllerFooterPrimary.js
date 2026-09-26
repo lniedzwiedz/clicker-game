@@ -1,10 +1,10 @@
 export class ControllerFooterPrimary {
 
-    constructor(viewFooterMain) {
-        this.viewFooterMain = viewFooterMain
+    constructor(viewFooterPrimary) {
+        this.viewFooterPrimary = viewFooterPrimary
     }
 
-    createFooterMain() {
-        this.viewFooterMain.createContainerSectionFooterMain();
+    createFooterPrimary() {
+        this.viewFooterPrimary.createContainerSectionFooterPrimary();
     }
 }

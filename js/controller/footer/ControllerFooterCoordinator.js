@@ -1,20 +1,20 @@
 export class ControllerFooterCoordinator {
 
-    constructor(controllerFooterMain, controllerAuthor) {
-        this.controllerFooterMain = controllerFooterMain;
-        this.controllerAuthor = controllerAuthor
+    constructor(controllerFooterPrimary, controllerFooterAuthor) {
+        this.controllerFooterPrimary = controllerFooterPrimary;
+        this.controllerFooterAuthor = controllerFooterAuthor
     }
 
     createFooter() {
-        this.createFooterMain();
-        this.createAuthor();
+        this.createFooterPrimary();
+        this.createFooterAuthor();
     }
 
-    createFooterMain() {
-        this.controllerFooterMain.createFooterMain();
+    createFooterPrimary() {
+        this.controllerFooterPrimary.createFooterPrimary();
     }
 
-    createAuthor() {
-        this.controllerAuthor.createAuthor();
+    createFooterAuthor() {
+        this.controllerFooterAuthor.createFooterAuthor();
     }
 }

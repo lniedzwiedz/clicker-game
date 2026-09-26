@@ -1,10 +1,10 @@
 export class ControllerFooterAuthor {
 
-    constructor(viewAuthor) {
-        this.viewAuthor = viewAuthor;
+    constructor(viewFooterAuthor) {
+        this.viewFooterAuthor = viewFooterAuthor;
     }
 
-    createAuthor() {
-        this.viewAuthor.createContainerAuthor();
+    createFooterAuthor() {
+        this.viewFooterAuthor.createContainerFooterAuthor();
     }
 }

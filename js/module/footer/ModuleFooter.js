@@ -1,4 +1,4 @@
-import {ViewFooterMain} from "../../view/footer/ViewFooterMain.js";
+import {ViewFooterPrimary} from "../../view/footer/ViewFooterPrimary.js";
 import {ControllerFooterPrimary} from "../../controller/footer/ControllerFooterPrimary.js";
 
 import {ViewFooterAuthor} from "../../view/footer/ViewFooterAuthor.js";
@@ -11,28 +11,28 @@ export class ModuleFooter {
 
     constructor() {
 
-        this.viewFooterMain =
-            new ViewFooterMain();
+        this.viewFooterPrimary =
+            new ViewFooterPrimary();
 
-        this.controllerFooterMain =
+        this.controllerFooterPrimary =
             new ControllerFooterPrimary(
-                this.viewFooterMain
+                this.viewFooterPrimary
             );
 
 
-        this.viewAuthor =
+        this.viewFooterAuthor =
             new ViewFooterAuthor();
 
-        this.controllerAuthor =
+        this.controllerFooterAuthor =
             new ControllerFooterAuthor(
-                this.viewAuthor
+                this.viewFooterAuthor
             );
 
 
         this.controllerFooterCoordinator =
             new ControllerFooterCoordinator(
-                this.controllerFooterMain,
-                this.controllerAuthor
+                this.controllerFooterPrimary,
+                this.controllerFooterAuthor
             );
     }
 

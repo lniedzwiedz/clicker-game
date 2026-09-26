@@ -5,49 +5,54 @@ import {
     addElementClassNamedAndText
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesAuthor from "../../common/variable/footer/variablesFooterAuthor.js";
+import * as variablesFooterAuthor from "../../common/variable/footer/variablesFooterAuthor.js";
 
 
 export class ViewFooterAuthor {
 
-    createContainerAuthor() {
-        this.createContainerAuthorMain();
-        this.createContainerAuthorMainParts();
-        this.createAuthorText();
+    createContainerFooterAuthor() {
+        this.createContainerFooterAuthorPrimary();
+        this.createFooterAuthorText();
     }
 
-    createContainerAuthorMain() {
+    createContainerFooterAuthorPrimary() {
+        this.createContainerFooterAuthorMain();
+    }
 
+    createContainerFooterAuthorMain() {
         createElementDiv(
-            variablesAuthor.containerFooterMainPartsId,
-            variablesAuthor.containerAuthorMainId
+            variablesFooterAuthor.containerFooterMainPartsId,
+            variablesFooterAuthor.containerFooterAuthorMainId
         );
     }
 
-    createContainerAuthorMainParts() {
+    createFooterAuthorText() {
+       this.createFooterAuthorMain();
+       this.createAuthorText();
+    }
 
+    createFooterAuthorMain() {
         createElementDiv(
-            variablesAuthor.containerAuthorMainId,
-            variablesAuthor.authorId
+            variablesFooterAuthor.containerFooterAuthorMainId,
+            variablesFooterAuthor.footerAuthorId
         );
 
         addElementClassNameById(
-            variablesAuthor.authorId,
-            variablesAuthor.authorStyleDisplayFlex
+            variablesFooterAuthor.footerAuthorId,
+            variablesFooterAuthor.footerAuthorStyleDisplayFlex
         );
     }
 
     createAuthorText() {
-
         createElementP(
-            variablesAuthor.authorId,
-            variablesAuthor.authorTextId
+            variablesFooterAuthor.footerAuthorId,
+            variablesFooterAuthor.footerAuthorTextId
         );
 
         addElementClassNamedAndText(
-            variablesAuthor.authorTextId,
-            variablesAuthor.authorStyleText,
-            variablesAuthor.authorText
+            variablesFooterAuthor.footerAuthorTextId,
+            variablesFooterAuthor.footerAuthorStyleText,
+            variablesFooterAuthor.footerAuthorText
         );
     }
 }
