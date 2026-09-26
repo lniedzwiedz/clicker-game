@@ -7,12 +7,13 @@ import {
     addElementClassNames,
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonStart from "../../../common/variable/game/gameState/variablesGameStateButtonStart.js";
+import * as variablesButtonStart
+    from "../../../common/variable/game/gameState/variablesGameStateButtonStart.js";
 
 
 export class ViewGameStateButtonStart {
 
-    createContainerButtonStart() {
+    createContainerGameStateButtonStart() {
         this.createContainerButtonStartMain();
         this.createButtonStart();
     }
@@ -30,7 +31,6 @@ export class ViewGameStateButtonStart {
     }
 
     createButtonStartMain() {
-
         createElementButton(
             variablesButtonStart.containerButtonStartMainId,
             variablesButtonStart.buttonStartId
@@ -49,7 +49,6 @@ export class ViewGameStateButtonStart {
     }
 
     createIconPlay() {
-
         createElementI(
             variablesButtonStart.buttonStartId,
             variablesButtonStart.buttonStarIconPlayId,
@@ -74,7 +73,6 @@ export class ViewGameStateButtonStart {
     }
 
     addIconPlayStyleBeforeClick() {
-
         addElementClassNameById(
             variablesButtonStart.buttonStarIconPlayId,
             variablesButtonStart.buttonStartIconPlayStyleBeforeClick
@@ -82,7 +80,6 @@ export class ViewGameStateButtonStart {
     }
 
     removeIconPlayStyleBeforeClick() {
-
         removeElementClassNameById(
             variablesButtonStart.buttonStarIconPlayId,
             variablesButtonStart.buttonStartIconPlayStyleBeforeClick
@@ -90,7 +87,6 @@ export class ViewGameStateButtonStart {
     }
 
     addIconPlayStyleAfterClick() {
-
         addElementClassNameById(
             variablesButtonStart.buttonStarIconPlayId,
             variablesButtonStart.buttonStartIconPlayStyleAfterClick
@@ -98,7 +94,6 @@ export class ViewGameStateButtonStart {
     }
 
     removeIconPlayStyleAfterClick() {
-
         removeElementClassNameById(
             variablesButtonStart.buttonStarIconPlayId,
             variablesButtonStart.buttonStartIconPlayStyleAfterClick

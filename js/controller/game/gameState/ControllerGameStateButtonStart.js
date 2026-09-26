@@ -2,24 +2,23 @@ import {
     addEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonStart from "../../../common/variable/game/gameState/variablesGameStateButtonStart.js";
+import * as variablesGameStateButtonStart from "../../../common/variable/game/gameState/variablesGameStateButtonStart.js";
 
 
 export class ControllerGameStateButtonStart {
 
-    constructor(viewButtonStart, actionButtonStart) {
-        this.viewButtonStart = viewButtonStart;
-        this.actionButtonStart = actionButtonStart;
+    constructor(viewGameStateButtonStart) {
+        this.viewButtonStart = viewGameStateButtonStart;
         this.onStart = null;
     }
 
     createButtonStart() {
-        this.createContainerButtonStart();
+        this.createContainerGameStateButtonStart();
         this.addClickStartListener();
     }
 
-    createContainerButtonStart() {
-        this.viewButtonStart.createContainerButtonStart();
+    createContainerGameStateButtonStart() {
+        this.viewButtonStart.createContainerGameStateButtonStart();
     }
 
     setOnStart(onStart) {
@@ -34,7 +33,7 @@ export class ControllerGameStateButtonStart {
 
     addClickStartListener() {
         addEventListenerOnClickButton(
-            variablesButtonStart.buttonStartId,
+            variablesGameStateButtonStart.buttonStartId,
             this.handleClickStart,
             this
         );

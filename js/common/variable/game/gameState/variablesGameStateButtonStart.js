@@ -1,7 +1,7 @@
-import * as variablesGameState from "./variablesGameStatePrimary.js";
+import * as variablesGameStatePrimary from "./variablesGameStatePrimary.js";
 
 
-export const containerGameStateMainPartsId = variablesGameState.containerGameStateMainPartsId;
+export const containerGameStateMainPartsId = variablesGameStatePrimary.containerGameStateMainPartsId;
 
 export const containerButtonStartMainId = "containerButtonStart-Main";
 export const buttonStartId = "buttonStart";

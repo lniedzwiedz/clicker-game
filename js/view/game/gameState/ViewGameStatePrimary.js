@@ -2,25 +2,25 @@ import {
     createElementDiv,
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesGameState from "../../../common/variable/game/gameState/variablesGameStatePrimary.js";
+import * as variablesGameStatePrimary from "../../../common/variable/game/gameState/variablesGameStatePrimary.js";
 
 
 export class ViewGameStatePrimary {
 
-    createGameStateMain() {
+    createContainerGameStatePrimary() {
         this.createContainerGameStateMain();
         this.createContainerGameStateMainParts();
     }
 
     createContainerGameStateMain() {
         createElementDiv(
-            variablesGameState.containerHomeMainPartsId,
-            variablesGameState.containerGameStateMainId);
+            variablesGameStatePrimary.containerHomeMainPartsId,
+            variablesGameStatePrimary.containerGameStateMainId);
     }
 
     createContainerGameStateMainParts() {
         createElementDiv(
-            variablesGameState.containerGameStateMainId,
-            variablesGameState.containerGameStateMainPartsId);
+            variablesGameStatePrimary.containerGameStateMainId,
+            variablesGameStatePrimary.containerGameStateMainPartsId);
     }
 }

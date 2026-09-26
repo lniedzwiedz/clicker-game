@@ -13,10 +13,8 @@ import * as variablesButtonStop from "../../../common/variable/game/gameState/va
 
 export class ViewGameStateButtonStop {
 
-    createContainerButtonStop() {
-
+    createContainerGameStateButtonStop() {
         if (!isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
-
             this.createContainerButtonStopMain();
             this.createButtonStop();
         }
@@ -41,11 +39,6 @@ export class ViewGameStateButtonStop {
             variablesButtonStop.buttonStopId
         );
 
-        // addElementClassNameById(
-        //     variablesButtonStop.buttonStopId,
-        //     variablesButtonStop.buttonStopStyle
-        // );
-
         addElementClassNames(
             variablesButtonStop.buttonStopId,
             variablesButtonStop.buttonStopStyleDisplayFlex,
@@ -59,7 +52,6 @@ export class ViewGameStateButtonStop {
     }
 
     createIconStop(){
-
         createElementI(
             variablesButtonStop.buttonStopId,
             variablesButtonStop.buttonStopIconStopId,
@@ -69,18 +61,14 @@ export class ViewGameStateButtonStop {
     }
 
     setIconStopStyleBeforeClick() {
-
         if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)) {
-
             this.removeIconStopStyleAfterClick();
             this.addIconStopStyleBeforeClick();
         }
     }
 
     setIconStopStyleAfterClick() {
-
         if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)){
-
             this.removeIconStopStyleBeforeClick();
             this.addIconStopStyleAfterClick();
         }
@@ -92,7 +80,6 @@ export class ViewGameStateButtonStop {
     }
 
     addIconStopStyleBeforeClick(){
-
         addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
@@ -100,7 +87,6 @@ export class ViewGameStateButtonStop {
     }
 
     removeIconStopStyleBeforeClick(){
-
         removeElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
@@ -108,7 +94,6 @@ export class ViewGameStateButtonStop {
     }
 
     addIconStopStyleAfterClick(){
-
         addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleAfterClick
@@ -116,7 +101,6 @@ export class ViewGameStateButtonStop {
     }
 
     removeIconStopStyleAfterClick(){
-
         removeElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleAfterClick
@@ -124,20 +108,14 @@ export class ViewGameStateButtonStop {
     }
 
     setButtonStopStyleInactive() {
-
-        // if (isElementsExistById(variablesButtonStop.buttonStopDisplayFlex)){
-
            addElementClassNameById(
                 variablesButtonStop.buttonStopId,
                 variablesButtonStop.buttonStopStyleInactive
             );
-        // }
     }
 
     removeButtonStopStyleInactive() {
-
         if (isElementsExistById(variablesButtonStop.buttonStopId)){
-
             removeElementClassNameById(
                 variablesButtonStop.buttonStopId,
                 variablesButtonStop.buttonStopStyleInactive

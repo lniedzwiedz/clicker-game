@@ -1,10 +1,10 @@
 export class ControllerGameStatePrimary {
 
-    constructor(viewGameStateMain) {
-        this.viewGameStateMain = viewGameStateMain;
+    constructor(viewGameStatePrimary) {
+        this.viewGameStatePrimary = viewGameStatePrimary;
     }
 
-    createGameStateMain() {
-        this.viewGameStateMain.createGameStateMain();
+    createGameStatePrimary() {
+        this.viewGameStatePrimary.createContainerGameStatePrimary();
     }
 }

@@ -1,18 +1,18 @@
 export class ControllerGameStateCoordinator {
 
-    constructor(controllerGameState, controllerButtonStart, controllerButtonStop) {
-        this.controllerGameState = controllerGameState;
-        this.controllerButtonStart = controllerButtonStart;
-        this.controllerButtonStop = controllerButtonStop
+    constructor(controllerGameStatePrimary, controllerGameStateButtonStart, controllerGameStateButtonStop) {
+        this.controllerGameStatePrimary = controllerGameStatePrimary;
+        this.controllerButtonStart = controllerGameStateButtonStart;
+        this.controllerButtonStop = controllerGameStateButtonStop
     }
 
     createGameState() {
-        this.createGameStateMain();
+        this.createGameStatePrimary();
         this.createButtonStart();
     }
 
-    createGameStateMain() {
-        this.controllerGameState.createGameStateMain();
+    createGameStatePrimary() {
+        this.controllerGameStatePrimary.createGameStatePrimary();
     }
 
     createButtonStart() {

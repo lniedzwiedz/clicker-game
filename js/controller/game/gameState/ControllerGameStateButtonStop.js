@@ -4,25 +4,24 @@ import {
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonStop from "../../../common/variable/game/gameState/variablesGameStateButtonStop.js";
+import * as variablesGameStateButtonStop from "../../../common/variable/game/gameState/variablesGameStateButtonStop.js";
 
 
 export class ControllerGameStateButtonStop {
 
-    constructor(viewButtonStop, actionButtonStop) {
-        this.viewButtonStop = viewButtonStop;
-        this.actionButtonStop = actionButtonStop;
+    constructor(viewGameStateButtonStop) {
+        this.viewButtonStop = viewGameStateButtonStop;
         this.onStop = null;
         this.buttonClickEvent = null;
     }
 
     createButtonStop() {
-        this.createContainerButtonStop();
+        this.createContainerGameStateButtonStop();
         this.addClickStopListener();
     }
 
-    createContainerButtonStop() {
-        this.viewButtonStop.createContainerButtonStop();
+    createContainerGameStateButtonStop() {
+        this.viewButtonStop.createContainerGameStateButtonStop();
     }
 
     setOnStop(onStop) {
@@ -37,11 +36,11 @@ export class ControllerGameStateButtonStop {
 
     addClickStopListener() {
 
-        if (isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
+        if (isElementsExistById(variablesGameStateButtonStop.containerButtonStopMainId)) {
 
             this.buttonClickEvent =
                 addEventListenerOnClickButton(
-                    variablesButtonStop.buttonStopId,
+                    variablesGameStateButtonStop.buttonStopId,
                     this.handleClickStop,
                     this
                 );
@@ -50,10 +49,10 @@ export class ControllerGameStateButtonStop {
 
     removeClickStopListener() {
 
-        if (isElementsExistById(variablesButtonStop.containerButtonStopMainId)) {
+        if (isElementsExistById(variablesGameStateButtonStop.containerButtonStopMainId)) {
 
             removeEventListenerOnClickButton(
-                variablesButtonStop.buttonStopId,
+                variablesGameStateButtonStop.buttonStopId,
                 this.buttonClickEvent
             );
 

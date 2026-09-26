@@ -14,38 +14,38 @@ export class ModuleGameState {
 
     constructor() {
 
-        this.viewGameStateMain =
+        this.viewGameStatePrimary =
             new ViewGameStatePrimary();
 
-        this.controllerGameStateMain =
+        this.controllerGameStatePrimary =
             new ControllerGameStatePrimary(
-                this.viewGameStateMain
+                this.viewGameStatePrimary
             );
 
 
-        this.viewButtonStart =
+        this.viewGameStateButtonStart =
             new ViewGameStateButtonStart();
 
-        this.controllerButtonStart =
+        this.controllerGameStateButtonStart =
             new ControllerGameStateButtonStart(
-                this.viewButtonStart
+                this.viewGameStateButtonStart
             );
 
 
-        this.viewButtonStop =
+        this.viewGameStateButtonStop =
             new ViewGameStateButtonStop();
 
-        this.controllerButtonStop =
+        this.controllerGameStateButtonStop =
             new ControllerGameStateButtonStop(
-                this.viewButtonStop
+                this.viewGameStateButtonStop
             );
 
 
         this.controllerGameStateCoordinator =
             new ControllerGameStateCoordinator(
-                this.controllerGameStateMain,
-                this.controllerButtonStart,
-                this.controllerButtonStop
+                this.controllerGameStatePrimary,
+                this.controllerGameStateButtonStart,
+                this.controllerGameStateButtonStop
             );
     }
 
