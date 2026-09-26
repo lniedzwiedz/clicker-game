@@ -2,29 +2,27 @@ import {
     createElementDiv
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesMenu from "../../common/variable/menu/variablesMenuPrimary.js";
+import * as variablesMenuPrimary from "../../common/variable/menu/variablesMenuPrimary.js";
 
 
 export class ViewMenuPrimary {
 
-    createContainerSectionMenuMain() {
+    createContainerMenuPrimary() {
         this.createContainerMenuMain();
         this.createContainerMenuMainParts();
     }
 
     createContainerMenuMain() {
-
         createElementDiv(
-            variablesMenu.containerMainPartsId,
-            variablesMenu.containerMenuMainId
+            variablesMenuPrimary.containerMainPartsId,
+            variablesMenuPrimary.containerMenuMainId
         );
     }
 
     createContainerMenuMainParts() {
-
         createElementDiv(
-            variablesMenu.containerMenuMainId,
-            variablesMenu.containerMenuMainPartsId
+            variablesMenuPrimary.containerMenuMainId,
+            variablesMenuPrimary.containerMenuMainPartsId
         );
     }
 }

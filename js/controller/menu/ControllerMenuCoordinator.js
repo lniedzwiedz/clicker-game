@@ -1,20 +1,20 @@
 export class ControllerMenuCoordinator {
 
-    constructor(controllerMenuMain, controllerTitle) {
-        this.controllerMenuMain = controllerMenuMain;
-        this.controllerTitle = controllerTitle;
+    constructor(controllerMenuPrimary, controllerMenuTitle) {
+        this.controllerMenuPrimary = controllerMenuPrimary;
+        this.controllerMenuTitle = controllerMenuTitle;
     }
 
     createMenu() {
-        this.createMenuMain();
-        this.createTitle();
+        this.createMenuPrimary();
+        this.createMenuTitle();
     }
 
-    createMenuMain() {
-        this.controllerMenuMain.createMenuMain();
+    createMenuPrimary() {
+        this.controllerMenuPrimary.createMenuPrimary();
     }
 
-    createTitle() {
-        this.controllerTitle.createTitle();
+    createMenuTitle() {
+        this.controllerMenuTitle.createMenuTitle();
     }
 }

@@ -1,4 +1,4 @@
-import {ViewTitle} from "../../view/menu/ViewTitle.js";
+import {ViewMenuTitle} from "../../view/menu/ViewMenuTitle.js";
 import {ControllerMenuTitle} from "../../controller/menu/ControllerMenuTitle.js";
 
 import {ViewMenuPrimary} from "../../view/menu/ViewMenuPrimary.js";
@@ -11,28 +11,28 @@ export class ModuleMenu {
 
     constructor() {
 
-        this.viewMenuMain =
+        this.viewMenuPrimary =
             new ViewMenuPrimary();
 
-        this.controllerMenuMain =
+        this.controllerMenuPrimary =
             new ControllerMenuPrimary(
-                this.viewMenuMain
+                this.viewMenuPrimary
             );
 
 
-        this.viewTitle =
-            new ViewTitle();
+        this.viewMenuTitle =
+            new ViewMenuTitle();
 
-        this.controllerTitle =
+        this.controllerMenuTitle =
             new ControllerMenuTitle(
-                this.viewTitle
+                this.viewMenuTitle
             );
 
 
         this.controllerMenuCoordinator =
             new ControllerMenuCoordinator(
-                this.controllerMenuMain,
-                this.controllerTitle,
+                this.controllerMenuPrimary,
+                this.controllerMenuTitle,
             );
     }
 

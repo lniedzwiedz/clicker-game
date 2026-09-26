@@ -27,8 +27,8 @@ export class ViewFooterAuthor {
     }
 
     createFooterAuthorText() {
-       this.createFooterAuthorMain();
-       this.createAuthorText();
+        this.createFooterAuthorMain();
+        this.createAuthorText();
     }
 
     createFooterAuthorMain() {

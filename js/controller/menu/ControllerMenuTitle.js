@@ -1,10 +1,10 @@
 export class ControllerMenuTitle {
 
-    constructor(viewTitle) {
-        this.viewTitle = viewTitle;
+    constructor(viewMenuTitle) {
+        this.viewMenuTitle = viewMenuTitle;
     }
 
-    createTitle() {
-        this.viewTitle.createContainerTitle();
+    createMenuTitle() {
+        this.viewMenuTitle.createContainerMenuTitle();
     }
 }

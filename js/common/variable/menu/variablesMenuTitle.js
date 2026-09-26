@@ -1,12 +1,12 @@
-import * as variablesMenuMain from "./variablesMenuPrimary.js";
+import * as variablesMenuPrimary from "./variablesMenuPrimary.js";
 
 
-export const containerMenuMainPartsId = variablesMenuMain.containerMenuMainPartsId;
+export const containerMenuMainPartsId = variablesMenuPrimary.containerMenuMainPartsId;
 
 export const containerTitleMainId = "containerTitle-Main";
-export const titleId = "title";
-export const titleStyleDisplayFlex = "title-StyleDisplayFlex";
+export const menuTitleId = "menuTitle";
+export const menuTitleStyleDisplayFlex = "menuTitle-StyleDisplayFlex";
 
-export const titleTextId = "title-TextId";
-export const titleStyleText = "title-StyleText";
-export const titleText = "Clicker Game";
+export const menuTitleTextId = "menuTitle-TextId";
+export const menuTitleStyleText = "menuTitle-StyleText";
+export const menuTitleText = "Clicker Game";

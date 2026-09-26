@@ -1,10 +1,10 @@
 export class ControllerMenuPrimary {
 
-    constructor(viewMenuMain) {
-        this.viewMenuMain = viewMenuMain
+    constructor(viewMenuPrimary) {
+        this.viewMenuPrimary = viewMenuPrimary
     }
 
-    createMenuMain() {
-        this.viewMenuMain.createContainerSectionMenuMain();
+    createMenuPrimary() {
+        this.viewMenuPrimary.createContainerMenuPrimary();
     }
 }

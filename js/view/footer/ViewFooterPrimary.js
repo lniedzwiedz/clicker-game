@@ -7,20 +7,19 @@ import * as variablesFooterPrimary from "../../common/variable/footer/variablesF
 
 export class ViewFooterPrimary {
 
-    createContainerSectionFooterPrimary() {
-        this.createContainerSectionFooterMain();
-        this.createContainerSectionFooterMainParts();
+    createContainerFooterPrimary() {
+        this.createContainerFooterMain();
+        this.createContainerFooterMainParts();
     }
 
-    createContainerSectionFooterMain() {
-
+    createContainerFooterMain() {
         createElementDiv(
             variablesFooterPrimary.containerMainPartsId,
             variablesFooterPrimary.containerFooterMainId
         );
     }
 
-    createContainerSectionFooterMainParts() {
+    createContainerFooterMainParts() {
         createElementDiv(
             variablesFooterPrimary.containerFooterMainId,
             variablesFooterPrimary.containerFooterMainPartsId

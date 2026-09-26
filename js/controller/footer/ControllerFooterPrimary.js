@@ -5,6 +5,6 @@ export class ControllerFooterPrimary {
     }
 
     createFooterPrimary() {
-        this.viewFooterPrimary.createContainerSectionFooterPrimary();
+        this.viewFooterPrimary.createContainerFooterPrimary();
     }
 }
