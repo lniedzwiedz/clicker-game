@@ -1,10 +1,14 @@
 export class ControllerHomeCoordinator {
 
-    constructor(controllerHomeMain) {
-        this.controllerHomeMain = controllerHomeMain;
+    constructor(controllerHomePrimary) {
+        this.controllerHomePrimary = controllerHomePrimary;
     }
 
     createHome() {
-        this.controllerHomeMain.createHomeMain();
+        this.createHomePrimary();
+    }
+
+    createHomePrimary() {
+        this.controllerHomePrimary.createHomePrimary();
     }
 }

@@ -9,17 +9,17 @@ export class ModuleHome {
 
     constructor() {
 
-        this.viewHome =
+        this.viewHomePrimary =
             new ViewHomePrimary();
 
-        this.controllerHomeMain =
+        this.controllerHomePrimary =
             new ControllerHomePrimary(
-                this.viewHome
+                this.viewHomePrimary
             );
 
         this.controllerHomeCoordinator =
             new ControllerHomeCoordinator(
-                this.controllerHomeMain,
+                this.controllerHomePrimary,
             );
     }
 

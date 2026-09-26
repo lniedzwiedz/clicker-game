@@ -1,10 +1,10 @@
 export class ControllerHomePrimary {
 
-    constructor(viewHomeMain) {
-        this.viewHomeMain = viewHomeMain;
+    constructor(viewHomePrimary) {
+        this.viewHomePrimary = viewHomePrimary;
     }
 
-    createHomeMain() {
-        this.viewHomeMain.createContainerSectionHomeMain();
+    createHomePrimary() {
+        this.viewHomePrimary.createContainerHomePrimary();
     }
 }

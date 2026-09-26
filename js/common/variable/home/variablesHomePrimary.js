@@ -3,5 +3,5 @@ import * as variablesPrimary from "../variablesPrimary.js";
 
 export const containerMainPartsId = variablesPrimary.containerMainPartsId;
 
-export const containerFooterMainId = "containerFooter-Main";
-export const containerFooterMainPartsId = "containerFooter-MainParts";
+export const containerHomeMainId = "containerHome-Main";
+export const containerHomeMainPartsId = "containerHome-MainParts";

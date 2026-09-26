@@ -2,27 +2,27 @@ import {
     createElementDiv
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesHome from "../../common/variable/home/variablesHome.js";
+import * as variablesHomePrimary from "../../common/variable/home/variablesHomePrimary.js";
 
 
 export class ViewHomePrimary {
 
-    createContainerSectionHomeMain() {
+    createContainerHomePrimary() {
         this.createContainerHomeMain();
         this.createContainerHomeMainParts();
     }
 
     createContainerHomeMain() {
         createElementDiv(
-            variablesHome.containerMainPartsId,
-            variablesHome.containerHomeMainId
+            variablesHomePrimary.containerMainPartsId,
+            variablesHomePrimary.containerHomeMainId
         );
     }
 
     createContainerHomeMainParts() {
         createElementDiv(
-            variablesHome.containerHomeMainId,
-            variablesHome.containerHomeMainPartsId
+            variablesHomePrimary.containerHomeMainId,
+            variablesHomePrimary.containerHomeMainPartsId
         );
     }
 }

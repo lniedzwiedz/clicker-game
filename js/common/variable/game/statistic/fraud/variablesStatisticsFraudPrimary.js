@@ -1,4 +1,4 @@
-import * as variablesHome from "../../../home/variablesHome.js";
+import * as variablesHome from "../../../home/variablesHomePrimary.js";
 
 
 export const containerHomeMainPartsId = variablesHome.containerHomeMainPartsId;
