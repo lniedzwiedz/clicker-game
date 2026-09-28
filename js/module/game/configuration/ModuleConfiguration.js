@@ -2,7 +2,9 @@ import {ViewConfigurationPrimary} from "../../../view/game/configuration/ViewCon
 import {ControllerConfigurationPrimary} from "../../../controller/game/configuration/ControllerConfigurationPrimary.js";
 
 import {ViewConfigurationDecoration} from "../../../view/game/configuration/decoration/ViewConfigurationDecoration.js";
-import {ControllerConfigurationDecoration} from "../../../controller/game/configuration/decoration/ControllerConfigurationDecoration.js";
+import {
+    ControllerConfigurationDecoration
+} from "../../../controller/game/configuration/decoration/ControllerConfigurationDecoration.js";
 
 
 import {

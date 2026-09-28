@@ -55,7 +55,6 @@ export class ControllerGameCoordinator {
         this.controllerGameStateCoordinator.configureGameStateAtStop();
     }
 
-
     setOnGame(onGame) {
         this.controllerButtonGameCoordinator
             .setOnGame(onGame);
@@ -76,15 +75,9 @@ export class ControllerGameCoordinator {
     updateStatistic(
         fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
 
-        // this.controllerStatisticsCoordinator.updateStatisticFraud(
-        //     fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
-        // );
-
         this.controllerStatisticsCoordinator.updateStatistic(
             fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
         );
-
-
     }
 
     updateStatisticTime(

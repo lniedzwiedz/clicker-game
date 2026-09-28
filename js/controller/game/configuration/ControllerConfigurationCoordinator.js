@@ -1,9 +1,9 @@
 export class ControllerConfigurationCoordinator {
 
-    constructor(controllerConfigurationPrimary, controllerConfigurationDecoration, controllerRoundCoordinator) {
+    constructor(controllerConfigurationPrimary, controllerConfigurationDecoration, controllerConfigurationRoundCoordinator) {
         this.controllerConfigurationPrimary = controllerConfigurationPrimary;
         this.controllerConfigurationDecoration = controllerConfigurationDecoration;
-        this.controllerRoundCoordinator = controllerRoundCoordinator;
+        this.controllerConfigurationRoundCoordinator = controllerConfigurationRoundCoordinator;
     }
 
     createConfiguration() {
@@ -21,27 +21,18 @@ export class ControllerConfigurationCoordinator {
     }
 
     createConfigurationRound() {
-        this.controllerRoundCoordinator.createConfigurationRound();
+        this.controllerConfigurationRoundCoordinator.createConfigurationRound();
     }
 
-
     getRoundNumber() {
-        return this.controllerRoundCoordinator.getRoundNumber();
+        return this.controllerConfigurationRoundCoordinator.getRoundNumber();
     }
 
     configureConfigurationAtStart() {
-        this.controllerRoundCoordinator.configureConfigurationAtStart();
+        this.controllerConfigurationRoundCoordinator.configureConfigurationAtStart();
     }
 
     configureRoundButtonsAfterGameEnd(){
-        this.controllerRoundCoordinator.configureRoundButtonsAfterGameEnd();
+        this.controllerConfigurationRoundCoordinator.configureRoundButtonsAfterGameEnd();
     }
-
-    // configureConfigurationAtStop() {
-    //     this.controllerRoundCoordinator.configureConfigurationAtStop();
-    // }
-    //
-    // configureConfigurationForGameOver() {
-    //     this.controllerRoundCoordinator.configureConfigurationForGameOver();
-    // }
 }

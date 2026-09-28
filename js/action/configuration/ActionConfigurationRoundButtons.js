@@ -8,13 +8,19 @@ import * as variablesConfigurationButtonRound
 
 export class ActionConfigurationRoundButtons {
 
-    buttonIdPrevious = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5)
-    buttonIdCurrent = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5);
+    buttonIdPrevious =
+        variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(
+            variablesConfigurationButtonRound.configurationRoundMaxButtonNumberPerRow
+        );
+
+    buttonIdCurrent =
+        variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(
+            variablesConfigurationButtonRound.configurationRoundMaxButtonNumberPerRow
+        );
+
     buttonIdChosen = this.buttonIdCurrent;
 
     setConfigurationRoundButtons(event) {
-        // this.buttonIdPrevious = this.buttonIdCurrent;
-        // this.buttonIdCurrent = event.currentTarget.id;
         this.setRoundButtonIdPrevious();
         this.setRoundButtonIdCurrent(event);
     }

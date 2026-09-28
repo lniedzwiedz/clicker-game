@@ -45,33 +45,18 @@ export class ControllerConfigurationRoundButtons {
 
     handleClickRoundButton(event) {
 
-        // const buttonIdPrevious = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-        // this.actionConfigurationRoundButtons.setConfigurationRoundButtons(event);
-        //
-        // const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-        // this.viewConfigurationRoundButtons
-        //     .setConfigurationRoundButtonsAfterClickButtonStart(buttonIdPrevious, buttonIdCurrent);
-
-
         this.actionConfigurationRoundButtons.setConfigurationRoundButtons(event);
-
 
         const buttonIdPrevious = this.actionConfigurationRoundButtons.getRoundButtonIdPrevious();
         const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-        // console.log("current = " + buttonIdCurrent);
-        //
 
-        // console.log("previous = " + buttonIdPrevious);
-        // console.log("");
-
-        // const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
         this.viewConfigurationRoundButtons
             .setConfigurationRoundButtonsAfterClickRoundButton(buttonIdPrevious, buttonIdCurrent);
     }
 
-    getRoundNumber() {
+    getRoundButtonNumberValue() {
         const currentButtonId = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-        return this.viewConfigurationRoundButtons.getRoundButtonNumberChosen(currentButtonId);
+        return this.viewConfigurationRoundButtons.getRoundButtonChosenNumberValue(currentButtonId);
     }
 
     setConfigurationRoundButtonsAtStart() {
@@ -84,65 +69,11 @@ export class ControllerConfigurationRoundButtons {
             .setConfigurationRoundButtonsAfterClickButtonStart(buttonIdCurrent, buttonIdChosen);
     }
 
-    // setConfigurationRoundButtonsAfterClickButtonStart(buttonIdCurrent, buttonIdChosen) {
-    //
-    //     this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(buttonIdChosen);
-    //     this.viewConfigurationRoundButtons.removeButtonRoundStyleCurrentNumber(buttonIdChosen);
-    //
-    //     this.viewConfigurationRoundButtons.removeButtonRoundStyleCurrentNumber(buttonIdCurrent);
-    //     this.viewConfigurationRoundButtons.addButtonRoundStyleChosenNumber(buttonIdCurrent);
-    // }
-
     setConfigurationRoundButtonsAfterGameEnd() {
         const buttonIdChosen = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
         const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-        //
-        // this.viewConfigurationRoundButtons
-        //     .setConfigurationRoundButtonsAfterClickButtonStop(buttonIdCurrent, buttonIdChosen);
 
         this.viewConfigurationRoundButtons
             .setConfigurationRoundButtonsAfterGameEnd(buttonIdCurrent, buttonIdChosen);
     }
-
-    // setConfigurationRoundButtonsAtStop() {
-    //
-    //     const buttonIdChosen = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
-    //     const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-    //     //
-    //     // this.viewConfigurationRoundButtons
-    //     //     .setConfigurationRoundButtonsAfterClickButtonStop(buttonIdCurrent, buttonIdChosen);
-    //
-    //     this.viewConfigurationRoundButtons
-    //         .setConfigurationRoundButtonsAfterGameEnd(buttonIdCurrent, buttonIdChosen);
-    // }
-
-    // setConfigurationRoundButtonsAfterClickButtonStop(currentButtonId, buttonIdChosen) {
-    //
-    //     // // round number - last setup
-    //     // this.viewButtonsRound.removeButtonRoundStyleCurrentNumber(currentButtonId);
-    //     // this.viewButtonsRound.removeButtonRoundStyleChosenNumber(roundNumberFinalId);
-    //     // this.viewButtonsRound.addButtonRoundStyleCurrentNumber(roundNumberFinalId);
-    //
-    //     // round number - new round number mark
-    //     this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(buttonIdChosen);
-    //     this.viewConfigurationRoundButtons.addButtonRoundStyleCurrentNumber(currentButtonId);
-    // }
-
-    // setConfigurationRoundButtonsForGameOver() {
-    //
-    //     const buttonIdChosen = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
-    //     const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
-    //
-    //     // round number - new round number mark
-    //     // this.viewConfigurationRoundButtons
-    //     //     .setRoundButtonsAfterGameOver(buttonIdCurrent, buttonIdChosen);
-    //
-    //     this.viewConfigurationRoundButtons
-    //         .setConfigurationRoundButtonsAfterGameEnd(buttonIdCurrent, buttonIdChosen);
-    // }
-
-    // setRoundButtonsAfterGameOver(buttonIdCurrent, buttonIdChosen) {
-    //     this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(buttonIdChosen);
-    //     this.viewConfigurationRoundButtons.addButtonRoundStyleCurrentNumber(buttonIdCurrent);
-    // }
 }

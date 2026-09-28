@@ -21,30 +21,16 @@ class ViewConfigurationRoundButtons {
 
     createContainersConfigurationRoundButton() {
 
-        // // let buttonNumberPerRow = 5;
-        // // let buttonNumberPerRow = variablesConfigurationRoundButtons.configurationRoundMaxRowNumber;
-        //
-        // for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
-        //
-        //     // this.createContainerConfigurationRoundButtons(
-        //     //     rowNumber,
-        //     //     buttonNumberPerRow
-        //     // );
-        // }
-
         let maxRowNumber =
             variablesConfigurationRoundButtons.configurationRoundMaxRowNumber;
 
-        // for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
         for (let rowNumber = 0; rowNumber < maxRowNumber; rowNumber++) {
-
             this.createContainerConfigurationRoundButtons(
                 rowNumber
             );
         }
     }
 
-    // createContainerConfigurationRoundButtons(rowNumber, buttonNumberPerRow) {
     createContainerConfigurationRoundButtons(rowNumber) {
 
         let buttonNumberPerRow =
@@ -87,7 +73,6 @@ class ViewConfigurationRoundButtons {
                 roundNumber
             );
 
-            // if (roundNumber === 5) {
             if (roundNumber === buttonNumberPerRow) {
                 addElementClassNameById(
                     variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
@@ -159,7 +144,7 @@ class ViewConfigurationRoundButtons {
         );
     }
 
-    getRoundButtonNumberChosen(buttonIdCurrent) {
+    getRoundButtonChosenNumberValue(buttonIdCurrent) {
         return getElementAttributeValueById(
             buttonIdCurrent
         );
@@ -186,24 +171,7 @@ class ViewConfigurationRoundButtons {
         this.addButtonRoundStyleChosenNumber(buttonIdCurrent);
     }
 
-    setConfigurationRoundButtonsAfterGameEnd(buttonIdCurrent, buttonIdChosen){
-        this.removeButtonRoundStyleChosenNumber(buttonIdChosen);
-        this.addButtonRoundStyleCurrentNumber(buttonIdCurrent);
-    }
-
-    setConfigurationRoundButtonsAfterClickButtonStop(currentButtonId, buttonIdChosen) {
-
-        // // round number - last setup
-        // this.removeButtonRoundStyleCurrentNumber(currentButtonId);
-        // this.removeButtonRoundStyleChosenNumber(roundNumberFinalId);
-        // this.addButtonRoundStyleCurrentNumber(roundNumberFinalId);
-
-        // round number - new round number mark
-        this.removeButtonRoundStyleChosenNumber(buttonIdChosen);
-        this.addButtonRoundStyleCurrentNumber(currentButtonId);
-    }
-
-    setRoundButtonsAfterGameOver(buttonIdCurrent, buttonIdChosen) {
+    setConfigurationRoundButtonsAfterGameEnd(buttonIdCurrent, buttonIdChosen) {
         this.removeButtonRoundStyleChosenNumber(buttonIdChosen);
         this.addButtonRoundStyleCurrentNumber(buttonIdCurrent);
     }

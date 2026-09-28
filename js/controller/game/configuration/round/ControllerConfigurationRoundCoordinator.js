@@ -25,7 +25,7 @@ export class ControllerConfigurationRoundCoordinator {
     }
 
     getRoundNumber() {
-        return this.controllerConfigurationRoundButtons.getRoundNumber();
+        return this.controllerConfigurationRoundButtons.getRoundButtonNumberValue();
     }
 
     configureConfigurationAtStart() {
@@ -35,12 +35,4 @@ export class ControllerConfigurationRoundCoordinator {
     configureRoundButtonsAfterGameEnd(){
         this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAfterGameEnd();
     }
-
-    // configureConfigurationAtStop() {
-    //     this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAtStop();
-    // }
-    //
-    // configureConfigurationForGameOver() {
-    //     this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsForGameOver();
-    // }
 }
