@@ -16,15 +16,12 @@ export class ViewConfigurationRoundButtonsPrimary {
 
     createContainerConfigurationRoundRowPrimary() {
 
-        // create variables = 5
-        // let buttonNumberPerRow = 5;
-        let buttonNumberPerRow = variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumberPerRow;
+        let buttonNumberPerRow =
+            variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumberPerRow;
 
-        // create variables = 2
-        let maxRowNumber = variablesConfigurationRoundButtonsPrimary.configurationRoundMaxRowNumber;
+        let maxRowNumber =
+            variablesConfigurationRoundButtonsPrimary.configurationRoundMaxRowNumber;
 
-
-        // for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
         for (let rowNumber = 0; rowNumber < maxRowNumber; rowNumber++) {
 
             this.createContainerConfigurationRoundRowMain(

@@ -19,13 +19,8 @@ export class ControllerGameCoordinator {
     }
 
     configureGameStart() {
-
         this.controllerConfigurationCoordinator.configureConfigurationAtStart();
-
         this.controllerGameStateCoordinator.configureGameStateButtonsAtStart();
-
-        // this.controllerStatisticsCoordinator.configureStatisticsAtStart();
-
     }
 
     getRoundNumber() {
@@ -49,7 +44,7 @@ export class ControllerGameCoordinator {
     }
 
     configureConfigurationAtStop() {
-        this.controllerConfigurationCoordinator.configureConfigurationAtStop();
+        this.controllerConfigurationCoordinator.configureRoundButtonsAfterGameEnd();
     }
 
     configureButtonGameAtStop() {
@@ -103,7 +98,7 @@ export class ControllerGameCoordinator {
     }
 
     gameOver() {
-        this.controllerConfigurationCoordinator.configureConfigurationForGameOver();
+        this.controllerConfigurationCoordinator.configureRoundButtonsAfterGameEnd();
         this.controllerButtonGameCoordinator.configureButtonGameForGameOver();
         this.controllerGameStateCoordinator.configureGameStateForGameOver();
     }

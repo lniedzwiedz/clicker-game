@@ -9,7 +9,7 @@ export class ControllerConfigurationRoundCoordinator {
     createConfigurationRound() {
         this.createConfigurationRoundPrimary();
         this.createConfigurationRoundButtonsPrimary();
-        this.createConfigurationRoundButtons();
+        this.configureRoundButtons();
     }
 
     createConfigurationRoundPrimary() {
@@ -20,8 +20,8 @@ export class ControllerConfigurationRoundCoordinator {
         this.controllerConfigurationRoundButtonsPrimary.createConfigurationRoundButtonsPrimary();
     }
 
-    createConfigurationRoundButtons() {
-        this.controllerConfigurationRoundButtons.createConfigurationRoundButtons()
+    configureRoundButtons() {
+        this.controllerConfigurationRoundButtons.configureRoundButtons()
     }
 
     getRoundNumber() {
@@ -32,11 +32,15 @@ export class ControllerConfigurationRoundCoordinator {
         this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAtStart();
     }
 
-    configureConfigurationAtStop() {
-        this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAtStop();
+    configureRoundButtonsAfterGameEnd(){
+        this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAfterGameEnd();
     }
 
-    configureConfigurationForGameOver() {
-        this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsForGameOver();
-    }
+    // configureConfigurationAtStop() {
+    //     this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAtStop();
+    // }
+    //
+    // configureConfigurationForGameOver() {
+    //     this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsForGameOver();
+    // }
 }

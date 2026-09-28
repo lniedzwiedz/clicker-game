@@ -2,7 +2,9 @@ import {
     valueToString
 } from "../../common/function/commonFunctions.js";
 
-import * as variablesConfigurationButtonRound from "../../common/variable/game/configuration/round/variablesConfigurationRoundButtons.js";
+import * as variablesConfigurationButtonRound
+    from "../../common/variable/game/configuration/round/variablesConfigurationRoundButtons.js";
+
 
 export class ActionConfigurationRoundButtons {
 
@@ -10,21 +12,27 @@ export class ActionConfigurationRoundButtons {
     buttonIdCurrent = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5);
     buttonIdChosen = this.buttonIdCurrent;
 
-    setConfigurationRoundButtonIdCurrent(event) {
-        this.buttonIdPrevious = this.buttonIdCurrent;
-        this.buttonIdCurrent = event.currentTarget.id;
+    setConfigurationRoundButtons(event) {
+        // this.buttonIdPrevious = this.buttonIdCurrent;
+        // this.buttonIdCurrent = event.currentTarget.id;
+        this.setRoundButtonIdPrevious();
+        this.setRoundButtonIdCurrent(event);
     }
 
-    getRoundButtonIdCurrent() {
-        return this.buttonIdCurrent;
+    setRoundButtonIdPrevious() {
+        this.buttonIdPrevious = this.buttonIdCurrent;
     }
 
     getRoundButtonIdPrevious() {
         return this.buttonIdPrevious;
     }
 
-    setButtonIdChosenFinaRoundNumberForGame() {
-        this.buttonIdPrevious = this.buttonIdCurrent;
+    setRoundButtonIdCurrent(event) {
+        this.buttonIdCurrent = event.currentTarget.id;
+    }
+
+    getRoundButtonIdCurrent() {
+        return this.buttonIdCurrent;
     }
 
     setRoundButtonIdChosen() {

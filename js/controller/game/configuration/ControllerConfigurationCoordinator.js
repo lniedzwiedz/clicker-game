@@ -33,11 +33,15 @@ export class ControllerConfigurationCoordinator {
         this.controllerRoundCoordinator.configureConfigurationAtStart();
     }
 
-    configureConfigurationAtStop() {
-        this.controllerRoundCoordinator.configureConfigurationAtStop();
+    configureRoundButtonsAfterGameEnd(){
+        this.controllerRoundCoordinator.configureRoundButtonsAfterGameEnd();
     }
 
-    configureConfigurationForGameOver() {
-        this.controllerRoundCoordinator.configureConfigurationForGameOver();
-    }
+    // configureConfigurationAtStop() {
+    //     this.controllerRoundCoordinator.configureConfigurationAtStop();
+    // }
+    //
+    // configureConfigurationForGameOver() {
+    //     this.controllerRoundCoordinator.configureConfigurationForGameOver();
+    // }
 }

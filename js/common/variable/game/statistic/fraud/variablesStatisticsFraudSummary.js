@@ -26,4 +26,4 @@ export const statisticsFraudSummaryIconsIconWhiskeyGlassRightId = "statisticsFra
 export const statisticsFraudSummaryIconGem = "fa-gem";
 export const statisticsFraudSummaryIconWhiskeyGlass = "fa-whiskey-glass";
 export const statisticsFraudSummaryIconStyleSolid = "fa-solid";
-export const statisticsFraudSummaryIconStyleWhiskeyGlassMain = "fa-whiskeyGlassMain";
+export const statisticsFraudSummaryIconStyleWhiskeyGlassMain = "fa-whiskeyGlassFraudSummary";
