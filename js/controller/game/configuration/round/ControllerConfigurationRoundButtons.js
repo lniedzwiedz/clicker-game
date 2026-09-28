@@ -29,11 +29,13 @@ export class ControllerConfigurationRoundButtons {
 
     setButtonsConfigurationRound() {
 
+        let maxButtonNumber = variablesConfigurationRoundButton.configurationRoundMaxButtonNumber;
+        // console.log("maxButtonNumber = " + maxButtonNumber);
 
-        // create variables = 10
-        for (let clickNumber = 1; clickNumber <= 10; clickNumber++) {
+        // for (let buttonNumber = 1; buttonNumber <= 10; buttonNumber++) {
+        for (let buttonNumber = 1; buttonNumber <= maxButtonNumber; buttonNumber++) {
 
-            const buttonId = variablesConfigurationRoundButton.buttonRoundPrefixId + valueToString(clickNumber);
+            const buttonId = variablesConfigurationRoundButton.buttonRoundPrefixId + valueToString(buttonNumber);
             const button = getElementById(buttonId);
 
             button.addEventListener("click", (event) => {
@@ -44,28 +46,28 @@ export class ControllerConfigurationRoundButtons {
 
     setConfigurationClickNumberRoundButtons(event) {
 
-        const buttonIdPrevious = this.actionConfigurationRoundButtons.getButtonIdCurrent();
-        this.actionConfigurationRoundButtons.setConfigurationButtonIdClickedCurrent(event);
+        const buttonIdPrevious = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
+        this.actionConfigurationRoundButtons.setConfigurationRoundButtonIdCurrent(event);
 
-        const currentButtonId = this.actionConfigurationRoundButtons.getButtonIdCurrent();
-        this.viewConfigurationRoundButtons.setStyleButtonRoundNumberAtStart(buttonIdPrevious, currentButtonId);
+        const currentButtonId = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
+        this.viewConfigurationRoundButtons.setConfigurationButtonRoundStyleAtStart(buttonIdPrevious, currentButtonId);
     }
 
     getRoundNumber() {
-        const currentButtonId = this.actionConfigurationRoundButtons.getButtonIdCurrent();
-        return this.viewConfigurationRoundButtons.getRoundNumberChosenNumber(currentButtonId);
+        const currentButtonId = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
+        return this.viewConfigurationRoundButtons.getRoundButtonNumberChosen(currentButtonId);
     }
 
     setConfigurationRoundButtonsAtStart() {
 
-        const roundNumberFinal = this.actionConfigurationRoundButtons.getButtonIdPMaxClicksNumberSetByUser();
-        this.actionConfigurationRoundButtons.setButtonIdPMaxClicksNumberSetByUser();
+        const roundNumberFinal = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
+        this.actionConfigurationRoundButtons.setRoundButtonIdChosen();
 
-        const currentButtonId = this.actionConfigurationRoundButtons.getButtonIdCurrent();
-        this.setStyleButtonRoundNumberAfterClickButtonStart(currentButtonId, roundNumberFinal);
+        const currentButtonId = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
+        this.setConfigurationRoundButtonsAfterClickButtonStart(currentButtonId, roundNumberFinal);
     }
 
-    setStyleButtonRoundNumberAfterClickButtonStart(currentButtonId, roundNumberFinal) {
+    setConfigurationRoundButtonsAfterClickButtonStart(currentButtonId, roundNumberFinal) {
 
         this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(roundNumberFinal);
         this.viewConfigurationRoundButtons.removeButtonRoundStyleCurrentNumber(roundNumberFinal);
@@ -76,13 +78,13 @@ export class ControllerConfigurationRoundButtons {
 
     setConfigurationRoundButtonsAtStop() {
 
-        const roundNumberFinalId = this.actionConfigurationRoundButtons.getButtonIdPMaxClicksNumberSetByUser();
-        const currentButtonId = this.actionConfigurationRoundButtons.getButtonIdCurrent();
+        const roundNumberFinalId = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
+        const currentButtonId = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
 
-        this.setStyleButtonRoundNumberAfterClickButtonStop(currentButtonId, roundNumberFinalId);
+        this.setConfigurationRoundButtonsAfterClickButtonStop(currentButtonId, roundNumberFinalId);
     }
 
-    setStyleButtonRoundNumberAfterClickButtonStop(currentButtonId, roundNumberFinalId) {
+    setConfigurationRoundButtonsAfterClickButtonStop(currentButtonId, roundNumberFinalId) {
 
         // // round number - last setup
         // this.viewButtonsRound.removeButtonRoundStyleCurrentNumber(currentButtonId);
@@ -94,17 +96,17 @@ export class ControllerConfigurationRoundButtons {
         this.viewConfigurationRoundButtons.addButtonRoundStyleCurrentNumber(currentButtonId);
     }
 
-    setConfigurationButtonsRoundForGameOver() {
+    setConfigurationRoundButtonsForGameOver() {
 
-        const roundNumberFinalId = this.actionConfigurationRoundButtons.getButtonIdPMaxClicksNumberSetByUser();
-        const currentButtonId = this.actionConfigurationRoundButtons.getButtonIdCurrent();
+        const buttonIdChosen = this.actionConfigurationRoundButtons.getRoundButtonIdChosen();
+        const buttonIdCurrent = this.actionConfigurationRoundButtons.getRoundButtonIdCurrent();
 
         // round number - new round number mark
-        this.setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId);
+        this.setRoundButtonsAfterGameOver(buttonIdCurrent, buttonIdChosen);
     }
 
-    setStyleButtonsRoundForGameOver(currentButtonId, roundNumberFinalId) {
-        this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(roundNumberFinalId);
-        this.viewConfigurationRoundButtons.addButtonRoundStyleCurrentNumber(currentButtonId);
+    setRoundButtonsAfterGameOver(buttonIdCurrent, buttonIdChosen) {
+        this.viewConfigurationRoundButtons.removeButtonRoundStyleChosenNumber(buttonIdChosen);
+        this.viewConfigurationRoundButtons.addButtonRoundStyleCurrentNumber(buttonIdCurrent);
     }
 }

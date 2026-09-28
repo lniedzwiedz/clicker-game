@@ -5,3 +5,9 @@ export const containerConfigurationRoundMainPartsId = variablesConfigurationRoun
 
 export const containerConfigurationRoundRowMainPrefixId = "containerConfigurationRound-RowMain-";
 export const containerConfigurationRoundRowMainPartsPrefixId = "containerConfigurationRound-RowMainParts-";
+
+export const configurationRoundMaxRowNumber = 2;
+export const configurationRoundMaxButtonNumberPerRow = 5;
+export const configurationRoundMaxButtonNumber =
+    configurationRoundMaxRowNumber * configurationRoundMaxButtonNumberPerRow;
+

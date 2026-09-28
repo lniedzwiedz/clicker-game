@@ -8,18 +8,18 @@ export class ActionConfigurationRoundButtons {
 
     buttonIdPrevious = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5)
     buttonIdCurrent = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5);
-    buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
+    buttonIdChosen = this.buttonIdCurrent;
 
-    setConfigurationButtonIdClickedCurrent(event) {
+    setConfigurationRoundButtonIdCurrent(event) {
         this.buttonIdPrevious = this.buttonIdCurrent;
         this.buttonIdCurrent = event.currentTarget.id;
     }
 
-    getButtonIdCurrent() {
+    getRoundButtonIdCurrent() {
         return this.buttonIdCurrent;
     }
 
-    getButtonIdPrevious() {
+    getRoundButtonIdPrevious() {
         return this.buttonIdPrevious;
     }
 
@@ -27,11 +27,11 @@ export class ActionConfigurationRoundButtons {
         this.buttonIdPrevious = this.buttonIdCurrent;
     }
 
-    setButtonIdPMaxClicksNumberSetByUser() {
-        this.buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
+    setRoundButtonIdChosen() {
+        this.buttonIdChosen = this.buttonIdCurrent;
     }
 
-    getButtonIdPMaxClicksNumberSetByUser() {
-        return this.buttonIdMaxClicksNumberSetByUser;
+    getRoundButtonIdChosen() {
+        return this.buttonIdChosen;
     }
 }

@@ -1,7 +1,17 @@
-import * as variablesConfigurationRound from "./variablesConfigurationRoundButtonsPrimary.js";
+import * as variablesConfigurationRoundButtonsPrimary from "./variablesConfigurationRoundButtonsPrimary.js";
 
 
-export const containerConfigurationRoundRowMainPartsPrefixId = variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefixId;
+export const containerConfigurationRoundRowMainPartsPrefixId =
+    variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId;
+
+export const configurationRoundMaxRowNumber =
+    variablesConfigurationRoundButtonsPrimary.configurationRoundMaxRowNumber;
+
+export const configurationRoundMaxButtonNumberPerRow =
+    variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumberPerRow;
+
+export const configurationRoundMaxButtonNumber =
+    variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumber;
 
 export const containerConfigurationRoundButtonRoundPrefixId = "containerConfigurationRound-ButtonRound-";
 export const configurationRoundStyleDisplayFlex = "configurationRound-StyleDisplayFlex";

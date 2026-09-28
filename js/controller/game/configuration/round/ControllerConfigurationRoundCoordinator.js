@@ -37,6 +37,6 @@ export class ControllerConfigurationRoundCoordinator {
     }
 
     configureConfigurationForGameOver() {
-        this.controllerConfigurationRoundButtons.setConfigurationButtonsRoundForGameOver();
+        this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsForGameOver();
     }
 }

@@ -10,7 +10,7 @@ import {
     ControllerConfigurationRoundButtonsPrimary
 } from "../../../controller/game/configuration/round/ControllerConfigurationRoundButtonsPrimary.js";
 
-import {ViewConfigurationRoundButtons} from "../../../view/game/configuration/round/ViewConfigurationRoundButtons.js";
+import ViewConfigurationRoundButtons from "../../../view/game/configuration/round/ViewConfigurationRoundButtons.js";
 import {ActionConfigurationRoundButtons} from "../../../action/configuration/ActionConfigurationRoundButtons.js";
 import {
     ControllerConfigurationRoundButtons
