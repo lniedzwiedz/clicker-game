@@ -69,7 +69,7 @@ class ViewConfigurationRoundButtons {
                 gridTemplateColumnsChild);
 
             this.createButtonRound(
-                childId,
+                // childId,
                 roundNumber
             );
 
@@ -86,18 +86,27 @@ class ViewConfigurationRoundButtons {
         }
     }
 
-    createButtonRound(parentId, roundNumber) {
-        this.createButtonRoundMain(parentId, roundNumber);
+    // createButtonRound(parentId, roundNumber) {
+    createButtonRound(roundNumber) {
+        // this.createButtonRoundMain(parentId, roundNumber);
+        this.createButtonRoundMain(roundNumber);
         this.createIconComputerMouse(roundNumber);
         this.createButtonRoundText(roundNumber);
     }
 
-    createButtonRoundMain(parentId, roundNumber) {
+    // createButtonRoundMain(parentId, roundNumber) {
+    createButtonRoundMain(roundNumber) {
+
+        // let parentId =
+        //     variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
+        //     + valueToString(roundNumber);
 
         let buttonId = variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber);
 
         createElementButton(
-            parentId,
+            // parentId,
+            variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
+            + valueToString(roundNumber),
             buttonId
         );
 

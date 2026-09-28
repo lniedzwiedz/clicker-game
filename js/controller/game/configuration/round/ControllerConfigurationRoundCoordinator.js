@@ -16,7 +16,7 @@ export class ControllerConfigurationRoundCoordinator {
         this.controllerConfigurationRoundPrimary.createConfigurationRoundPrimary();
     }
 
-    createConfigurationRoundButtonsPrimary(){
+    createConfigurationRoundButtonsPrimary() {
         this.controllerConfigurationRoundButtonsPrimary.createConfigurationRoundButtonsPrimary();
     }
 
@@ -32,7 +32,7 @@ export class ControllerConfigurationRoundCoordinator {
         this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAtStart();
     }
 
-    configureRoundButtonsAfterGameEnd(){
+    configureRoundButtonsAfterGameEnd() {
         this.controllerConfigurationRoundButtons.setConfigurationRoundButtonsAfterGameEnd();
     }
 }

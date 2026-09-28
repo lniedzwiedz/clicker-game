@@ -36,58 +36,11 @@ export class ViewConfigurationRoundButtonsPrimary {
     }
 
     createContainerConfigurationRoundRowMain(rowNumber) {
-
-        // let parentId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundMainPartsId;
-        //
-        // let childId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // createElementDiv(
-        //     parentId,
-        //     childId
-        // );
-
         this.createContainerRoundRowMain(rowNumber);
-
-        // let gridRowStartNumber = 1 + rowNumber;
-        // let gridColumnStartNumber = 1;
-        // let gridRowEndNumber = 2;
-        // let gridColumnEndNumber = 2 + rowNumber;
-        //
-        // let gridTemplateRows = "1fr";
-        // let gridTemplateColumns = "1fr";
-        //
-        // setElementStyletAsGrid(
-        //     // childId,
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        //     + valueToString(rowNumber),
-        //     gridRowStartNumber,
-        //     gridColumnStartNumber,
-        //     gridRowEndNumber,
-        //     gridColumnEndNumber,
-        //     gridTemplateRows,
-        //     gridTemplateColumns
-        // );
-
         this.setContainerRoundRowMainStyleAsGrid(rowNumber);
     }
 
     createContainerRoundRowMain(rowNumber) {
-
-        // let parentId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundMainPartsId;
-        //
-        // let childId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // createElementDiv(
-        //     parentId,
-        //     childId
-        // );
-
         createElementDiv(
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundMainPartsId,
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
@@ -96,6 +49,7 @@ export class ViewConfigurationRoundButtonsPrimary {
     }
 
     setContainerRoundRowMainStyleAsGrid(rowNumber) {
+
         let gridRowStartNumber = 1 + rowNumber;
         let gridColumnStartNumber = 1;
         let gridRowEndNumber = 2;
@@ -118,54 +72,11 @@ export class ViewConfigurationRoundButtonsPrimary {
     }
 
     createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
-        //
-        // let parentId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // let childId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // createElementDiv(
-        //     parentId,
-        //     childId
-        // );
-
         this.createContainerRoundRowMainParts(rowNumber);
-
-        // let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
-        // let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
-        //
-        // setElementStyletAsGrid(
-        //     // childId,
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
-        //     + valueToString(rowNumber),
-        //     1,
-        //     1,
-        //     2,
-        //     2,
-        //     gridTemplateRows,
-        //     gridTemplateColumns
-        // );
-
         this.setContainerRoundRowMainPartsStyleAsGrid(rowNumber, buttonNumberPerRow);
     }
 
     createContainerRoundRowMainParts(rowNumber) {
-        // let parentId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // let childId =
-        //     variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // createElementDiv(
-        //     parentId,
-        //     childId
-        // );
-
         createElementDiv(
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber),
