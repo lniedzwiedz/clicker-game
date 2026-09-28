@@ -12,7 +12,7 @@ export class ViewFooterAuthor {
 
     createContainerFooterAuthor() {
         this.createContainerFooterAuthorPrimary();
-        this.createFooterAuthorText();
+        this.createFooterAuthor();
     }
 
     createContainerFooterAuthorPrimary() {
@@ -26,9 +26,9 @@ export class ViewFooterAuthor {
         );
     }
 
-    createFooterAuthorText() {
+    createFooterAuthor() {
         this.createFooterAuthorMain();
-        this.createAuthorText();
+        this.createFooterAuthorText();
     }
 
     createFooterAuthorMain() {
@@ -43,7 +43,7 @@ export class ViewFooterAuthor {
         );
     }
 
-    createAuthorText() {
+    createFooterAuthorText() {
         createElementP(
             variablesFooterAuthor.footerAuthorId,
             variablesFooterAuthor.footerAuthorTextId

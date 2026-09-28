@@ -1,4 +1,4 @@
-import * as variablesConfigurationRound from "./variablesConfigurationRound.js";
+import * as variablesConfigurationRound from "./variablesConfigurationRoundButtonsPrimary.js";
 
 
 export const containerConfigurationRoundRowMainPartsPrefixId = variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefixId;
@@ -16,4 +16,5 @@ export const buttonRoundIconComputerMouseStyleSolid = "fa-solid";
 export const buttonRoundIconComputerMouse = "fa-computer-mouse";
 
 export const buttonRoundTextId = "buttonRound-TextId-";
+export const buttonRoundStyleText = "buttonRound-StyleText";
 export const buttonRoundTextSpace = "&nbsp &nbsp";

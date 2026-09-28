@@ -1,7 +1,7 @@
-import * as variablesConfigurationMain from "./variablesConfigurationPrimary.js";
+import * as variablesConfigurationPrimary from "../variablesConfigurationPrimary.js";
 
 
-export const containerConfigurationMainPartsId = variablesConfigurationMain.containerConfigurationMainPartsId;
+export const containerConfigurationMainPartsId = variablesConfigurationPrimary.containerConfigurationMainPartsId;
 
 export const containerConfigurationDecorationMainId = "containerConfigurationDecoration-Main";
 export const configurationDecorationId = "configurationDecoration";

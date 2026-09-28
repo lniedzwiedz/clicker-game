@@ -1,0 +1,37 @@
+.configurationRound-StyleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonRound-Style {
+    border: none;
+    background-color: #2c3e3a;
+    color: #FFFFFF;
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.45rem;
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
+}
+
+.buttonRound-StyleText {
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    /*font-size: 0.5rem;*/
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.buttonRound-CurrentNumber {
+    border-radius: 0.45rem;
+    box-shadow: 0px 0px 3px 1px #FFFFFF;
+    opacity: 0.8;
+}
+
+.buttonRound-ChosenNumber {
+    color: #e9a610;
+    opacity: 1;
+    box-shadow: 0px 0px 3px 1px #e9a610;
+}

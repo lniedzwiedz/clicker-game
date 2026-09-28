@@ -2,12 +2,12 @@ import {
     valueToString
 } from "../../common/function/commonFunctions.js";
 
-import * as variableButtonRound from "../../common/variable/game/configuration/variablesConfigurationButtonRound.js";
+import * as variablesConfigurationButtonRound from "../../common/variable/game/configuration/round/variablesConfigurationRoundButtons.js";
 
-export class ActionButtonsRound {
+export class ActionConfigurationRoundButtons {
 
-    buttonIdPrevious = variableButtonRound.buttonRoundPrefixId + valueToString(5)
-    buttonIdCurrent = variableButtonRound.buttonRoundPrefixId + valueToString(5);
+    buttonIdPrevious = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5)
+    buttonIdCurrent = variablesConfigurationButtonRound.buttonRoundPrefixId + valueToString(5);
     buttonIdMaxClicksNumberSetByUser = this.buttonIdCurrent;
 
     setConfigurationButtonIdClickedCurrent(event) {

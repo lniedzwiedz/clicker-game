@@ -1,19 +1,19 @@
 export class ControllerButtonGameCoordinator {
 
-    constructor(controllerButtonGameMain, controllerButtonGameColor, controllerButtonClickText) {
-        this.controllerButtonGameMain = controllerButtonGameMain;
+    constructor(controllerButtonGamePrimary, controllerButtonGameColor, controllerButtonClickText) {
+        this.controllerButtonGamePrimary = controllerButtonGamePrimary;
         this.controllerButtonGameColor = controllerButtonGameColor;
         this.controllerButtonClickText = controllerButtonClickText
     }
 
     createButtonGame() {
-        this.controllerButtonGameMain.createButtonGameMainAtStart();
+        this.controllerButtonGamePrimary.createButtonGameMainAtStart();
         this.controllerButtonGameColor.setButtonGameColorAtStart();
         this.controllerButtonClickText.removeButtonGameText();
     }
 
     setOnGame(onGame) {
-        this.controllerButtonGameMain
+        this.controllerButtonGamePrimary
             .setOnGame(onGame);
     }
 
@@ -22,7 +22,7 @@ export class ControllerButtonGameCoordinator {
     }
 
     addButtonGameListener() {
-        this.controllerButtonGameMain.addButtonGameClickListener();
+        this.controllerButtonGamePrimary.addButtonGameClickListener();
     }
 
     configureButtonGameAtStop() {
@@ -38,7 +38,7 @@ export class ControllerButtonGameCoordinator {
     }
 
     removeClickGameListener() {
-        this.controllerButtonGameMain.removeButtonGameClickListener();
+        this.controllerButtonGamePrimary.removeButtonGameClickListener();
     }
 
     createButtonGameTextGameOver() {

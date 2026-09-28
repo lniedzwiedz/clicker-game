@@ -11,12 +11,16 @@ import {
     setElementStyletAsGrid,
     setElementTextById,
     valueToString
-} from "../../../common/function/commonFunctions.js";
+} from "../../../../common/function/commonFunctions.js";
 
-import * as variablesButtonRound from "../../../common/variable/game/configuration/variablesConfigurationButtonRound.js";
+import * as variablesConfigurationRoundButtons
+    from "../../../../common/variable/game/configuration/round/variablesConfigurationRoundButtons.js";
+import {
+    buttonRoundStyleText
+} from "../../../../common/variable/game/configuration/round/variablesConfigurationRoundButtons.js";
 
 
-export class ViewConfigurationButtonsRound {
+export class ViewConfigurationRoundButtons {
 
     createContainersConfigurationRoundButtons() {
 
@@ -34,7 +38,7 @@ export class ViewConfigurationButtonsRound {
     createContainerConfigurationRoundButtons(rowNumber, buttonNumberPerRow) {
 
         let parentId =
-            variablesButtonRound.containerConfigurationRoundRowMainPartsPrefixId
+            variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber);
 
         let gridRowStartNumberChild = 2;
@@ -48,7 +52,7 @@ export class ViewConfigurationButtonsRound {
         for (let number = 0; number < buttonNumberPerRow; number++) {
 
             let childId =
-                variablesButtonRound.containerConfigurationRoundButtonRoundPrefixId
+                variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
                 + valueToString(roundNumber);
 
             createElementDiv(parentId, childId);
@@ -72,8 +76,8 @@ export class ViewConfigurationButtonsRound {
 
             if (roundNumber === 5) {
                 addElementClassNameById(
-                    variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber),
-                    variablesButtonRound.buttonRoundCurrentNumber
+                    variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
+                    variablesConfigurationRoundButtons.buttonRoundCurrentNumber
                 );
             }
 
@@ -92,7 +96,7 @@ export class ViewConfigurationButtonsRound {
 
     createButtonRoundMain(parentId, roundNumber) {
 
-        let buttonId = variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber);
+        let buttonId = variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber);
 
         createElementButton(
             parentId,
@@ -106,18 +110,18 @@ export class ViewConfigurationButtonsRound {
 
         addElementClassNames(
             buttonId,
-            variablesButtonRound.configurationRoundStyleDisplayFlex,
-            variablesButtonRound.buttonRoundStyle
+            variablesConfigurationRoundButtons.configurationRoundStyleDisplayFlex,
+            variablesConfigurationRoundButtons.buttonRoundStyle
         );
     }
 
     createIconComputerMouse(roundNumber) {
 
         createElementI(
-            variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber),
-            variablesButtonRound.buttonRoundIconComputerMousePrefixId + valueToString(roundNumber),
-            variablesButtonRound.buttonRoundIconComputerMouseStyleSolid,
-            variablesButtonRound.buttonRoundIconComputerMouse
+            variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
+            variablesConfigurationRoundButtons.buttonRoundIconComputerMousePrefixId + valueToString(roundNumber),
+            variablesConfigurationRoundButtons.buttonRoundIconComputerMouseStyleSolid,
+            variablesConfigurationRoundButtons.buttonRoundIconComputerMouse
         );
 
     }
@@ -125,17 +129,22 @@ export class ViewConfigurationButtonsRound {
     createButtonRoundText(roundNumber) {
 
         let pId =
-            variablesButtonRound.buttonRoundTextId + valueToString(roundNumber);
+            variablesConfigurationRoundButtons.buttonRoundTextId + valueToString(roundNumber);
 
         createElementP(
-            variablesButtonRound.buttonRoundPrefixId + valueToString(roundNumber),
+            variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
             pId
         );
 
         setElementTextById(
             pId,
-            variablesButtonRound.buttonRoundTextSpace
+            variablesConfigurationRoundButtons.buttonRoundTextSpace
             + valueToString(roundNumber)
+        );
+
+        addElementClassNames(
+            pId,
+            variablesConfigurationRoundButtons.buttonRoundStyleText
         );
     }
 
@@ -149,12 +158,12 @@ export class ViewConfigurationButtonsRound {
 
         removeElementClassNameById(
             buttonIdPrevious,
-            variablesButtonRound.buttonRoundCurrentNumber
+            variablesConfigurationRoundButtons.buttonRoundCurrentNumber
         );
 
         addElementClassNameById(
             currentButtonId,
-            variablesButtonRound.buttonRoundCurrentNumber
+            variablesConfigurationRoundButtons.buttonRoundCurrentNumber
         );
     }
 
@@ -162,7 +171,7 @@ export class ViewConfigurationButtonsRound {
 
         addElementClassNameById(
             elementId,
-            variablesButtonRound.buttonRoundCurrentNumber
+            variablesConfigurationRoundButtons.buttonRoundCurrentNumber
         );
     }
 
@@ -170,7 +179,7 @@ export class ViewConfigurationButtonsRound {
 
         removeElementClassNameById(
             elementId,
-            variablesButtonRound.buttonRoundCurrentNumber
+            variablesConfigurationRoundButtons.buttonRoundCurrentNumber
         );
     }
 
@@ -178,7 +187,7 @@ export class ViewConfigurationButtonsRound {
 
         removeElementClassNameById(
             elementId,
-            variablesButtonRound.buttonRoundChosenNumber
+            variablesConfigurationRoundButtons.buttonRoundChosenNumber
         );
     }
 
@@ -186,7 +195,7 @@ export class ViewConfigurationButtonsRound {
 
         addElementClassNameById(
             elementId,
-            variablesButtonRound.buttonRoundChosenNumber
+            variablesConfigurationRoundButtons.buttonRoundChosenNumber
         );
     }
 }

@@ -1,8 +1,8 @@
 import {ViewConfigurationPrimary} from "../../../view/game/configuration/ViewConfigurationPrimary.js";
 import {ControllerConfigurationPrimary} from "../../../controller/game/configuration/ControllerConfigurationPrimary.js";
 
-import {ViewConfigurationDecoration} from "../../../view/game/configuration/ViewConfigurationDecoration.js";
-import {ControllerConfigurationDecoration} from "../../../controller/game/configuration/ControllerConfigurationDecoration.js";
+import {ViewConfigurationDecoration} from "../../../view/game/configuration/decoration/ViewConfigurationDecoration.js";
+import {ControllerConfigurationDecoration} from "../../../controller/game/configuration/decoration/ControllerConfigurationDecoration.js";
 
 
 import {
@@ -16,12 +16,12 @@ export class ModuleConfiguration {
 
     constructor() {
 
-        this.viewConfigurationMain =
+        this.viewConfigurationPrimary =
             new ViewConfigurationPrimary();
 
-        this.controllerConfigurationMain =
+        this.controllerConfigurationPrimary =
             new ControllerConfigurationPrimary(
-                this.viewConfigurationMain
+                this.viewConfigurationPrimary
             );
 
 
@@ -40,9 +40,9 @@ export class ModuleConfiguration {
 
         this.controllerConfigurationCoordinator =
             new ControllerConfigurationCoordinator(
-                this.controllerConfigurationMain,
+                this.controllerConfigurationPrimary,
                 this.controllerConfigurationDecoration,
-                this.moduleConfigurationRound.getControllerRoundCoordinator(),
+                this.moduleConfigurationRound.getControllerConfigurationRoundCoordinator(),
             );
     }
 

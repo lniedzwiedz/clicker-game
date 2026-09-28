@@ -1,7 +1,7 @@
-import * as variablesHome from "../../../home/variablesHomePrimary.js";
+import * as variablesHomePrimary from "../../../home/variablesHomePrimary.js";
 
 
-export const containerHomeMainPartsId = variablesHome.containerHomeMainPartsId;
+export const containerHomeMainPartsId = variablesHomePrimary.containerHomeMainPartsId;
 
 export const statisticsFraudMainId = "containerStatisticsFraud-Main";
 export const statisticsFraudMainPartsId = "containerStatisticsFraud-MainParts";

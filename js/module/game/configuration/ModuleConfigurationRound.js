@@ -1,45 +1,69 @@
-import {ViewConfigurationRound} from "../../../view/game/configuration/ViewConfigurationRound.js";
-import {ControllerRoundPrimary} from "../../../controller/game/configuration/round/ControllerRoundPrimary.js";
+import {
+    ViewConfigurationRoundButtonsPrimary
+} from "../../../view/game/configuration/round/ViewConfigurationRoundButtonsPrimary.js";
+import {
+    ControllerConfigurationRoundPrimary
+} from "../../../controller/game/configuration/round/ControllerConfigurationRoundPrimary.js";
 
-import {ViewConfigurationButtonsRound} from "../../../view/game/configuration/ViewConfigurationButtonsRound.js";
-import {ActionButtonsRound} from "../../../action/control/ActionButtonsRound.js";
-import {ControllerButtonsRound} from "../../../controller/game/configuration/round/ControllerButtonsRound.js";
+import {ViewConfigurationRoundPrimary} from "../../../view/game/configuration/round/ViewConfigurationRoundPrimary.js";
+import {
+    ControllerConfigurationRoundButtonsPrimary
+} from "../../../controller/game/configuration/round/ControllerConfigurationRoundButtonsPrimary.js";
 
-import {ControllerRoundCoordinator} from "../../../controller/game/configuration/round/ControllerRoundCoordinator.js";
+import {ViewConfigurationRoundButtons} from "../../../view/game/configuration/round/ViewConfigurationRoundButtons.js";
+import {ActionConfigurationRoundButtons} from "../../../action/configuration/ActionConfigurationRoundButtons.js";
+import {
+    ControllerConfigurationRoundButtons
+} from "../../../controller/game/configuration/round/ControllerConfigurationRoundButtons.js";
+
+import {
+    ControllerConfigurationRoundCoordinator
+} from "../../../controller/game/configuration/round/ControllerConfigurationRoundCoordinator.js";
+
 
 export class ModuleConfigurationRound {
 
     constructor() {
 
-        this.viewConfigurationRound =
-            new ViewConfigurationRound();
+        this.viewConfigurationRoundPrimary =
+            new ViewConfigurationRoundPrimary();
 
-        this.controllerRoundMain =
-            new ControllerRoundPrimary(
-                this.viewConfigurationRound
+        this.controllerConfigurationRoundPrimary =
+            new ControllerConfigurationRoundPrimary(
+                this.viewConfigurationRoundPrimary
             );
 
 
-        this.viewButtonsRound =
-            new ViewConfigurationButtonsRound();
+        this.viewConfigurationRoundButtonsPrimary =
+            new ViewConfigurationRoundButtonsPrimary();
 
-        this.actionButtonsRound =
-            new ActionButtonsRound();
-
-        this.controllerButtonsRound =
-            new ControllerButtonsRound(
-                this.viewButtonsRound,
-                this.actionButtonsRound
+        this.controllerConfigurationRoundButtonsPrimary =
+            new ControllerConfigurationRoundButtonsPrimary(
+                this.viewConfigurationRoundButtonsPrimary
             );
 
-        this. controllerRoundCoordinator =
-            new ControllerRoundCoordinator(
-                this.controllerRoundMain,
-                this.controllerButtonsRound
+
+        this.viewConfigurationRoundButtons =
+            new ViewConfigurationRoundButtons();
+
+        this.actionConfigurationRoundButtons =
+            new ActionConfigurationRoundButtons();
+
+        this.controllerConfigurationRoundButtons =
+            new ControllerConfigurationRoundButtons(
+                this.viewConfigurationRoundButtons,
+                this.actionConfigurationRoundButtons
+            );
+
+        this.controllerConfigurationRoundCoordinator =
+            new ControllerConfigurationRoundCoordinator(
+                this.controllerConfigurationRoundPrimary,
+                this.controllerConfigurationRoundButtonsPrimary,
+                this.controllerConfigurationRoundButtons
             );
     }
 
-    getControllerRoundCoordinator() {
-        return this.controllerRoundCoordinator;
+    getControllerConfigurationRoundCoordinator() {
+        return this.controllerConfigurationRoundCoordinator;
     }
 }

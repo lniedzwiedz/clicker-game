@@ -1,24 +1,38 @@
 import {
-    createElementDivAnaDivChild,
     createElementI,
-    addElementClassNameById
-} from "../../../common/function/commonFunctions.js";
+    addElementClassNameById,
+    createElementDiv
+} from "../../../../common/function/commonFunctions.js";
 
 import * as variablesConfigurationDecoration
-    from "../../../common/variable/game/configuration/variablesConfigurationDecoration.js";
+    from "../../../../common/variable/game/configuration/decoration/variablesConfigurationDecoration.js";
 
 
 export class ViewConfigurationDecoration {
 
     createContainerConfigurationDecoration() {
+        this.createContainerConfigurationDecorationPrimary();
+        this.createConfigurationDecoration();
+    }
+
+    createContainerConfigurationDecorationPrimary() {
         this.createContainerConfigurationDecorationMain();
-        this.createIconScrewdriverWrench();
     }
 
     createContainerConfigurationDecorationMain() {
-
-        createElementDivAnaDivChild(
+        createElementDiv(
             variablesConfigurationDecoration.containerConfigurationMainPartsId,
+            variablesConfigurationDecoration.containerConfigurationDecorationMainId,
+        );
+    }
+
+    createConfigurationDecoration() {
+        this.createConfigurationDecorationMain();
+        this.createIconScrewdriverWrench();
+    }
+
+    createConfigurationDecorationMain() {
+        createElementDiv(
             variablesConfigurationDecoration.containerConfigurationDecorationMainId,
             variablesConfigurationDecoration.configurationDecorationId
         );
@@ -30,7 +44,6 @@ export class ViewConfigurationDecoration {
     }
 
     createIconScrewdriverWrench() {
-
         createElementI(
             variablesConfigurationDecoration.configurationDecorationId,
             variablesConfigurationDecoration.configurationDecorationIconScrewdriverWrenchId,

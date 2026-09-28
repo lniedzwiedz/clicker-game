@@ -3,20 +3,19 @@ import {
     removeEventListenerOnClickButton
 } from "../../../common/function/commonFunctions.js";
 
-import * as variablesButtonGameMain from "../../../common/variable/game/buttonGame/variablesButtonGamePrimary.js";
+import * as variablesButtonGamePrimary from "../../../common/variable/game/buttonGame/variablesButtonGamePrimary.js";
 
 
 export class ControllerButtonGamePrimary {
 
-    constructor(viewButtonGameMain, actionButtonClickColor) {
-        this.viewButtonGameMain = viewButtonGameMain;
-        this.actionButtonClickColor = actionButtonClickColor;
+    constructor(viewButtonGamePrimary) {
+        this.viewButtonGamePrimary = viewButtonGamePrimary;
         this.onGame = null;
         this.buttonGameEvent = null;
     }
 
     createButtonGameMainAtStart() {
-        this.viewButtonGameMain.createContainerButtonGame();
+        this.viewButtonGamePrimary.createContainerButtonGame();
     }
 
     setOnGame(onGame) {
@@ -32,7 +31,7 @@ export class ControllerButtonGamePrimary {
     addButtonGameClickListener() {
         this.buttonGameEvent =
             addEventListenerOnClickButton(
-                variablesButtonGameMain.buttonGameId,
+                variablesButtonGamePrimary.buttonGameId,
                 this.handleClickGame,
                 this
             );
@@ -41,7 +40,7 @@ export class ControllerButtonGamePrimary {
     removeButtonGameClickListener() {
 
         removeEventListenerOnClickButton(
-            variablesButtonGameMain.buttonGameId,
+            variablesButtonGamePrimary.buttonGameId,
             this.buttonGameEvent
         );
 

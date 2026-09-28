@@ -1,10 +1,10 @@
 export class ControllerConfigurationPrimary {
 
-    constructor(viewConfigurationMain) {
-        this.viewConfigurationMain = viewConfigurationMain;
+    constructor(viewConfigurationPrimary) {
+        this.viewConfigurationPrimary = viewConfigurationPrimary;
     }
 
-    createConfigurationMain() {
-        this.viewConfigurationMain.createContainerConfigurationMain();
+    createConfigurationPrimary() {
+        this.viewConfigurationPrimary.createContainerConfigurationPrimary();
     }
 }

@@ -12,7 +12,7 @@ export class ViewMenuTitle {
 
     createContainerMenuTitle() {
         this.createContainerMenuTitlePrimary();
-        this.createMenuTitleText();
+        this.createMenuTitle();
     }
 
     createContainerMenuTitlePrimary() {
@@ -26,9 +26,9 @@ export class ViewMenuTitle {
         );
     }
 
-    createMenuTitleText() {
+    createMenuTitle() {
         this.createMenuTitleMain();
-        this.createTitleText();
+        this.createMenuTitleText();
     }
 
     createMenuTitleMain() {
@@ -43,7 +43,7 @@ export class ViewMenuTitle {
         );
     }
 
-    createTitleText() {
+    createMenuTitleText() {
         createElementP(
             variablesMenuTitle.menuTitleId,
             variablesMenuTitle.menuTitleTextId

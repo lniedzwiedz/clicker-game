@@ -1,19 +1,19 @@
 export class ControllerConfigurationCoordinator {
 
-    constructor(controllerConfiguration, controllerConfigurationDecoration, controllerRoundCoordinator) {
-        this.controllerConfiguration = controllerConfiguration;
+    constructor(controllerConfigurationPrimary, controllerConfigurationDecoration, controllerRoundCoordinator) {
+        this.controllerConfigurationPrimary = controllerConfigurationPrimary;
         this.controllerConfigurationDecoration = controllerConfigurationDecoration;
         this.controllerRoundCoordinator = controllerRoundCoordinator;
     }
 
     createConfiguration() {
-        this.createConfigurationMain();
+        this.createConfigurationPrimary();
         this.createConfigurationDecoration();
         this.createConfigurationRound();
     }
 
-    createConfigurationMain() {
-        this.controllerConfiguration.createConfigurationMain();
+    createConfigurationPrimary() {
+        this.controllerConfigurationPrimary.createConfigurationPrimary();
     }
 
     createConfigurationDecoration() {
@@ -23,6 +23,7 @@ export class ControllerConfigurationCoordinator {
     createConfigurationRound() {
         this.controllerRoundCoordinator.createConfigurationRound();
     }
+
 
     getRoundNumber() {
         return this.controllerRoundCoordinator.getRoundNumber();

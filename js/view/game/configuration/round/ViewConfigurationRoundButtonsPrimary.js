@@ -1,34 +1,25 @@
 import {
     createElementDiv,
-    createElementDivAnaDivChild,
     setElementStyletAsGrid,
     valueToString
-} from "../../../common/function/commonFunctions.js";
+} from "../../../../common/function/commonFunctions.js";
 
-import * as variablesConfigurationRound
-    from "../../../common/variable/game/configuration/variablesConfigurationRound.js";
+import * as variablesConfigurationRoundButtonsPrimary
+    from "../../../../common/variable/game/configuration/round/variablesConfigurationRoundButtonsPrimary.js";
 
 
-export class ViewConfigurationRound {
+export class ViewConfigurationRoundButtonsPrimary {
 
-    createContainerConfigurationRound() {
-        this.createContainerConfigurationRoundMain();
-        this.createContainerConfigurationRoundMainParts();
+    createContainerConfigurationRoundButtonsPrimary() {
+        this.createContainerConfigurationRoundRowPrimary();
     }
 
-    createContainerConfigurationRoundMain() {
+    createContainerConfigurationRoundRowPrimary() {
 
-        createElementDivAnaDivChild(
-            variablesConfigurationRound.containerConfigurationMainPartsId,
-            variablesConfigurationRound.containerConfigurationRoundMainId,
-            variablesConfigurationRound.containerConfigurationRoundMainPartsId
-        );
-    }
-
-    createContainerConfigurationRoundMainParts() {
-
+        // create variables = 5
         let buttonNumberPerRow = 5;
 
+        // create variables = 2
         for (let rowNumber = 0; rowNumber < 2; rowNumber++) {
 
             this.createContainerConfigurationRoundRowMain(
@@ -45,10 +36,10 @@ export class ViewConfigurationRound {
     createContainerConfigurationRoundRowMain(rowNumber) {
 
         let parentId =
-            variablesConfigurationRound.containerConfigurationRoundMainPartsId;
+            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundMainPartsId;
 
         let childId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPrefixId
+            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber);
 
         createElementDiv(
@@ -77,24 +68,24 @@ export class ViewConfigurationRound {
 
     createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
 
-        let childId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPrefixId
+        let parentId =
+            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber);
 
-        let grandchildId =
-            variablesConfigurationRound.containerConfigurationRoundRowMainPartsPrefixId
+        let childId =
+            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber);
 
         createElementDiv(
-            childId,
-            grandchildId
+            parentId,
+            childId
         );
 
         let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
         let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
 
         setElementStyletAsGrid(
-            grandchildId,
+            childId,
             1,
             1,
             2,

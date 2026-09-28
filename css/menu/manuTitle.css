@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 }
 
-#menuTitle-StyleDisplayFlex {
+.menuTitle-StyleDisplayFlex {
     display: flex;
     align-items: center;
     justify-content: left;

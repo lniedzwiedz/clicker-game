@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="css/menu/menuPrimary.css">
     <link rel="stylesheet" href="css/menu/manuTitle.css">
 
-    <link rel="stylesheet" href="css/game/configuration/configurationDecoration.css">
-    <link rel="stylesheet" href="css/game/configuration/configurationButtonRound.css">
+    <link rel="stylesheet" href="css/game/configuration/configurationPrimary.css">
+    <link rel="stylesheet" href="css/game/configuration/decoration/configurationDecoration.css">
+    <link rel="stylesheet" href="css/game/configuration/round/configurationRoundButtonsPrimary.css">
+    <link rel="stylesheet" href="css/game/configuration/round/configurationRoundButtons.css">
+
 
     <link rel="stylesheet" href="css/game/buttonGame/buttonGamePrimary.css">
     <link rel="stylesheet" href="css/game/buttonGame/buttonGameColor.css">
@@ -45,7 +48,8 @@
 
 
     <script type="module" src="js/common/variable/home/variablesHomePrimary.js" defer></script>
-    <script type="module" src="js/common/variable/game/configuration/variablesConfigurationButtonRound.js" defer></script>
+    <script type="module" src="js/common/variable/game/configuration/round/variablesConfigurationRoundButtons.js"
+            defer></script>
     <script type="module" src="js/common/variable/game/buttonGame/variablesButtonGamePrimary.js" defer></script>
     <script type="module" src="js/common/variable/game/gameState/variablesGameStatePrimary.js" defer></script>
     <script type="module" src="js/common/variable/game/gameState/variablesGameStateButtonStart.js" defer></script>
@@ -53,14 +57,19 @@
 
 
     <script type="module" src="js/common/variable/game/configuration/variablesConfigurationPrimary.js" defer></script>
-    <script type="module" src="js/common/variable/game/configuration/variablesConfigurationDecoration.js" defer></script>
-    <script type="module" src="js/common/variable/game/configuration/variablesConfigurationRound.js" defer></script>
+    <script type="module" src="js/common/variable/game/configuration/decoration/variablesConfigurationDecoration.js"
+            defer></script>
+    <script type="module" src="js/common/variable/game/configuration/round/variablesConfigurationRoundButtonsPrimary.js"
+            defer></script>
 
 
     <script type="module" src="js/common/variable/game/statistic/time/variablesStatisticsTimePrimary.js" defer></script>
-    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudPrimary.js" defer></script>
-    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js" defer></script>
-    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js" defer></script>
+    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudPrimary.js"
+            defer></script>
+    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js"
+            defer></script>
+    <script type="module" src="js/common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js"
+            defer></script>
 
     <script type="module" src="js/common/function/commonFunctions.js" defer></script>
 
@@ -75,7 +84,9 @@
     <script type="module" src="js/module/ModuleMain.js" defer></script>
 
 
-    <script type="module" src="js/view/game/configuration/ViewConfigurationButtonsRound.js" defer></script>
+    <script type="module" src="js/view/game/configuration/round/ViewConfigurationRoundPrimary.js" defer></script>
+    <script type="module" src="js/view/game/configuration/round/ViewConfigurationRoundButtonsPrimary.js" defer></script>
+    <script type="module" src="js/view/game/configuration/round/ViewConfigurationRoundButtons.js" defer></script>
 
     <script type="module" src="js/view/game/buttonGame/ViewButtonGamePrimary.js" defer></script>
     <script type="module" src="js/view/game/gameState/ViewGameStateButtonStart.js" defer></script>
@@ -86,36 +97,16 @@
     <script type="module" src="js/view/game/statistic/fraud/ViewStatisticsFraudHistory.js" defer></script>
     <script type="module" src="js/view/game/statistic/time/ViewStatisticsTimePrimary.js" defer></script>
 
-    <script type="module" src="js/action/control/ActionButtonsRound.js" defer></script>
-    <script type="module" src="js/action/control/ActionButtonClick.js" defer></script>
-    <script type="module" src="js/action/control/ActionButtonStart.js" defer></script>
-    <script type="module" src="js/action/control/ActionButtonStop.js" defer></script>
+    <script type="module" src="js/action/configuration/ActionConfigurationRoundButtons.js" defer></script>
 
     <script type="module" src="js/action/statistic/ActionStatisticsTime.js" defer></script>
-
-    <!--    <script type="module" src="js/controller/menu/ControllerMenuTitle.js" defer></script>-->
-
-
-    <!--    <script type="module" src="js/controller/home/configuration/ControllerButtonsRound.js" defer></script>-->
-    <!--    <script type="module" src="js/controller/home/play/ControllerButtonGamePrimary.js" defer></script>-->
-    <!--    <script type="module" src="js/controller/home/gameState/ControllerGameStateButtonStart.js" defer></script>-->
-    <!--    <script type="module" src="js/controller/home/gameState/ControllerGameStateButtonStop.js" defer></script>-->
-
-    <!--    <script type="module" src="js/controller/home/statistic/ControllerStatisticsFraudPrimary.js" defer></script>-->
-    <!--    <script type="module" src="js/controller/home/statistic/ControllerStatisticsTimePrimary.js" defer></script>-->
-
-    <!--    <script type="module" src="js/controller/home/statistic/ControllerStatisticsCoordinator.js" defer></script>-->
-
-    <!--    <script type="module" src="js/controller/home/play/ControllerGameCoordinator.js" defer></script>-->
-    <!--    <script type="module" src="js/controller/ControllerCoordinator.js" defer></script>-->
-
 
     <script type="module" src="js/gameClickerColorOldToRemove.js" defer></script>
     <script type="module" src="js/Game.js" defer></script>
     <script type="module" src="js/main.js" defer></script>
 
 </head>
-    <body>
-        <div id="container-Main"></div>
-    </body>
+<body>
+<div id="container-Main"></div>
+</body>
 </html>

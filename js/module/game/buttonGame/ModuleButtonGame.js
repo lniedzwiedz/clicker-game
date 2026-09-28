@@ -1,5 +1,4 @@
 import {ViewButtonGamePrimary} from "../../../view/game/buttonGame/ViewButtonGamePrimary.js";
-import {ActionButtonClick} from "../../../action/control/ActionButtonClick.js";
 import {ControllerButtonGamePrimary} from "../../../controller/game/buttonGame/ControllerButtonGamePrimary.js";
 
 import {ViewButtonGameColor} from "../../../view/game/buttonGame/ViewButtonGameColor.js";
@@ -17,16 +16,12 @@ export class ModuleButtonGame {
 
     constructor() {
 
-        this.viewButtonGameMain =
+        this.viewButtonGamePrimary =
             new ViewButtonGamePrimary();
 
-        this.actionButtonClick =
-            new ActionButtonClick();
-
-        this.controllerButtonGameMain =
+        this.controllerButtonGamePrimary =
             new ControllerButtonGamePrimary(
-                this.viewButtonGameMain,
-                this.actionButtonClick
+                this.viewButtonGamePrimary,
             );
 
 
@@ -50,7 +45,7 @@ export class ModuleButtonGame {
 
         this.controllerButtonGameCoordinator =
             new ControllerButtonGameCoordinator(
-                this.controllerButtonGameMain,
+                this.controllerButtonGamePrimary,
                 this.controllerButtonGameColor,
                 this.controllerButtonClickText
             );
