@@ -41,80 +41,20 @@ class ViewConfigurationRoundButtons {
         let buttonNumberPerRow =
             variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow;
 
-        // let parentId =
-        //     variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
-        //     + valueToString(rowNumber);
-
-        // let gridRowStartNumberChild = 2;
-        // let gridColumnStartNumberChild = 2;
-        // let gridRowEndNumberChild = 3;
-        // let gridColumnEndNumberChild = 3;
+        let roundNumberStartPerRow = buttonNumberPerRow * rowNumber + 1;
+        let roundNumberEndPerRow = roundNumberStartPerRow + buttonNumberPerRow;
 
         let gridColumnStartNumber = 2;
         let gridColumnEndNumber = 3;
 
-        // let roundNumber = 0;
-        // roundNumber = buttonNumberPerRow * rowNumber + 1;
-
-        // let roundNumber = 0;
-        let roundNumberStartPerRow = buttonNumberPerRow * rowNumber + 1;
-        let roundNumberEndPerRow = roundNumberStartPerRow + buttonNumberPerRow;
-
-        // for (let number = 0; number < buttonNumberPerRow; number++) {
-        // for (let buttonNumber = 0; buttonNumber < buttonNumberPerRow; buttonNumber++) {
         for (let roundNumber = roundNumberStartPerRow; roundNumber < roundNumberEndPerRow; roundNumber++) {
-
-            // // let childId =
-            // //     variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-            // //     + valueToString(roundNumber);
-            //
-            // // createElementDiv(parentId, childId);
-            // // this.createContainerButtonRoundMain(rowNumber, roundNumberStartPerRow);
-            // this.createContainerButtonRoundMain(rowNumber, roundNumber);
-            //
-            // // let gridTemplateRowsChild = "1fr";
-            // // let gridTemplateColumnsChild = "1fr";
-            // //
-            // // setElementStyletAsGrid(
-            // //     childId,
-            // //     gridRowStartNumberChild,
-            // //     gridColumnStartNumberChild,
-            // //     gridRowEndNumberChild,
-            // //     gridColumnEndNumberChild,
-            // //     gridTemplateRowsChild,
-            // //     gridTemplateColumnsChild);
-            //
-            // // this.setContainerButtonRoundMainStyleAsGrid(
-            // //     roundNumberStartPerRow, gridColumnStartNumber, gridColumnEndNumber
-            // // );
-            //
-            // this.setContainerButtonRoundMainStyleAsGrid(
-            //     // roundNumberStartPerRow, gridColumnStartNumber, gridColumnEndNumber
-            //     roundNumber, gridColumnStartNumber, gridColumnEndNumber
-            // );
 
             this.createContainerConfigurationRoundButton(
                 rowNumber, roundNumber,
-                gridColumnStartNumber, gridColumnEndNumber
-            );
-
-
-            // this.createButtonRound(roundNumberStartPerRow);
-            // this.createButtonRoundPrimary(roundNumber);
-
-            // // if (roundNumberStartPerRow === buttonNumberPerRow) {
-            // if (roundNumber === buttonNumberPerRow) {
-            //     // addElementClassNameById(
-            //     //     variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
-            //     //     variablesConfigurationRoundButtons.buttonRoundCurrentNumber
-            //     // );
-            //     // this.setConfigurationRoundButtonDefault(roundNumberStartPerRow);
-            //     this.setConfigurationRoundButtonDefault(roundNumber);
-            // }
+                gridColumnStartNumber, gridColumnEndNumber);
 
             gridColumnStartNumber += 3;
             gridColumnEndNumber += 3;
-            // roundNumberStartPerRow += 1;
         }
     }
 
@@ -139,17 +79,6 @@ class ViewConfigurationRoundButtons {
     }
 
     createContainerButtonRoundMain(rowNumber, roundNumber) {
-
-        // let parentId =
-        //     variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
-        //     + valueToString(rowNumber);
-        //
-        // let childId =
-        //     variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-        //     + valueToString(roundNumber);
-
-        // createElementDiv(parentId, childId);
-
         createElementDiv(
             variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber),
@@ -159,34 +88,12 @@ class ViewConfigurationRoundButtons {
     }
 
     setContainerButtonRoundMainStyleAsGrid(roundNumber, gridColumnStartNumber, gridColumnEndNumber) {
-
-        // let gridRowStartNumber = 2;
-        // let gridRowEndNumber = 3;
-        //
-        // let gridTemplateRows = "1fr";
-        // let gridTemplateColumns = "1fr";
-
-        // setElementStyletAsGrid(
-        //     // childId,
-        //     variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-        //     + valueToString(roundNumber),
-        //     gridRowStartNumber,
-        //     gridColumnStartNumber,
-        //     gridRowEndNumber,
-        //     gridColumnEndNumber,
-        //     gridTemplateRows,
-        //     gridTemplateColumns);
-
         setElementStyletAsGrid(
-            // childId,
             variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
             + valueToString(roundNumber),
-            2,
-            gridColumnStartNumber,
-            3,
-            gridColumnEndNumber,
-            "1fr",
-            "1fr");
+            2, gridColumnStartNumber,
+            3, gridColumnEndNumber,
+            "1fr", "1fr");
     }
 
     createButtonRound(roundNumber) {
@@ -258,10 +165,9 @@ class ViewConfigurationRoundButtons {
     }
 
     setConfigurationRoundButtonDefault() {
-        addElementClassNameById(
+        this.addButtonRoundStyleCurrentNumber(
             variablesConfigurationRoundButtons.buttonRoundPrefixId
-            + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow),
-            variablesConfigurationRoundButtons.buttonRoundCurrentNumber
+            + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow)
         );
     }
 

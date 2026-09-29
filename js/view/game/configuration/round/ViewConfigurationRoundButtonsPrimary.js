@@ -11,27 +11,18 @@ import * as variablesConfigurationRoundButtonsPrimary
 export class ViewConfigurationRoundButtonsPrimary {
 
     createContainerConfigurationRoundButtonsPrimary() {
-        this.createContainerConfigurationRoundRowPrimary();
+        this.createContainerConfigurationRoundButtonsRowPrimary();
     }
 
-    createContainerConfigurationRoundRowPrimary() {
-
-        let buttonNumberPerRow =
-            variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumberPerRow;
+    createContainerConfigurationRoundButtonsRowPrimary() {
 
         let maxRowNumber =
             variablesConfigurationRoundButtonsPrimary.configurationRoundMaxRowNumber;
 
         for (let rowNumber = 0; rowNumber < maxRowNumber; rowNumber++) {
 
-            this.createContainerConfigurationRoundRowMain(
-                rowNumber
-            );
-
-            this.createContainerConfigurationRoundRowMainParts(
-                rowNumber,
-                buttonNumberPerRow
-            );
+            this.createContainerConfigurationRoundRowMain(rowNumber);
+            this.createContainerConfigurationRoundRowMainParts(rowNumber);
         }
     }
 
@@ -51,29 +42,20 @@ export class ViewConfigurationRoundButtonsPrimary {
     setContainerRoundRowMainStyleAsGrid(rowNumber) {
 
         let gridRowStartNumber = 1 + rowNumber;
-        let gridColumnStartNumber = 1;
-        let gridRowEndNumber = 2;
         let gridColumnEndNumber = 2 + rowNumber;
 
-        let gridTemplateRows = "1fr";
-        let gridTemplateColumns = "1fr";
-
         setElementStyletAsGrid(
-            // childId,
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber),
-            gridRowStartNumber,
-            gridColumnStartNumber,
-            gridRowEndNumber,
-            gridColumnEndNumber,
-            gridTemplateRows,
-            gridTemplateColumns
+            gridRowStartNumber, 1,
+            2, gridColumnEndNumber,
+            "1fr", "1fr"
         );
     }
 
-    createContainerConfigurationRoundRowMainParts(rowNumber, buttonNumberPerRow) {
+    createContainerConfigurationRoundRowMainParts(rowNumber) {
         this.createContainerRoundRowMainParts(rowNumber);
-        this.setContainerRoundRowMainPartsStyleAsGrid(rowNumber, buttonNumberPerRow);
+        this.setContainerRoundRowMainPartsStyleAsGrid(rowNumber);
     }
 
     createContainerRoundRowMainParts(rowNumber) {
@@ -85,21 +67,20 @@ export class ViewConfigurationRoundButtonsPrimary {
         );
     }
 
-    setContainerRoundRowMainPartsStyleAsGrid(rowNumber, buttonNumberPerRow) {
+    setContainerRoundRowMainPartsStyleAsGrid(rowNumber) {
+
+        let buttonNumberPerRow =
+            variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumberPerRow;
 
         let gridTemplateRows = " repeat(1, 1fr 7fr 1fr) ";
         let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
 
         setElementStyletAsGrid(
-            // childId,
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber),
-            1,
-            1,
-            2,
-            2,
-            gridTemplateRows,
-            gridTemplateColumns
+            1, 1,
+            2, 2,
+            gridTemplateRows, gridTemplateColumns
         );
     }
 }
