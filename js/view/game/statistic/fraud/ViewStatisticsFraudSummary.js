@@ -8,6 +8,9 @@ import {
 
 import * as variablesStatisticsFraudSummary
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
+import {
+    statisticsFraudSummaryIconStyleGem
+} from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
 
 
 export class ViewStatisticsFraudSummary {
@@ -132,6 +135,11 @@ export class ViewStatisticsFraudSummary {
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleSolid,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconWhiskeyGlass
         );
+
+        addElementClassNameById(
+            iconId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleWhiskeyGlass
+        );
     }
 
     createSummaryIconGem() {
@@ -144,7 +152,7 @@ export class ViewStatisticsFraudSummary {
 
         addElementClassNameById(
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconGemId,
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleWhiskeyGlassMain
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleGem
         );
     }
 

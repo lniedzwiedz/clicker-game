@@ -23,7 +23,12 @@ export const statisticsFraudSummaryIconsIconWhiskeyGlassLeftId = "statisticsFrau
 export const statisticsFraudSummaryIconGemId = "statisticsFraudSummaryIcons-IconGem";
 export const statisticsFraudSummaryIconsIconWhiskeyGlassRightId = "statisticsFraudSummary-Icons-IconWhiskeyGlassRight";
 
-export const statisticsFraudSummaryIconGem = "fa-gem";
-export const statisticsFraudSummaryIconWhiskeyGlass = "fa-whiskey-glass";
 export const statisticsFraudSummaryIconStyleSolid = "fa-solid";
-export const statisticsFraudSummaryIconStyleWhiskeyGlassMain = "fa-whiskeyGlassFraudSummary";
+
+export const statisticsFraudSummaryIconGem = "fa-gem";
+export const statisticsFraudSummaryIconStyleGem = "fa-gemFraudSummary";
+
+export const statisticsFraudSummaryIconWhiskeyGlass = "fa-whiskey-glass";
+export const statisticsFraudSummaryIconStyleWhiskeyGlass = "fa-whiskeyGlassFraudSummary";
+export const statisticsFraudSummaryIconStyleWhiskeyGlassBefore = "fa-whiskey-glass::before";
+

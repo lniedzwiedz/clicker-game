@@ -1,10 +1,14 @@
 .buttonGame-Style-TextGameOver {
+    margin: 0;
+    padding: 0;
     color: lightgoldenrodyellow;
     font-weight: 900;
     font-size: 1.7rem;
 }
 
 .buttonGame-Style-TextGameStopped {
+    margin: 0;
+    padding: 0;
     color: lightgoldenrodyellow;
     font-weight: 900;
     font-size: 1.7rem;

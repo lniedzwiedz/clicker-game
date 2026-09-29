@@ -19,6 +19,7 @@ export const historyRoundNumberStyleDisplayFlex = "historyRoundNumber-StyleDispl
 export const historyRoundNumberIconWhiskeyGlassIdPrefix = "historyRoundNumber-IconWhiskeyGlass-";
 export const statisticsFraudSumIconStyleSolid = "fa-solid";
 export const statisticsFraudHistoryRoundIconWhiskeyGlass = "fa-whiskey-glass";
+export const statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory = "fa-whiskeyGlassFraudHistory";
 
 
 export const historyRoundNumberTextIdIdPrefix = "historyRoundNumber-TextId-";

@@ -26,6 +26,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /*border: none;*/
+    /*border-radius: 0.45rem;*/
+    /*box-shadow: 0 0 1px 1px #2a1e1e;*/
 }
 
 .statisticsFraudSummaryTotalValue-StyleText {
@@ -33,7 +37,7 @@
     padding: 0;
     opacity: 0.8;
     color: #FF7E00;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
 }
 
 #containerStatisticsFraudSummary-IconsMain {
@@ -48,24 +52,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 6px;
+
+    /*border: none;*/
+    /*border-radius: 0.45rem;*/
+    /*box-shadow: 0 0 1px 1px #2a1e1e;*/
 }
 
 .fa-gem {
-    color: lightgoldenrodyellow;
-    opacity: 0.9;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*opacity: 0.9;*/
     font-size: 1.0rem;
+    line-height: 1;
 }
 
 .fa-whiskey-glass {
+    /*margin: 0;*/
+    /*padding: 0;*/
     color: #FFFFFF;
     opacity: 0.9;
     font-weight: 600;
-    font-size: 1.0rem;
+    font-size: 0.9rem;
+    /*line-height: 1;*/
+}
+
+.fa-whiskey-glass::before {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 1.5;
 }
 
 .fa-whiskeyGlassFraudSummary {
     color: #FFFFFF;
     opacity: 0.8;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.fa-gemFraudSummary{
+    color: #FAFAD2;
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 1.7rem;
 }

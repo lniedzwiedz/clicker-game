@@ -11,6 +11,9 @@ import {
 
 import * as variablesStatisticsFraudHistory
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
+import {
+    statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory
+} from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
 
 
 export class ViewStatisticsFraudHistory {
@@ -74,6 +77,9 @@ export class ViewStatisticsFraudHistory {
         let gridRowEndNumber = 2;
         let gridColumnEndNumber = 2;
 
+        // let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
+        // let gridTemplateRows = "repeat(1, 1fr 8fr 1fr)";
+        // let gridTemplateRows = "repeat(1, 4fr 4fr 2fr)";
         let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
         let gridTemplateColumns = "repeat(" + gameRoundCount + ", 1fr 100fr 1fr)";
 
@@ -161,12 +167,9 @@ export class ViewStatisticsFraudHistory {
     containerHistoryRoundNumberMainPartsGrid(index) {
         setElementStyletAsGrid(
             variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
-            1,
-            1,
-            2,
-            2,
-            "1fr",
-            "1fr");
+            1, 1,
+            2, 2,
+            "1fr", "1fr");
     }
 
     createContainerHistoryRoundValue(index) {
@@ -190,6 +193,11 @@ export class ViewStatisticsFraudHistory {
             variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
             variablesStatisticsFraudHistory.statisticsFraudSumIconStyleSolid,
             variablesStatisticsFraudHistory.statisticsFraudHistoryRoundIconWhiskeyGlass
+        );
+
+        addElementClassNameById(
+            variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory
         );
     }
 
