@@ -5,7 +5,8 @@ export const containerGameStateMainPartsId = variablesGameStatePrimary.container
 
 export const containerButtonStopMainId = "containerButtonStop-Main";
 export const buttonStopId = "buttonStop";
-export const buttonStopStyleDisplayFlex = "buttonStop-StyleDisplayFlex";
+// export const buttonStopStyleDisplayFlex = "buttonStop-StyleDisplayFlex";
+export const buttonStopStyleDisplayFlex = "styleFlexCenter";
 export const buttonStopStyle = "buttonStop-Style";
 
 export const buttonStopIconStopId = "buttonStop-IconStop";

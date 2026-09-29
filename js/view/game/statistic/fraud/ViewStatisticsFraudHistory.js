@@ -1,5 +1,5 @@
 import {
-    addElementClassNameById,
+    addElementClassNameById, addElementClassNames,
     createElementDiv,
     createElementDivWithIdAndSetClassName,
     createElementI,
@@ -12,6 +12,8 @@ import {
 import * as variablesStatisticsFraudHistory
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
 import {
+    historyNameStyle,
+    historyRoundNumberStyle,
     statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory
 } from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
 
@@ -77,9 +79,6 @@ export class ViewStatisticsFraudHistory {
         let gridRowEndNumber = 2;
         let gridColumnEndNumber = 2;
 
-        // let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
-        // let gridTemplateRows = "repeat(1, 1fr 8fr 1fr)";
-        // let gridTemplateRows = "repeat(1, 4fr 4fr 2fr)";
         let gridTemplateRows = "repeat(1, 2fr 6fr 2fr)";
         let gridTemplateColumns = "repeat(" + gameRoundCount + ", 1fr 100fr 1fr)";
 
@@ -180,10 +179,15 @@ export class ViewStatisticsFraudHistory {
     }
 
     createContainerHistoryRoundValueMain(index) {
-        createElementDivWithIdAndSetClassName(
+        createElementDiv(
             variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
+            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index
+        );
+
+        addElementClassNames(
             variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
-            variablesStatisticsFraudHistory.historyRoundNumberStyleDisplayFlex
+            variablesStatisticsFraudHistory.historyRoundNumberStyleDisplayFlex,
+            variablesStatisticsFraudHistory.historyRoundNumberStyle
         );
     }
 
@@ -252,9 +256,15 @@ export class ViewStatisticsFraudHistory {
             variablesStatisticsFraudHistory.historyNameId
         );
 
-        addElementClassNameById(
+        // addElementClassNameById(
+        //     variablesStatisticsFraudHistory.historyNameId,
+        //     variablesStatisticsFraudHistory.historyNameStyleDisplayFlex
+        // );
+
+        addElementClassNames(
             variablesStatisticsFraudHistory.historyNameId,
-            variablesStatisticsFraudHistory.historyNameStyleDisplayFlex
+            variablesStatisticsFraudHistory.historyNameStyleDisplayFlex,
+            variablesStatisticsFraudHistory.historyNameStyle
         );
     }
 

@@ -6,11 +6,11 @@
     grid-template-columns: 1fr;
 }
 
-.menuTitle-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
+/*.menuTitle-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: left;*/
+/*}*/
 
 .menuTitle-StyleText {
     margin: 0;

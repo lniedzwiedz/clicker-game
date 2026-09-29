@@ -1,8 +1,8 @@
-.buttonGame-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.buttonGame-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
 .buttonGame-Style-BackgroundColor {
     background-color: var(--cssButtonGameStyleBackgroundColor);

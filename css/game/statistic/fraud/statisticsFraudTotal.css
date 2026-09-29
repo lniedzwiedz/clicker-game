@@ -22,15 +22,15 @@
     grid-template-columns: 1fr;
 }
 
-.statisticsFraudSummaryTotalValue-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*.statisticsFraudSummaryTotalValue-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
 
-    /*border: none;*/
-    /*border-radius: 0.45rem;*/
-    /*box-shadow: 0 0 1px 1px #2a1e1e;*/
-}
+/*    !*border: none;*!*/
+/*    !*border-radius: 0.45rem;*!*/
+/*    !*box-shadow: 0 0 1px 1px #2a1e1e;*!*/
+/*}*/
 
 .statisticsFraudSummaryTotalValue-StyleText {
     margin: 0;
@@ -48,46 +48,43 @@
     grid-template-columns: 1fr;
 }
 
-.statisticsFraudSummaryIcons-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*.statisticsFraudSummaryIcons-StyleDisplayFlex {*/
+.styleFlexCenter-update {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
     gap: 6px;
-
-    /*border: none;*/
-    /*border-radius: 0.45rem;*/
-    /*box-shadow: 0 0 1px 1px #2a1e1e;*/
 }
 
 .fa-gem {
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*opacity: 0.9;*/
     font-size: 1.0rem;
     line-height: 1;
 }
 
 .fa-whiskey-glass {
-    /*margin: 0;*/
-    /*padding: 0;*/
     color: #FFFFFF;
     opacity: 0.9;
     font-weight: 600;
     font-size: 0.9rem;
-    /*line-height: 1;*/
 }
 
-.fa-whiskey-glass::before {
-    display: inline-block;
-    vertical-align: bottom;
-    line-height: 1.5;
-}
+/*.fa-whiskey-glass::before {*/
+/*    display: inline-block;*/
+/*    vertical-align: bottom;*/
+/*    line-height: 1.5;*/
+/*}*/
 
 .fa-whiskeyGlassFraudSummary {
     color: #FFFFFF;
     opacity: 0.8;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+.fa-whiskeyGlassFraudSummary::before {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 0.4;
 }
 
 .fa-gemFraudSummary{

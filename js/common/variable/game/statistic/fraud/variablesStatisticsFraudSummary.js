@@ -9,7 +9,8 @@ export const containerStatisticsFraudSummaryMainPartsId = "containerStatisticsFr
 // total value
 export const containerStatisticsFraudSummaryTotalValueMainId = "containerStatisticsFraudSummary-TotalValueMain";
 export const statisticsFraudSummaryTotalValueId = "statisticsFraudSummaryTotalValue";
-export const statisticsFraudSummaryTotalValueStyleDisplayFlex = "statisticsFraudSummaryTotalValue-StyleDisplayFlex";
+// export const statisticsFraudSummaryTotalValueStyleDisplayFlex = "statisticsFraudSummaryTotalValue-StyleDisplayFlex";
+export const statisticsFraudSummaryTotalValueStyleDisplayFlex = "styleFlexCenter";
 
 export const statisticsFraudSummaryTotalValueTextIdId = "statisticsFraudSummaryTotalValue-TextId";
 export const statisticsFraudSummaryTotalValueStyleText = "statisticsFraudSummaryTotalValue-StyleText";
@@ -17,7 +18,9 @@ export const statisticsFraudSummaryTotalValueStyleText = "statisticsFraudSummary
 // icons
 export const containerStatisticsFraudSummaryIconsMainId = "containerStatisticsFraudSummary-IconsMain";
 export const statisticsFraudSummaryIconsId = "statisticsFraudSummaryIcons";
-export const statisticsFraudSummaryIconsStyleDisplayFlex = "statisticsFraudSummaryIcons-StyleDisplayFlex";
+// export const statisticsFraudSummaryIconsStyleDisplayFlex = "statisticsFraudSummaryIcons-StyleDisplayFlex";
+export const statisticsFraudSummaryIconsStyleDisplayFlex = "styleFlexCenter";
+export const statisticsFraudSummaryIconsStyleFlexCenterUpdate = "styleFlexCenter-update";
 
 export const statisticsFraudSummaryIconsIconWhiskeyGlassLeftId = "statisticsFraudSummaryIcons-IconWhiskeyGlassLeft";
 export const statisticsFraudSummaryIconGemId = "statisticsFraudSummaryIcons-IconGem";

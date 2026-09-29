@@ -14,7 +14,8 @@ export const configurationRoundMaxButtonNumber =
     variablesConfigurationRoundButtonsPrimary.configurationRoundMaxButtonNumber;
 
 export const containerConfigurationRoundButtonRoundPrefixId = "containerConfigurationRound-ButtonRound-";
-export const configurationRoundStyleDisplayFlex = "configurationRound-StyleDisplayFlex";
+// export const configurationRoundStyleDisplayFlex = "configurationRound-StyleDisplayFlex";
+export const configurationRoundStyleDisplayFlex = "styleFlexCenter";
 
 export const buttonRoundPrefixId = "buttonRound-";
 export const buttonRoundStyle = "buttonRound-Style";

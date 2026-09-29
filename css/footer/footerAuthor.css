@@ -6,11 +6,11 @@
     grid-template-columns: 1fr;
 }
 
-.footerAuthor-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
+/*.footerAuthor-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: left;*/
+/*}*/
 
 .footerAuthor-StyleText {
     /*margin: auto 0;*/

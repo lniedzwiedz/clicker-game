@@ -14,7 +14,9 @@ export const historyRoundNumberMainIdPrefix = "historyRoundNumber-Main-";
 export const historyRoundNumberMainPartsIdPrefix = "historyRoundNumber-MainParts-";
 
 export const historyRoundNumberIdPrefix = "historyRoundNumber-";
-export const historyRoundNumberStyleDisplayFlex = "historyRoundNumber-StyleDisplayFlex";
+// export const historyRoundNumberStyleDisplayFlex = "historyRoundNumber-StyleDisplayFlex";
+export const historyRoundNumberStyleDisplayFlex = "styleFlexCenter";
+export const historyRoundNumberStyle = "historyRoundNumber-style";
 
 export const historyRoundNumberIconWhiskeyGlassIdPrefix = "historyRoundNumber-IconWhiskeyGlass-";
 export const statisticsFraudSumIconStyleSolid = "fa-solid";
@@ -38,7 +40,9 @@ export const containerStatisticsFraudHistoryNameMainId = "containerStatisticsFra
 export const containerStatisticsFraudHistoryNameMainPartsId = "containerStatisticsFraudHistoryName-MainParts";
 
 export const historyNameId = "historyName";
-export const historyNameStyleDisplayFlex = "historyName-StyleDisplayFlex";
+// export const historyNameStyleDisplayFlex = "historyName-StyleDisplayFlex";
+export const historyNameStyleDisplayFlex = "styleFlexCenter";
+export const historyNameStyle = "historyName-style";
 export const historyNameTextId = "historyName-TextId";
 export const historyNameText = "FRAUD COUNTER";
 export const historyNameStyleText = "historyName-StyleText";

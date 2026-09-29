@@ -6,11 +6,11 @@
     grid-template-columns: 1fr;
 }
 
-.buttonStop-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.buttonStop-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
 .buttonStop-Style {
     background-color: #2c3e3a;

@@ -1,5 +1,5 @@
 import {
-    addElementClassNameById,
+    addElementClassNameById, addElementClassNames,
     createElementDiv,
     createElementI,
     createElementP,
@@ -9,6 +9,7 @@ import {
 import * as variablesStatisticsFraudSummary
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
 import {
+    statisticsFraudSummaryIconsStyleFlexCenterUpdate,
     statisticsFraudSummaryIconStyleGem
 } from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
 
@@ -101,12 +102,18 @@ export class ViewStatisticsFraudSummary {
     creatSummaryIconsMain() {
         createElementDiv(
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryIconsMainId,
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId
         );
 
-        addElementClassNameById(
+        // addElementClassNameById(
+        //     variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId,
+        //     variablesStatisticsFraudSummary.statisticsFraudSummaryIconsStyleDisplayFlex
+        // );
+
+        addElementClassNames(
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconsStyleDisplayFlex,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconsStyleFlexCenterUpdate
         );
     }
 

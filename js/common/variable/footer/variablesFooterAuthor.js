@@ -5,7 +5,8 @@ export const containerFooterMainPartsId = variablesFooterPrimary.containerFooter
 
 export const containerFooterAuthorMainId = "containerFooterAuthor-Main";
 export const footerAuthorId = "footerAuthor";
-export const footerAuthorStyleDisplayFlex = "footerAuthor-StyleDisplayFlex";
+// export const footerAuthorStyleDisplayFlex = "footerAuthor-StyleDisplayFlex";
+export const footerAuthorStyleDisplayFlex = "styleFlexLeft";
 
 export const footerAuthorTextId = "footerAuthor-TextId";
 export const footerAuthorStyleText = "footerAuthor-StyleText";

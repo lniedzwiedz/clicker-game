@@ -31,11 +31,17 @@
     grid-template-columns: 1fr;
 }
 
-.historyRoundNumber-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*.historyRoundNumber-StyleDisplayFlex {*/
+/*    !*display: flex;*!*/
+/*    !*align-items: center;*!*/
+/*    !*justify-content: center;*!*/
 
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    box-shadow: 0 0 1px 1px #2a1e1e;*/
+/*}*/
+
+.historyRoundNumber-style {
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0 0 1px 1px #2a1e1e;
@@ -47,7 +53,6 @@
     opacity: 0.7;
     color: #FF7E00;
     font-size: 1.7rem;
-    /*line-height: 1;*/
 }
 
 .fa-whiskeyGlassFraudHistory {
@@ -80,11 +85,19 @@
     grid-template-columns: 1fr;
 }
 
-.historyName-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*.historyName-StyleDisplayFlex {*/
+/*    !*display: flex;*!*/
+/*    !*align-items: center;*!*/
+/*    !*justify-content: center;*!*/
 
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    box-shadow: 0 0 1px 1px #2a1e1e;*/
+/*    !*box-shadow: 1px 0 1px 1px #2a1e1e;*!*/
+/*    !*opacity: 0.8;*!*/
+/*}*/
+
+.historyName-style {
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0 0 1px 1px #2a1e1e;

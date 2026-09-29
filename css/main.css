@@ -33,6 +33,14 @@ body {
     grid-template-columns: 1fr 8fr 1fr;
 }
 
-@media (max-width: 600px) {
+.styleFlexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.styleFlexLeft {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }

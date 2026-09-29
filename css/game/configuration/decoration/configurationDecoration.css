@@ -6,11 +6,11 @@
     grid-template-columns: 1fr;
 }
 
-.configurationDecoration-StyleDisplayFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.configurationDecoration-StyleDisplayFlex {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
 .fa-screwdriver-wrench {
     margin: 0;

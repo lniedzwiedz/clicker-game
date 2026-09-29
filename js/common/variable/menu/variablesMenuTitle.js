@@ -5,7 +5,7 @@ export const containerMenuMainPartsId = variablesMenuPrimary.containerMenuMainPa
 
 export const containerTitleMainId = "containerMenuTitle-Main";
 export const menuTitleId = "menuTitle";
-export const menuTitleStyleDisplayFlex = "menuTitle-StyleDisplayFlex";
+export const menuTitleStyleDisplayFlex = "styleFlexLeft";
 
 export const menuTitleTextId = "menuTitle-TextId";
 export const menuTitleStyleText = "menuTitle-StyleText";
