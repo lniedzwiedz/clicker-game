@@ -1,6 +1,5 @@
 import {
     createElementDiv,
-    isElementsExistById,
     removeElementById
 } from "../../../../common/function/commonFunctions.js";
 
@@ -18,21 +17,22 @@ class ViewStatisticsFraudPrimary {
     createContainerStatisticsFraudMain() {
         createElementDiv(
             variablesStatisticsFraud.containerHomeMainPartsId,
-            variablesStatisticsFraud.statisticsFraudMainId
+            variablesStatisticsFraud.containerStatisticsFraudMainId
         );
     }
 
     createContainerStatisticsFraudMainParts() {
         createElementDiv(
-            variablesStatisticsFraud.statisticsFraudMainId,
-            variablesStatisticsFraud.statisticsFraudMainPartsId
+            variablesStatisticsFraud.containerStatisticsFraudMainId,
+            variablesStatisticsFraud.containerStatisticsFraudMainPartsId
         );
     }
 
     removeContainerStatisticsFraudPrimary() {
-        if (isElementsExistById(variablesStatisticsFraud.statisticsFraudMainId))
-            removeElementById(
-                variablesStatisticsFraud.statisticsFraudMainId
+
+        console.log(" remove fraud");
+        removeElementById(
+                variablesStatisticsFraud.containerStatisticsFraudMainId
             );
     }
 }

@@ -1,7 +1,7 @@
 import * as variablesStatisticsFraudPrimary from "./variablesStatisticsFraudPrimary.js";
 
 
-export const containerStatisticsFraudMainPartsId = variablesStatisticsFraudPrimary.statisticsFraudMainPartsId;
+export const containerStatisticsFraudMainPartsId = variablesStatisticsFraudPrimary.containerStatisticsFraudMainPartsId;
 
 export const containerStatisticsFraudSummaryMainId = "containerStatisticsFraudSummary-Main";
 export const containerStatisticsFraudSummaryMainPartsId = "containerStatisticsFraudSummary-MainParts";

@@ -31,7 +31,7 @@ export class ControllerButtonGameCoordinator {
         this.removeClickGameListener();
     }
 
-    configureButtonGameForGameOver() {
+    configureButtonGameAtGameEnd() {
         this.removeClickGameListener();
         this.createButtonGameTextGameOver();
         this.setButtonGameStyleGameOver();
@@ -49,7 +49,7 @@ export class ControllerButtonGameCoordinator {
         this.controllerButtonGameColor.setConfigurationButtonGameColorForGameOver();
     }
 
-    removeConfigurationGameOver() {
+    configureButtonGameAtStart() {
         this.removeButtonGameText();
         this.removeButtonGameStyleGameOver();
     }

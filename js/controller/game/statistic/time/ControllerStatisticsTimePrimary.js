@@ -9,6 +9,11 @@ export class ControllerStatisticsTimePrimary {
         this.viewStatisticsTimePrimary.createContainerStatisticsTimePrimary();
     }
 
+    removeStatisticsTimePrimary(){
+        this.viewStatisticsTimePrimary.removeContainerStatisticsTimePrimary();
+    }
+
+
     // createStatisticsTime() {
     //     this.viewStatisticsTime.createGameFieldStatisticsTime();
     // }

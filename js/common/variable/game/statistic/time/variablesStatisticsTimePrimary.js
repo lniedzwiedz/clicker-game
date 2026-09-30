@@ -5,24 +5,10 @@ export const containerHomeMainParts = home.containerHomeMainPartsId;
 
 
 // statistics time - main
-export const containerStatisticsTimeMain = "containerStatistics-TimeMain";
-export const containerStatisticsTimeMainParts = "containerStatistics-TimeMainParts";
-
-// statistics fraud  -> sum
-// export const containerStatisticsFraudSumMain = "containerStatisticsFraudSum-Main";
-// export const containerStatisticsFraudSumMainParts = "containerStatisticsFraudSum-MainParts";
+export const containerStatisticsTimeMain = "containerStatisticsTime-main";
+export const containerStatisticsTimeMainParts = "containerStatisticsTime-mainParts";
 
 
-
-
-
-
-
-
-export const timeKindMin = "Min";
-export const timeKindAvg = "Avg";
-export const timeKindMax = "Max";
-export const timeKindBest = "Best";
 
 export const containerGameFiledStatisticsTimeKind = "containerGameFiled-statisticsTimeKind";
 export const containerGameFiledStatisticsTimeKindParts = "containerGameFiled-statisticsTimeKindParts";

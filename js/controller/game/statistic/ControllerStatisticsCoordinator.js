@@ -6,22 +6,40 @@ export class ControllerStatisticsCoordinator {
         this.onStart = null;
     }
 
-    // setOnStart(onStart) {
-    //     this.onStart = onStart;
-    // }
-
-    createStatistics(gameRoundCount) {
-        // this.createStatisticTime(gameRoundCount);
-        this.createStatisticFraud(gameRoundCount);
+    configureStatistic(gameRoundCount) {
+        this.configureStatisticTime();
+        this.configureStatisticsFraud(gameRoundCount);
     }
 
-    createStatisticFraud(gameRoundCount) {
-        this.controllerStatisticsFraudCoordinator.createStatisticsFraud(gameRoundCount);
+    configureStatisticTime() {
+        this.controllerStatisticsTimeCoordinator.configureStatisticsTime();
     }
 
-    // createStatisticTime(gameRoundCount){
-    //     this.controllerStatisticsTimeCoordinator.createStatisticsTime(gameRoundCount);
+    configureStatisticsFraud(gameRoundCount) {
+        this.controllerStatisticsFraudCoordinator.configureStatisticsFraud(gameRoundCount);
+    }
+
+    removeStatistics(){
+        this.removeStatisticsFraud();
+        this.removeStatisticsTime();
+    }
+
+    removeStatisticsFraud() {
+        this.controllerStatisticsFraudCoordinator.removeStatisticsFraud();
+    }
+
+    removeStatisticsTime(){
+        this.controllerStatisticsTimeCoordinator.removeStatisticsTime();
+    }
+
+    // configureStatisticsAtStart(){
+    //     this.removeStatisticsFraudPrimary();
     // }
+
+    // removeStatisticsFraudPrimary(){
+    //     this.controllerStatisticsFraudCoordinator.removeStatisticsFraudPrimary();
+    // }
+
 
     updateStatistic(
         fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
@@ -40,6 +58,16 @@ export class ControllerStatisticsCoordinator {
             fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
         );
     }
+
+    // updateStatisticTime(
+    //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //     statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+    //
+    //     this.controllerStatisticsCoordinator.configureStatisticTime(
+    //         statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //         statisticTimeInSecondsMax, statisticTimeInSecondsBest
+    //     );
+    // }
 
     updateStatisticTime() {
         // this.controllerStatisticsTimeCoordinator.updateStatisticTime();

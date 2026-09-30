@@ -32,7 +32,7 @@ export class ControllerConfigurationCoordinator {
         this.controllerConfigurationRoundCoordinator.configureConfigurationAtStart();
     }
 
-    configureRoundButtonsAfterGameEnd() {
-        this.controllerConfigurationRoundCoordinator.configureRoundButtonsAfterGameEnd();
+    configureConfigurationAtGameEnd() {
+        this.controllerConfigurationRoundCoordinator.configureRoundButtonsAtGameEnd();
     }
 }

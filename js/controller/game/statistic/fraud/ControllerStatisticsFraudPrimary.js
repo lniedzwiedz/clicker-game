@@ -11,12 +11,4 @@ export class ControllerStatisticsFraudPrimary {
     removeStatisticsFraudPrimary() {
         this.viewStatisticsFraudPrimary.removeContainerStatisticsFraudPrimary();
     }
-
-    // setStatisticFraudData(fraudCountedSumNumber, fraudCountedNumber, fraudCountRoundIndex) {
-    //     this.viewStatisticsFraud.setStatisticFraudData(
-    //         fraudCountedSumNumber,
-    //         fraudCountedNumber,
-    //         fraudCountRoundIndex
-    //     );
-    // }
 }

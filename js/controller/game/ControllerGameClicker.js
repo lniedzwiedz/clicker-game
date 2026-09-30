@@ -17,14 +17,15 @@ export class ControllerGameClicker {
 
     startGame() {
 
+        this.controllerGameCoordinator
+            .removeStatistics();
+
         this.clearTimeoutAfterChangeColor();
 
-        this.removeConfigurationGameOver();
-
-        this.configureButtonStopAfterClickStart();
+        this.configureButtonStopAtStart();
 
         this.controllerGameCoordinator
-            .configureGameStart();
+            .configureGameAtStart();
 
 
         const roundNumber =
@@ -47,7 +48,7 @@ export class ControllerGameClicker {
         this.startRound();
     }
 
-    configureButtonStopAfterClickStart() {
+    configureButtonStopAtStart() {
 
         this.createButtonStop();
 
@@ -151,8 +152,10 @@ export class ControllerGameClicker {
 
         if (this.game.getCurrentRoundNumber() === 1) {
 
+            console.log("runda = " + this.game.getCurrentRoundNumber());
+
             this.controllerGameCoordinator
-                .configureStatisticAtStart(
+                .configureStatistic(
                     this.game.getGameRoundCount()
                 );
         }
@@ -214,10 +217,6 @@ export class ControllerGameClicker {
     }
 
     gameOver() {
-        this.controllerGameCoordinator.gameOver();
-    }
-
-    removeConfigurationGameOver() {
-        this.controllerGameCoordinator.removeConfigurationGameOver();
+        this.controllerGameCoordinator.configureGameOver();
     }
 }

@@ -3,5 +3,5 @@ import * as variablesHomePrimary from "../../../home/variablesHomePrimary.js";
 
 export const containerHomeMainPartsId = variablesHomePrimary.containerHomeMainPartsId;
 
-export const statisticsFraudMainId = "containerStatisticsFraud-Main";
-export const statisticsFraudMainPartsId = "containerStatisticsFraud-MainParts";
+export const containerStatisticsFraudMainId = "containerStatisticsFraud-Main";
+export const containerStatisticsFraudMainPartsId = "containerStatisticsFraud-MainParts";

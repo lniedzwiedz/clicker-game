@@ -6,5 +6,30 @@ export class ControllerStatisticsTimeCoordinator {
         this.controllerStatisticsTimeHistory = controllerStatisticsTimeHistory
     }
 
+    configureStatisticsTime() {
+        // this.removeStatisticsTime();
+        this.createStatisticsTime();
+    }
 
+    removeStatisticsTime() {
+        this.controllerStatisticsTimePrimary.removeStatisticsTimePrimary();
+    }
+
+    createStatisticsTime() {
+        this.createStatisticsTimePrimary();
+        this.createStatisticsTimeSummary();
+        this.createStatisticsTimeHistory();
+    }
+
+    createStatisticsTimePrimary() {
+        this.controllerStatisticsTimePrimary.createStatisticsTimePrimary()
+    }
+
+    createStatisticsTimeSummary() {
+
+    }
+
+    createStatisticsTimeHistory() {
+
+    }
 }

@@ -59,7 +59,7 @@ export class ControllerGameStateCoordinator {
         this.controllerButtonStop.setConfigurationButtonStopAfterClickButtonStop();
     }
 
-    configureGameStateForGameOver() {
+    configureGameStateAtGameOver() {
         this.setConfigurationButtonStartForGameOver();
         this.setConfigurationButtonStopForGameOver();
     }

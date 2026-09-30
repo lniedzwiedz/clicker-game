@@ -6,6 +6,14 @@ export class ControllerStatisticsFraudCoordinator {
         this.controllerStatisticsFraudHistory = controllerStatisticsFraudHistory
     }
 
+    configureStatisticsFraud(gameRoundCount) {
+        this.createStatisticsFraud(gameRoundCount);
+    }
+
+    removeStatisticsFraud(){
+        this.controllerStatisticsFraudPrimary.removeStatisticsFraudPrimary();
+    }
+
     createStatisticsFraud(gameRoundCount) {
         this.createStatisticsFraudPrimary();
         this.creatStatisticsFraudSummary();
@@ -23,6 +31,7 @@ export class ControllerStatisticsFraudCoordinator {
     createStatisticsFraudHistory(gameRoundCount) {
         this.controllerStatisticsFraudHistory.creatStatisticsFraudHistory(gameRoundCount);
     }
+
 
     updateStatisticFraud(fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
         this.updateStatisticsFraudSummary(fraudTotalValue);

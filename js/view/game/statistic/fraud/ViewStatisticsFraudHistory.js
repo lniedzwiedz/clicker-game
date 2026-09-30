@@ -1,9 +1,8 @@
 import {
     addElementClassNameById, addElementClassNames,
     createElementDiv,
-    createElementDivWithIdAndSetClassName,
     createElementI,
-    createElementP,
+    createElementP, removeElementById,
     setElementStyletAsGrid,
     setElementTextById,
     valueToString
@@ -11,11 +10,6 @@ import {
 
 import * as variablesStatisticsFraudHistory
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
-import {
-    historyNameStyle,
-    historyRoundNumberStyle,
-    statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory
-} from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory.js";
 
 
 export class ViewStatisticsFraudHistory {
@@ -255,11 +249,6 @@ export class ViewStatisticsFraudHistory {
             variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameMainPartsId,
             variablesStatisticsFraudHistory.historyNameId
         );
-
-        // addElementClassNameById(
-        //     variablesStatisticsFraudHistory.historyNameId,
-        //     variablesStatisticsFraudHistory.historyNameStyleDisplayFlex
-        // );
 
         addElementClassNames(
             variablesStatisticsFraudHistory.historyNameId,

@@ -8,9 +8,21 @@ export class ControllerGameCoordinator {
     }
 
     configureGame() {
+        this.createConfiguration();
+        this.createButtonGame();
+        this.createGameState();
+    }
+
+    createConfiguration() {
         this.controllerConfigurationCoordinator.createConfiguration();
-        this.controllerGameStateCoordinator.createGameState();
+    }
+
+    createButtonGame() {
         this.controllerButtonGameCoordinator.createButtonGame();
+    }
+
+    createGameState() {
+        this.controllerGameStateCoordinator.createGameState();
     }
 
     setOnStart(onStart) {
@@ -18,10 +30,27 @@ export class ControllerGameCoordinator {
             .setOnStart(onStart);
     }
 
-    configureGameStart() {
+    configureGameAtStart() {
+        this.configureConfigurationAtStart();
+        this.configureGameStateButtonsAtStart();
+        this.configureButtonGameAtStart();
+    }
+
+    configureConfigurationAtStart() {
         this.controllerConfigurationCoordinator.configureConfigurationAtStart();
+    }
+
+    configureGameStateButtonsAtStart() {
         this.controllerGameStateCoordinator.configureGameStateButtonsAtStart();
     }
+
+    configureButtonGameAtStart() {
+        this.controllerButtonGameCoordinator.configureButtonGameAtStart();
+    }
+
+    // configureStatisticsAtStart() {
+    //     this.controllerStatisticsCoordinator.configureStatisticsAtStart();
+    // }
 
     getRoundNumber() {
         return this.controllerConfigurationCoordinator
@@ -44,7 +73,7 @@ export class ControllerGameCoordinator {
     }
 
     configureConfigurationAtStop() {
-        this.controllerConfigurationCoordinator.configureRoundButtonsAfterGameEnd();
+        this.configureConfigurationAtGameEnd();
     }
 
     configureButtonGameAtStop() {
@@ -68,8 +97,8 @@ export class ControllerGameCoordinator {
         this.controllerButtonGameCoordinator.setButtonGameColor(roundColor);
     }
 
-    configureStatisticAtStart(gameRoundCount) {
-        this.controllerStatisticsCoordinator.createStatistics(gameRoundCount);
+    configureStatistic(gameRoundCount){
+        this.controllerStatisticsCoordinator.configureStatistic(gameRoundCount);
     }
 
     updateStatistic(
@@ -80,23 +109,17 @@ export class ControllerGameCoordinator {
         );
     }
 
-    updateStatisticTime(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
-
-        this.controllerStatisticsCoordinator.configureStatisticTime(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, statisticTimeInSecondsBest
-        );
+    removeStatistics(){
+        this.controllerStatisticsCoordinator.removeStatistics();
     }
 
-    gameOver() {
-        this.controllerConfigurationCoordinator.configureRoundButtonsAfterGameEnd();
-        this.controllerButtonGameCoordinator.configureButtonGameForGameOver();
-        this.controllerGameStateCoordinator.configureGameStateForGameOver();
+    configureGameOver() {
+        this.configureConfigurationAtGameEnd();
+        this.controllerButtonGameCoordinator.configureButtonGameAtGameEnd();
+        this.controllerGameStateCoordinator.configureGameStateAtGameOver();
     }
 
-    removeConfigurationGameOver() {
-        this.controllerButtonGameCoordinator.removeConfigurationGameOver();
+    configureConfigurationAtGameEnd() {
+        this.controllerConfigurationCoordinator.configureConfigurationAtGameEnd();
     }
 }

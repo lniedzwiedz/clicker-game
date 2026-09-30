@@ -1,7 +1,5 @@
 :root {
     --colorMain: #ac4a71;
-    /*--gameFiledButtonPlayColor: #000000;*/
-    /*--cssButtonGameStyleBackgroundColor: #000000;*/
     --cssButtonGameStyleBackgroundColor: pink;
 }
 
@@ -13,9 +11,9 @@ body {
     display: flex;
 }
 
-.button {
-    background-color: #000000;
-}
+/*.button {*/
+/*    background-color: #000000;*/
+/*}*/
 
 #container-Main {
     display: grid;

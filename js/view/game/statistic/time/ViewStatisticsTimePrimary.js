@@ -1,35 +1,28 @@
 import {
     createElementDiv,
     isElementsExistById,
-    removeElementById,
+    removeElementById, removeElementClassNameById,
     setElementTextById
 } from "../../../../common/function/commonFunctions.js";
 
-import * as variablesStatisticsTime from "../../../../common/variable/game/statistic/time/variablesStatisticsTimePrimary.js";
+import * as variablesStatisticsTimePrimary
+    from "../../../../common/variable/game/statistic/time/variablesStatisticsTimePrimary.js";
 
 
 export class ViewStatisticsTimePrimary {
 
-    // createCSSVariableName(baseVariableName, partToSwitch) {
-    //     let timeKind = "Kind";
-    //     return baseVariableName.replace(timeKind, partToSwitch);
-    // }
-
-    createContainerStatisticsTimePrimary(){
-
-
+    createContainerStatisticsTimePrimary() {
+        this.createContainerStatisticsTimeMain();
+        this.createContainerStatisticsTimeMainParts();
     }
 
-    createStatisticsTime() {
+    createContainerStatisticsTimeMain() {
 
         createElementDiv(
-            variablesStatisticsTime.containerHomeMainParts,
-            variablesStatisticsTime.containerStatisticsTimeMain
+            variablesStatisticsTimePrimary.containerHomeMainParts,
+            variablesStatisticsTimePrimary.containerStatisticsTimeMain
         );
 
-        // this.createContainerStatisticsFraudMain();
-        // this.createContainerStatisticsFraudSum();
-        // this.createContainerStatisticsFraudCounter();
 
         // createElementDivWithTheSameIdAndClassName(
         //     variablesStatisticsTime.containerGameFiledStatisticsTime,
@@ -47,7 +40,26 @@ export class ViewStatisticsTimePrimary {
 
     }
 
-    createContainerStatisticsTimeMain() {
+    createContainerStatisticsTimeMainParts() {
+        createElementDiv(
+            variablesStatisticsTimePrimary.containerStatisticsTimeMain,
+            variablesStatisticsTimePrimary.containerStatisticsTimeMainParts
+        );
+    }
+
+    removeContainerStatisticsTimePrimary(){
+
+        console.log(" remove time");
+
+        // if(isElementsExistById(variablesStatisticsTimePrimary.containerStatisticsTimeMain)){
+        removeElementById(
+                variablesStatisticsTimePrimary.containerStatisticsTimeMain
+            );
+        // }
+
+    }
+
+    createContainerStatisticsTimeMainwww() {
 
         // createElementDiv(
         //     variablesStatisticsTime.containerStatisticsTimeMain,
@@ -135,23 +147,23 @@ export class ViewStatisticsTimePrimary {
 
 
     setStatisticTimeInSecondsMin(statisticTimeInSecondsMin) {
-        setElementTextById(variablesStatisticsTime.statisticsTimeMinGamePlay, statisticTimeInSecondsMin);
+        setElementTextById(variablesStatisticsTimePrimary.statisticsTimeMinGamePlay, statisticTimeInSecondsMin);
     }
 
     setStatisticTimeInSecondsAvg(statisticTimeInSecondsAvg) {
-        setElementTextById(variablesStatisticsTime.statisticsTimeAvgGamePlay, statisticTimeInSecondsAvg);
+        setElementTextById(variablesStatisticsTimePrimary.statisticsTimeAvgGamePlay, statisticTimeInSecondsAvg);
     }
 
     setStatisticTimeInSecondsMax(statisticTimeInSecondsMax) {
-        setElementTextById(variablesStatisticsTime.statisticsTimeMaxGamePlay, statisticTimeInSecondsMax);
+        setElementTextById(variablesStatisticsTimePrimary.statisticsTimeMaxGamePlay, statisticTimeInSecondsMax);
     }
 
     setStatisticTimeInSecondsBest(statisticTimeInSecondsBest) {
-        setElementTextById(variablesStatisticsTime.statisticsTimeBestGamePlay, statisticTimeInSecondsBest);
+        setElementTextById(variablesStatisticsTimePrimary.statisticsTimeBestGamePlay, statisticTimeInSecondsBest);
     }
 
     removeGameFieldStatisticsTime() {
-        if (isElementsExistById(variablesStatisticsTime.containerGameFiledStatisticsTimeParts))
-            removeElementById(variablesStatisticsTime.containerGameFiledStatisticsTimeParts);
+        if (isElementsExistById(variablesStatisticsTimePrimary.containerGameFiledStatisticsTimeParts))
+            removeElementById(variablesStatisticsTimePrimary.containerGameFiledStatisticsTimeParts);
     }
 }

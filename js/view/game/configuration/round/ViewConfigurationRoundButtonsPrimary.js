@@ -47,9 +47,12 @@ export class ViewConfigurationRoundButtonsPrimary {
         setElementStyletAsGrid(
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
             + valueToString(rowNumber),
-            gridRowStartNumber, 1,
-            2, gridColumnEndNumber,
-            "1fr", "1fr"
+            gridRowStartNumber,
+            1,
+            2,
+            gridColumnEndNumber,
+            "1fr",
+            "1fr"
         );
     }
 
@@ -78,9 +81,12 @@ export class ViewConfigurationRoundButtonsPrimary {
         setElementStyletAsGrid(
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber),
-            1, 1,
-            2, 2,
-            gridTemplateRows, gridTemplateColumns
+            1,
+            1,
+            2,
+            2,
+            gridTemplateRows,
+            gridTemplateColumns
         );
     }
 }
