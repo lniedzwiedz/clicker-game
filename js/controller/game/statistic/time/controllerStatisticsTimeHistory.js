@@ -4,5 +4,8 @@ export class ControllerStatisticsTimeHistory {
         this.viewStatisticsTimeHistory = viewStatisticsTimeHistory;
     }
 
+    createStatisticsTimeHistory(){
+        this.viewStatisticsTimeHistory.createContainerStatisticsTimedHistory();
+    }
 
 }

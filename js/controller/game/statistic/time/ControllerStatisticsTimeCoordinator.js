@@ -1,13 +1,12 @@
 export class ControllerStatisticsTimeCoordinator {
 
-    constructor(controllerStatisticsTimePrimary, controllerStatisticsTimeBest, controllerStatisticsTimeHistory) {
+    constructor(controllerStatisticsTimePrimary, controllerStatisticsTimeSummary, controllerStatisticsTimeHistory) {
         this.controllerStatisticsTimePrimary = controllerStatisticsTimePrimary;
-        this.controllerStatisticsTimeBest = controllerStatisticsTimeBest;
+        this.controllerStatisticsTimeSummary = controllerStatisticsTimeSummary;
         this.controllerStatisticsTimeHistory = controllerStatisticsTimeHistory
     }
 
     configureStatisticsTime() {
-        // this.removeStatisticsTime();
         this.createStatisticsTime();
     }
 
@@ -26,10 +25,10 @@ export class ControllerStatisticsTimeCoordinator {
     }
 
     createStatisticsTimeSummary() {
-
+        this.controllerStatisticsTimeSummary.createStatisticsTimeSummary();
     }
 
     createStatisticsTimeHistory() {
-
+        this.controllerStatisticsTimeHistory.createStatisticsTimeHistory();
     }
 }

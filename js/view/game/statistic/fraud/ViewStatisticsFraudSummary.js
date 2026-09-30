@@ -1,5 +1,6 @@
 import {
-    addElementClassNameById, addElementClassNames,
+    addElementClassNameById,
+    addElementClassNames,
     createElementDiv,
     createElementI,
     createElementP,
@@ -14,8 +15,8 @@ export class ViewStatisticsFraudSummary {
 
     createContainerStatisticsFraudSummary() {
         this.createContainerStatisticsFraudSummaryPrimary();
-        this.createContainerSummaryTotalValue();
-        this.createContainerSummaryIcons();
+        this.createContainerStatisticsFraudSummaryTotalValue();
+        this.createContainerStatisticsFraudSummaryIcons();
     }
 
     createContainerStatisticsFraudSummaryPrimary() {
@@ -37,13 +38,12 @@ export class ViewStatisticsFraudSummary {
         );
     }
 
-    createContainerSummaryTotalValue() {
-        this.createContainerSummaryTotalValuePrimary();
-        this.createSummaryTotalValueMain();
-        this.createSummaryTotalValueText();
+    createContainerStatisticsFraudSummaryTotalValue() {
+        this.createContainerStatisticsFraudSummaryTotalValuePrimary();
+        this.createFraudSummaryTotalValue();
     }
 
-    createContainerSummaryTotalValuePrimary() {
+    createContainerStatisticsFraudSummaryTotalValuePrimary() {
         this.containerStatisticsFraudSummaryTotalValueMain();
     }
 
@@ -52,6 +52,11 @@ export class ViewStatisticsFraudSummary {
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryMainPartsId,
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryTotalValueMainId,
         );
+    }
+
+    createFraudSummaryTotalValue() {
+        this.createSummaryTotalValueMain();
+        this.createSummaryTotalValueText();
     }
 
     createSummaryTotalValueMain() {
@@ -69,22 +74,21 @@ export class ViewStatisticsFraudSummary {
     createSummaryTotalValueText() {
         createElementP(
             variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueId,
-            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextIdId
+            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextId
         );
 
         addElementClassNameById(
-            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextIdId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextId,
             variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueStyleText
         );
     }
 
-    createContainerSummaryIcons() {
-        this.createContainerSummaryIconsPrimary();
-        this.creatSummaryIconsMain();
-        this.createSummaryIcons();
+    createContainerStatisticsFraudSummaryIcons() {
+        this.createContainerStatisticsFraudSummaryIconsPrimary();
+        this.createStatisticsFraudSummaryIcons();
     }
 
-    createContainerSummaryIconsPrimary() {
+    createContainerStatisticsFraudSummaryIconsPrimary() {
         this.createContainerSummaryTotalIconsMain();
     }
 
@@ -95,7 +99,12 @@ export class ViewStatisticsFraudSummary {
         );
     }
 
-    creatSummaryIconsMain() {
+    createStatisticsFraudSummaryIcons() {
+        this.creatFraudSummaryIconsMain();
+        this.createFraudSummaryIcons();
+    }
+
+    creatFraudSummaryIconsMain() {
         createElementDiv(
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryIconsMainId,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId
@@ -108,25 +117,25 @@ export class ViewStatisticsFraudSummary {
         );
     }
 
-    createSummaryIcons() {
-        this.createSummaryIconWhiskeyGlassLeft();
-        this.createSummaryIconGem();
-        this.createSummaryIconWhiskeyGlassRight();
+    createFraudSummaryIcons() {
+        this.createFraudSummaryIconLeft();
+        this.createFraudSummaryIconMiddle();
+        this.createFraudSummaryIconRight();
     }
 
-    createSummaryIconWhiskeyGlassLeft() {
-        this.createIconWhiskeyGlass(
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconsIconWhiskeyGlassLeftId
+    createFraudSummaryIconLeft() {
+        this.createFraudSummaryIconWhiskeyGlass(
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconLeftId
         );
     }
 
-    createSummaryIconWhiskeyGlassRight() {
-        this.createIconWhiskeyGlass(
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconsIconWhiskeyGlassRightId
+    createFraudSummaryIconRight() {
+        this.createFraudSummaryIconWhiskeyGlass(
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconRightId
         );
     }
 
-    createIconWhiskeyGlass(iconId) {
+    createFraudSummaryIconWhiskeyGlass(iconId) {
         createElementI(
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId,
             iconId,
@@ -140,23 +149,27 @@ export class ViewStatisticsFraudSummary {
         );
     }
 
-    createSummaryIconGem() {
+    createFraudSummaryIconMiddle() {
+        this.createFraudSummaryIconGem();
+    }
+
+    createFraudSummaryIconGem() {
         createElementI(
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconsId,
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconGemId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconMiddleId,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleSolid,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconGem
         );
 
         addElementClassNameById(
-            variablesStatisticsFraudSummary.statisticsFraudSummaryIconGemId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryIconMiddleId,
             variablesStatisticsFraudSummary.statisticsFraudSummaryIconStyleGem
         );
     }
 
     setStatisticsFraudSummaryTotalValue(fraudTotalValue) {
         setElementTextById(
-            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextIdId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextId,
             fraudTotalValue
         );
     }

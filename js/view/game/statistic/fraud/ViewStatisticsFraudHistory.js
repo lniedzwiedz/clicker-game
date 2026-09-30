@@ -1,8 +1,9 @@
 import {
-    addElementClassNameById, addElementClassNames,
+    addElementClassNameById,
+    addElementClassNames,
     createElementDiv,
     createElementI,
-    createElementP, removeElementById,
+    createElementP,
     setElementStyletAsGrid,
     setElementTextById,
     valueToString

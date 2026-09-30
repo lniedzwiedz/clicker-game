@@ -29,11 +29,9 @@ class ViewStatisticsFraudPrimary {
     }
 
     removeContainerStatisticsFraudPrimary() {
-
-        console.log(" remove fraud");
         removeElementById(
-                variablesStatisticsFraud.containerStatisticsFraudMainId
-            );
+            variablesStatisticsFraud.containerStatisticsFraudMainId
+        );
     }
 }
 

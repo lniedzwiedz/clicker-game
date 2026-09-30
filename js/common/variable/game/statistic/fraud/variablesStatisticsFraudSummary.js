@@ -3,28 +3,29 @@ import * as variablesStatisticsFraudPrimary from "./variablesStatisticsFraudPrim
 
 export const containerStatisticsFraudMainPartsId = variablesStatisticsFraudPrimary.containerStatisticsFraudMainPartsId;
 
-export const containerStatisticsFraudSummaryMainId = "containerStatisticsFraudSummary-Main";
-export const containerStatisticsFraudSummaryMainPartsId = "containerStatisticsFraudSummary-MainParts";
+export const containerStatisticsFraudSummaryMainId = "containerStatisticsFraudSummary-main";
+export const containerStatisticsFraudSummaryMainPartsId = "containerStatisticsFraudSummary-mainParts";
 
 // total value
-export const containerStatisticsFraudSummaryTotalValueMainId = "containerStatisticsFraudSummary-TotalValueMain";
-export const statisticsFraudSummaryTotalValueId = "statisticsFraudSummaryTotalValue";
+export const containerStatisticsFraudSummaryTotalValueMainId = "containerStatisticsFraudSummary-totalValue-main";
+export const statisticsFraudSummaryTotalValueId = "statisticsFraudSummary-totalValue-main";
 // export const statisticsFraudSummaryTotalValueStyleDisplayFlex = "statisticsFraudSummaryTotalValue-StyleDisplayFlex";
 export const statisticsFraudSummaryTotalValueStyleDisplayFlex = "styleFlexCenter";
 
-export const statisticsFraudSummaryTotalValueTextIdId = "statisticsFraudSummaryTotalValue-TextId";
-export const statisticsFraudSummaryTotalValueStyleText = "statisticsFraudSummaryTotalValue-StyleText";
+export const statisticsFraudSummaryTotalValueTextId = "statisticsFraudSummary-totalValue-textId";
+export const statisticsFraudSummaryTotalValueStyleText = "statisticsFraudSummary-totalValue-styleText";
+export const statisticsTimeSummaryTotalValueTextDefault = "03-06";
 
 // icons
-export const containerStatisticsFraudSummaryIconsMainId = "containerStatisticsFraudSummary-IconsMain";
-export const statisticsFraudSummaryIconsId = "statisticsFraudSummaryIcons";
+export const containerStatisticsFraudSummaryIconsMainId = "containerStatisticsFraudSummary-iconsMain";
+export const statisticsFraudSummaryIconsId = "statisticsFraudSummary-icons";
 // export const statisticsFraudSummaryIconsStyleDisplayFlex = "statisticsFraudSummaryIcons-StyleDisplayFlex";
 export const statisticsFraudSummaryIconsStyleDisplayFlex = "styleFlexCenter";
-export const statisticsFraudSummaryIconsStyleFlexCenterUpdate = "styleFlexCenter-update";
+export const statisticsFraudSummaryIconsStyleFlexCenterUpdate = "statisticsFraudSummary-styleFlexCenter-update";
 
-export const statisticsFraudSummaryIconsIconWhiskeyGlassLeftId = "statisticsFraudSummaryIcons-IconWhiskeyGlassLeft";
-export const statisticsFraudSummaryIconGemId = "statisticsFraudSummaryIcons-IconGem";
-export const statisticsFraudSummaryIconsIconWhiskeyGlassRightId = "statisticsFraudSummary-Icons-IconWhiskeyGlassRight";
+export const statisticsFraudSummaryIconLeftId = "statisticsFraudSummary-iconLeft";
+export const statisticsFraudSummaryIconMiddleId = "statisticsFraudSummary-iconMiddle";
+export const statisticsFraudSummaryIconRightId = "statisticsFraudSummary-iconRight";
 
 export const statisticsFraudSummaryIconStyleSolid = "fa-solid";
 

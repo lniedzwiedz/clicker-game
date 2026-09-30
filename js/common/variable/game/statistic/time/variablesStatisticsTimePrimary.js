@@ -1,35 +1,12 @@
 import * as home from "../../../home/variablesHomePrimary.js";
 
 
-export const containerHomeMainParts = home.containerHomeMainPartsId;
+export const containerHomeMainPartsId = home.containerHomeMainPartsId;
 
 
-// statistics time - main
-export const containerStatisticsTimeMain = "containerStatisticsTime-main";
-export const containerStatisticsTimeMainParts = "containerStatisticsTime-mainParts";
+export const containerStatisticsTimeMainId = "containerStatisticsTime-main";
+export const containerStatisticsTimeMainPartsId = "containerStatisticsTime-mainParts";
 
-
-
-export const containerGameFiledStatisticsTimeKind = "containerGameFiled-statisticsTimeKind";
-export const containerGameFiledStatisticsTimeKindParts = "containerGameFiled-statisticsTimeKindParts";
-export const containerGameFiledStatisticsTimeKindText = "containerGameFiled-statisticsTimeKindText";
-export const containerGameFiledStatisticsTimeKindGamePlay = "containerGameFiled-statisticsTimeKindGamePlay";
-export const gameFiledStatisticsTimeKindGamePlay = "containerGameFiled-statisticsTimeKindGamePlay";
-export const gameFiledStatisticsTimeKindText = "gameFiledStatisticsTimeKindText";
-export const statisticsTimeKindGamePlay = "statisticsTimeKindGamePlay";
-export const statisticsTimeKindText = "statisticsTimeKindText";
-export const statisticsTimeKindGamePlayDisplay = "0.0000 ??? ";
-
-
-export const containerGameFiledStatisticsTime = "containerGameFiled-statisticsTime";
-export const containerGameFiledStatisticsTimeParts = "containerGameFiled-statisticsTimeParts";
-
-export const containerGameFiledStatisticsTimeBest = "containerGameFiled-statisticsTimeBest";
-export const containerGameFiledStatisticsTimeBestParts = "containerGameFiled-statisticsTimeBestParts";
-export const containerGameFiledStatisticsTimeBestText = "containerGameFiled-statisticsTimeBestText";
-export const containerGameFiledStatisticsTimeBestGamePlay = "containerGameFiled-statisticsTimeBestGamePlay";
-export const gameFiledStatisticsTimeBestGamePlay = "containerGameFiled-statisticsTimeBestGamePlay";
-export const gameFiledStatisticsTimeBestText = "gameFiledStatisticsTimeBestText";
 
 export const statisticsTimeBestGamePlay = "statisticsTimeBestGamePlay";
 

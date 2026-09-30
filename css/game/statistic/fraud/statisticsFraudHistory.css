@@ -1,4 +1,4 @@
-#containerStatisticsFraudHistory-Main {
+#containerStatisticsFraudHistory-main {
     display: grid;
     grid-row: 2/ 3;
     grid-column: 2 / 3;
@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudHistory-MainParts {
+#containerStatisticsFraudHistory-mainParts {
     display: grid;
     grid-row: 1/ 1;
     grid-column: 1 / 1;
@@ -14,7 +14,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudHistoryRound-Main {
+#containerStatisticsFraudHistoryRound-main {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
@@ -22,7 +22,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudHistoryRound-MainParts {
+#containerStatisticsFraudHistoryRound-mainParts {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -46,7 +46,7 @@
     box-shadow: 0 0 1px 1px #2a1e1e;
 }
 
-.historyRoundNumber-StyleText {
+.historyRoundNumber-styleText {
     margin: 0;
     padding: 0;
     opacity: 0.7;
@@ -68,7 +68,7 @@
     line-height: 1;
 }
 
-#containerStatisticsFraudHistoryName-Main {
+#containerStatisticsFraudHistoryName-main {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -76,7 +76,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerStatisticsFraudHistoryName-MainParts {
+#containerStatisticsFraudHistoryName-mainParts {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -90,7 +90,7 @@
     box-shadow: 0 0 1px 1px #2a1e1e;
 }
 
-.historyName-StyleText {
+.historyName-styleText {
     margin: 0;
     padding: 0;
     color: #FF7E00;

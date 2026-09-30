@@ -1,0 +1,186 @@
+import {
+    addElementClassNameById,
+    addElementClassNamedAndText,
+    addElementClassNames,
+    createElementDiv,
+    createElementI,
+    createElementP, setElementTextById
+} from "../../../../common/function/commonFunctions.js";
+
+import * as variablesStatisticsTimeSummary
+    from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeSummary.js";
+
+
+export class ViewStatisticsTimeSummary {
+
+    createContainerStatisticsTimeSummary() {
+        this.createContainerStatisticsTimeSummaryPrimary();
+        this.createContainerStatisticsTimeSummaryBestValue();
+        this.createContainerStatisticsTimeSummaryIcons();
+    }
+
+    createContainerStatisticsTimeSummaryPrimary() {
+        this.createContainerStatisticsTimeSummaryMain();
+        this.createContainerStatisticsTimeSummaryMainParts();
+    }
+
+    createContainerStatisticsTimeSummaryMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeMainPartsId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainId
+        );
+    }
+
+    createContainerStatisticsTimeSummaryMainParts() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainPartsId
+        );
+    }
+
+    createContainerStatisticsTimeSummaryBestValue() {
+        this.createContainerStatisticsTimeSummaryBestValuePrimary();
+        this.createTimeSummaryBestValue();
+    }
+
+    createContainerStatisticsTimeSummaryBestValuePrimary() {
+        this.createContainerStatisticsTimeSummaryBestValueMain();
+    }
+
+    createContainerStatisticsTimeSummaryBestValueMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainPartsId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBestValueMainId,
+        );
+    }
+
+    createTimeSummaryBestValue() {
+        this.createTimeSummaryBestValueMain();
+        this.createTimeSummaryBestValueText();
+    }
+
+    createTimeSummaryBestValueMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBestValueMainId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueId,
+        );
+
+        addElementClassNameById(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueStyleFlexCenter
+        );
+    }
+
+    createTimeSummaryBestValueText() {
+        createElementP(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextId
+        );
+
+        // final !!!
+        // addElementClassNameById(
+        //     variablesStatisticsTimeSummary.statisticsFraudSummaryBestValueTextId,
+        //     variablesStatisticsTimeSummary.statisticsFraudSummaryBestValueStyle
+        // );
+
+        // temp to remove - update
+        addElementClassNamedAndText(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueStyleText,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextDefault
+        );
+    }
+
+    createContainerStatisticsTimeSummaryIcons() {
+        this.createContainerStatisticsTimeSummaryIconsPrimary();
+        this.createStatisticsTimeSummaryIcons();
+    }
+
+    createContainerStatisticsTimeSummaryIconsPrimary() {
+        this.createContainerStatisticsTimeSummaryBestIconsMain();
+    }
+
+    createContainerStatisticsTimeSummaryBestIconsMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainPartsId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryIconsMainId,
+        );
+    }
+
+    createStatisticsTimeSummaryIcons() {
+        this.createTimeSummaryIconsMain();
+        this.createTimeSummaryIcons();
+    }
+
+    createTimeSummaryIconsMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryIconsMainId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconsId
+        );
+
+        addElementClassNames(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconsId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconsStyleFlexCenter,
+            variablesStatisticsTimeSummary.statisticsTmeSummaryIconsStyleFlexCenterUpdate
+        );
+    }
+
+    createTimeSummaryIcons() {
+        this.createTimeSummaryIconLeft();
+        this.createTimeSummaryIconMiddle();
+        this.createTimeSummaryIconRight();
+    }
+
+    createTimeSummaryIconLeft() {
+        this.createTimeSummaryIconStar(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconLeftId
+        );
+    }
+
+    createTimeSummaryIconRight() {
+        this.createTimeSummaryIconStar(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconRightId
+        );
+    }
+
+    createTimeSummaryIconStar(iconId) {
+        createElementI(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconsId,
+            iconId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconStyleSolid,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconStar
+        );
+
+        addElementClassNameById(
+            iconId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconStyleStar
+        );
+    }
+
+    createTimeSummaryIconMiddle() {
+        this.createTimeSummaryIconClock(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconMiddleId
+        );
+    }
+
+    createTimeSummaryIconClock(iconId) {
+        createElementI(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconsId,
+            iconId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconStyleSolid,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconClock
+        );
+
+        addElementClassNameById(
+            iconId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryIconStyleClock
+        );
+    }
+
+    setStatisticsTimeSummaryBestValue(timeBestValue) {
+        setElementTextById(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextId,
+            timeBestValue
+        );
+    }
+}

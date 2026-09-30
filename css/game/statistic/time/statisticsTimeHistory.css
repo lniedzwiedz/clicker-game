@@ -1,0 +1,139 @@
+#containerStatisticsTimeHistory-main {
+    display: grid;
+    grid-row: 2/ 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerStatisticsTimeHistory-mainParts {
+    display: grid;
+    grid-row: 1/ 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+
+#containerGameFiled-statisticsTimeMin {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerGameFiled-statisticsTimeAvg {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerGameFiled-statisticsTimeMax {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerGameFiled-commonParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 6fr 4fr;
+    grid-template-columns: 1fr;
+}
+
+.containerGameFiled-commonGamePlayUpdate {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.commonGameFiledDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commonConfigurationFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerGameFiled-commonStaticText {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+
+.commonGamePlayUpdateTextTime {
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 900;
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0px 0px 1px 1px #1f130e;
+}
+
+
+.statisticsTimeMinGamePlay {
+    color: #78C209;
+    font-size: 1.2rem;
+}
+
+.statisticsTimeMinText {
+    color: #78C209;
+    font-size: 1.0rem;
+}
+
+.statisticsTimeAvgGamePlay {
+    color: skyblue;
+    font-size: 1.2rem;
+}
+
+.statisticsTimeAvgText {
+    color: skyblue;
+    font-size: 1.0rem;
+}
+
+.statisticsTimeMaxGamePlay {
+    color: #EC7998;
+    font-size: 1.2rem;
+}
+
+.statisticsTimeMaxText {
+    color: #EC7998;
+    font-size: 1.0rem;
+}
+
+.statisticsTimeBestGamePlay {
+    color: #e9a610;
+    /*color: yellowgreen;*/
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+.fa-timeMin {
+}
+
+.fa-timeAvg {
+}
+
+.fa-timeMax {
+}

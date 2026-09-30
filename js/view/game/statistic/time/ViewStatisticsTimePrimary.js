@@ -19,8 +19,8 @@ export class ViewStatisticsTimePrimary {
     createContainerStatisticsTimeMain() {
 
         createElementDiv(
-            variablesStatisticsTimePrimary.containerHomeMainParts,
-            variablesStatisticsTimePrimary.containerStatisticsTimeMain
+            variablesStatisticsTimePrimary.containerHomeMainPartsId,
+            variablesStatisticsTimePrimary.containerStatisticsTimeMainId
         );
 
 
@@ -42,21 +42,15 @@ export class ViewStatisticsTimePrimary {
 
     createContainerStatisticsTimeMainParts() {
         createElementDiv(
-            variablesStatisticsTimePrimary.containerStatisticsTimeMain,
-            variablesStatisticsTimePrimary.containerStatisticsTimeMainParts
+            variablesStatisticsTimePrimary.containerStatisticsTimeMainId,
+            variablesStatisticsTimePrimary.containerStatisticsTimeMainPartsId
         );
     }
 
     removeContainerStatisticsTimePrimary(){
-
-        console.log(" remove time");
-
-        // if(isElementsExistById(variablesStatisticsTimePrimary.containerStatisticsTimeMain)){
         removeElementById(
-                variablesStatisticsTimePrimary.containerStatisticsTimeMain
+                variablesStatisticsTimePrimary.containerStatisticsTimeMainId
             );
-        // }
-
     }
 
     createContainerStatisticsTimeMainwww() {

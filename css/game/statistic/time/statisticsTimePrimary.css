@@ -10,6 +10,8 @@
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
+    /*grid-template-rows: 1fr 9fr 1fr;*/
+    /*grid-template-columns: 1fr repeat(3, 2fr);*/
     grid-template-rows: 1fr 9fr 1fr;
-    grid-template-columns: 1fr repeat(3, 2fr);
+    grid-template-columns: 1fr 6fr;
 }

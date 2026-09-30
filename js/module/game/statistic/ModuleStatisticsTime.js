@@ -2,8 +2,8 @@ import {ViewStatisticsTimePrimary} from "../../../view/game/statistic/time/ViewS
 import {ActionStatisticsTime} from "../../../action/statistic/ActionStatisticsTime.js";
 import {ControllerStatisticsTimePrimary} from "../../../controller/game/statistic/time/ControllerStatisticsTimePrimary.js";
 
-import {ViewStatisticsTimeBest} from "../../../view/game/statistic/time/ViewStatisticsTimeBest.js";
-import {ControllerStatisticsTimeBest} from "../../../controller/game/statistic/time/controllerStatisticsTimeBest.js";
+import {ViewStatisticsTimeSummary} from "../../../view/game/statistic/time/ViewStatisticsTimeSummary.js";
+import {ControllerStatisticsTimeSummary} from "../../../controller/game/statistic/time/controllerStatisticsTimeSummary.js";
 
 import {ViewStatisticsTimeHistory} from "../../../view/game/statistic/time/ViewStatisticsTimeHistory.js";
 import {
@@ -33,10 +33,10 @@ export class ModuleStatisticsTime {
 
 
         this.viewStatisticsTimeBest =
-            new ViewStatisticsTimeBest();
+            new ViewStatisticsTimeSummary();
 
         this.controllerStatisticsTimeBest =
-            new ControllerStatisticsTimeBest(
+            new ControllerStatisticsTimeSummary(
                 this.viewStatisticsTimeBest
             );
 
