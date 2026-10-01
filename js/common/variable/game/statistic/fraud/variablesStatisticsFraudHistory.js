@@ -39,10 +39,10 @@ export const historyRoundNumberTextSpaceAfterIconWhiskeyGlassAndSpace =
 export const containerStatisticsFraudHistoryNameMainId = "containerStatisticsFraudHistoryName-main";
 export const containerStatisticsFraudHistoryNameMainPartsId = "containerStatisticsFraudHistoryName-mainParts";
 
-export const historyNameId = "historyName";
+export const statisticsFraudHistoryNameId = "statisticsFraud-historyName";
 // export const historyNameStyleDisplayFlex = "historyName-StyleDisplayFlex";
-export const historyNameStyleDisplayFlex = "styleFlexCenter";
-export const historyNameStyle = "historyName-style";
-export const historyNameTextId = "historyName-textId";
-export const historyNameText = "FRAUD COUNTER";
-export const historyNameStyleText = "historyName-styleText";
+export const statisticsFraudHistoryNameStyleDisplayFlex = "styleFlexCenter";
+export const statisticsFraudHistoryNameStyle = "statisticsFraud-historyName-style";
+export const statisticsFraudHistoryNameTextId = "statisticsFraud-historyName-textId";
+export const statisticsFraudHistoryNameText = "FRAUD COUNTER";
+export const statisticsFraudHistoryNameStyleText = "statisticsFraud-historyName-styleText";

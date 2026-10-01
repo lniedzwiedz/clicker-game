@@ -248,30 +248,30 @@ export class ViewStatisticsFraudHistory {
     createHistoryNameMain() {
         createElementDiv(
             variablesStatisticsFraudHistory.containerStatisticsFraudHistoryNameMainPartsId,
-            variablesStatisticsFraudHistory.historyNameId
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameId
         );
 
         addElementClassNames(
-            variablesStatisticsFraudHistory.historyNameId,
-            variablesStatisticsFraudHistory.historyNameStyleDisplayFlex,
-            variablesStatisticsFraudHistory.historyNameStyle
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameId,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameStyleDisplayFlex,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameStyle
         );
     }
 
     createHistoryNameText() {
         createElementP(
-            variablesStatisticsFraudHistory.historyNameId,
-            variablesStatisticsFraudHistory.historyNameTextId
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameId,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameTextId
         );
 
         setElementTextById(
-            variablesStatisticsFraudHistory.historyNameTextId,
-            variablesStatisticsFraudHistory.historyNameText
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameTextId,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameText
         );
 
         addElementClassNameById(
-            variablesStatisticsFraudHistory.historyNameTextId,
-            variablesStatisticsFraudHistory.historyNameStyleText
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameTextId,
+            variablesStatisticsFraudHistory.statisticsFraudHistoryNameStyleText
         );
     }
 
