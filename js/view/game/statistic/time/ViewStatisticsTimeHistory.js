@@ -1,21 +1,19 @@
 import {
     addElementClassNameById,
     addElementClassNames,
-    createElementDiv, createElementI, createElementP, setElementStyletAsGrid, setElementTextById
+    createElementDiv, createElementI, createElementP, setElementStyletAsGrid, setElementTextById, valueToString
 } from "../../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsTimeHistory
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeHistory.js";
-import * as variablesStatisticsFraudHistory
-    from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudHistory";
 
 
 export class ViewStatisticsTimeHistory {
 
     createContainerStatisticsTimedHistory() {
         this.createContainerStatisticsTimeHistoryPrimary();
-        this.createContainerHistoryMetrics();
-        this.createContainerHistoryName();
+        this.createContainerStatisticsTimeHistoryMetrics();
+        this.createContainerStatisticsTimeHistoryName();
     }
 
     createContainerStatisticsTimeHistoryPrimary() {
@@ -37,28 +35,25 @@ export class ViewStatisticsTimeHistory {
         );
     }
 
-
-    createContainerHistoryMetrics() {
-        this.createContainerHistoryMetricsPrimary();
-        this.createContainerHistoryMetric();
-
+    createContainerStatisticsTimeHistoryMetrics() {
+        this.createContainerStatisticsTimeHistoryMetricsPrimary();
+        this.createContainerHistoryMetrics();
     }
 
 
-    createContainerHistoryMetricsPrimary() {
-        this.createContainerHistoryMetricsMain();
-        this.createContainerHistoryMetricsMainParts();
-        this.createHistoryIconHourGlassEnd();
+    createContainerStatisticsTimeHistoryMetricsPrimary() {
+        this.createContainerStatisticsTimeHistoryMetricsMain();
+        this.createContainerStatisticsTimeHistoryMetricsMainParts();
     }
 
-    createContainerHistoryMetricsMain() {
+    createContainerStatisticsTimeHistoryMetricsMain() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryMainPartsId,
             variablesStatisticsTimeHistory.containerStatisticsTImeHistoryMetricsMainId
         );
     }
 
-    createContainerHistoryMetricsMainParts() {
+    createContainerStatisticsTimeHistoryMetricsMainParts() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTImeHistoryMetricsMainId,
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryMetricsMainPartsId
@@ -66,57 +61,154 @@ export class ViewStatisticsTimeHistory {
     }
 
 
-    createContainerHistoryMetric() {
-        this.createContainerHistoryMetricNumberMain();
-        this.createContainerHistoryMetricNumberMainPartsGrid();
+    createContainerHistoryMetrics() {
+
+        let gridRowStartNumber = 2;
+        let gridColumnStartNumber = 2;
+        let gridRowEndNumber = 3;
+        let gridColumnEndNumber = 3;
+
+
+        for (let index = 0; index < 3; index++) {
+
+
+            // this.createContainerHistoryMetricMain(index);
+            //
+            // this.setContainerHistoryMetricMainGrid(
+            //     index,
+            //     gridRowStartNumber, gridColumnStartNumber,
+            //     gridRowEndNumber, gridColumnEndNumber);
+
+
+            this.createContainerHistoryMetric(
+                index,
+                gridRowStartNumber, gridColumnStartNumber,
+                gridRowEndNumber, gridColumnEndNumber);
+
+
+            gridColumnStartNumber += 2;
+            gridColumnEndNumber += 2;
+        }
     }
 
-    createContainerHistoryMetricNumberMain() {
+
+    createContainerHistoryMetricMain(index) {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryMetricsMainPartsId,
             variablesStatisticsTimeHistory.historyMetricNumberMainIdPrefix
+            + valueToString(index)
         );
     }
 
-    createContainerHistoryMetricNumberMainPartsGrid() {
-
-        let childId = variablesStatisticsTimeHistory.historyMetricNumberMainIdPrefix;
-
-        let gridRowStartNumberChild = 2;
-        let gridColumnStartNumberChild = 2;
-        let gridRowEndNumberChild = 3;
-        let gridColumnEndNumberChild = 3;
-
-        let gridTemplateRowsChild = "1fr";
-        let gridTemplateColumnsChild = "1fr";
+    setContainerHistoryMetricMainGrid(
+        index,
+        gridRowStartNumber, gridColumnStartNumber,
+        gridRowEndNumber, gridColumnEndNumber) {
 
         setElementStyletAsGrid(
-            childId,
-            gridRowStartNumberChild,
-            gridColumnStartNumberChild,
-            gridRowEndNumberChild,
-            gridColumnEndNumberChild,
-            gridTemplateRowsChild,
-            gridTemplateColumnsChild);
+            variablesStatisticsTimeHistory.historyMetricNumberMainIdPrefix
+            + valueToString(index),
+            gridRowStartNumber,
+            gridColumnStartNumber,
+            gridRowEndNumber,
+            gridColumnEndNumber,
+            "1fr",
+            "1fr");
+
+    }
+
+    setContainerHistoryMetricMainPartsGrid(index) {
+
+        setElementStyletAsGrid(
+            variablesStatisticsTimeHistory.historyMetricNumberMainPartsIdPrefix
+            + valueToString(index),
+            1,
+            1,
+            2,
+            2,
+            "1fr 1fr",
+            "1fr");
+
+    }
+
+    createContainerHistoryMetricMainParts(index) {
+        createElementDiv(
+            variablesStatisticsTimeHistory.historyMetricNumberMainIdPrefix
+            + valueToString(index),
+            variablesStatisticsTimeHistory.historyMetricNumberMainPartsIdPrefix
+            + valueToString(index)
+        );
+    }
+
+    createContainerHistoryMetric(index,
+                                 gridRowStartNumber, gridColumnStartNumber,
+                                 gridRowEndNumber, gridColumnEndNumber) {
+
+
+        this.createContainerHistoryMetricPrimary(index,
+            gridRowStartNumber, gridColumnStartNumber,
+            gridRowEndNumber, gridColumnEndNumber);
+
+        this.createHistoryMetric(index);
+
+
+    }
+
+    createContainerHistoryMetricPrimary(index,
+                                        gridRowStartNumber, gridColumnStartNumber,
+                                        gridRowEndNumber, gridColumnEndNumber) {
+
+        this.createContainerHistoryMetricMain(
+            index);
+
+        this.setContainerHistoryMetricMainGrid(
+            index,
+            gridRowStartNumber, gridColumnStartNumber,
+            gridRowEndNumber, gridColumnEndNumber);
+
+        this.createContainerHistoryMetricMainParts(index);
+
+        this.setContainerHistoryMetricMainPartsGrid(index);
+    }
+
+
+    createHistoryMetric(index) {
+        this.createHistoryMetricMain(index);
+        this.createHistoryMetricIcon(index);
+
+    }
+
+    createHistoryMetricMain(index) {
+
+        createElementDiv(
+            variablesStatisticsTimeHistory.historyMetricNumberMainPartsIdPrefix + valueToString(index),
+            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index)
+        );
+
+        addElementClassNames(
+            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
+            variablesStatisticsTimeHistory.historyMetricStyleDisplayFlex,
+            variablesStatisticsTimeHistory.historyMetricStyle
+        );
+    }
+
+    createHistoryMetricIcon(index) {
+        createElementI(
+            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + index,
+            variablesStatisticsTimeHistory.historyMetricIconClockIdPrefix + index,
+            variablesStatisticsTimeHistory.historyMetricIconStyleSolid,
+            variablesStatisticsTimeHistory.historyMetricIconClock
+        );
+
+        addElementClassNameById(
+            variablesStatisticsTimeHistory.historyMetricIconClockIdPrefix + index,
+            variablesStatisticsTimeHistory.historyMetricIconStyleClockTimeHistory
+        );
 
     }
 
 
-    createHistoryIconHourGlassEnd(){
-       let index = 1;
-
-        // createElementI(
-        //     variablesStatisticsTimeHistory.historyMetricNumberMainIdPrefix + index,
-        //     variablesStatisticsTimeHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
-        //     variablesStatisticsTimeHistory.statisticsFraudSumIconStyleSolid,
-        //     variablesStatisticsTimeHistory.statisticsFraudHistoryRoundIconWhiskeyGlass
-        // );
-    }
-
-
-
-
-    createContainerHistoryName() {
+    createContainerStatisticsTimeHistoryName() {
         this.createContainerHistoryNamePrimary();
         this.createHistoryNameMain();
         this.createHistoryNameText();

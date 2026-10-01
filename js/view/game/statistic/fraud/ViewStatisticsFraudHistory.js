@@ -100,12 +100,12 @@ export class ViewStatisticsFraudHistory {
 
             let childId = variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + valueToString(index);
 
-            this.createContainerHistoryRoundNumberMain(parentId, childId);
+            this.createContainerHistoryRoundNumberMainParts(parentId, childId);
 
             this.createContainerHistoryRoundNumberMainPartsGrid(
                 childId,
                 gridRowStartNumberChild, gridColumnStartNumberChild,
-                gridRowEndNumberChild, gridColumnEndNumberChild,)
+                gridRowEndNumberChild, gridColumnEndNumberChild)
 
 
             this.containerStatisticsFraudCounterRoundNumberMainParts(
@@ -117,7 +117,7 @@ export class ViewStatisticsFraudHistory {
         }
     }
 
-    createContainerHistoryRoundNumberMain(parentId, childId) {
+    createContainerHistoryRoundNumberMainParts(parentId, childId) {
         createElementDiv(
             parentId,
             childId

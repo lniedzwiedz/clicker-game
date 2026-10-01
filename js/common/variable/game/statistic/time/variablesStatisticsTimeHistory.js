@@ -11,8 +11,25 @@ export const containerStatisticsTImeHistoryMetricsMainId = "containerStatisticsT
 export const containerStatisticsTimeHistoryMetricsMainPartsId = "containerStatisticsTimeHistoryMetrics-mainParts";
 
 
-export const historyMetricNumberMainIdPrefix = "historyMetricNumber-main-";
-export const historyMetricNumberMainPartsIdPrefix = "historyMetricNumber-mainParts-";
+export const historyMetricNumberMainIdPrefix = "historyMetric-main-";
+export const historyMetricNumberMainPartsIdPrefix = "historyMetric-mainParts-";
+
+export const historyMetricTimeValueIdPrefix = "historyMetric-timeValue-";
+export const historyMetricTimeValueTextIdPrefix = "historyMetric-timeValue-textId-";
+
+export const historyMetricTimeNameIdPrefix = "historyMetric-timeName-";
+export const historyMetricTimeNameTextIdPrefix = "historyMetric-timeName-textId";
+
+// export const historyMetricIdPrefix = "historyMetric-";
+// export const historyMetricStyleDisplayFlex = "historyRoundNumber-StyleDisplayFlex";
+export const historyMetricStyleDisplayFlex = "styleFlexCenter";
+export const historyMetricStyle = "historyMetric-style";
+
+export const historyMetricIconClockIdPrefix = "historyMetric-iconClock-";
+export const historyMetricIconStyleSolid = "fa-solid";
+export const historyMetricIconClock = "fa-clock";
+export const historyMetricIconStyleClockTimeHistory = "fa-clockTimeHistory";
+
 
 
 

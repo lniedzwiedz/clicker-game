@@ -7,8 +7,8 @@ export class ControllerStatisticsCoordinator {
     }
 
     configureStatistic(gameRoundCount) {
-        this.configureStatisticTime();
         this.configureStatisticsFraud(gameRoundCount);
+        this.configureStatisticTime();
     }
 
     configureStatisticTime() {
