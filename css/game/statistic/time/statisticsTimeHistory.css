@@ -50,13 +50,17 @@
     font-weight: 200;
 }
 
-
 #containerStatisticsTimeHistoryMetrics-main {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+}
+
+.containerHistoryMetric-timeInfo-main {
+    z-index: 1;
+    /*background-color: aquamarine;*/
 }
 
 #containerStatisticsTimeHistoryMetrics-mainParts {
@@ -66,23 +70,17 @@
     /*grid-template-rows: 1fr 8fr 1fr;*/
     /*grid-template-rows: 0fr 97fr 3fr;*/
     /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr;*/
-    grid-template-rows: 10fr 80fr 10fr;
-    grid-template-columns: 5fr 25fr 5fr 25fr 5fr 25fr 5fr;
+    /*grid-template-rows: 10fr 80fr 10fr;*/
+    grid-template-rows: 0fr 90fr 10fr;
+    /*grid-template-columns: 5fr 25fr 5fr 25fr 5fr 25fr 5fr;*/
+    grid-template-columns: 0fr 30fr 0fr 30fr 0fr 30fr 0fr;
     /*grid-template-columns: 0fr 20fr 0fr 20fr 0fr 20fr 0fr;*/
 }
 
-.historyMetric-style {
+.historyMetric-background-style {
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0 0 1px 1px #2a1e1e;
-}
-
-.historyMetric-styleText {
-    margin: 0;
-    padding: 0;
-    opacity: 0.7;
-    color: #FF7E00;
-    font-size: 1.7rem;
 }
 
 .fa-clock {
@@ -91,10 +89,23 @@
 }
 
 .fa-clockTimeHistory {
-    color: #FF7E00;
-    opacity: 0.6;
-    font-weight: 600;
-    font-size: 0.9rem;
+    /*color: #FFFFFF;*/
+    /*color: #FF7E00;*/
+    color: #78C209;
+    /*color: #2c3e3a;*/
+    /*color: #e9a610;*/
+    /*color: #2a1e1e;*/
+    /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);*/
+    /*text-shadow: 0px 0px 77px #FFFFFF;*/
+    text-shadow: 0px 0px 77px #FF7E00;
+    /*text-shadow: 0px 0px 77px #78C209;*/
+    /*text-shadow: 0px 0px 77px #2c3e3a;*/
+    /*text-shadow: 0px 0px 77px #e9a610;*/
+    /*text-shadow: 0px 0px 77px #2a1e1e;*/
+    opacity: 0.3;
+    /*opacity: 0.8;*/
+    /*font-weight: 600;*/
+    font-size: 3.6rem;
     /*line-height: 1.5;*/
 }
 
@@ -104,122 +115,28 @@
     line-height: 1;
 }
 
-
-#containerGameFiled-statisticsTimeMin {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+.historyMetric-timeValue-styleText {
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+    color: #FF7E00;
+    font-size: 1.7rem;
 }
 
-#containerGameFiled-statisticsTimeAvg {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 3 / 4;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-#containerGameFiled-statisticsTimeMax {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 4 / 5;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-.containerGameFiled-commonParts {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 6fr 4fr;
-    grid-template-columns: 1fr;
-}
-
-.containerGameFiled-commonGamePlayUpdate {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-.commonGameFiledDisplay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.commonConfigurationFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.containerGameFiled-commonStaticText {
-    display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-
-.commonGamePlayUpdateTextTime {
-    width: 95%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 900;
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #1f130e;
-}
-
-
-.statisticsTimeMinGamePlay {
-    color: #78C209;
-    font-size: 1.2rem;
-}
-
-.statisticsTimeMinText {
+.historyMetric-timeValue-styleTex-min {
     color: #78C209;
     font-size: 1.0rem;
+    opacity: 0.7;
 }
 
-.statisticsTimeAvgGamePlay {
-    color: skyblue;
-    font-size: 1.2rem;
-}
-
-.statisticsTimeAvgText {
-    color: skyblue;
+.historyMetric-timeValue-styleTex-avg {
+    color: #87CEEB;
     font-size: 1.0rem;
+    opacity: 0.7;
 }
 
-.statisticsTimeMaxGamePlay {
-    color: #EC7998;
-    font-size: 1.2rem;
-}
-
-.statisticsTimeMaxText {
+.historyMetric-timeValue-styleTex-max {
     color: #EC7998;
     font-size: 1.0rem;
-}
-
-.statisticsTimeBestGamePlay {
-    color: #e9a610;
-    /*color: yellowgreen;*/
-    font-weight: 600;
-    font-size: 1.9rem;
-}
-
-.fa-timeMin {
-}
-
-.fa-timeAvg {
-}
-
-.fa-timeMax {
+    opacity: 0.7;
 }
