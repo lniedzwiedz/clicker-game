@@ -25,7 +25,9 @@ export const historyMetricBackgroundIconIdPrefix = "historyMetric-background-ico
 // export const historyMetricIconStyleSolid = "fa-solid";
 export const historyMetricIconStyleSolid = "fa-regular";
 export const historyMetricIconClock = "fa-clock";
-export const historyMetricIconStyleTimeHistory = "fa-clockTimeHistory";
+export const historyMetricIconStyleTextBase = "fa-clockTimeHistory-base";
+export const historyMetricIconStyleTimeKindPrefix = "fa-clockTimeHistory-";
+export const historyMetricTimeKindSuffix = ["min", "avg", "max"];
 
 
 export const containerHistoryMetricTimeInfoMainIdPrefix = "containerHistoryMetric-timeInfo-main-";
@@ -39,6 +41,11 @@ export const historyMetricTimeValueIdPrefix = "historyMetric-timeValue-";
 
 export const historyMetricTimeValueTextIdPrefix = "historyMetric-timeValue-textId-";
 export const historyMetricTimeValueStyleText = "historyMetric-timeValue-styleText";
+
+export const historyMetricTimeValueStyleTextBase = "historyMetric-timeValue-styleText-base";
+export const historyMetricTimeValueStyleTextPrefix = "historyMetric-timeValue-styleText-";
+export const historyMetricTimeKindText = ["min", "avg", "max"];
+
 export const historyMetricTimeValueTextDefault = "03-06";
 
 export const containerHistoryMetricTimeNameMainIdPrefix = "containerHistoryMetric-timeName-main-";
@@ -46,8 +53,9 @@ export const containerHistoryMetricTimeNameMainPartsIdPrefix = "containerHistory
 
 export const historyMetricTimeNameIdPrefix = "historyMetric-timeName-";
 export const historyMetricTimeNameTextIdPrefix = "historyMetric-timeName-textId-";
-export const historyMetricTimeNameStyleTextIdPrefix = "historyMetric-timeValue-styleTex-";
-export const historyMetricTimeNameText = ["min", "avg", "max"];
+export const historyMetricTimeNameStyleTextBase = "historyMetric-timeName-styleText-base";
+export const historyMetricTimeNameStyleTextPrefix = "historyMetric-timeName-styleText-";
+
 
 
 //  history name

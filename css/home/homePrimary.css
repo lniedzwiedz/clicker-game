@@ -20,15 +20,23 @@
 
     /*        20fr 5fr;*/
 
+    /*grid-template-rows:*/
+            /*5fr*/
+            /*27fr 3fr*/
+            /*10fr 0fr*/
+            /*15fr 0fr*/
+            /*40fr 0fr;*/
+
     grid-template-rows:
-            5fr
-            27fr 3fr
+            4fr
+            37fr 3fr
             10fr 0fr
-            15fr 0fr
-            40fr 0fr;
+            22fr 1fr
+            22fr 1fr;
 
     grid-template-columns:
             00fr 20fr 10fr 10fr
             10fr 10fr
             10fr 10fr 20fr 0fr;
+
 }

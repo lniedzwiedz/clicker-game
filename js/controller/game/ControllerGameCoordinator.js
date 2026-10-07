@@ -102,9 +102,13 @@ export class ControllerGameCoordinator {
     }
 
     updateStatistic(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        statisticTimeInSecondsMax, statisticTimeInSecondsBest,
         fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
 
         this.controllerStatisticsCoordinator.updateStatistic(
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax, statisticTimeInSecondsBest,
             fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
         );
     }

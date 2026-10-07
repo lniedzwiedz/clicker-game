@@ -44,8 +44,9 @@
 .statisticsTime-historyName-styleText {
     margin: 0;
     padding: 0;
-    color: #FF7E00;
-    opacity: 0.6;
+    /*color: #FF7E00;*/
+    color: #e9a610;
+    opacity: 0.8;
     font-size: 1.3rem;
     font-weight: 200;
 }
@@ -61,6 +62,9 @@
 .containerHistoryMetric-timeInfo-main {
     z-index: 1;
     /*background-color: aquamarine;*/
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0 0 1px 1px #2a1e1e;
 }
 
 #containerStatisticsTimeHistoryMetrics-mainParts {
@@ -73,70 +77,90 @@
     /*grid-template-rows: 10fr 80fr 10fr;*/
     grid-template-rows: 0fr 90fr 10fr;
     /*grid-template-columns: 5fr 25fr 5fr 25fr 5fr 25fr 5fr;*/
-    grid-template-columns: 0fr 30fr 0fr 30fr 0fr 30fr 0fr;
+    /*grid-template-columns: 0fr 30fr 0fr 30fr 0fr 30fr 0fr;*/
+    /*grid-template-columns: 0fr 32fr 1fr 32fr 1fr 32fr 2fr;*/
+    grid-template-columns: 0fr 32fr 2fr 32fr 2fr 32fr 0fr;
     /*grid-template-columns: 0fr 20fr 0fr 20fr 0fr 20fr 0fr;*/
 }
 
-.historyMetric-background-style {
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0 0 1px 1px #2a1e1e;
-}
+/*.historyMetric-background-style {*/
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    box-shadow: 0 0 1px 1px #2a1e1e;*/
+/*}*/
 
 .fa-clock {
     margin: 0;
     padding: 0;
 }
 
-.fa-clockTimeHistory {
-    /*color: #FFFFFF;*/
-    /*color: #FF7E00;*/
-    color: #78C209;
-    /*color: #2c3e3a;*/
-    /*color: #e9a610;*/
-    /*color: #2a1e1e;*/
-    /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);*/
-    /*text-shadow: 0px 0px 77px #FFFFFF;*/
-    text-shadow: 0px 0px 77px #FF7E00;
-    /*text-shadow: 0px 0px 77px #78C209;*/
-    /*text-shadow: 0px 0px 77px #2c3e3a;*/
-    /*text-shadow: 0px 0px 77px #e9a610;*/
-    /*text-shadow: 0px 0px 77px #2a1e1e;*/
-    opacity: 0.3;
-    /*opacity: 0.8;*/
-    /*font-weight: 600;*/
+.fa-clockTimeHistory-base {
+    text-shadow: 0px 0px 60px #FFFFFF;
     font-size: 3.6rem;
     /*line-height: 1.5;*/
 }
 
-.fa-clockTimeHistory::before {
+.fa-clockTimeHistory-base::before {
     display: inline-block;
     vertical-align: bottom;
     line-height: 1;
 }
 
-.historyMetric-timeValue-styleText {
+.fa-clockTimeHistory-min {
+    text-shadow: 0px 0px 60px #78C209;
+}
+
+.fa-clockTimeHistory-avg {
+    text-shadow: 0px 0px 60px #87CEEB;
+}
+
+.fa-clockTimeHistory-max {
+    text-shadow: 0px 0px 60px #EC7998;
+}
+
+
+
+
+
+.historyMetric-timeValue-styleText-base {
     margin: 0;
     padding: 0;
-    opacity: 0.7;
-    color: #FF7E00;
-    font-size: 1.7rem;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 600;
+    /*opacity: 0.7;*/
 }
 
-.historyMetric-timeValue-styleTex-min {
+.historyMetric-timeValue-styleText-min {
     color: #78C209;
-    font-size: 1.0rem;
-    opacity: 0.7;
 }
 
-.historyMetric-timeValue-styleTex-avg {
+.historyMetric-timeValue-styleText-avg {
     color: #87CEEB;
-    font-size: 1.0rem;
+}
+
+.historyMetric-timeValue-styleText-max {
+    color: #EC7998;
+}
+
+
+.historyMetric-timeName-styleText-base {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 600;
     opacity: 0.7;
 }
 
-.historyMetric-timeValue-styleTex-max {
+.historyMetric-timeName-styleText-min {
+    color: #78C209;
+}
+
+.historyMetric-timeName-styleText-avg {
+    color: #87CEEB;
+}
+
+.historyMetric-timeName-styleText-max {
     color: #EC7998;
-    font-size: 1.0rem;
-    opacity: 0.7;
 }

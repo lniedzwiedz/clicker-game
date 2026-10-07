@@ -31,4 +31,23 @@ export class ControllerStatisticsTimeCoordinator {
     createStatisticsTimeHistory() {
         this.controllerStatisticsTimeHistory.createStatisticsTimeHistory();
     }
+
+    updateStatisticTime( statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+                         statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+
+        this.updateStatisticsTimeSummary(statisticTimeInSecondsBest);
+        this.updateStatisticTimeHistory(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);
+
+    }
+
+    updateStatisticsTimeSummary(statisticTimeInSecondsBest) {
+        this.controllerStatisticsTimeSummary.setStatisticsTimeSummaryBestValue(statisticTimeInSecondsBest);
+    }
+
+    updateStatisticTimeHistory(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax) {
+
+        this.controllerStatisticsTimeHistory.setStatisticsTimeHistoryRoundNumberValue(
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);
+    }
 }

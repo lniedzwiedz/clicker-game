@@ -4,8 +4,14 @@ export class ControllerStatisticsTimeHistory {
         this.viewStatisticsTimeHistory = viewStatisticsTimeHistory;
     }
 
-    createStatisticsTimeHistory(){
+    createStatisticsTimeHistory() {
         this.viewStatisticsTimeHistory.createContainerStatisticsTimedHistory();
     }
 
+    setStatisticsTimeHistoryRoundNumberValue(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax) {
+
+        this.viewStatisticsTimeHistory.setStatisticsTimeHistoryRoundNumberValue(
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);
+    }
 }

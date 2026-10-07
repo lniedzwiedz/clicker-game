@@ -19,7 +19,7 @@ export class ControllerStatisticsCoordinator {
         this.controllerStatisticsFraudCoordinator.configureStatisticsFraud(gameRoundCount);
     }
 
-    removeStatistics(){
+    removeStatistics() {
         this.removeStatisticsFraud();
         this.removeStatisticsTime();
     }
@@ -28,7 +28,7 @@ export class ControllerStatisticsCoordinator {
         this.controllerStatisticsFraudCoordinator.removeStatisticsFraud();
     }
 
-    removeStatisticsTime(){
+    removeStatisticsTime() {
         this.controllerStatisticsTimeCoordinator.removeStatisticsTime();
     }
 
@@ -42,13 +42,18 @@ export class ControllerStatisticsCoordinator {
 
 
     updateStatistic(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        statisticTimeInSecondsMax, statisticTimeInSecondsBest,
         fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
 
         this.updateStatisticFraud(
             fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
         );
 
-        // this.updateStatisticTime();
+        this.updateStatisticTime(
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax, statisticTimeInSecondsBest
+        );
     }
 
     updateStatisticFraud(
@@ -69,8 +74,13 @@ export class ControllerStatisticsCoordinator {
     //     );
     // }
 
-    updateStatisticTime() {
-        // this.controllerStatisticsTimeCoordinator.updateStatisticTime();
+    updateStatisticTime(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+
+        this.controllerStatisticsTimeCoordinator.updateStatisticTime(
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax, statisticTimeInSecondsBest);
     }
 
     // createGameFieldStatisticsTime() {

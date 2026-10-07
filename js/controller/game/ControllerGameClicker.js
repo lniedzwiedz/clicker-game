@@ -152,8 +152,6 @@ export class ControllerGameClicker {
 
         if (this.game.getCurrentRoundNumber() === 1) {
 
-            console.log("runda = " + this.game.getCurrentRoundNumber());
-
             this.controllerGameCoordinator
                 .configureStatistic(
                     this.game.getGameRoundCount()
@@ -162,12 +160,52 @@ export class ControllerGameClicker {
 
 
         // this.setStatisticsTime();
-        this.setStatisticFraud();
+        // this.setStatisticFraud();
+        this.setStatistics();
 
         // next round 2, 3, 4 ...
         this.startRound();
+    }
+
+    setStatistics(){
 
 
+        this.game.setConfigurationTime();
+
+        let statisticTimeInSecondsMin =
+            this.game.getStatisticTimeInSecondsMin();
+
+        let statisticTimeInSecondsAvg =
+            this.game.getStatisticTimeInSecondsAvg();
+
+        let statisticTimeInSecondsMax =
+            this.game.getStatisticTimeInSecondsMax();
+
+        let statisticTimeInSecondsBest =
+            this.game.getStatisticTimeInSecondsBest();
+
+        this.game.setFraudCountedSum();
+
+        let fraudCountedRoundNumber =
+            this.game.getFraudCountedClicks();
+
+        let fraudCountedSumNumber =
+            this.game.getFraudCountedSum();
+
+        let historyRoundNumber =
+            this.game.getFraudRoundElementIndexToUpdate();
+
+        this.controllerGameCoordinator.updateStatistic(
+            statisticTimeInSecondsMin,
+            statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax,
+            statisticTimeInSecondsBest,
+            fraudCountedRoundNumber,
+            fraudCountedSumNumber,
+            historyRoundNumber);
+
+        this.game.resetFraudCountedClicks();
+        this.game.setFraudRoundElementIndexToUpdate();
     }
 
     setStatisticFraud() {
@@ -208,12 +246,12 @@ export class ControllerGameClicker {
         let statisticTimeInSecondsBest =
             this.game.getStatisticTimeInSecondsBest();
 
-        // this.controllerGameCoordinator.updateStatistic(
-        //     statisticTimeInSecondsMin,
-        //     statisticTimeInSecondsAvg,
-        //     statisticTimeInSecondsMax,
-        //     statisticTimeInSecondsBest
-        // );
+        this.controllerGameCoordinator.updateStatistic(
+            statisticTimeInSecondsMin,
+            statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax,
+            statisticTimeInSecondsBest
+        );
     }
 
     gameOver() {

@@ -32,7 +32,6 @@ export class ControllerStatisticsFraudCoordinator {
         this.controllerStatisticsFraudHistory.creatStatisticsFraudHistory(gameRoundCount);
     }
 
-
     updateStatisticFraud(fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
         this.updateStatisticsFraudSummary(fraudTotalValue);
         this.updateStatisticFraudHistory(fraudCountedRoundNumber, historyRoundNumber);

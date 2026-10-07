@@ -7,4 +7,8 @@ export class ControllerStatisticsTimeSummary {
     createStatisticsTimeSummary() {
         this.viewStatisticsTimeSummary.createContainerStatisticsTimeSummary();
     }
+
+    setStatisticsTimeSummaryBestValue(statisticTimeInSecondsBest) {
+        this.viewStatisticsTimeSummary.setStatisticsTimeSummaryBestValue(statisticTimeInSecondsBest);
+    }
 }

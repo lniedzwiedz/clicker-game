@@ -213,9 +213,16 @@ export class ViewStatisticsTimeHistory {
             variablesStatisticsTimeHistory.historyMetricIconClock
         );
 
-        addElementClassNameById(
+        // addElementClassNameById(
+        //     variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
+        //     variablesStatisticsTimeHistory.historyMetricIconStyleTextBase
+        // );
+
+        addElementClassNames(
             variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
-            variablesStatisticsTimeHistory.historyMetricIconStyleTimeHistory
+            variablesStatisticsTimeHistory.historyMetricIconStyleTextBase,
+            variablesStatisticsTimeHistory.historyMetricIconStyleTimeKindPrefix
+            + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index]
         );
     }
 
@@ -263,7 +270,7 @@ export class ViewStatisticsTimeHistory {
             1,
             2,
             2,
-            "1fr 1fr",
+            "7fr 3fr",
             "1fr");
     }
 
@@ -331,13 +338,23 @@ export class ViewStatisticsTimeHistory {
     createHistoryMetricInfoTimeValueText(index) {
         createElementP(
             variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index)
+        this.getHistoryMetricTimeValueTextId(index)
         );
 
         addElementClassNamedAndText(
-            variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index),
+            this.getHistoryMetricTimeValueTextId(index),
             variablesStatisticsTimeHistory.historyMetricTimeValueStyleText,
             variablesStatisticsTimeHistory.historyMetricTimeValueTextDefault
+        );
+
+        addElementClassNames(
+            // variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index),
+            this.getHistoryMetricTimeValueTextId(index),
+            variablesStatisticsTimeHistory.historyMetricTimeValueStyleTextBase,
+            variablesStatisticsTimeHistory.historyMetricTimeValueStyleTextPrefix
+            + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index]
         );
     }
 
@@ -402,12 +419,17 @@ export class ViewStatisticsTimeHistory {
             variablesStatisticsTimeHistory.historyMetricTimeNameTextIdPrefix + valueToString(index)
         );
 
-
         addElementClassNamedAndText(
             variablesStatisticsTimeHistory.historyMetricTimeNameTextIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.historyMetricTimeNameStyleTextIdPrefix
-            + variablesStatisticsTimeHistory.historyMetricTimeNameText[index],
-            variablesStatisticsTimeHistory.historyMetricTimeNameText[index]
+            variablesStatisticsTimeHistory.historyMetricTimeKindText[index],
+            variablesStatisticsTimeHistory.historyMetricTimeKindText[index]
+        );
+
+        addElementClassNames(
+            variablesStatisticsTimeHistory.historyMetricTimeNameTextIdPrefix + valueToString(index),
+            variablesStatisticsTimeHistory.historyMetricTimeNameStyleTextBase,
+            variablesStatisticsTimeHistory.historyMetricTimeNameStyleTextPrefix
+            + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index]
         );
     }
 
@@ -464,5 +486,38 @@ export class ViewStatisticsTimeHistory {
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameTextId,
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyleText
         );
+    }
+
+    setStatisticsTimeHistoryRoundNumberValue(
+        statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax) {
+
+        this.setStatisticsTimeHistoryMin(statisticTimeInSecondsMin);
+        this.setStatisticsTimeHistoryAvg(statisticTimeInSecondsAvg);
+        this.setStatisticsTimeHistoryMax(statisticTimeInSecondsMax);
+    }
+
+    setStatisticsTimeHistoryMin(statisticTimeInSecondsMin) {
+        setElementTextById(
+            this.getHistoryMetricTimeValueTextId(0),
+            statisticTimeInSecondsMin
+        );
+    }
+
+    setStatisticsTimeHistoryAvg(statisticTimeInSecondsAvg) {
+        setElementTextById(
+            this.getHistoryMetricTimeValueTextId(1),
+            statisticTimeInSecondsAvg
+        );
+    }
+
+    setStatisticsTimeHistoryMax(statisticTimeInSecondsMax) {
+        setElementTextById(
+            this.getHistoryMetricTimeValueTextId(2),
+            statisticTimeInSecondsMax
+        );
+    }
+
+    getHistoryMetricTimeValueTextId(index){
+        return variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index);
     }
 }
