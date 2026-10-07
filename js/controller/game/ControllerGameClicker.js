@@ -35,14 +35,10 @@ export class ControllerGameClicker {
         this.game =
             new Game(roundNumber);
 
-
-        // DODAJEMY LISTENER TYLKO RAZ
         this.controllerGameCoordinator
             .configureButtonGameListener();
 
-        // ustawiamy callback FRAUD
         this.configureCounterFraud();
-
 
         // round 1
         this.startRound();
@@ -51,7 +47,6 @@ export class ControllerGameClicker {
     configureButtonStopAtStart() {
 
         this.createButtonStop();
-
         this.configureButtonStop();
     }
 
@@ -69,18 +64,11 @@ export class ControllerGameClicker {
 
     handleClickStop() {
 
-        // this.controllerGameCoordinator
-        //     .configureGameStateButtonsAtStop();
-
         this.configureButtonStopAtStop();
-
         this.clearTimeoutAfterChangeColor();
     }
 
     configureButtonStopAtStop() {
-
-        // this.controllerGameCoordinator
-        //     .configureGameStateButtonsAtStop();
 
         this.controllerGameCoordinator
             .configureGameStop();
@@ -158,9 +146,6 @@ export class ControllerGameClicker {
                 );
         }
 
-
-        // this.setStatisticsTime();
-        // this.setStatisticFraud();
         this.setStatistics();
 
         // next round 2, 3, 4 ...
@@ -168,7 +153,6 @@ export class ControllerGameClicker {
     }
 
     setStatistics(){
-
 
         this.game.setConfigurationTime();
 
@@ -206,52 +190,6 @@ export class ControllerGameClicker {
 
         this.game.resetFraudCountedClicks();
         this.game.setFraudRoundElementIndexToUpdate();
-    }
-
-    setStatisticFraud() {
-
-        this.game.setFraudCountedSum();
-
-        let fraudCountedRoundNumber =
-            this.game.getFraudCountedClicks();
-
-        let fraudCountedSumNumber =
-            this.game.getFraudCountedSum();
-
-        let historyRoundNumber =
-            this.game.getFraudRoundElementIndexToUpdate();
-
-        this.controllerGameCoordinator.updateStatistic(
-            fraudCountedRoundNumber,
-            fraudCountedSumNumber,
-            historyRoundNumber);
-
-        this.game.resetFraudCountedClicks();
-        this.game.setFraudRoundElementIndexToUpdate();
-    }
-
-    setStatisticsTime() {
-
-        this.game.setConfigurationTime();
-
-        let statisticTimeInSecondsMin =
-            this.game.getStatisticTimeInSecondsMin();
-
-        let statisticTimeInSecondsAvg =
-            this.game.getStatisticTimeInSecondsAvg();
-
-        let statisticTimeInSecondsMax =
-            this.game.getStatisticTimeInSecondsMax();
-
-        let statisticTimeInSecondsBest =
-            this.game.getStatisticTimeInSecondsBest();
-
-        this.controllerGameCoordinator.updateStatistic(
-            statisticTimeInSecondsMin,
-            statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax,
-            statisticTimeInSecondsBest
-        );
     }
 
     gameOver() {
