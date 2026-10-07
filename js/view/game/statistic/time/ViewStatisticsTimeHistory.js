@@ -14,6 +14,8 @@ import * as variablesStatisticsTimeHistory
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeHistory.js";
 
 
+
+
 export class ViewStatisticsTimeHistory {
 
     createContainerStatisticsTimedHistory() {
@@ -113,8 +115,10 @@ export class ViewStatisticsTimeHistory {
     createContainerHistoryMetricMain(index) {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryMetricsMainPartsId,
-            variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
-            + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
+            // + valueToString(index)
+
+            this.getContainerHistoryMetricMainId(index)
         );
     }
 
@@ -124,8 +128,9 @@ export class ViewStatisticsTimeHistory {
         gridRowEndNumber, gridColumnEndNumber) {
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
-            + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
+            // + valueToString(index),
+            this.getContainerHistoryMetricMainId(index),
             gridRowStartNumber,
             gridColumnStartNumber,
             gridRowEndNumber,
@@ -137,8 +142,9 @@ export class ViewStatisticsTimeHistory {
     setContainerHistoryMetricMainPartsGrid(index) {
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix
-            + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix
+            // + valueToString(index),
+            this.getContainerHistoryMetricMainPartsId(index),
             1,
             1,
             2,
@@ -149,10 +155,13 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricMainParts(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
-            + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix
-            + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix
+            // + valueToString(index),
+
+            this.getContainerHistoryMetricMainId(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix
+            // + valueToString(index)
+        this.getContainerHistoryMetricMainPartsId(index)
         );
     }
 
@@ -174,16 +183,19 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricBackgroundMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricMainPartsId(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix + valueToString(index)
+        this.getContainerHistoryMetricBackgroundMainId(index)
         );
     }
 
     setContainerHistoryMetricBackgroundMain(index) {
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix
-            + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix
+            // + valueToString(index),
+            this.getContainerHistoryMetricBackgroundMainId(index),
             1,
             1,
             2,
@@ -195,20 +207,25 @@ export class ViewStatisticsTimeHistory {
 
     createHistoryMetricBackgroundMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricBackgroundMainId(index),
+            // variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + valueToString(index)
+        this.getHistoryMetricBackgroundIdPrefix(index)
         );
 
         addElementClassNameById(
-            variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + valueToString(index),
+            this.getHistoryMetricBackgroundIdPrefix(index),
             variablesStatisticsTimeHistory.historyMetricStyleDisplayFlex,
         );
     }
 
     createHistoryMetricBackgroundIcon(index) {
         createElementI(
-            variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + index,
-            variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
+            // variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + index,
+            this.getHistoryMetricBackgroundIdPrefix(index),
+            // variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
+            this.getHistoryMetricBackgroundIconId(index),
             variablesStatisticsTimeHistory.historyMetricIconStyleSolid,
             variablesStatisticsTimeHistory.historyMetricIconClock
         );
@@ -219,10 +236,13 @@ export class ViewStatisticsTimeHistory {
         // );
 
         addElementClassNames(
-            variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
+            // variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
+            this.getHistoryMetricBackgroundIconId(index),
             variablesStatisticsTimeHistory.historyMetricIconStyleTextBase,
-            variablesStatisticsTimeHistory.historyMetricIconStyleTimeKindPrefix
-            + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index]
+            // variablesStatisticsTimeHistory.historyMetricIconStyleTimeKindPrefix
+            // + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index]
+
+            this.getHistoryMetricIconStyleTimeId(index)
         );
     }
 
@@ -238,17 +258,21 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricTimeInfoMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricMainPartsId(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index)
+            this.getContainerHistoryMetricTimeInfoMainId(index)
         );
 
         addElementClassNameById(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainId(index),
             variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMain
         );
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainId(index),
             1,
             1,
             2,
@@ -260,12 +284,15 @@ export class ViewStatisticsTimeHistory {
     createContainerHistoryMetricTimeInfoMainParts(index) {
 
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainId(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index)
+        this.getContainerHistoryMetricTimeInfoMainPartsId(index)
         );
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainPartsId(index),
             1,
             1,
             2,
@@ -292,12 +319,15 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricInfoTimeValueMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainPartsId(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index)
+        this.getContainerHistoryMetricTimeValueMainI(index)
         );
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeValueMainI(index),
             1,
             1,
             2,
@@ -308,12 +338,15 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricInfoTimeValueMainParts(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeValueMainI(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index)
+        this.getContainerHistoryMetricTimeValueMainPartsId(index)
         );
 
         setElementStyletAsGrid(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeValueMainPartsId(index),
             1,
             1,
             2,
@@ -325,19 +358,23 @@ export class ViewStatisticsTimeHistory {
 
     createHistoryMetricInfoTimeValueMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index),
-            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index)
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeValueMainPartsId(index),
+            // variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index)
+            this.getHistoryMetricTimeValueId(index)
         );
 
         addElementClassNameById(
-            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
+            this.getHistoryMetricTimeValueId(index),
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyleDisplayFlex
         )
     }
 
     createHistoryMetricInfoTimeValueText(index) {
         createElementP(
-            variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index),
+            this.getHistoryMetricTimeValueId(index),
             // variablesStatisticsTimeHistory.historyMetricTimeValueTextIdPrefix + valueToString(index)
         this.getHistoryMetricTimeValueTextId(index)
         );
@@ -371,7 +408,8 @@ export class ViewStatisticsTimeHistory {
 
     createContainerHistoryMetricInfoTimeNameMain(index) {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
+            // variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index),
+            this.getContainerHistoryMetricTimeInfoMainPartsId(index),
             variablesStatisticsTimeHistory.containerHistoryMetricTimeNameMainIdPrefix + valueToString(index)
         );
 
@@ -515,6 +553,62 @@ export class ViewStatisticsTimeHistory {
             this.getHistoryMetricTimeValueTextId(2),
             statisticTimeInSecondsMax
         );
+    }
+
+    getContainerHistoryMetricMainId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricMainIdPrefix + valueToString(index);
+    }
+
+
+    getHistoryMetricBackgroundIdPrefix(index){
+        return variablesStatisticsTimeHistory.historyMetricBackgroundIdPrefix + valueToString(index);
+    }
+
+    getHistoryMetricBackgroundIconId(index){
+        return variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + valueToString(index);
+    }
+
+    getHistoryMetricIconStyleTimeId(index){
+        return variablesStatisticsTimeHistory.historyMetricIconStyleTimeKindPrefix
+        + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index];
+    }
+
+
+    getContainerHistoryMetricTimeValueMainI(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainIdPrefix + valueToString(index);
+    }
+
+
+    getContainerHistoryMetricTimeValueMainPartsId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricTimeValueMainPartsIdPrefix + valueToString(index);
+  }
+
+
+
+
+
+
+
+    getContainerHistoryMetricTimeInfoMainId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainIdPrefix + valueToString(index);
+    }
+
+    getContainerHistoryMetricTimeInfoMainPartsId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricTimeInfoMainPartsIdPrefix + valueToString(index);
+    }
+
+    getHistoryMetricTimeValueId(index){
+        return variablesStatisticsTimeHistory.historyMetricTimeValueIdPrefix + valueToString(index);
+    }
+
+
+
+    getContainerHistoryMetricBackgroundMainId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricBackgroundMainIdPrefix + valueToString(index);
+    }
+
+    getContainerHistoryMetricMainPartsId(index){
+        return variablesStatisticsTimeHistory.containerHistoryMetricMainPartsIdPrefix + valueToString(index)
     }
 
     getHistoryMetricTimeValueTextId(index){
