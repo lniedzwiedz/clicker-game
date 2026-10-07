@@ -9,20 +9,7 @@ export class ControllerStatisticsTimePrimary {
         this.viewStatisticsTimePrimary.createContainerStatisticsTimePrimary();
     }
 
-    removeStatisticsTimePrimary(){
+    removeStatisticsTimePrimary() {
         this.viewStatisticsTimePrimary.removeContainerStatisticsTimePrimary();
     }
-
-
-    // createStatisticsTime() {
-    //     this.viewStatisticsTime.createGameFieldStatisticsTime();
-    // }
-    //
-    // removeGameFieldStatisticsTime() {
-    //     this.viewStatisticsTime.removeGameFieldStatisticsTime();
-    // }
-    //
-    // setGameStatisticTimeData(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
-    //     this.viewStatisticsTime.setGameStatisticTimeData(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax, statisticTimeInSecondsBest);
-    // }
 }

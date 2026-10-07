@@ -15,6 +15,7 @@ export const containerHistoryMetricMainIdPrefix = "containerHistoryMetric-main-"
 export const containerHistoryMetricMainPartsIdPrefix = "containerHistoryMetric-mainParts-";
 
 
+// background
 export const containerHistoryMetricBackgroundMainIdPrefix = "containerHistoryMetric-background-main-";
 export const historyMetricBackgroundIdPrefix = "historyMetric-background-";
 
@@ -22,7 +23,6 @@ export const historyMetricStyleDisplayFlex = "styleFlexCenter";
 export const historyMetricBackgroundStyle = "historyMetric-background-style";
 
 export const historyMetricBackgroundIconIdPrefix = "historyMetric-background-icon-";
-// export const historyMetricIconStyleSolid = "fa-solid";
 export const historyMetricIconStyleSolid = "fa-regular";
 export const historyMetricIconClock = "fa-clock";
 export const historyMetricIconStyleTextBase = "fa-clockTimeHistory-base";
@@ -30,6 +30,7 @@ export const historyMetricIconStyleTimeKindPrefix = "fa-clockTimeHistory-";
 export const historyMetricTimeKindSuffix = ["min", "avg", "max"];
 
 
+// timeInfo
 export const containerHistoryMetricTimeInfoMainIdPrefix = "containerHistoryMetric-timeInfo-main-";
 export const containerHistoryMetricTimeInfoMain = "containerHistoryMetric-timeInfo-main";
 export const containerHistoryMetricTimeInfoMainPartsIdPrefix = "containerHistoryMetric-timeInfo-mainParts-";
@@ -57,7 +58,6 @@ export const historyMetricTimeNameStyleTextBase = "historyMetric-timeName-styleT
 export const historyMetricTimeNameStyleTextPrefix = "historyMetric-timeName-styleText-";
 
 
-
 //  history name
 export const containerStatisticsTimeHistoryNameMainId = "containerStatisticsTimeHistoryName-main";
 export const containerStatisticsTimeHistoryNameMainPartsId = "containerStatisticsTimeHistoryName-mainParts";
@@ -69,7 +69,3 @@ export const statisticsTimeHistoryNameStyle = "statisticsTime-historyName-style"
 export const statisticsTimeHistoryNameTextId = "statisticsTime-historyName-textId";
 export const statisticsTimeHistoryNameText = "TIME";
 export const statisticsTimeHistoryNameStyleText = "statisticsTime-historyName-styleText";
-
-
-
-

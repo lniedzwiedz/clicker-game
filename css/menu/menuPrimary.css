@@ -13,15 +13,3 @@
     grid-template-rows: 20fr 70fr 10fr;
     grid-template-columns: 0fr 30fr 70fr 0fr;
 }
-
-@media (max-width: 600px) {
-
-}
-
-@media (max-width: 1000px) {
-
-}
-
-@media (max-device-height: 500px) {
-
-}

@@ -10,7 +10,7 @@ export class ControllerStatisticsFraudCoordinator {
         this.createStatisticsFraud(gameRoundCount);
     }
 
-    removeStatisticsFraud(){
+    removeStatisticsFraud() {
         this.controllerStatisticsFraudPrimary.removeStatisticsFraudPrimary();
     }
 

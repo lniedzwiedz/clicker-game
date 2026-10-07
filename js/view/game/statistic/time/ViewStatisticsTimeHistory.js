@@ -182,7 +182,6 @@ export class ViewStatisticsTimeHistory {
             1,
             2,
             2,
-            // "1fr 1fr",
             "1fr",
             "1fr");
     }
@@ -206,11 +205,6 @@ export class ViewStatisticsTimeHistory {
             variablesStatisticsTimeHistory.historyMetricIconStyleSolid,
             variablesStatisticsTimeHistory.historyMetricIconClock
         );
-
-        // addElementClassNameById(
-        //     variablesStatisticsTimeHistory.historyMetricBackgroundIconIdPrefix + index,
-        //     variablesStatisticsTimeHistory.historyMetricIconStyleTextBase
-        // );
 
         addElementClassNames(
             this.getHistoryMetricBackgroundIconId(index),
@@ -487,21 +481,21 @@ export class ViewStatisticsTimeHistory {
     setStatisticsTimeHistoryMin(statisticTimeInSecondsMin) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(0),
-            statisticTimeInSecondsMin
+            valueToString(statisticTimeInSecondsMin)
         );
     }
 
     setStatisticsTimeHistoryAvg(statisticTimeInSecondsAvg) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(1),
-            statisticTimeInSecondsAvg
+            valueToString(statisticTimeInSecondsAvg)
         );
     }
 
     setStatisticsTimeHistoryMax(statisticTimeInSecondsMax) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(2),
-            statisticTimeInSecondsMax
+            valueToString(statisticTimeInSecondsMax)
         );
     }
 
@@ -575,8 +569,8 @@ export class ViewStatisticsTimeHistory {
             + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index];
     }
 
-    getHistoryMetricTimeValueStyleText(index){
-        return    variablesStatisticsTimeHistory.historyMetricTimeValueStyleTextPrefix
+    getHistoryMetricTimeValueStyleText(index) {
+        return variablesStatisticsTimeHistory.historyMetricTimeValueStyleTextPrefix
             + variablesStatisticsTimeHistory.historyMetricTimeKindSuffix[index];
     }
 }

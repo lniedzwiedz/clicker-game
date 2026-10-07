@@ -43,12 +43,6 @@
     gap: 8px;
 }
 
-.fa-clock {
-}
-
-.fa-star {
-}
-
 .fa-starTimeSummary {
     color: #e9a610;
     font-size: 1.1rem;
@@ -56,7 +50,5 @@
 
 .fa-clockTimeSummary {
     color: #e9a610;
-    /*opacity: 1.2;*/
     font-size: 1.9rem;
 }
-

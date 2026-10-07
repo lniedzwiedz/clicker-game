@@ -98,7 +98,7 @@ export class ViewStatisticsFraudHistory {
 
         for (let index = 0; index < gameRoundCount; index++) {
 
-            let childId = variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + valueToString(index);
+            let childId = this.getHistoryRoundNumberMainId(index);
 
             this.createContainerHistoryRoundNumberMainParts(parentId, childId);
 
@@ -153,14 +153,14 @@ export class ViewStatisticsFraudHistory {
 
     containerHistoryRoundNumberMain(index) {
         createElementDiv(
-            variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + index,
-            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
+            this.getHistoryRoundNumberMainId(index),
+            this.getHistoryRoundNumberMainPartsId(index)
         );
     }
 
     containerHistoryRoundNumberMainPartsGrid(index) {
         setElementStyletAsGrid(
-            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
+            this.getHistoryRoundNumberMainPartsId(index),
             1, 1,
             2, 2,
             "1fr", "1fr");
@@ -175,12 +175,12 @@ export class ViewStatisticsFraudHistory {
 
     createContainerHistoryRoundValueMain(index) {
         createElementDiv(
-            variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + index,
-            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index
+            this.getHistoryRoundNumberMainPartsId(index),
+            this.getHistoryRoundNumberId(index),
         );
 
         addElementClassNames(
-            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
+            this.getHistoryRoundNumberId(index),
             variablesStatisticsFraudHistory.historyRoundNumberStyleDisplayFlex,
             variablesStatisticsFraudHistory.historyRoundNumberStyle
         );
@@ -188,24 +188,24 @@ export class ViewStatisticsFraudHistory {
 
     createHistoryIconWhiskeyGlass(index) {
         createElementI(
-            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
-            variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
+            this.getHistoryRoundNumberId(index),
+            this.getHistoryRoundNumberIconWhiskeyGlassId(index),
             variablesStatisticsFraudHistory.statisticsFraudSumIconStyleSolid,
             variablesStatisticsFraudHistory.statisticsFraudHistoryRoundIconWhiskeyGlass
         );
 
         addElementClassNameById(
-            variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + index,
+            this.getHistoryRoundNumberIconWhiskeyGlassId(index),
             variablesStatisticsFraudHistory.statisticsFraudHistoryIconStyleWhiskeyGlassFraudHistory
         );
     }
 
     createHistoryRoundValueText(index) {
 
-        let pId = variablesStatisticsFraudHistory.historyRoundNumberTextIdIdPrefix + index
+        let pId = this.getHistoryRoundNumberTextIdId(index);
 
         createElementP(
-            variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + index,
+            this.getHistoryRoundNumberId(index),
             pId
         );
 
@@ -275,7 +275,7 @@ export class ViewStatisticsFraudHistory {
         );
     }
 
-    // // action
+    // action
     setStatisticsFraudHistoryRoundNumberValue(fraudCountedRoundNumber, historyRoundNumberTextId) {
 
         let result;
@@ -291,5 +291,26 @@ export class ViewStatisticsFraudHistory {
             elementId,
             text
         );
+    }
+
+
+    getHistoryRoundNumberMainId(index) {
+        return variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + valueToString(index);
+    }
+
+    getHistoryRoundNumberMainPartsId(index) {
+        return variablesStatisticsFraudHistory.historyRoundNumberMainPartsIdPrefix + valueToString(index);
+    }
+
+    getHistoryRoundNumberId(index) {
+        return variablesStatisticsFraudHistory.historyRoundNumberIdPrefix + valueToString(index);
+    }
+
+    getHistoryRoundNumberIconWhiskeyGlassId(index) {
+        return variablesStatisticsFraudHistory.historyRoundNumberIconWhiskeyGlassIdPrefix + valueToString(index);
+    }
+
+    getHistoryRoundNumberTextIdId(index) {
+        return variablesStatisticsFraudHistory.historyRoundNumberTextIdIdPrefix + valueToString(index);
     }
 }

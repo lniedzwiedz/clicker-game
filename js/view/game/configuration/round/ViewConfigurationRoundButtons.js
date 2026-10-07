@@ -24,7 +24,7 @@ class ViewConfigurationRoundButtons {
         this.setConfigurationRoundButtonDefault();
     }
 
-    createContainersConfigurationRoundButtonMain(){
+    createContainersConfigurationRoundButtonMain() {
 
         let maxRowNumber =
             variablesConfigurationRoundButtons.configurationRoundMaxRowNumber;
@@ -80,17 +80,14 @@ class ViewConfigurationRoundButtons {
 
     createContainerButtonRoundMain(rowNumber, roundNumber) {
         createElementDiv(
-            variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
-            + valueToString(rowNumber),
-            variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-            + valueToString(roundNumber)
+            this.getContainerConfigurationRoundRowMainPartsId(rowNumber),
+            this.getContainerConfigurationRoundButtonRoundId(roundNumber)
         );
     }
 
     setContainerButtonRoundMainStyleAsGrid(roundNumber, gridColumnStartNumber, gridColumnEndNumber) {
         setElementStyletAsGrid(
-            variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-            + valueToString(roundNumber),
+            this.getContainerConfigurationRoundButtonRoundId(roundNumber),
             2, gridColumnStartNumber,
             3, gridColumnEndNumber,
             "1fr", "1fr");
@@ -104,12 +101,10 @@ class ViewConfigurationRoundButtons {
 
     createButtonRoundMain(roundNumber) {
 
-        let buttonId =
-            variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber);
+        let buttonId = this.getButtonRoundId(roundNumber);
 
         createElementButton(
-            variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
-            + valueToString(roundNumber),
+            this.getContainerConfigurationRoundButtonRoundId(roundNumber),
             buttonId
         );
 
@@ -127,10 +122,8 @@ class ViewConfigurationRoundButtons {
 
     createIconComputerMouse(roundNumber) {
         createElementI(
-            variablesConfigurationRoundButtons.buttonRoundPrefixId
-            + valueToString(roundNumber),
-            variablesConfigurationRoundButtons.buttonRoundIconComputerMousePrefixId
-            + valueToString(roundNumber),
+            this.getButtonRoundId(roundNumber),
+            this.getButtonRoundIconComputerMouseId(roundNumber),
             variablesConfigurationRoundButtons.buttonRoundIconComputerMouseStyleSolid,
             variablesConfigurationRoundButtons.buttonRoundIconComputerMouse
         );
@@ -138,11 +131,10 @@ class ViewConfigurationRoundButtons {
 
     createButtonRoundText(roundNumber) {
 
-        let pId =
-            variablesConfigurationRoundButtons.buttonRoundTextId + valueToString(roundNumber);
+        let pId = this.getButtonRoundTextId(roundNumber);
 
         createElementP(
-            variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber),
+            this.getButtonRoundId(roundNumber),
             pId
         );
 
@@ -166,8 +158,7 @@ class ViewConfigurationRoundButtons {
 
     setConfigurationRoundButtonDefault() {
         this.addButtonRoundStyleCurrentNumber(
-            variablesConfigurationRoundButtons.buttonRoundPrefixId
-            + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow)
+            this.getButtonRoundStyleCurrentNumber()
         );
     }
 
@@ -223,6 +214,34 @@ class ViewConfigurationRoundButtons {
             elementId,
             variablesConfigurationRoundButtons.buttonRoundChosenNumber
         );
+    }
+
+    getContainerConfigurationRoundRowMainPartsId(rowNumber) {
+        return variablesConfigurationRoundButtons.containerConfigurationRoundRowMainPartsPrefixId
+            + valueToString(rowNumber);
+    }
+
+    getContainerConfigurationRoundButtonRoundId(roundNumber) {
+        return variablesConfigurationRoundButtons.containerConfigurationRoundButtonRoundPrefixId
+            + valueToString(roundNumber);
+    }
+
+    getButtonRoundId(roundNumber) {
+        return variablesConfigurationRoundButtons.buttonRoundPrefixId + valueToString(roundNumber);
+    }
+
+    getButtonRoundIconComputerMouseId(roundNumber) {
+        return variablesConfigurationRoundButtons.buttonRoundIconComputerMousePrefixId
+            + valueToString(roundNumber);
+    }
+
+    getButtonRoundTextId(roundNumber) {
+        return   variablesConfigurationRoundButtons.buttonRoundTextId + valueToString(roundNumber);
+    }
+
+    getButtonRoundStyleCurrentNumber(){
+       return  variablesConfigurationRoundButtons.buttonRoundPrefixId
+        + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow)
     }
 }
 

@@ -1,6 +1,5 @@
 import {
     addElementClassNameById,
-    addElementClassNamedAndText,
     addElementClassNames,
     createElementDiv,
     createElementI,
@@ -77,17 +76,9 @@ export class ViewStatisticsTimeSummary {
             variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextId
         );
 
-        // final !!!
-        // addElementClassNameById(
-        //     variablesStatisticsTimeSummary.statisticsFraudSummaryBestValueTextId,
-        //     variablesStatisticsTimeSummary.statisticsFraudSummaryBestValueStyle
-        // );
-
-        // temp to remove - update
-        addElementClassNamedAndText(
+        addElementClassNameById(
             variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextId,
-            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueStyleText,
-            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueTextDefault
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueStyleText
         );
     }
 

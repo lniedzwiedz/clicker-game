@@ -34,8 +34,7 @@ export class ViewConfigurationRoundButtonsPrimary {
     createContainerRoundRowMain(rowNumber) {
         createElementDiv(
             variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundMainPartsId,
-            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-            + valueToString(rowNumber)
+            this.getContainerConfigurationRoundRowMainId(rowNumber)
         );
     }
 
@@ -45,8 +44,7 @@ export class ViewConfigurationRoundButtonsPrimary {
         let gridColumnEndNumber = 2 + rowNumber;
 
         setElementStyletAsGrid(
-            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-            + valueToString(rowNumber),
+            this.getContainerConfigurationRoundRowMainId(rowNumber),
             gridRowStartNumber,
             1,
             2,
@@ -63,10 +61,8 @@ export class ViewConfigurationRoundButtonsPrimary {
 
     createContainerRoundRowMainParts(rowNumber) {
         createElementDiv(
-            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-            + valueToString(rowNumber),
-            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
-            + valueToString(rowNumber)
+            this.getContainerConfigurationRoundRowMainId(rowNumber),
+            this.getContainerConfigurationRoundRowMainPartsId(rowNumber)
         );
     }
 
@@ -79,8 +75,7 @@ export class ViewConfigurationRoundButtonsPrimary {
         let gridTemplateColumns = " repeat(" + buttonNumberPerRow + ", 1fr 38fr 1fr)";
 
         setElementStyletAsGrid(
-            variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
-            + valueToString(rowNumber),
+            this.getContainerConfigurationRoundRowMainPartsId(rowNumber),
             1,
             1,
             2,
@@ -88,5 +83,15 @@ export class ViewConfigurationRoundButtonsPrimary {
             gridTemplateRows,
             gridTemplateColumns
         );
+    }
+
+    getContainerConfigurationRoundRowMainId(rowNumber){
+        return variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
+        + valueToString(rowNumber)
+    }
+
+    getContainerConfigurationRoundRowMainPartsId(rowNumber){
+        return variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
+            + valueToString(rowNumber);
     }
 }

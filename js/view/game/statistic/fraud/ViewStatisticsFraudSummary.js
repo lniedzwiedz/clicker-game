@@ -4,7 +4,7 @@ import {
     createElementDiv,
     createElementI,
     createElementP,
-    setElementTextById
+    setElementTextById, valueToString
 } from "../../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsFraudSummary
@@ -170,7 +170,7 @@ export class ViewStatisticsFraudSummary {
     setStatisticsFraudSummaryTotalValue(fraudTotalValue) {
         setElementTextById(
             variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueTextId,
-            fraudTotalValue
+            valueToString(fraudTotalValue)
         );
     }
 }

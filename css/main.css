@@ -11,10 +11,6 @@ body {
     display: flex;
 }
 
-/*.button {*/
-/*    background-color: #000000;*/
-/*}*/
-
 #container-Main {
     display: grid;
     height: 100%;

@@ -48,10 +48,6 @@ export class ControllerGameCoordinator {
         this.controllerButtonGameCoordinator.configureButtonGameAtStart();
     }
 
-    // configureStatisticsAtStart() {
-    //     this.controllerStatisticsCoordinator.configureStatisticsAtStart();
-    // }
-
     getRoundNumber() {
         return this.controllerConfigurationCoordinator
             .getRoundNumber();
