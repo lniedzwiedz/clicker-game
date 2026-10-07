@@ -236,12 +236,12 @@ class ViewConfigurationRoundButtons {
     }
 
     getButtonRoundTextId(roundNumber) {
-        return   variablesConfigurationRoundButtons.buttonRoundTextId + valueToString(roundNumber);
+        return variablesConfigurationRoundButtons.buttonRoundTextId + valueToString(roundNumber);
     }
 
-    getButtonRoundStyleCurrentNumber(){
-       return  variablesConfigurationRoundButtons.buttonRoundPrefixId
-        + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow)
+    getButtonRoundStyleCurrentNumber() {
+        return variablesConfigurationRoundButtons.buttonRoundPrefixId
+            + valueToString(variablesConfigurationRoundButtons.configurationRoundMaxButtonNumberPerRow)
     }
 }
 

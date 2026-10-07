@@ -3,7 +3,8 @@ import {
     addElementClassNames,
     createElementDiv,
     createElementI,
-    createElementP, setElementTextById
+    createElementP,
+    setElementTextById
 } from "../../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsTimeSummary

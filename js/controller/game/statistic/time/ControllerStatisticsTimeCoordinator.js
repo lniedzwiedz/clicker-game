@@ -32,8 +32,8 @@ export class ControllerStatisticsTimeCoordinator {
         this.controllerStatisticsTimeHistory.createStatisticsTimeHistory();
     }
 
-    updateStatisticTime( statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-                         statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+    updateStatisticTime(statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+                        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
 
         this.updateStatisticsTimeSummary(statisticTimeInSecondsBest);
         this.updateStatisticTimeHistory(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);

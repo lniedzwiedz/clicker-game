@@ -12,12 +12,12 @@ export class ControllerConfigurationRoundButtons {
     constructor(viewConfigurationRoundButtons, actionConfigurationRoundButtons) {
         this.viewConfigurationRoundButtons = viewConfigurationRoundButtons;
         this.actionConfigurationRoundButtons = actionConfigurationRoundButtons;
-        this.onStart = null;
+        // this.onStart = null;
     }
 
-    setOnStart(onStart) {
-        this.onStart = onStart;
-    }
+    // setOnStart(onStart) {
+    //     this.onStart = onStart;
+    // }
 
     configureRoundButtons() {
         this.createConfigurationRoundButtons();

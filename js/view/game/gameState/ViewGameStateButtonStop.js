@@ -51,7 +51,7 @@ export class ViewGameStateButtonStop {
         this.addIconStopStyleBeforeClick();
     }
 
-    createIconStop(){
+    createIconStop() {
         createElementI(
             variablesButtonStop.buttonStopId,
             variablesButtonStop.buttonStopIconStopId,
@@ -68,7 +68,7 @@ export class ViewGameStateButtonStop {
     }
 
     setIconStopStyleAfterClick() {
-        if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)){
+        if (isElementsExistById(variablesButtonStop.buttonStopIconStopId)) {
             this.removeIconStopStyleBeforeClick();
             this.addIconStopStyleAfterClick();
         }
@@ -79,28 +79,28 @@ export class ViewGameStateButtonStop {
         this.addIconStopStyleBeforeClick();
     }
 
-    addIconStopStyleBeforeClick(){
+    addIconStopStyleBeforeClick() {
         addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
         );
     }
 
-    removeIconStopStyleBeforeClick(){
+    removeIconStopStyleBeforeClick() {
         removeElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleBeforeClick
         );
     }
 
-    addIconStopStyleAfterClick(){
+    addIconStopStyleAfterClick() {
         addElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleAfterClick
         );
     }
 
-    removeIconStopStyleAfterClick(){
+    removeIconStopStyleAfterClick() {
         removeElementClassNameById(
             variablesButtonStop.buttonStopIconStopId,
             variablesButtonStop.buttonStopIconStopStyleAfterClick
@@ -108,14 +108,14 @@ export class ViewGameStateButtonStop {
     }
 
     setButtonStopStyleInactive() {
-           addElementClassNameById(
-                variablesButtonStop.buttonStopId,
-                variablesButtonStop.buttonStopStyleInactive
-            );
+        addElementClassNameById(
+            variablesButtonStop.buttonStopId,
+            variablesButtonStop.buttonStopStyleInactive
+        );
     }
 
     removeButtonStopStyleInactive() {
-        if (isElementsExistById(variablesButtonStop.buttonStopId)){
+        if (isElementsExistById(variablesButtonStop.buttonStopId)) {
             removeElementClassNameById(
                 variablesButtonStop.buttonStopId,
                 variablesButtonStop.buttonStopStyleInactive

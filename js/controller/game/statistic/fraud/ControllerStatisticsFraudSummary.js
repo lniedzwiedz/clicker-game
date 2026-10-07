@@ -11,5 +11,4 @@ export class ControllerStatisticsFraudSummary {
     setStatisticsFraudSummaryTotalValue(fraudTotalValue) {
         this.viewStatisticsFraudSummary.setStatisticsFraudSummaryTotalValue(fraudTotalValue);
     }
-
 }

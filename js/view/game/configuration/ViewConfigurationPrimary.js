@@ -5,6 +5,7 @@ import {
 import * as variablesConfigurationMain
     from "../../../common/variable/game/configuration/variablesConfigurationPrimary.js";
 
+
 export class ViewConfigurationPrimary {
 
     createContainerConfigurationPrimary() {

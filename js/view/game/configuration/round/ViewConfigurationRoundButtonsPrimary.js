@@ -85,12 +85,12 @@ export class ViewConfigurationRoundButtonsPrimary {
         );
     }
 
-    getContainerConfigurationRoundRowMainId(rowNumber){
+    getContainerConfigurationRoundRowMainId(rowNumber) {
         return variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPrefixId
-        + valueToString(rowNumber)
+            + valueToString(rowNumber)
     }
 
-    getContainerConfigurationRoundRowMainPartsId(rowNumber){
+    getContainerConfigurationRoundRowMainPartsId(rowNumber) {
         return variablesConfigurationRoundButtonsPrimary.containerConfigurationRoundRowMainPartsPrefixId
             + valueToString(rowNumber);
     }

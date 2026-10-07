@@ -4,7 +4,8 @@ import {
     createElementDiv,
     createElementI,
     createElementP,
-    setElementTextById, valueToString
+    setElementTextById,
+    valueToString
 } from "../../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsFraudSummary

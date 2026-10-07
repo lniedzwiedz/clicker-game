@@ -1,16 +1,19 @@
-import {createElementDiv} from "../../../../common/function/commonFunctions.js";
+import {
+    createElementDiv
+} from "../../../../common/function/commonFunctions.js";
 
-import * as variablesConfigurationRoundPrimary from "../../../../common/variable/game/configuration/round/variablesConfigurationRoundPrimary.js";
+import * as variablesConfigurationRoundPrimary
+    from "../../../../common/variable/game/configuration/round/variablesConfigurationRoundPrimary.js";
 
 
-export class ViewConfigurationRoundPrimary{
+export class ViewConfigurationRoundPrimary {
 
-    createContainerConfigurationRoundPrimary(){
+    createContainerConfigurationRoundPrimary() {
         this.createContainerConfigurationRoundMain();
         this.createContainerConfigurationRoundMainParts();
     }
 
-    createContainerConfigurationRoundMain(){
+    createContainerConfigurationRoundMain() {
         createElementDiv(
             variablesConfigurationRoundPrimary.containerConfigurationMainPartsId,
             variablesConfigurationRoundPrimary.containerConfigurationRoundMainId,

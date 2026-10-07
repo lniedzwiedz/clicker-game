@@ -293,7 +293,6 @@ export class ViewStatisticsFraudHistory {
         );
     }
 
-
     getHistoryRoundNumberMainId(index) {
         return variablesStatisticsFraudHistory.historyRoundNumberMainIdPrefix + valueToString(index);
     }

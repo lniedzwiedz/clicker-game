@@ -4,8 +4,7 @@ export class ControllerConfigurationRoundButtonsPrimary {
         this.viewConfigurationRoundButtonsPrimary = viewConfigurationRoundButtonsPrimary;
     }
 
-    createConfigurationRoundButtonsPrimary(){
+    createConfigurationRoundButtonsPrimary() {
         this.viewConfigurationRoundButtonsPrimary.createContainerConfigurationRoundButtonsPrimary();
     }
-
 }

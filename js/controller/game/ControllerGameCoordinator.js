@@ -93,7 +93,7 @@ export class ControllerGameCoordinator {
         this.controllerButtonGameCoordinator.setButtonGameColor(roundColor);
     }
 
-    configureStatistic(gameRoundCount){
+    configureStatistic(gameRoundCount) {
         this.controllerStatisticsCoordinator.configureStatistic(gameRoundCount);
     }
 
@@ -109,7 +109,7 @@ export class ControllerGameCoordinator {
         );
     }
 
-    removeStatistics(){
+    removeStatistics() {
         this.controllerStatisticsCoordinator.removeStatistics();
     }
 

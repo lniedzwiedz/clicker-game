@@ -152,7 +152,7 @@ export class ControllerGameClicker {
         this.startRound();
     }
 
-    setStatistics(){
+    setStatistics() {
 
         this.game.setConfigurationTime();
 
@@ -180,13 +180,9 @@ export class ControllerGameClicker {
             this.game.getFraudRoundElementIndexToUpdate();
 
         this.controllerGameCoordinator.updateStatistic(
-            statisticTimeInSecondsMin,
-            statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax,
-            statisticTimeInSecondsBest,
-            fraudCountedRoundNumber,
-            fraudCountedSumNumber,
-            historyRoundNumber);
+            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+            fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
 
         this.game.resetFraudCountedClicks();
         this.game.setFraudRoundElementIndexToUpdate();
