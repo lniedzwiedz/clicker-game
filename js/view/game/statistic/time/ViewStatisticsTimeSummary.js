@@ -9,12 +9,18 @@ import {
 
 import * as variablesStatisticsTimeSummary
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeSummary.js";
+import {
+    containerStatisticsTimeSummaryBackgroundId, containerStatisticsTimeSummaryBackgroundPartsId,
+    statisticsTimeSummaryBackgroundId,
+    statisticsTimeSummaryBackgroundStyleBase, statisticsTimeSummaryBestValueStyleFlexCenter
+} from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeSummary.js";
 
 
 export class ViewStatisticsTimeSummary {
 
     createContainerStatisticsTimeSummary() {
         this.createContainerStatisticsTimeSummaryPrimary();
+        this.createContainerStatisticsTimeSummaryBackground();
         this.createContainerStatisticsTimeSummaryBestValue();
         this.createContainerStatisticsTimeSummaryIcons();
     }
@@ -35,6 +41,43 @@ export class ViewStatisticsTimeSummary {
         createElementDiv(
             variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainId,
             variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainPartsId
+        );
+    }
+
+    createContainerStatisticsTimeSummaryBackground() {
+        this.createContainerStatisticsTimeSummaryBackgroundPrimary();
+        this.createStatisticsTimeSummaryBackgroundMain();
+    }
+
+    createContainerStatisticsTimeSummaryBackgroundPrimary() {
+        this.createContainerStatisticsTimeSummaryBackgroundMain();
+        this.createContainerStatisticsTimeSummaryBackgroundParts();
+    }
+
+    createContainerStatisticsTimeSummaryBackgroundMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryMainPartsId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBackgroundId,
+        );
+    }
+
+    createContainerStatisticsTimeSummaryBackgroundParts() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBackgroundId,
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBackgroundPartsId,
+        );
+    }
+
+    createStatisticsTimeSummaryBackgroundMain() {
+        createElementDiv(
+            variablesStatisticsTimeSummary.containerStatisticsTimeSummaryBackgroundPartsId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBackgroundId,
+        );
+
+        addElementClassNames(
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBackgroundId,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBestValueStyleFlexCenter,
+            variablesStatisticsTimeSummary.statisticsTimeSummaryBackgroundStyleBase
         );
     }
 

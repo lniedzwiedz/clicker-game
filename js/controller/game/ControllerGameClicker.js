@@ -1,4 +1,4 @@
-import {Game} from "../../Game.js";
+import {GameMain} from "../../game/GameMain.js";
 
 export class ControllerGameClicker {
 
@@ -33,7 +33,7 @@ export class ControllerGameClicker {
                 .getRoundNumber();
 
         this.game =
-            new Game(roundNumber);
+            new GameMain(roundNumber);
 
         this.controllerGameCoordinator
             .configureButtonGameListener();

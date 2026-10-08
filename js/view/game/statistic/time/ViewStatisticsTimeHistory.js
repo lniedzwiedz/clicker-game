@@ -14,6 +14,7 @@ import * as variablesStatisticsTimeHistory
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeHistory.js";
 
 
+
 export class ViewStatisticsTimeHistory {
 
     createContainerStatisticsTimedHistory() {
@@ -195,6 +196,11 @@ export class ViewStatisticsTimeHistory {
         addElementClassNameById(
             this.getHistoryMetricBackgroundIdPrefix(index),
             variablesStatisticsTimeHistory.historyMetricStyleDisplayFlex,
+        );
+
+        addElementClassNameById(
+            this.getHistoryMetricBackgroundIdPrefix(index),
+            variablesStatisticsTimeHistory.historyMetricBackgroundStyleBase,
         );
     }
 
@@ -417,8 +423,8 @@ export class ViewStatisticsTimeHistory {
 
     createContainerStatisticsTimeHistoryName() {
         this.createContainerHistoryNamePrimary();
-        this.createHistoryNameMain();
-        this.createHistoryNameText();
+        this.createHistoryNameBackground();
+        this.createHistoryName();
     }
 
     createContainerHistoryNamePrimary() {
@@ -442,15 +448,124 @@ export class ViewStatisticsTimeHistory {
 
     createHistoryNameMain() {
         createElementDiv(
-            variablesStatisticsTimeHistory.containerStatisticsTimeHistoryNameMainPartsId,
+            variablesStatisticsTimeHistory.containerHistoryNameMainPartsId,
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameId
         );
 
-        addElementClassNames(
+        // addElementClassNames(
+        //     variablesStatisticsTimeHistory.statisticsTimeHistoryNameId,
+        //     variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyleDisplayFlex,
+        //     variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyle
+        // );
+
+        addElementClassNameById(
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameId,
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyleDisplayFlex,
-            variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyle
         );
+    }
+
+    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    createHistoryNameBackground(){
+        this.createContainerHistoryNameBackgroundPrimary();
+        this.createHistoryNameBackgroundMian();
+    }
+
+    createContainerHistoryNameBackgroundPrimary(){
+        this.createContainerHistoryNameBackgroundMian();
+        this.createContainerHistoryNameBackgroundParts();
+    }
+
+    createContainerHistoryNameBackgroundMian(){
+        createElementDiv(
+            variablesStatisticsTimeHistory.containerStatisticsTimeHistoryNameMainPartsId,
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainId
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainId,
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
+    }
+
+    createContainerHistoryNameBackgroundParts(){
+        createElementDiv(
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainId,
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainPartsId
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainPartsId,
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
+    }
+
+    createHistoryNameBackgroundMian(){
+        createElementDiv(
+            variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainPartsId,
+            variablesStatisticsTimeHistory.statisticsTimeHistoryNameBackgroundId
+        );
+
+        addElementClassNameById(
+            variablesStatisticsTimeHistory.statisticsTimeHistoryNameBackgroundId,
+            variablesStatisticsTimeHistory.statisticsTimeHistoryNameStyleDisplayFlex
+        );
+
+        addElementClassNameById(
+            variablesStatisticsTimeHistory.statisticsTimeHistoryNameBackgroundId,
+            variablesStatisticsTimeHistory.statisticsTimeHistoryNameBackgroundStyle
+        );
+    }
+
+    createHistoryName(){
+        this.createHistoryNamePrimary();
+        this.createHistoryNameMain();
+        this.createHistoryNameText();
+    }
+
+    createHistoryNamePrimary(){
+        this.createContainerHistoryNameMian();
+        this.createContainerHistoryNameMianParts();
+    }
+
+    createContainerHistoryNameMian(){
+        createElementDiv(
+            variablesStatisticsTimeHistory.containerStatisticsTimeHistoryNameMainPartsId,
+            variablesStatisticsTimeHistory.containerHistoryNameMainId
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsTimeHistory.containerHistoryNameMainId,
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
+    }
+
+    createContainerHistoryNameMianParts(){
+        createElementDiv(
+            variablesStatisticsTimeHistory.containerHistoryNameMainId,
+            variablesStatisticsTimeHistory.containerHistoryNameMainPartsId
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsTimeHistory.containerHistoryNameMainPartsId,
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
     }
 
     createHistoryNameText() {

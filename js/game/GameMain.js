@@ -1,4 +1,4 @@
-export class Game {
+export class GameMain {
 
     constructor(gameRoundCount) {
         this.gameRoundCount = gameRoundCount;

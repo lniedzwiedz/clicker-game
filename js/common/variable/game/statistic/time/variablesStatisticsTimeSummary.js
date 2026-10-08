@@ -6,6 +6,13 @@ export const containerStatisticsTimeMainPartsId = variablesStatisticsTimePrimary
 export const containerStatisticsTimeSummaryMainId = "containerStatisticsTimeSummary-main";
 export const containerStatisticsTimeSummaryMainPartsId = "containerStatisticsTimeSummary-mainParts";
 
+//  background
+export const containerStatisticsTimeSummaryBackgroundId = "containerStatisticsTimeSummary-background-main";
+export const containerStatisticsTimeSummaryBackgroundPartsId = "containerStatisticsTimeSummary-background-mainParts";
+export const statisticsTimeSummaryBackgroundId = "statisticsTimeSummary-background";
+export const statisticsTimeSummaryBackgroundStyleBase = "statisticsTimeSummary-background-style-base";
+
+
 // best value
 export const containerStatisticsTimeSummaryBestValueMainId = "containerStatisticsTimeSummary-bestValue-main";
 export const statisticsTimeSummaryBestValueId = "statisticsTimeSummary-bestValue-main";

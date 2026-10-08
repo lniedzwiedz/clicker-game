@@ -30,10 +30,20 @@
     grid-template-columns: 1fr;
 }
 
-.statisticsTime-historyName-style {
+/*.statisticsTime-historyName-style {*/
+/*    border: none;*/
+/*    border-radius: 0.45rem;*/
+/*    !*box-shadow: 0 0 1px 1px #2a1e1e;*!*/
+/*    box-shadow: 0 0 1px 1px #e9a610;*/
+/*    opacity: 0.7;*/
+/*}*/
+
+.statisticsTime-historyName-background-style-base {
     border: none;
     border-radius: 0.45rem;
-    box-shadow: 0 0 1px 1px #2a1e1e;
+    /*box-shadow: 0 0 1px 1px #2a1e1e;*/
+    box-shadow: 0 0 1px 1px #e9a610;
+    opacity: 0.6;
 }
 
 .statisticsTime-historyName-styleText {
@@ -55,10 +65,9 @@
 
 .containerHistoryMetric-timeInfo-main {
     z-index: 1;
-    /*background-color: aquamarine;*/
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0 0 1px 1px #2a1e1e;
+    /*border: none;*/
+    /*border-radius: 0.45rem;*/
+    /*box-shadow: 0 0 1px 1px #e9a610;*/
 }
 
 #containerStatisticsTimeHistoryMetrics-mainParts {
@@ -67,6 +76,14 @@
     grid-column: 1 / 2;
     grid-template-rows: 0fr 90fr 10fr;
     grid-template-columns: 0fr 32fr 2fr 32fr 2fr 32fr 0fr;
+}
+
+.historyMetric-background-style-base {
+    /*z-index: 1;*/
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0 0 1px 1px #e9a610;
+    opacity: 0.6;
 }
 
 .fa-clock {
