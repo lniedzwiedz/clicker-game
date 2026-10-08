@@ -14,7 +14,6 @@ import * as variablesStatisticsTimeHistory
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeHistory.js";
 
 
-
 export class ViewStatisticsTimeHistory {
 
     createContainerStatisticsTimedHistory() {
@@ -466,17 +465,17 @@ export class ViewStatisticsTimeHistory {
 
     // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    createHistoryNameBackground(){
+    createHistoryNameBackground() {
         this.createContainerHistoryNameBackgroundPrimary();
         this.createHistoryNameBackgroundMian();
     }
 
-    createContainerHistoryNameBackgroundPrimary(){
+    createContainerHistoryNameBackgroundPrimary() {
         this.createContainerHistoryNameBackgroundMian();
         this.createContainerHistoryNameBackgroundParts();
     }
 
-    createContainerHistoryNameBackgroundMian(){
+    createContainerHistoryNameBackgroundMian() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryNameMainPartsId,
             variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainId
@@ -492,7 +491,7 @@ export class ViewStatisticsTimeHistory {
             "1fr");
     }
 
-    createContainerHistoryNameBackgroundParts(){
+    createContainerHistoryNameBackgroundParts() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainId,
             variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainPartsId
@@ -508,7 +507,7 @@ export class ViewStatisticsTimeHistory {
             "1fr");
     }
 
-    createHistoryNameBackgroundMian(){
+    createHistoryNameBackgroundMian() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerHistoryNameBackgroundMainPartsId,
             variablesStatisticsTimeHistory.statisticsTimeHistoryNameBackgroundId
@@ -525,18 +524,18 @@ export class ViewStatisticsTimeHistory {
         );
     }
 
-    createHistoryName(){
+    createHistoryName() {
         this.createHistoryNamePrimary();
         this.createHistoryNameMain();
         this.createHistoryNameText();
     }
 
-    createHistoryNamePrimary(){
+    createHistoryNamePrimary() {
         this.createContainerHistoryNameMian();
         this.createContainerHistoryNameMianParts();
     }
 
-    createContainerHistoryNameMian(){
+    createContainerHistoryNameMian() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerStatisticsTimeHistoryNameMainPartsId,
             variablesStatisticsTimeHistory.containerHistoryNameMainId
@@ -552,7 +551,7 @@ export class ViewStatisticsTimeHistory {
             "1fr");
     }
 
-    createContainerHistoryNameMianParts(){
+    createContainerHistoryNameMianParts() {
         createElementDiv(
             variablesStatisticsTimeHistory.containerHistoryNameMainId,
             variablesStatisticsTimeHistory.containerHistoryNameMainPartsId

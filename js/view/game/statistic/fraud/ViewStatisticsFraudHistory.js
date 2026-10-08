@@ -98,35 +98,93 @@ export class ViewStatisticsFraudHistory {
 
         for (let index = 0; index < gameRoundCount; index++) {
 
-            let childId = this.getHistoryRoundNumberMainId(index);
+            // let childId = this.getHistoryRoundNumberMainId(index);
+            let childId = variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainIdPrefix + valueToString(index);
 
-            this.createContainerHistoryRoundNumberMainParts(parentId, childId);
+            this.createContainerHistoryRoundNumberMain(parentId, childId);
 
-            this.createContainerHistoryRoundNumberMainPartsGrid(
+            this.createContainerHistoryRoundNumberMainGrid(
                 childId,
                 gridRowStartNumberChild, gridColumnStartNumberChild,
                 gridRowEndNumberChild, gridColumnEndNumberChild)
 
 
-            this.containerStatisticsFraudCounterRoundNumberMainParts(
-                valueToString(index)
-            );
+            this.createContainerHistoryRoundNumberMainParts(index);
 
             gridColumnStartNumberChild += 3;
             gridColumnEndNumberChild += 3;
         }
     }
 
-    createContainerHistoryRoundNumberMainParts(parentId, childId) {
+    createContainerHistoryRoundBackground(gameRoundCount) {
+        this.createContainerHistoryRoundBackgroundPrimary(gameRoundCount);
+        this.createHistoryRoundBackgroundMain(gameRoundCount);
+    }
+
+    createContainerHistoryRoundBackgroundPrimary(gameRoundCount) {
+        this.createContainerHistoryRoundBackgroundMain(gameRoundCount);
+        this.createContainerHistoryRoundBackgroundMainParts(gameRoundCount);
+    }
+
+    createContainerHistoryRoundBackgroundMain(index) {
+        createElementDiv(
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainPartsIdPrefix
+            + valueToString(index),
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainIdPrefix
+            + valueToString(index)
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainIdPrefix
+            + valueToString(index),
+            1, 1,
+            2, 2,
+            "1fr", "1fr");
+    }
+
+    createContainerHistoryRoundBackgroundMainParts(index) {
+        createElementDiv(
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainIdPrefix
+            + valueToString(index),
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainPartsIdPrefix
+            + valueToString(index)
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainPartsIdPrefix
+            + valueToString(index),
+            1, 1,
+            2, 2,
+            "1fr", "1fr");
+    }
+
+    createHistoryRoundBackgroundMain(gameRoundCount) {
+        createElementDiv(
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundMainPartsIdPrefix
+            + valueToString(gameRoundCount),
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundIdPrefix
+            + valueToString(gameRoundCount)
+        );
+
+        addElementClassNames(
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundIdPrefix
+            + valueToString(gameRoundCount),
+            variablesStatisticsFraudHistory.historyRoundNumberStyleDisplayFlex,
+            variablesStatisticsFraudHistory.historyRoundNumberBackgroundStyleBase
+        );
+
+    }
+
+    createContainerHistoryRoundNumberMain(parentId, childId) {
         createElementDiv(
             parentId,
             childId
         );
     }
 
-    createContainerHistoryRoundNumberMainPartsGrid(childId,
-                                                   gridRowStartNumberChild, gridColumnStartNumberChild,
-                                                   gridRowEndNumberChild, gridColumnEndNumberChild,) {
+    createContainerHistoryRoundNumberMainGrid(childId,
+                                              gridRowStartNumberChild, gridColumnStartNumberChild,
+                                              gridRowEndNumberChild, gridColumnEndNumberChild,) {
 
         let gridTemplateRowsChild = "1fr";
         let gridTemplateColumnsChild = "1fr";
@@ -141,8 +199,9 @@ export class ViewStatisticsFraudHistory {
             gridTemplateColumnsChild);
     }
 
-    containerStatisticsFraudCounterRoundNumberMainParts(index) {
+    createContainerHistoryRoundNumberMainParts(index) {
         this.containerHistoryRoundNumberMainPartsPrimary(index);
+        this.createContainerHistoryRoundBackground(index);
         this.createContainerHistoryRoundValue(index);
     }
 
@@ -153,30 +212,79 @@ export class ViewStatisticsFraudHistory {
 
     containerHistoryRoundNumberMain(index) {
         createElementDiv(
-            this.getHistoryRoundNumberMainId(index),
-            this.getHistoryRoundNumberMainPartsId(index)
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainIdPrefix
+            + valueToString(index),
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainPartsIdPrefix
+            + valueToString(index)
         );
     }
 
     containerHistoryRoundNumberMainPartsGrid(index) {
         setElementStyletAsGrid(
-            this.getHistoryRoundNumberMainPartsId(index),
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainPartsIdPrefix
+            + valueToString(index),
             1, 1,
             2, 2,
             "1fr", "1fr");
     }
 
     createContainerHistoryRoundValue(index) {
-        this.createContainerHistoryRoundValueMain(index);
+        this.createContainerHistoryRoundValuePrimary(index);
+        this.createHistoryRoundValueMain(index);
         this.createHistoryIconWhiskeyGlass(index);
         this.createHistoryRoundValueText(index);
 
     }
 
+    createContainerHistoryRoundValuePrimary(index) {
+        this.createContainerHistoryRoundValueMain(index);
+        this.createContainerHistoryRoundValueMainParts(index);
+    }
+
     createContainerHistoryRoundValueMain(index) {
         createElementDiv(
-            this.getHistoryRoundNumberMainPartsId(index),
-            this.getHistoryRoundNumberId(index),
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberTextMainPartsIdPrefix
+            + valueToString(index),
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainIdPrefix
+            + valueToString(index)
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainIdPrefix
+            + valueToString(index),
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
+    }
+
+    createContainerHistoryRoundValueMainParts(index) {
+        createElementDiv(
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainIdPrefix
+            + valueToString(index),
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainPartsIdPrefix
+            + valueToString(index)
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainPartsIdPrefix
+            + valueToString(index),
+            1,
+            1,
+            2,
+            2,
+            "1fr",
+            "1fr");
+    }
+
+
+    createHistoryRoundValueMain(index) {
+        createElementDiv(
+            variablesStatisticsFraudHistory.containerHistoryRoundNumberMainPartsIdPrefix
+            + valueToString(index),
+            this.getHistoryRoundNumberId(index)
         );
 
         addElementClassNames(

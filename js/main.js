@@ -4,4 +4,4 @@ const moduleMain = new ModuleMain();
 moduleMain.start();
 
 
-console.log("Clicker game: version 20261008v50_branch_class_77");
+console.log("Clicker game: version 20261008v50_branch_class_78");

@@ -6,12 +6,26 @@ export const containerStatisticsFraudMainPartsId = variablesStatisticsFraudPrima
 export const containerStatisticsFraudHistoryMainId = "containerStatisticsFraudHistory-main";
 export const containerStatisticsFraudHistoryMainPartsId = "containerStatisticsFraudHistory-mainParts";
 
+
 export const containerStatisticsFraudHistoryRoundMainId = "containerStatisticsFraudHistoryRound-main";
 export const containerStatisticsFraudHistoryRoundMainPartsId = "containerStatisticsFraudHistoryRound-mainParts";
 
+
 // fraud per round
-export const historyRoundNumberMainIdPrefix = "historyRoundNumber-main-";
-export const historyRoundNumberMainPartsIdPrefix = "historyRoundNumber-mainParts-";
+export const containerHistoryRoundNumberTextMainIdPrefix = "containerHistoryRoundNumber-main-";
+export const containerHistoryRoundNumberTextMainPartsIdPrefix = "containerHistoryRoundNumber-mainParts-";
+
+// fraud per round - background
+export const historyRoundNumberBackgroundMainIdPrefix = "historyRoundNumber-background-main-";
+export const historyRoundNumberBackgroundMainPartsIdPrefix = "historyRoundNumber-background-mainParts-";
+export const historyRoundNumberBackgroundIdPrefix = "historyRoundNumber-background-";
+export const historyRoundNumberBackgroundStyleBase = "historyRoundNumber-background-style-base";
+
+
+export const containerHistoryRoundNumberMainIdPrefix = "containerHistory-roundNumber-main-";
+export const containerHistoryRoundNumberMainPartsIdPrefix = "containerHistory-roundNumber-mainParts-";
+export const historyRoundNumberMainIdPrefix = "history-roundNumber-main-";
+export const historyRoundNumberMainPartsIdPrefix = "history-roundNumber-mainParts-";
 
 export const historyRoundNumberIdPrefix = "historyRoundNumber-";
 // export const historyRoundNumberStyleDisplayFlex = "historyRoundNumber-StyleDisplayFlex";

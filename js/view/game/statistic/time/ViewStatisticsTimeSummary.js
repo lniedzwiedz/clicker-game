@@ -9,11 +9,6 @@ import {
 
 import * as variablesStatisticsTimeSummary
     from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeSummary.js";
-import {
-    containerStatisticsTimeSummaryBackgroundId, containerStatisticsTimeSummaryBackgroundPartsId,
-    statisticsTimeSummaryBackgroundId,
-    statisticsTimeSummaryBackgroundStyleBase, statisticsTimeSummaryBestValueStyleFlexCenter
-} from "../../../../common/variable/game/statistic/time/variablesStatisticsTimeSummary.js";
 
 
 export class ViewStatisticsTimeSummary {
