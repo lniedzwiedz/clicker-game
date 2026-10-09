@@ -3,19 +3,24 @@ import {
     addElementClassNames,
     createElementDiv,
     createElementI,
-    createElementP,
+    createElementP, setElementStyletAsGrid,
     setElementTextById,
     valueToString
 } from "../../../../common/function/commonFunctions.js";
 
 import * as variablesStatisticsFraudSummary
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
+import {
+    statisticsFraudSummaryBackgroundId, statisticsFraudSummaryBackgroundStyleBase
+} from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
+
 
 
 export class ViewStatisticsFraudSummary {
 
     createContainerStatisticsFraudSummary() {
         this.createContainerStatisticsFraudSummaryPrimary();
+        this.createContainerStatisticsFraudSummaryBackground();
         this.createContainerStatisticsFraudSummaryTotalValue();
         this.createContainerStatisticsFraudSummaryIcons();
     }
@@ -39,6 +44,55 @@ export class ViewStatisticsFraudSummary {
         );
     }
 
+    createContainerStatisticsFraudSummaryBackground(){
+        this.createContainerStatisticsFraudSummaryBackgroundPrimary();
+        this.createStatisticsFraudSummaryBackgroundMain();
+    }
+
+    createContainerStatisticsFraudSummaryBackgroundPrimary(){
+        this.createContainerStatisticsFraudSummaryBackgroundMain();
+        this.createContainerStatisticsFraudSummaryBackgroundParts();
+    }
+
+    createContainerStatisticsFraudSummaryBackgroundMain() {
+        createElementDiv(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryMainPartsId,
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundId,
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundId,
+            2, 2,
+            4, 3,
+            "1fr", "1fr");
+    }
+
+    createContainerStatisticsFraudSummaryBackgroundParts() {
+        createElementDiv(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundId,
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundPartsId,
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundPartsId,
+            1, 1,
+            2, 2,
+            "1fr", "1fr");
+    }
+
+    createStatisticsFraudSummaryBackgroundMain(){
+        createElementDiv(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryBackgroundPartsId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryBackgroundId,
+        );
+
+        addElementClassNames(
+            variablesStatisticsFraudSummary.statisticsFraudSummaryBackgroundId,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryTotalValueStyleDisplayFlex,
+            variablesStatisticsFraudSummary.statisticsFraudSummaryBackgroundStyleBase
+        );
+    }
+
     createContainerStatisticsFraudSummaryTotalValue() {
         this.createContainerStatisticsFraudSummaryTotalValuePrimary();
         this.createFraudSummaryTotalValue();
@@ -53,6 +107,12 @@ export class ViewStatisticsFraudSummary {
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryMainPartsId,
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryTotalValueMainId,
         );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryTotalValueMainId,
+            2, 2,
+            3, 3,
+            "1fr", "1fr");
     }
 
     createFraudSummaryTotalValue() {
@@ -97,6 +157,13 @@ export class ViewStatisticsFraudSummary {
         createElementDiv(
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryMainPartsId,
             variablesStatisticsFraudSummary.containerStatisticsFraudSummaryIconsMainId,
+        );
+
+        setElementStyletAsGrid(
+            variablesStatisticsFraudSummary.containerStatisticsFraudSummaryIconsMainId,
+            3, 2,
+            4, 3,
+            "1fr", "1fr"
         );
     }
 

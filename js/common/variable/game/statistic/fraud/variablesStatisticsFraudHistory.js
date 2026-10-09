@@ -16,14 +16,14 @@ export const containerHistoryRoundNumberTextMainIdPrefix = "containerHistoryRoun
 export const containerHistoryRoundNumberTextMainPartsIdPrefix = "containerHistoryRoundNumber-mainParts-";
 
 // fraud per round - background
-export const historyRoundNumberBackgroundMainIdPrefix = "historyRoundNumber-background-main-";
-export const historyRoundNumberBackgroundMainPartsIdPrefix = "historyRoundNumber-background-mainParts-";
-export const historyRoundNumberBackgroundIdPrefix = "historyRoundNumber-background-";
-export const historyRoundNumberBackgroundStyleBase = "historyRoundNumber-background-style-base";
+export const containerStatisticsFraudHistoryRoundNumberBackgroundMainIdPrefix = "containerStatisticsFraudRoundNumber-background-main-";
+export const containerStatisticsFraudHistoryRoundNumberBackgroundMainPartsIdPrefix = "containerSatisticsFraudHistoryRoundNumber-background-mainParts-";
+export const statisticsFraudHistoryRoundNumberBackgroundIdPrefix = "statisticsFraudHistoryRoundNumber-background-";
+export const statisticsFraudHistoryRoundNumberBackgroundStyleBase = "statisticsFraudHistoryRoundNumber-background-style-base";
 
 
-export const containerHistoryRoundNumberMainIdPrefix = "containerHistory-roundNumber-main-";
-export const containerHistoryRoundNumberMainPartsIdPrefix = "containerHistory-roundNumber-mainParts-";
+export const containerHistoryRoundNumberMainIdPrefix = "historyRoundNumber-main-";
+export const containerHistoryRoundNumberMainPartsIdPrefix = "historyRoundNumber-mainParts-";
 export const historyRoundNumberMainIdPrefix = "history-roundNumber-main-";
 export const historyRoundNumberMainPartsIdPrefix = "history-roundNumber-mainParts-";
 
@@ -49,14 +49,24 @@ export const historyRoundNumberTextSpaceAfterIconWhiskeyGlassAndSpace =
     + historyRoundNumberTextSpace
     + historyRoundNumberTextSpace;
 
-//  history name
+//  history name - main
 export const containerStatisticsFraudHistoryNameMainId = "containerStatisticsFraudHistoryName-main";
 export const containerStatisticsFraudHistoryNameMainPartsId = "containerStatisticsFraudHistoryName-mainParts";
 
-export const statisticsFraudHistoryNameId = "statisticsFraud-historyName";
+//  history name - background
+export const containerStatisticsFraudHistoryNameBackgroundMainId = "containerStatisticsFraudHistoryName-background-main";
+export const containerStatisticsFraudHistoryNameBackgroundMainPartsId = "containerStatisticsFraudHistoryName-background-mainParts";
+export const statisticsFraudHistoryNameBackgroundId = "statisticsFraudHistoryName-background";
+export const statisticsFraudHistoryNameBackgroundStyleBase = "statisticsFraudHistoryName-background-style-base";
+
+//  history name - text
+export const containerStatisticsFraudHistoryNameConstantsMainId = "containerStatisticsFraudHistoryName-constants-main";
+export const containerStatisticsFraudHistoryNameConstantsMainPartsId = "containerStatisticsFraudHistoryName-constants-mainParts";
+
+export const statisticsFraudHistoryNameConstantsId = "statisticsFraudHistoryName-constants";
 // export const historyNameStyleDisplayFlex = "historyName-StyleDisplayFlex";
 export const statisticsFraudHistoryNameStyleDisplayFlex = "styleFlexCenter";
-export const statisticsFraudHistoryNameStyle = "statisticsFraud-historyName-style";
-export const statisticsFraudHistoryNameTextId = "statisticsFraud-historyName-textId";
-export const statisticsFraudHistoryNameText = "FRAUD COUNTER";
-export const statisticsFraudHistoryNameStyleText = "statisticsFraud-historyName-styleText";
+export const statisticsFraudHistoryNameConstantsStyleBase = "statisticsFraudHistoryName-constants-style-base";
+export const statisticsFraudHistoryNameConstantsTextId = "statisticsFraudHistoryName-constants-text";
+export const statisticsFraudHistoryNameConstantsText = "FRAUD COUNTER";
+export const statisticsFraudHistoryNameConstantsStyleText = "statisticsFraudHistoryName-constants-styleText";

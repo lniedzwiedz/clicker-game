@@ -6,6 +6,12 @@ export const containerStatisticsFraudMainPartsId = variablesStatisticsFraudPrima
 export const containerStatisticsFraudSummaryMainId = "containerStatisticsFraudSummary-main";
 export const containerStatisticsFraudSummaryMainPartsId = "containerStatisticsFraudSummary-mainParts";
 
+//  background
+export const containerStatisticsFraudSummaryBackgroundId = "containerStatisticsFraudSummary-background-main";
+export const containerStatisticsFraudSummaryBackgroundPartsId = "containerStatisticsFraudSummary-background-mainParts";
+export const statisticsFraudSummaryBackgroundId = "statisticsFraudSummary-background";
+export const statisticsFraudSummaryBackgroundStyleBase = "statisticsFraudSummary-background-style-base";
+
 // total value
 export const containerStatisticsFraudSummaryTotalValueMainId = "containerStatisticsFraudSummary-totalValue-main";
 export const statisticsFraudSummaryTotalValueId = "statisticsFraudSummary-totalValue-main";
