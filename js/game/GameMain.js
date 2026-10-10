@@ -207,6 +207,10 @@ export class GameMain {
             this.statisticTimeInMillisecondsMin = this.reactionTime;
     }
 
+    getStatisticTimeInMillisecondsMin(){
+        return this.statisticTimeInMillisecondsMin;
+    }
+
     setStatisticTimeInMillisecondsSum() {
         this.statisticTimeInMillisecondsSum += this.reactionTime;
     }
@@ -224,6 +228,11 @@ export class GameMain {
         if (this.statisticTimeInMillisecondsBest > this.statisticTimeInMillisecondsMin)
             this.statisticTimeInMillisecondsBest = this.statisticTimeInMillisecondsMin;
     }
+
+    getStatisticTimeInMillisecondsBest(){
+        return this.statisticTimeInMillisecondsBest
+    }
+
 
     setStatisticTimeInMilliseconds() {
         this.setStatisticTimeInMillisecondsMin();

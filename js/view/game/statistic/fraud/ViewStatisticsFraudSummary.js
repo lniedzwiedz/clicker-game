@@ -10,10 +10,6 @@ import {
 
 import * as variablesStatisticsFraudSummary
     from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
-import {
-    statisticsFraudSummaryBackgroundId, statisticsFraudSummaryBackgroundStyleBase
-} from "../../../../common/variable/game/statistic/fraud/variablesStatisticsFraudSummary.js";
-
 
 
 export class ViewStatisticsFraudSummary {

@@ -21,11 +21,8 @@ export const containerStatisticsFraudHistoryRoundNumberBackgroundMainPartsIdPref
 export const statisticsFraudHistoryRoundNumberBackgroundIdPrefix = "statisticsFraudHistoryRoundNumber-background-";
 export const statisticsFraudHistoryRoundNumberBackgroundStyleBase = "statisticsFraudHistoryRoundNumber-background-style-base";
 
-
 export const containerHistoryRoundNumberMainIdPrefix = "historyRoundNumber-main-";
 export const containerHistoryRoundNumberMainPartsIdPrefix = "historyRoundNumber-mainParts-";
-export const historyRoundNumberMainIdPrefix = "history-roundNumber-main-";
-export const historyRoundNumberMainPartsIdPrefix = "history-roundNumber-mainParts-";
 
 export const historyRoundNumberIdPrefix = "historyRoundNumber-";
 // export const historyRoundNumberStyleDisplayFlex = "historyRoundNumber-StyleDisplayFlex";

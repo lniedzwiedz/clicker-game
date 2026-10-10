@@ -6,6 +6,8 @@ export class ControllerGameClicker {
         this.controllerGameCoordinator = controllerGameCoordinator
     }
 
+    tempBestTimeBeforeRefresh = 130000000000000000000000000;
+
     createGameClicker() {
 
         this.controllerGameCoordinator
@@ -179,9 +181,23 @@ export class ControllerGameClicker {
         let historyRoundNumber =
             this.game.getFraudRoundElementIndexToUpdate();
 
+        // this.controllerGameCoordinator.updateStatistic(
+        //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        //     statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+        //     fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
+
+        // temp var
+        let currentBestTime = this.game.getStatisticTimeInMillisecondsBest();
+        console.log("update stat currentBestTime = " + currentBestTime);
+        console.log("update stat tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
+
+        if(this.tempBestTimeBeforeRefresh > currentBestTime){
+            this.tempBestTimeBeforeRefresh = currentBestTime;
+        }
+
         this.controllerGameCoordinator.updateStatistic(
             statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+            statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
             fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
 
         this.game.resetFraudCountedClicks();
