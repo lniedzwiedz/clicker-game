@@ -188,12 +188,14 @@ export class ControllerGameClicker {
 
         // temp var
         let currentBestTime = this.game.getStatisticTimeInMillisecondsBest();
-        console.log("update stat currentBestTime = " + currentBestTime);
-        console.log("update stat tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
+
 
         if(this.tempBestTimeBeforeRefresh > currentBestTime){
             this.tempBestTimeBeforeRefresh = currentBestTime;
         }
+
+        console.log("currentBestTime = " + currentBestTime);
+        console.log("tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
 
         this.controllerGameCoordinator.updateStatistic(
             statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
@@ -205,6 +207,7 @@ export class ControllerGameClicker {
     }
 
     gameOver() {
+        this.clearTimeoutAfterChangeColor();
         this.controllerGameCoordinator.configureGameOver();
     }
 }

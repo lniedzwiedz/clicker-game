@@ -155,3 +155,7 @@ export function setElementStyleByDocumentQuerySelectorRoot(CSSVariableName, CSSV
         CSSVariableValue
     );
 }
+
+export function getRandomNumber(maxNumber) {
+    return Math.floor((Math.random() * maxNumber));
+}
