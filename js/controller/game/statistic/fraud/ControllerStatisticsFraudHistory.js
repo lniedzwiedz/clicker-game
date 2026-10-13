@@ -8,7 +8,7 @@ export class ControllerStatisticsFraudHistory {
         this.viewStatisticsFraudHistory.createContainerStatisticsFraudHistory(gameRoundCount);
     }
 
-    setStatisticsFraudHistoryRoundNumberValue(fraudCountedRoundNumber, historyRoundNumber) {
-        this.viewStatisticsFraudHistory.setStatisticsFraudHistoryRoundNumberValue(fraudCountedRoundNumber, historyRoundNumber);
+    setStatisticsFraudHistoryRoundNumberValue(fraudRoundNumber, fraudTotalValuePerRoundNumber) {
+        this.viewStatisticsFraudHistory.setStatisticsFraudHistoryRoundNumberValue(fraudRoundNumber, fraudTotalValuePerRoundNumber);
     }
 }

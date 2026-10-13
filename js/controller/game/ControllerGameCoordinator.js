@@ -97,16 +97,28 @@ export class ControllerGameCoordinator {
         this.controllerStatisticsCoordinator.configureStatistic(gameRoundCount);
     }
 
+    // updateStatistic(
+    //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //     statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+    //     fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+    //
+    //     this.controllerStatisticsCoordinator.updateStatistic(
+    //         statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //         statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+    //         fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
+    //     );
+    // }
+
     updateStatistic(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-        statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-        fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex) {
+        // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+        fraudStatisticsMap
+         ) {
 
         this.controllerStatisticsCoordinator.updateStatistic(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-            fraudCountedRoundNumber, fraudCountedSumNumber, fraudRoundIndex
-        );
+            // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+            fraudStatisticsMap);
     }
 
     removeStatistics() {

@@ -234,7 +234,7 @@ export class ViewStatisticsFraudHistory {
         );
 
         setElementStyletAsGrid(
-       this.getContainerHistoryRoundNumberMainId(index),
+            this.getContainerHistoryRoundNumberMainId(index),
             1,
             1,
             2,
@@ -246,7 +246,7 @@ export class ViewStatisticsFraudHistory {
     createContainerHistoryRoundValueMainParts(index) {
         createElementDiv(
             this.getContainerHistoryRoundNumberMainId(index),
-        this.getContainerHistoryRoundNumberMainPartsId(index)
+            this.getContainerHistoryRoundNumberMainPartsId(index)
         );
 
         setElementStyletAsGrid(
@@ -460,15 +460,15 @@ export class ViewStatisticsFraudHistory {
     }
 
     // action
-    setStatisticsFraudHistoryRoundNumberValue(fraudCountedRoundNumber, historyRoundNumberTextId) {
+    setStatisticsFraudHistoryRoundNumberValue(fraudRoundNumber, fraudTotalValuePerRoundNumber) {
 
         let result;
-        if (fraudCountedRoundNumber < 10)
-            result = valueToString(fraudCountedRoundNumber) + variablesStatisticsFraudHistory.historyRoundNumberTextSpace;
+        if (fraudRoundNumber < 10)
+            result = valueToString(fraudTotalValuePerRoundNumber) + variablesStatisticsFraudHistory.historyRoundNumberTextSpace;
         else
-            result = fraudCountedRoundNumber;
+            result = fraudTotalValuePerRoundNumber;
 
-        let elementId = variablesStatisticsFraudHistory.historyRoundNumberTextIdIdPrefix + historyRoundNumberTextId;
+        let elementId = variablesStatisticsFraudHistory.historyRoundNumberTextIdIdPrefix + fraudRoundNumber;
         let text = variablesStatisticsFraudHistory.historyRoundNumberTextSpace + result;
 
         setElementTextById(

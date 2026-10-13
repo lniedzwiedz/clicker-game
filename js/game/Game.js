@@ -26,16 +26,16 @@ export class Game {
         let gameKind = "GameModeColor";
 
         if (gameKind === gameMode) {
-            console.log("game mode color");
+            // console.log("game mode color");
             this.gameMode = new GameModeColor();
 
         } else {
-            console.log("game mode abc");
+            // console.log("game mode abc");
         }
 
         this.gameRoundCount = gameRoundCount;
         this.currentRoundNumber = 0;
-        this.fraudCurrentRoundNumber = 0;
+        // this.fraudCurrentRoundNumber = 0;
 
         this.gameModeFraud = new GameModeFraud();
     }
@@ -66,9 +66,9 @@ export class Game {
         return this.gameTimeout.getRandomTimeout();
     }
 
-    getRandomDataToDisplay() {
-        this.gameTimeout.getReactionTime();
-    }
+    // getRandomDataToDisplay() {
+    //     this.gameTimeout.getReactionTime();
+    // }
 
 
 //mainGame class

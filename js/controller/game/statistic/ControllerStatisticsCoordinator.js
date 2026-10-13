@@ -3,7 +3,7 @@ export class ControllerStatisticsCoordinator {
     constructor(controllerStatisticsTimeCoordinator, controllerStatisticsFraudCoordinator) {
         this.controllerStatisticsTimeCoordinator = controllerStatisticsTimeCoordinator;
         this.controllerStatisticsFraudCoordinator = controllerStatisticsFraudCoordinator;
-        this.onStart = null;
+        // this.onStart = null;
     }
 
     configureStatistic(gameRoundCount) {
@@ -32,27 +32,44 @@ export class ControllerStatisticsCoordinator {
         this.controllerStatisticsTimeCoordinator.removeStatisticsTime();
     }
 
+    // updateStatistic(
+    //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //     statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+    //     fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
+    //
+    //     this.updateStatisticFraud(
+    //         fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
+    //     );
+    //
+    //     this.updateStatisticTime(
+    //         statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+    //         statisticTimeInSecondsMax, statisticTimeInSecondsBest
+    //     );
+    // }
+
     updateStatistic(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-        statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-        fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
+        // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
+        fraudStatisticsMap) {
 
-        this.updateStatisticFraud(
-            fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
-        );
+        this.updateStatisticFraud(fraudStatisticsMap);
 
-        this.updateStatisticTime(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, statisticTimeInSecondsBest
-        );
+        // this.updateStatisticTime(
+        //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        //     statisticTimeInSecondsMax, statisticTimeInSecondsBest
+        // );
     }
 
-    updateStatisticFraud(
-        fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
+    // updateStatisticFraud(
+    //     fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
+    //
+    //     this.controllerStatisticsFraudCoordinator.updateStatisticFraud(
+    //         fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
+    //     );
+    // }
 
-        this.controllerStatisticsFraudCoordinator.updateStatisticFraud(
-            fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber
-        );
+    updateStatisticFraud(fraudStatisticsMap) {
+        this.controllerStatisticsFraudCoordinator.updateStatisticFraud(fraudStatisticsMap);
     }
 
     updateStatisticTime(

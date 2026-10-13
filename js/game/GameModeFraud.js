@@ -1,3 +1,6 @@
+import * as variablesGameModeFraud from "./common/variablesGameModeFraud.js";
+
+
 export class GameModeFraud {
 
     // constructor(currentRoundNumber) {
@@ -5,15 +8,15 @@ export class GameModeFraud {
     // }
 
     constructor() {
-        this.configureFraudDataBase();
+        this.initializeFraudStatisticsMapPerRound();
     }
 
-    fraudStatisticMap;
+    fraudStatisticMapPerRound;
 
     // fraudTotal = "fraudTotal";
-    fraudSummaryTotalKey = "fraudSummaryTotalKey";
-    fraudSummaryCurrentRoundNumberKey = "fraudSummaryCurrentRoundNumberKey";
-    fraudSummarySumPerCurrentRoundKey = "fraudSummarySumPerCurrentRoundKey";
+    // fraudSummaryTotalKey = "fraudSummaryTotalKey";
+    // fraudSummaryCurrentRoundNumberKey = "fraudSummaryCurrentRoundNumberKey";
+    // fraudSummarySumPerCurrentRoundKey = "fraudSummarySumPerCurrentRoundKey";
 
     // fraudElementIndexPerRound;
 
@@ -21,83 +24,93 @@ export class GameModeFraud {
     // fraudRoundCountedClicks = 0;
     // fraudRoundElementIndexToUpdate = 0;
 
-    fraudSummaryTotalValue = 0;
-    fraudSummaryCurrentRoundNumberValue = 0;
-    fraudSummarySumPerCurrentRoundValue = 0;
+    fraudTotalValuePerGame = 0;
+    fraudRoundNumber = 0;
+    fraudTotalValuePerRoundNumber = 0;
 
-    configureFraudDataBase() {
-        this.createFroundCounterMap();
-        this.setFroundCounterMapDataBase();
+
+    initializeFraudStatisticsMapPerRound() {
+        this.createFraudStatisticsMapPerRound();
+        this.setFraudStatisticsMapPerRound();
     }
 
-    createFroundCounterMap() {
-        this.fraudStatisticMap = new Map();
+    createFraudStatisticsMapPerRound() {
+        this.fraudStatisticMapPerRound = new Map();
     }
 
     // setFroundCounterMapDataBase(currentRoundNumber) {
-    setFroundCounterMapDataBase() {
-        this.fraudStatisticMap.set(
-            this.fraudSummaryTotalKey, this.fraudSummaryTotalValue);
+    setFraudStatisticsMapPerRound() {
+        this.fraudStatisticMapPerRound.set(
+            variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerGame,
+            this.fraudTotalValuePerGame);
 
-        this.fraudStatisticMap.set(
-            this.fraudSummaryCurrentRoundNumberKey, this.fraudSummaryCurrentRoundNumberValue);
+        this.fraudStatisticMapPerRound.set(
+            variablesGameModeFraud.mapKeyStatisticsFraudRoundNumber,
+            this.fraudRoundNumber);
 
+        this.fraudStatisticMapPerRound.set(
+            variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerRoundNumber,
+            this.fraudTotalValuePerRoundNumber);
 
-        this.fraudStatisticMap.set(
-            this.fraudSummarySumPerCurrentRoundKey, this.fraudSummarySumPerCurrentRoundValue);
+        // this.fraudStatisticMap.set(
+        //     this.fraudRoundNumber,
+        //     this.fraudTotalValuePerRoundNumber
+        // );
 
-
+        // this.fraudStatisticMap.set(
+        //     variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerRoundNumber,
+        //     this.fraudTotalValuePerRoundNumber);
     }
 
     getFraudStatisticMap() {
-        return this.fraudStatisticMap;
+        return this.fraudStatisticMapPerRound;
     }
 
     setFraudCountedClicks() {
-        this.fraudSummarySumPerCurrentRoundValue++;
+        this.fraudTotalValuePerRoundNumber++;
     }
 
-    setFraudCountedData() {
-        this.setFraudCountedSum();
-        this.setFroundCounterMapData();
-        this.setFraudCurrentRoundNumber();
+    setFraudStatisticData() {
+        this.setFraudTotalValuePerGame();
+        this.setFraudStatisticsMapPerRound();
+        this.setFraudConfigurationPerRoundNumber();
     }
 
     getStatisticsFraudData() {
-        this.setFraudCountedData();
-        return this.fraudStatisticMap
+        this.setFraudStatisticData();
+        return this.fraudStatisticMapPerRound;
     }
 
-    setFraudCountedSum() {
-        this.fraudSummaryTotalValue = this.fraudSummaryTotalValue + this.fraudSummarySumPerCurrentRoundValue;
+    setFraudTotalValuePerGame() {
+        this.fraudTotalValuePerGame = this.fraudTotalValuePerGame + this.fraudTotalValuePerRoundNumber;
     }
 
-    setFroundCounterMapData() {
-        this.fraudStatisticMap.set(
-            this.fraudSummaryTotalKey, this.fraudSummaryTotalValue);
-
-        this.fraudStatisticMap.set(
-            this.fraudSummaryCurrentRoundNumberKey, this.fraudSummaryCurrentRoundNumberValue);
-
-
-        this.fraudStatisticMap.set(
-            this.fraudSummarySumPerCurrentRoundKey, this.fraudSummarySumPerCurrentRoundValue);
+    setFraudConfigurationPerRoundNumber(){
+        this.setFraudRoundNumber();
+        this.initializeFraudTotalValuePerRoundNumber();
     }
 
-    setFraudCurrentRoundNumber(){
-        this.fraudSummaryCurrentRoundNumberValue++;
-    }
-    getFraudCountedSum() {
-        return this.fraudSummaryTotalValue;
+    setFraudRoundNumber() {
+        this.fraudRoundNumber++;
     }
 
-    resetFraudCountedClicks() {
-        this.fraudSummarySumPerCurrentRoundValue = 0;
+    initializeFraudTotalValuePerRoundNumber(){
+        this.fraudTotalValuePerRoundNumber = 0;
     }
 
-    getFraudCountedClicks() {
-        return this.fraudSummarySumPerCurrentRoundValue;
-    }
+
+
+    // getFraudCountedSum() {
+    //     return this.fraudTotalValuePerGame;
+    // }
+    //
+    // resetFraudCountedClicks() {
+    //     this.fraudTotalValuePerRoundNumber = 0;
+    // }
+    //
+    // getFraudCountedClicks() {
+    //     return this.fraudTotalValuePerRoundNumber;
+    // }
 
     // setFraudRoundElementIndexToUpdate() {
     //     this.fraudRoundElementIndexToUpdate++;

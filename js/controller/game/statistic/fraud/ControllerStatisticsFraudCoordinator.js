@@ -1,3 +1,6 @@
+import * as variablesGameModeFraud from "../../../../game/common/variablesGameModeFraud.js";
+
+
 export class ControllerStatisticsFraudCoordinator {
 
     constructor(controllerStatisticsFraudPrimary, controllerStatisticsFraudTotal, controllerStatisticsFraudHistory) {
@@ -32,16 +35,30 @@ export class ControllerStatisticsFraudCoordinator {
         this.controllerStatisticsFraudHistory.creatStatisticsFraudHistory(gameRoundCount);
     }
 
-    updateStatisticFraud(fraudCountedRoundNumber, fraudTotalValue, historyRoundNumber) {
-        this.updateStatisticsFraudSummary(fraudTotalValue);
-        this.updateStatisticFraudHistory(fraudCountedRoundNumber, historyRoundNumber);
+    updateStatisticFraud(fraudStatisticsMap) {
+
+        let fraudTotalValuePerGame =
+            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerGame);
+        // console.log("fraudTotalValuePerGame = " + fraudTotalValuePerGame);
+        this.updateStatisticsFraudSummary(fraudTotalValuePerGame);
+
+
+        let fraudTotalValuePerRoundNumber =
+            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerRoundNumber);
+        // console.log("fraudTotalValuePerRoundNumber = " + fraudTotalValuePerRoundNumber);
+
+        let fraudRoundNumber =
+            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudRoundNumber);
+        // console.log("fraudRoundNumber = " + fraudRoundNumber);
+
+        this.updateStatisticFraudHistory(fraudRoundNumber, fraudTotalValuePerRoundNumber);
     }
 
     updateStatisticsFraudSummary(fraudTotalValue) {
         this.controllerStatisticsFraudTotal.setStatisticsFraudSummaryTotalValue(fraudTotalValue);
     }
 
-    updateStatisticFraudHistory(fraudCountedRoundNumber, historyRoundNumber) {
-        this.controllerStatisticsFraudHistory.setStatisticsFraudHistoryRoundNumberValue(fraudCountedRoundNumber, historyRoundNumber);
+    updateStatisticFraudHistory(fraudRoundNumber, fraudTotalValuePerRoundNumber) {
+        this.controllerStatisticsFraudHistory.setStatisticsFraudHistoryRoundNumberValue(fraudRoundNumber, fraudTotalValuePerRoundNumber);
     }
 }

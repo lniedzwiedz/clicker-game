@@ -219,17 +219,17 @@ export class ControllerGameClicker {
             0;
 
 
-        let fraudStatisticMap =
+        let fraudStatisticsMap =
             this.game.getStatisticsFraudData();
 
-        let fraudCountedRoundNumber =
-            fraudStatisticMap.get("fraudSummarySumPerCurrentRoundKey");
-
-        let historyRoundNumber =
-            fraudStatisticMap.get("fraudSummaryCurrentRoundNumberKey");
-
-        let fraudCountedSumNumber =
-            fraudStatisticMap.get("fraudSummaryTotalKey");
+        // let fraudCountedRoundNumber =
+        //     fraudStatisticsMap.get("fraudSummarySumPerCurrentRoundKey");
+        //
+        // let historyRoundNumber =
+        //     fraudStatisticsMap.get("fraudSummaryCurrentRoundNumberKey");
+        //
+        // let fraudCountedSumNumber =
+        //     fraudStatisticsMap.get("fraudSummaryTotalKey");
 
 
 
@@ -249,13 +249,19 @@ export class ControllerGameClicker {
         // console.log("currentBestTime = " + currentBestTime);
         // console.log("tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
 
-        this.controllerGameCoordinator.updateStatistic(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
-            fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
+        // this.controllerGameCoordinator.updateStatistic(
+        //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        //     statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
+        //     fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
 
         // this.game.resetFraudCountedClicks();
         // this.game.setFraudRoundElementIndexToUpdate();
+
+        this.controllerGameCoordinator.updateStatistic(
+            // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            // statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
+            fraudStatisticsMap);
+
     }
 
     gameOver() {
