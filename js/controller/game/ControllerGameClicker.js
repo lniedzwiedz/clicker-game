@@ -1,4 +1,5 @@
 import {GameMain} from "../../game/GameMain.js";
+import {Game} from "../../game/Game.js";
 
 export class ControllerGameClicker {
 
@@ -34,12 +35,15 @@ export class ControllerGameClicker {
             this.controllerGameCoordinator
                 .getRoundNumber();
 
-        this.game =
-            new GameMain(roundNumber);
+        // this.game =
+        //     new GameMain(roundNumber);
+
+        this.game = new Game("GameModeColor", roundNumber);
 
         this.controllerGameCoordinator
             .configureButtonGameListener();
 
+        // ???
         this.configureCounterFraud();
 
         // round 1
@@ -98,26 +102,35 @@ export class ControllerGameClicker {
 
         this.configureCounterFraud();
 
+        // this.game
+        //     .playClickColorCounterTime();
+
         this.game
-            .playClickColorCounterTime();
+            .setGameRoundCountTime();
 
         this.runTimeoutBeforeClick();
     }
 
     runTimeoutBeforeClick() {
 
+        // const timeout =
+        //     this.game.getRandomTimeBeforeChangeColor();
+
         const timeout =
-            this.game.getRandomTimeBeforeChangeColor();
+            this.game.getRandomTimeout();
 
         this.clickColorTimeout =
             setTimeout(() => {
 
+                // const randomColor =
+                //     this.game.getRandomColor();
+
                 const randomColor =
-                    this.game.getRandomColor();
+                    this.game.getGameRoundDataToDisplay();
 
                 this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
-                this.game.setStartTime();
+                this.game.getGameRoundCountTimeStart();
 
                 this.configureCounterReactionTime();
 
@@ -130,7 +143,8 @@ export class ControllerGameClicker {
     }
 
     countFraud() {
-        this.game.setFraudCountedClicks();
+        // this.game.setFraudCountedClicks();
+        this.game.setGameRoundCountFraud();
     }
 
     configureCounterReactionTime() {
@@ -148,38 +162,76 @@ export class ControllerGameClicker {
                 );
         }
 
-        this.setStatistics();
-
         // next round 2, 3, 4 ...
         this.startRound();
+
+        this.setStatistics();
+
+        // // next round 2, 3, 4 ...
+        // this.startRound();
+
     }
 
     setStatistics() {
 
-        this.game.setConfigurationTime();
+        // this.game.setConfigurationTime();
+        //
+        // let statisticTimeInSecondsMin =
+        //     this.game.getStatisticTimeInSecondsMin();
+        //
+        // let statisticTimeInSecondsAvg =
+        //     this.game.getStatisticTimeInSecondsAvg();
+        //
+        // let statisticTimeInSecondsMax =
+        //     this.game.getStatisticTimeInSecondsMax();
+        //
+        // let statisticTimeInSecondsBest =
+        //     this.game.getStatisticTimeInSecondsBest();
+
+        // this.game.setFraudCountedSum();
+        //
+        // let fraudCountedRoundNumber =
+        //     this.game.getFraudCountedClicks();
+        //
+        // let fraudCountedSumNumber =
+        //     this.game.getFraudCountedSum();
+        //
+        // let historyRoundNumber =
+        //     this.game.getFraudRoundElementIndexToUpdate();
+
+
+        // this.game.setConfigurationTime();
 
         let statisticTimeInSecondsMin =
-            this.game.getStatisticTimeInSecondsMin();
+            // this.game.getStatisticTimeInSecondsMin();
+            0;
 
         let statisticTimeInSecondsAvg =
-            this.game.getStatisticTimeInSecondsAvg();
+            // this.game.getStatisticTimeInSecondsAvg();
+            0;
 
         let statisticTimeInSecondsMax =
-            this.game.getStatisticTimeInSecondsMax();
+            // this.game.getStatisticTimeInSecondsMax();
+            0;
 
         let statisticTimeInSecondsBest =
-            this.game.getStatisticTimeInSecondsBest();
+            // this.game.getStatisticTimeInSecondsBest();
+            0;
 
-        this.game.setFraudCountedSum();
+
+        let fraudStatisticMap =
+            this.game.getStatisticsFraudData();
 
         let fraudCountedRoundNumber =
-            this.game.getFraudCountedClicks();
-
-        let fraudCountedSumNumber =
-            this.game.getFraudCountedSum();
+            fraudStatisticMap.get("fraudSummarySumPerCurrentRoundKey");
 
         let historyRoundNumber =
-            this.game.getFraudRoundElementIndexToUpdate();
+            fraudStatisticMap.get("fraudSummaryCurrentRoundNumberKey");
+
+        let fraudCountedSumNumber =
+            fraudStatisticMap.get("fraudSummaryTotalKey");
+
+
 
         // this.controllerGameCoordinator.updateStatistic(
         //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
@@ -187,23 +239,23 @@ export class ControllerGameClicker {
         //     fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
 
         // temp var
-        let currentBestTime = this.game.getStatisticTimeInMillisecondsBest();
+        // let currentBestTime = this.game.getStatisticTimeInMillisecondsBest();
+        //
+        //
+        // if(this.tempBestTimeBeforeRefresh > currentBestTime){
+        //     this.tempBestTimeBeforeRefresh = currentBestTime;
+        // }
 
-
-        if(this.tempBestTimeBeforeRefresh > currentBestTime){
-            this.tempBestTimeBeforeRefresh = currentBestTime;
-        }
-
-        console.log("currentBestTime = " + currentBestTime);
-        console.log("tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
+        // console.log("currentBestTime = " + currentBestTime);
+        // console.log("tempBestTimeBeforeRefresh = " + this.tempBestTimeBeforeRefresh);
 
         this.controllerGameCoordinator.updateStatistic(
             statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
             statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
             fraudCountedRoundNumber, fraudCountedSumNumber, historyRoundNumber);
 
-        this.game.resetFraudCountedClicks();
-        this.game.setFraudRoundElementIndexToUpdate();
+        // this.game.resetFraudCountedClicks();
+        // this.game.setFraudRoundElementIndexToUpdate();
     }
 
     gameOver() {

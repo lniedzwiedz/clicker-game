@@ -22,13 +22,13 @@ export class GameModeColor {
 
     setConfigurationGameRound() {
         this.gameColors = this.colors;
-        this.startTime = 0;
-        this.endTime = 0;
-        this.reactionTimeTimeout = 0;
+        // this.startTime = 0;
+        // this.endTime = 0;
+        // this.reactionTimeTimeout = 0;
 
         this.setRandomColor();
-        this.setRandomTimeBeforeChangeColor();
-        this.setGameTimeTimeoutStart();
+        // this.setRandomTimeBeforeChangeColor();
+        // this.setGameTimeTimeoutStart();
     }
 
     getRandomNumber(maxNumber) {
@@ -43,7 +43,7 @@ export class GameModeColor {
     }
 
     // getRandomColor() {
-    getRandomData() {
+    getGameRoundDataToDisplay() {
         return this.randomColor;
     }
 

@@ -5,9 +5,19 @@ import {
 
 export class GameTimeout {
 
+    constructor() {
+        this.setConfigurationTimeout();
+    }
+
     randomTimeoutMaxSecond = 10;
     randomTimeout = 1;
     randomTimeoutStart = 1;
+
+    reactionTime = 0;
+    reactionTimeTimeout = 0;
+    startTime = 0;
+    endTime = 0;
+    gameTimeTimeoutStart;
 
     setRandomTimeout() {
         // let randomSecond = this.getRandomNumber(this.randomTimeoutMaxSecond) + 1;
@@ -27,5 +37,29 @@ export class GameTimeout {
     setConfigurationTimeout(){
         this.setRandomTimeout();
         this.setRandomTimeoutStart();
+    }
+
+    setReactionTime() {
+        this.reactionTime = this.endTime - this.startTime + this.reactionTimeTimeout;
+    }
+
+    getReactionTime() {
+        return this.reactionTime;
+    }
+
+    setStartTime() {
+        this.startTime = performance.now();
+    }
+
+    getStartTime() {
+        return this.startTime;
+    }
+
+    setEndTime() {
+        this.endTime = performance.now();
+    }
+
+    getEndTime() {
+        return this.endTime;
     }
 }
