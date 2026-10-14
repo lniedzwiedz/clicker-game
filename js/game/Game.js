@@ -2,8 +2,8 @@ import {GameModeColor} from "./GameModeColor.js";
 import {GameMain} from "./GameMain.js";
 import {GameModeFraud} from "./GameModeFraud.js";
 import {GameTimeout} from "./GameTimeout.js";
-import {GameStatisticTime} from "./GameStatisticTime.js";
-import {GameReactionTime} from "./GameReactionTime.js";
+import {GameStatisticsTime} from "./GameStatisticsTime.js";
+import {GameModeReactionTime} from "./GameModeReactionTime.js";
 import * as variablesGame from "./common/variablesGame.js";
 import {mapKeyStatisticsTime} from "./common/variablesGame.js";
 
@@ -17,10 +17,11 @@ export class Game {
 
     gameModeKind;
     gameModeFraud;
+    gameStatisticsTime;
 
     gameTimeout;
     gameReactionTime;
-    gameStatisticTime
+
 
     bestTimeBeforeRefresh = 1300000000000000000000000000000000;
     gameRoundCount;
@@ -43,6 +44,7 @@ export class Game {
         // this.fraudCurrentRoundNumber = 0;
 
         this.gameModeFraud = new GameModeFraud();
+        this.gameStatisticsTime = new GameStatisticsTime();
     }
 
     setGameRoundCountTime() {
@@ -53,7 +55,7 @@ export class Game {
     // time not timeout
     getGameRoundReactionTimeStart() {
         // this.gameReactionTime.seReactionTimeStart();
-        this.gameReactionTime = new GameReactionTime();
+        this.gameReactionTime = new GameModeReactionTime();
     }
 
     getGameRoundDataToDisplay() {
@@ -68,13 +70,30 @@ export class Game {
     getStatistics() {
         let statisticsMap = new Map();
         statisticsMap.set(variablesGame.mapKeyStatisticsFraud, this.getStatisticsFraudData());
-        // statisticsMap.set(variablesGame.mapKeyStatisticsTime, this.getStatisticsFraudData());
+        statisticsMap.set(variablesGame.mapKeyStatisticsTime, this.getStatisticsTimeData());
         return statisticsMap;
     }
 
     getStatisticsFraudData() {
         return this.gameModeFraud.getStatisticsFraudData();
     }
+
+    getStatisticsTimeData() {
+        this.configureReactionTime();
+        let reactionTime = this.gameReactionTime.getReactionTime();
+        this.bestTimeBeforeRefresh = this.gameStatisticsTime.getStatisticTimeInSecondsBest();
+        let currentRoundNumber = 3;
+
+        // map < map, map> -> 1 best -> 2 history
+        // map < json with best time?, one map> -> 1 best -> 2 history
+
+        return this.gameStatisticsTime.getStatisticsTimeData(currentRoundNumber, reactionTime);
+    }
+
+    configureReactionTime() {
+        this.gameReactionTime.configureReactionTime();
+    }
+
 
     getRandomTimeout() {
         return this.gameTimeout.getRandomTimeout();

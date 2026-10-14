@@ -1,4 +1,4 @@
-export class GameReactionTime {
+export class GameModeReactionTime {
 
     constructor() {
         this.seReactionTimeStart();
@@ -10,6 +10,10 @@ export class GameReactionTime {
     endTime = 0;
     gameTimeTimeoutStart;
 
+    configureReactionTime(){
+        this.setEndTime();
+        this.setReactionTime();
+    }
 
     setReactionTime() {
         this.reactionTime = this.endTime - this.startTime + this.reactionTimeTimeout;

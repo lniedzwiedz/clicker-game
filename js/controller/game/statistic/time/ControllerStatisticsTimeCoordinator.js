@@ -1,3 +1,6 @@
+import * as variablesGameStatisticsTime from "../../../../game/common/variablesGameStatisticsTime.js";
+
+
 export class ControllerStatisticsTimeCoordinator {
 
     constructor(controllerStatisticsTimePrimary, controllerStatisticsTimeSummary, controllerStatisticsTimeHistory) {
@@ -32,22 +35,32 @@ export class ControllerStatisticsTimeCoordinator {
         this.controllerStatisticsTimeHistory.createStatisticsTimeHistory();
     }
 
-    updateStatisticTime(statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-                        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+    updateStatisticTime(
+        // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        //                 statisticTimeInSecondsMax, statisticTimeInSecondsBest
+        statisticsTimedMap) {
 
-        this.updateStatisticsTimeSummary(statisticTimeInSecondsBest);
-        this.updateStatisticTimeHistory(statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);
+        let statisticTimeBest = statisticsTimedMap.get(variablesGameStatisticsTime.mapKeyStatisticTimeBest);
+        console.log("statisticTimeBest = " + statisticTimeBest);
+
+        this.updateStatisticsTimeSummary(statisticTimeBest);
+
+        let statisticTimeMin = statisticsTimedMap.get(variablesGameStatisticsTime.mapKeyStatisticTimeMin);
+        let statisticTimeAvg = statisticsTimedMap.get(variablesGameStatisticsTime.mapKeyStatisticTimeAvg);
+        let statisticTimeMax = statisticsTimedMap.get(variablesGameStatisticsTime.mapKeyStatisticTimeMax);
+
+        this.updateStatisticTimeHistory(statisticTimeMin, statisticTimeAvg, statisticTimeMax);
 
     }
 
-    updateStatisticsTimeSummary(statisticTimeInSecondsBest) {
-        this.controllerStatisticsTimeSummary.setStatisticsTimeSummaryBestValue(statisticTimeInSecondsBest);
+    updateStatisticsTimeSummary(statisticTimeBest) {
+        this.controllerStatisticsTimeSummary.setStatisticsTimeSummaryBestValue(statisticTimeBest);
     }
 
     updateStatisticTimeHistory(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax) {
+        statisticTimeMin, statisticTimeAvg, statisticTimeMax) {
 
         this.controllerStatisticsTimeHistory.setStatisticsTimeHistoryRoundNumberValue(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax);
+            statisticTimeMin, statisticTimeAvg, statisticTimeMax);
     }
 }

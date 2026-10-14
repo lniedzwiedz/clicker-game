@@ -585,31 +585,31 @@ export class ViewStatisticsTimeHistory {
     }
 
     setStatisticsTimeHistoryRoundNumberValue(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg, statisticTimeInSecondsMax) {
+        statisticTimeMin, statisticTimeAvg, statisticTimeMax) {
 
-        this.setStatisticsTimeHistoryMin(statisticTimeInSecondsMin);
-        this.setStatisticsTimeHistoryAvg(statisticTimeInSecondsAvg);
-        this.setStatisticsTimeHistoryMax(statisticTimeInSecondsMax);
+        this.setStatisticsTimeHistoryMin(statisticTimeMin);
+        this.setStatisticsTimeHistoryAvg(statisticTimeAvg);
+        this.setStatisticsTimeHistoryMax(statisticTimeMax);
     }
 
-    setStatisticsTimeHistoryMin(statisticTimeInSecondsMin) {
+    setStatisticsTimeHistoryMin(statisticTimeMin) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(0),
-            valueToString(statisticTimeInSecondsMin)
+            valueToString(statisticTimeMin)
         );
     }
 
-    setStatisticsTimeHistoryAvg(statisticTimeInSecondsAvg) {
+    setStatisticsTimeHistoryAvg(statisticTimeAvg) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(1),
-            valueToString(statisticTimeInSecondsAvg)
+            valueToString(statisticTimeAvg)
         );
     }
 
-    setStatisticsTimeHistoryMax(statisticTimeInSecondsMax) {
+    setStatisticsTimeHistoryMax(statisticTimeMax) {
         setElementTextById(
             this.getHistoryMetricTimeValueTextId(2),
-            valueToString(statisticTimeInSecondsMax)
+            valueToString(statisticTimeMax)
         );
     }
 

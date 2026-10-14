@@ -64,9 +64,9 @@ export class ControllerStatisticsCoordinator {
         //     statisticTimeInSecondsMax, statisticTimeInSecondsBest
         // );
 
-        // this.updateStatisticTime(
-        //     statisticsMap.get(variablesGame.mapKeyStatisticsTime)
-        // );
+        this.updateStatisticTime(
+            statisticsMap.get(variablesGame.mapKeyStatisticsTime)
+        );
     }
 
     // updateStatisticFraud(
@@ -82,11 +82,15 @@ export class ControllerStatisticsCoordinator {
     }
 
     updateStatisticTime(
-        statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-        statisticTimeInSecondsMax, statisticTimeInSecondsBest) {
+        // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+        // statisticTimeInSecondsMax, statisticTimeInSecondsBest
+        statisticsTimedMap
+    ) {
 
         this.controllerStatisticsTimeCoordinator.updateStatisticTime(
-            statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
-            statisticTimeInSecondsMax, statisticTimeInSecondsBest);
+            // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
+            // statisticTimeInSecondsMax, statisticTimeInSecondsBest
+            statisticsTimedMap
+        );
     }
 }
