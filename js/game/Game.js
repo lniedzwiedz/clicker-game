@@ -3,6 +3,9 @@ import {GameMain} from "./GameMain.js";
 import {GameModeFraud} from "./GameModeFraud.js";
 import {GameTimeout} from "./GameTimeout.js";
 import {GameStatisticTime} from "./GameStatisticTime.js";
+import {GameReactionTime} from "./GameReactionTime.js";
+import * as variablesGame from "./common/variablesGame.js";
+import {mapKeyStatisticsTime} from "./common/variablesGame.js";
 
 export class Game {
 
@@ -12,14 +15,16 @@ export class Game {
         this.setGameConfigurationMain(gameKind, gameRoundCount);
     }
 
-    gameMode;
+    gameModeKind;
     gameModeFraud;
-    gameRoundCount;
-    gameTimeout
+
+    gameTimeout;
+    gameReactionTime;
     gameStatisticTime
 
     bestTimeBeforeRefresh = 1300000000000000000000000000000000;
-    currentRoundNumber
+    gameRoundCount;
+    currentRoundNumber;
 
     setGameConfigurationMain(gameMode, gameRoundCount) {
 
@@ -27,7 +32,7 @@ export class Game {
 
         if (gameKind === gameMode) {
             // console.log("game mode color");
-            this.gameMode = new GameModeColor();
+            this.gameModeKind = new GameModeColor();
 
         } else {
             // console.log("game mode abc");
@@ -41,16 +46,18 @@ export class Game {
     }
 
     setGameRoundCountTime() {
-        this.gameMode.setConfigurationGameRound();
-        this.gameTimeout = new GameTimeout()
+        this.gameModeKind.setConfigurationGameRound();
+        this.gameTimeout = new GameTimeout();
     }
 
-    getGameRoundCountTimeStart() {
-        this.gameTimeout.setStartTime();
+    // time not timeout
+    getGameRoundReactionTimeStart() {
+        // this.gameReactionTime.seReactionTimeStart();
+        this.gameReactionTime = new GameReactionTime();
     }
 
     getGameRoundDataToDisplay() {
-        return this.gameMode.getGameRoundDataToDisplay();
+        return this.gameModeKind.getGameRoundDataToDisplay();
     }
 
     setGameRoundCountFraud() {
@@ -58,7 +65,14 @@ export class Game {
         this.gameModeFraud.setFraudCountedClicks();
     }
 
-    getStatisticsFraudData(){
+    getStatistics() {
+        let statisticsMap = new Map();
+        statisticsMap.set(variablesGame.mapKeyStatisticsFraud, this.getStatisticsFraudData());
+        // statisticsMap.set(variablesGame.mapKeyStatisticsTime, this.getStatisticsFraudData());
+        return statisticsMap;
+    }
+
+    getStatisticsFraudData() {
         return this.gameModeFraud.getStatisticsFraudData();
     }
 

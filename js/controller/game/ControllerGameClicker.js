@@ -130,7 +130,7 @@ export class ControllerGameClicker {
 
                 this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
-                this.game.getGameRoundCountTimeStart();
+                this.game.getGameRoundReactionTimeStart();
 
                 this.configureCounterReactionTime();
 
@@ -149,10 +149,10 @@ export class ControllerGameClicker {
 
     configureCounterReactionTime() {
         this.controllerGameCoordinator.setOnGame(() =>
-            this.processClickColor());
+            this.processReactionTimeClick());
     }
 
-    processClickColor() {
+    processReactionTimeClick() {
 
         if (this.game.getCurrentRoundNumber() === 1) {
 
@@ -162,13 +162,10 @@ export class ControllerGameClicker {
                 );
         }
 
-        // next round 2, 3, 4 ...
-        this.startRound();
-
         this.setStatistics();
 
-        // // next round 2, 3, 4 ...
-        // this.startRound();
+        // next round 2, 3, 4 ...
+        this.startRound();
 
     }
 
@@ -218,9 +215,13 @@ export class ControllerGameClicker {
             // this.game.getStatisticTimeInSecondsBest();
             0;
 
+        let statisticsTimeMap;
 
-        let fraudStatisticsMap =
-            this.game.getStatisticsFraudData();
+
+        // let fraudStatisticsMap =
+        //     this.game.getStatisticsFraudData();
+
+        let statisticsMap = this.game.getStatistics();
 
         // let fraudCountedRoundNumber =
         //     fraudStatisticsMap.get("fraudSummarySumPerCurrentRoundKey");
@@ -260,7 +261,8 @@ export class ControllerGameClicker {
         this.controllerGameCoordinator.updateStatistic(
             // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
             // statisticTimeInSecondsMax, this.tempBestTimeBeforeRefresh,
-            fraudStatisticsMap);
+            // fraudStatisticsMap);
+            statisticsMap);
 
     }
 

@@ -1,3 +1,5 @@
+import * as variablesGame from "../../../game/common/variablesGame.js";
+
 export class ControllerStatisticsCoordinator {
 
     constructor(controllerStatisticsTimeCoordinator, controllerStatisticsFraudCoordinator) {
@@ -50,13 +52,20 @@ export class ControllerStatisticsCoordinator {
     updateStatistic(
         // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
         // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-        fraudStatisticsMap) {
+        // statisticsFraudMap) {
+        statisticsMap) {
 
-        this.updateStatisticFraud(fraudStatisticsMap);
+        this.updateStatisticFraud(
+            statisticsMap.get(variablesGame.mapKeyStatisticsFraud)
+        );
 
         // this.updateStatisticTime(
         //     statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
         //     statisticTimeInSecondsMax, statisticTimeInSecondsBest
+        // );
+
+        // this.updateStatisticTime(
+        //     statisticsMap.get(variablesGame.mapKeyStatisticsTime)
         // );
     }
 
@@ -68,8 +77,8 @@ export class ControllerStatisticsCoordinator {
     //     );
     // }
 
-    updateStatisticFraud(fraudStatisticsMap) {
-        this.controllerStatisticsFraudCoordinator.updateStatisticFraud(fraudStatisticsMap);
+    updateStatisticFraud(statisticsFraudMap) {
+        this.controllerStatisticsFraudCoordinator.updateStatisticFraud(statisticsFraudMap);
     }
 
     updateStatisticTime(

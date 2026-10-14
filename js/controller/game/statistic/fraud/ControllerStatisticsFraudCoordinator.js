@@ -35,20 +35,20 @@ export class ControllerStatisticsFraudCoordinator {
         this.controllerStatisticsFraudHistory.creatStatisticsFraudHistory(gameRoundCount);
     }
 
-    updateStatisticFraud(fraudStatisticsMap) {
+    updateStatisticFraud(statisticsFraudMap) {
 
         let fraudTotalValuePerGame =
-            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerGame);
+            statisticsFraudMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerGame);
         // console.log("fraudTotalValuePerGame = " + fraudTotalValuePerGame);
         this.updateStatisticsFraudSummary(fraudTotalValuePerGame);
 
 
         let fraudTotalValuePerRoundNumber =
-            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerRoundNumber);
+            statisticsFraudMap.get(variablesGameModeFraud.mapKeyStatisticsFraudTotalValuePerRoundNumber);
         // console.log("fraudTotalValuePerRoundNumber = " + fraudTotalValuePerRoundNumber);
 
         let fraudRoundNumber =
-            fraudStatisticsMap.get(variablesGameModeFraud.mapKeyStatisticsFraudRoundNumber);
+            statisticsFraudMap.get(variablesGameModeFraud.mapKeyStatisticsFraudRoundNumber);
         // console.log("fraudRoundNumber = " + fraudRoundNumber);
 
         this.updateStatisticFraudHistory(fraudRoundNumber, fraudTotalValuePerRoundNumber);

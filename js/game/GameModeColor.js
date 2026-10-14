@@ -16,9 +16,9 @@ export class GameModeColor {
     gameColors = this.colors;
 
 
-    playClickColorCounterTime() {
-        this.setConfigurationGameRound();
-    }
+    // playClickColorCounterTime() {
+    //     this.setConfigurationGameRound();
+    // }
 
     setConfigurationGameRound() {
         this.gameColors = this.colors;

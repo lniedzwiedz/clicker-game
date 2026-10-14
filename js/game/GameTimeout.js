@@ -13,11 +13,17 @@ export class GameTimeout {
     randomTimeout = 1;
     randomTimeoutStart = 1;
 
-    reactionTime = 0;
-    reactionTimeTimeout = 0;
-    startTime = 0;
-    endTime = 0;
-    gameTimeTimeoutStart;
+    // reactionTime = 0;
+    // reactionTimeTimeout = 0;
+    // startTime = 0;
+    // endTime = 0;
+    // gameTimeTimeoutStart;
+
+
+    setConfigurationTimeout(){
+        this.setRandomTimeout();
+        this.setRandomTimeoutStart();
+    }
 
     setRandomTimeout() {
         // let randomSecond = this.getRandomNumber(this.randomTimeoutMaxSecond) + 1;
@@ -25,41 +31,41 @@ export class GameTimeout {
         this.randomTimeout = randomSecond * 1000;
     }
 
+    setRandomTimeoutStart() {
+        this.randomTimeoutStart = performance.now();
+    }
+
+
     // getRandomTimeBeforeChangeColor() {
     getRandomTimeout() {
         return this.randomTimeout;
     }
 
-    setRandomTimeoutStart() {
-        this.randomTimeoutStart = performance.now();
-    }
-
-    setConfigurationTimeout(){
-        this.setRandomTimeout();
-        this.setRandomTimeoutStart();
-    }
-
-    setReactionTime() {
-        this.reactionTime = this.endTime - this.startTime + this.reactionTimeTimeout;
-    }
-
-    getReactionTime() {
-        return this.reactionTime;
-    }
-
-    setStartTime() {
-        this.startTime = performance.now();
-    }
-
-    getStartTime() {
-        return this.startTime;
-    }
-
-    setEndTime() {
-        this.endTime = performance.now();
-    }
-
-    getEndTime() {
-        return this.endTime;
-    }
+    //
+    //
+    //
+    //
+    // setReactionTime() {
+    //     this.reactionTime = this.endTime - this.startTime + this.reactionTimeTimeout;
+    // }
+    //
+    // getReactionTime() {
+    //     return this.reactionTime;
+    // }
+    //
+    // setStartTime() {
+    //     this.startTime = performance.now();
+    // }
+    //
+    // getStartTime() {
+    //     return this.startTime;
+    // }
+    //
+    // setEndTime() {
+    //     this.endTime = performance.now();
+    // }
+    //
+    // getEndTime() {
+    //     return this.endTime;
+    // }
 }

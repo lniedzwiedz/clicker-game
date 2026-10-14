@@ -112,13 +112,15 @@ export class ControllerGameCoordinator {
     updateStatistic(
         // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
         // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-        fraudStatisticsMap
-         ) {
+        // fraudStatisticsMap
+        statisticsMap
+    ) {
 
         this.controllerStatisticsCoordinator.updateStatistic(
             // statisticTimeInSecondsMin, statisticTimeInSecondsAvg,
             // statisticTimeInSecondsMax, statisticTimeInSecondsBest,
-            fraudStatisticsMap);
+            // fraudStatisticsMap);
+            statisticsMap);
     }
 
     removeStatistics() {
