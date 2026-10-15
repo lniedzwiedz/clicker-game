@@ -1,9 +1,7 @@
-import {GameMain} from "../../game/GameMain.js";
-import {Game} from "../../game/Game.js";
-
 export class ControllerGameClicker {
 
-    constructor(controllerGameCoordinator) {
+    constructor(gameManager, controllerGameCoordinator) {
+        this.gameManager = gameManager;
         this.controllerGameCoordinator = controllerGameCoordinator
     }
 
@@ -36,9 +34,11 @@ export class ControllerGameClicker {
                 .getRoundNumber();
 
         // this.game =
-        //     new GameMain(roundNumber);
+        //     new GameManager(roundNumber);
 
-        this.game = new Game("GameModeColor", roundNumber);
+        // this.game = new Game("GameModeColor", roundNumber);
+
+        this.gameManager.configureGame("GameModeColor", roundNumber);
 
         this.controllerGameCoordinator
             .configureButtonGameListener();
@@ -92,12 +92,12 @@ export class ControllerGameClicker {
 
     startRound() {
 
-        if (!this.game.isGameRunning()) {
+        if (!this.gameManager.isGameRunning()) {
             this.gameOver();
             return;
         }
 
-        this.game
+        this.gameManager
             .setCurrentRoundNumber();
 
         this.configureCounterFraud();
@@ -105,7 +105,7 @@ export class ControllerGameClicker {
         // this.game
         //     .playClickColorCounterTime();
 
-        this.game
+        this.gameManager
             .setGameRoundCountTime();
 
         this.runTimeoutBeforeClick();
@@ -117,7 +117,7 @@ export class ControllerGameClicker {
         //     this.game.getRandomTimeBeforeChangeColor();
 
         const timeout =
-            this.game.getRandomTimeout();
+            this.gameManager.getRandomTimeout();
 
         this.clickColorTimeout =
             setTimeout(() => {
@@ -126,11 +126,11 @@ export class ControllerGameClicker {
                 //     this.game.getRandomColor();
 
                 const randomColor =
-                    this.game.getGameRoundDataToDisplay();
+                    this.gameManager.getGameRoundDataToDisplay();
 
                 this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
-                this.game.getGameRoundReactionTimeStart();
+                this.gameManager.getGameRoundReactionTimeStart();
 
                 this.configureCounterReactionTime();
 
@@ -144,7 +144,7 @@ export class ControllerGameClicker {
 
     countFraud() {
         // this.game.setFraudCountedClicks();
-        this.game.setGameRoundCountFraud();
+        this.gameManager.setGameRoundCountFraud();
     }
 
     configureCounterReactionTime() {
@@ -154,11 +154,11 @@ export class ControllerGameClicker {
 
     processReactionTimeClick() {
 
-        if (this.game.getCurrentRoundNumber() === 1) {
+        if (this.gameManager.getCurrentRoundNumber() === 1) {
 
             this.controllerGameCoordinator
                 .configureStatistic(
-                    this.game.getGameRoundCount()
+                    this.gameManager.getGameRoundCount()
                 );
         }
 
@@ -267,6 +267,7 @@ export class ControllerGameClicker {
     }
 
     gameOver() {
+        this.gameManager.gameOver();
         this.clearTimeoutAfterChangeColor();
         this.controllerGameCoordinator.configureGameOver();
     }

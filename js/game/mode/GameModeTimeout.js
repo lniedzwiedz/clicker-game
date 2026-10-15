@@ -1,9 +1,9 @@
 import {
     getRandomNumber
-} from "../common/function/commonFunctions.js";
+} from "../../common/function/commonFunctions.js";
 
 
-export class GameTimeout {
+export class GameModeTimeout {
 
     constructor() {
         this.setConfigurationTimeout();

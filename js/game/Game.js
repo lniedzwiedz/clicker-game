@@ -1,55 +1,113 @@
-import {GameModeColor} from "./GameModeColor.js";
-import {GameMain} from "./GameMain.js";
-import {GameModeFraud} from "./GameModeFraud.js";
-import {GameTimeout} from "./GameTimeout.js";
-import {GameStatisticsTime} from "./GameStatisticsTime.js";
-import {GameModeReactionTime} from "./GameModeReactionTime.js";
+import {GameModeColor} from "./mode/GameModeColor.js";
+import {GameManager} from "./GameManager.js";
+import {GameModeFraud} from "./mode/GameModeFraud.js";
+import {GameModeTimeout} from "./mode/GameModeTimeout.js";
+import {GameStatisticsTime} from "./statistics/GameStatisticsTime.js";
+import {GameModeReactionTime} from "./mode/GameModeReactionTime.js";
 import * as variablesGame from "./common/variablesGame.js";
 import {mapKeyStatisticsTime} from "./common/variablesGame.js";
 
 export class Game {
 
-    constructor(gameKind, gameRoundCount) {
+    constructor(gameModeKind, gameRoundCount) {
         // this.gameMode = "GameModeColor";
         // this.gameRoundCount = 5;
-        this.setGameConfigurationMain(gameKind, gameRoundCount);
+        this.setGameConfiguration(gameModeKind, gameRoundCount);
     }
 
-    gameModeKind;
+
+    // gameModeKind;
     gameModeFraud;
-    gameStatisticsTime;
+    // gameStatisticsTime;
+    // gameStatisticsTime = new GameStatisticsTime();
 
     gameTimeout;
     gameReactionTime;
 
-
-    bestTimeBeforeRefresh = 1300000000000000000000000000000000;
     gameRoundCount;
     currentRoundNumber;
 
-    setGameConfigurationMain(gameMode, gameRoundCount) {
+    setGameConfiguration(gameModeKind, gameRoundCount) {
 
-        let gameKind = "GameModeColor";
-
-        if (gameKind === gameMode) {
-            // console.log("game mode color");
-            this.gameModeKind = new GameModeColor();
-
-        } else {
-            // console.log("game mode abc");
-        }
-
+        this.gameModeKind = gameModeKind;
         this.gameRoundCount = gameRoundCount;
         this.currentRoundNumber = 0;
-        // this.fraudCurrentRoundNumber = 0;
 
-        this.gameModeFraud = new GameModeFraud();
-        this.gameStatisticsTime = new GameStatisticsTime();
+        // this.gameModeFraud = new GameModeFraud();
+        // this.gameStatisticsTime = new GameStatisticsTime();
     }
+
+    isModeFraud = true;
+
+    runGame() {
+
+        switch (this.isGameRunning()) {
+
+            case true:
+                this.runGameRound();
+                break;
+
+            case false:
+                this.gameOver();
+                break;
+
+            default:
+                console.log("Upssss UNKNOWN_GAME_STATE xD");
+
+        }
+
+
+    }
+
+    runGameRound() {
+
+        switch (this.isModeFraud) {
+
+            case true:
+                this.runModeFraud();
+                this.isModeFraud = false;
+                break;
+
+            case false:
+                this.runModeKind();
+                this.isModeFraud = true;
+                break;
+
+            default:
+                console.log("Upssss UNKNOWN_GAME_MODE xD");
+        }
+    }
+
+    runModeFraud() {
+        this.gameModeFraud = new GameModeFraud();
+    }
+
+    runModeKind() {
+        this.gameModeKind.getGameRoundDataToDisplay();
+    }
+
+
+
+    gameOver(){
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     setGameRoundCountTime() {
         this.gameModeKind.setConfigurationGameRound();
-        this.gameTimeout = new GameTimeout();
+        this.gameTimeout = new GameModeTimeout();
     }
 
     // time not timeout
@@ -67,28 +125,30 @@ export class Game {
         this.gameModeFraud.setFraudCountedClicks();
     }
 
-    getStatistics() {
-        let statisticsMap = new Map();
-        statisticsMap.set(variablesGame.mapKeyStatisticsFraud, this.getStatisticsFraudData());
-        statisticsMap.set(variablesGame.mapKeyStatisticsTime, this.getStatisticsTimeData());
-        return statisticsMap;
-    }
-
-    getStatisticsFraudData() {
-        return this.gameModeFraud.getStatisticsFraudData();
-    }
-
-    getStatisticsTimeData() {
-        this.configureReactionTime();
-        let reactionTime = this.gameReactionTime.getReactionTime();
-        this.bestTimeBeforeRefresh = this.gameStatisticsTime.getStatisticTimeInSecondsBest();
-        let currentRoundNumber = 3;
-
-        // map < map, map> -> 1 best -> 2 history
-        // map < json with best time?, one map> -> 1 best -> 2 history
-
-        return this.gameStatisticsTime.getStatisticsTimeData(currentRoundNumber, reactionTime);
-    }
+    // getStatistics() {
+    //     let statisticsMap = new Map();
+    //     statisticsMap.set(variablesGame.mapKeyStatisticsFraud, this.getStatisticsFraudData());
+    //     statisticsMap.set(variablesGame.mapKeyStatisticsTime, this.getStatisticsTimeData());
+    //     return statisticsMap;
+    // }
+    //
+    // getStatisticsFraudData() {
+    //     return this.gameModeFraud.getStatisticsFraudData();
+    // }
+    //
+    // getStatisticsTimeData() {
+    //     this.configureReactionTime();
+    //     let reactionTime = this.gameReactionTime.getReactionTime();
+    //
+    //     // game over
+    //     // this.bestTimeBeforeRefresh = this.gameStatisticsTime.getStatisticTimeInSecondsBest();
+    //     // let currentRoundNumber = 3;
+    //
+    //     // map < map, map> -> 1 best -> 2 history
+    //     // map < json with best time?, one map> -> 1 best -> 2 history
+    //
+    //     return this.gameStatisticsTime.getStatisticsTimeData(this.currentRoundNumber, reactionTime);
+    // }
 
     configureReactionTime() {
         this.gameReactionTime.configureReactionTime();
@@ -103,8 +163,6 @@ export class Game {
     //     this.gameTimeout.getReactionTime();
     // }
 
-
-//mainGame class
     isGameRunning() {
         return this.currentRoundNumber < this.gameRoundCount;
     }
@@ -120,4 +178,9 @@ export class Game {
     getCurrentRoundNumber() {
         return this.currentRoundNumber;
     }
+
+
+    // setBestTimeBeforeRefresh() {
+    //     this.bestTimeBeforeRefresh = this.gameStatisticsTime.getStatisticTimeInSecondsBest();
+    // }
 }

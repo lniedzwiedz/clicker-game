@@ -1,4 +1,4 @@
-import * as variablesGameStatisticsTime from "./common/variablesGameStatisticsTime.js";
+import * as variablesGameStatisticsTime from "../common/variablesGameStatisticsTime.js";
 
 
 export class GameStatisticsTime {
@@ -16,7 +16,7 @@ export class GameStatisticsTime {
     statisticTimeInMillisecondsAvg = 0;
     statisticTimeInMillisecondsSum = 0;
     statisticTimeInMillisecondsMax = 0;
-    statisticTimeInMillisecondsBest = this.statisticTimeInMillisecondsMin;
+    statisticTimeInMillisecondsBest = 1300000;
 
     statisticsTimeInSecondsMin = 0;
     statisticsTimeInSecondsAvg = 0;
@@ -27,6 +27,12 @@ export class GameStatisticsTime {
     initializeStatisticsTimeMapPerRound() {
         this.createStatisticsTimeMapPerRound();
         this.setStatisticsTimeMapPerRound();
+    }
+
+    setStatisticsTimeForRound() {
+        this.statisticTimeInMillisecondsMin = 1300000;
+        this.statisticTimeInMillisecondsAvg = 0;
+        this.statisticTimeInMillisecondsMax = 0;
     }
 
     createStatisticsTimeMapPerRound() {

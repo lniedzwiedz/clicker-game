@@ -1,4 +1,4 @@
-import * as variablesGameModeFraud from "./common/variablesGameModeFraud.js";
+import * as variablesGameModeFraud from "../common/variablesGameModeFraud.js";
 
 
 export class GameModeFraud {
