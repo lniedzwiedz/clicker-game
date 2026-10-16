@@ -9,28 +9,30 @@ import {mapKeyStatisticsTime} from "./common/variablesGame.js";
 
 export class Game {
 
-    constructor(gameModeKind, gameRoundCount) {
+    constructor(gameModeKind, maxRoundNumber) {
         // this.gameMode = "GameModeColor";
         // this.gameRoundCount = 5;
-        this.setGameConfiguration(gameModeKind, gameRoundCount);
+        this.setGameConfiguration(gameModeKind, maxRoundNumber);
     }
 
 
     // gameModeKind;
-    gameModeFraud;
+    // gameModeFraud;
+    gameModeCounter;
+    // gameModeCounter;
     // gameStatisticsTime;
     // gameStatisticsTime = new GameStatisticsTime();
 
-    gameTimeout;
-    gameReactionTime;
+    gameModeTimeout;
+    gameModeReactionTime;
 
-    gameRoundCount;
+    maxRoundNumber;
     currentRoundNumber;
 
-    setGameConfiguration(gameModeKind, gameRoundCount) {
+    setGameConfiguration(gameModeKind, maxRoundNumber) {
 
         this.gameModeKind = gameModeKind;
-        this.gameRoundCount = gameRoundCount;
+        this.maxRoundNumber = maxRoundNumber;
         this.currentRoundNumber = 0;
 
         // this.gameModeFraud = new GameModeFraud();
@@ -39,12 +41,16 @@ export class Game {
 
     isModeFraud = true;
 
+    isGameModeFraud(){
+        return this.isModeFraud;
+    }
+
     runGame() {
 
         switch (this.isGameRunning()) {
 
             case true:
-                this.runGameRound();
+                this.runGameModuleKind();
                 break;
 
             case false:
@@ -55,11 +61,10 @@ export class Game {
                 console.log("Upssss UNKNOWN_GAME_STATE xD");
 
         }
-
-
     }
 
-    runGameRound() {
+    runGameModuleKind() {
+
 
         switch (this.isModeFraud) {
 
@@ -76,54 +81,58 @@ export class Game {
             default:
                 console.log("Upssss UNKNOWN_GAME_MODE xD");
         }
+
     }
 
     runModeFraud() {
-        this.gameModeFraud = new GameModeFraud();
+        console.log("1 runModeFraud  ");
+        // this.gameModeFraud = new GameModeFraud();
+        this.gameModeCounter = new GameModeFraud();
+        this.gameModeTimeout = new GameModeTimeout();
+
     }
 
     runModeKind() {
-        this.gameModeKind.getGameRoundDataToDisplay();
+        console.log("2 runModeKind  ");
+
+        this.gameModeKind.setGameRoundDataToDisplay();
+        // this.gameModeReactionTime = new GameModeReactionTime();
+        this.gameModeCounter = new GameModeReactionTime();
+        this.currentRoundNumber++;
+        console.log("currentRoundNumber = " + this.currentRoundNumber);
+    }
+
+    setGameRoundModeCounter(){
+        this.gameModeCounter.setGameRoundModeCounterKind();
     }
 
 
-
-    gameOver(){
-
+    gameOver() {
 
 
     }
-
-
-
-
-
-
-
-
-
-
 
 
     setGameRoundCountTime() {
         this.gameModeKind.setConfigurationGameRound();
-        this.gameTimeout = new GameModeTimeout();
+        this.gameModeTimeout = new GameModeTimeout();
     }
 
     // time not timeout
     getGameRoundReactionTimeStart() {
         // this.gameReactionTime.seReactionTimeStart();
-        this.gameReactionTime = new GameModeReactionTime();
+        // return this.gameModeReactionTime = new GameModeReactionTime();
+        return this.gameModeCounter = new GameModeReactionTime();
     }
 
     getGameRoundDataToDisplay() {
         return this.gameModeKind.getGameRoundDataToDisplay();
     }
 
-    setGameRoundCountFraud() {
-        // this.gameModeFraud = new GameModeFraud();
-        this.gameModeFraud.setFraudCountedClicks();
-    }
+    // setGameRoundCountFraud() {
+    //     // this.gameModeFraud = new GameModeFraud();
+    //     this.gameModeFraud.setFraudCountedClicks();
+    // }
 
     // getStatistics() {
     //     let statisticsMap = new Map();
@@ -151,12 +160,13 @@ export class Game {
     // }
 
     configureReactionTime() {
-        this.gameReactionTime.configureReactionTime();
+        // this.gameModeReactionTime.configureReactionTime();
+        this.gameModeCounter.configureReactionTime();
     }
 
 
     getRandomTimeout() {
-        return this.gameTimeout.getRandomTimeout();
+        return this.gameModeTimeout.getRandomTimeout();
     }
 
     // getRandomDataToDisplay() {
@@ -164,7 +174,7 @@ export class Game {
     // }
 
     isGameRunning() {
-        return this.currentRoundNumber < this.gameRoundCount;
+        return this.currentRoundNumber < this.maxRoundNumber;
     }
 
     setCurrentRoundNumber() {
@@ -172,7 +182,7 @@ export class Game {
     }
 
     getGameRoundCount() {
-        return this.gameRoundCount;
+        return this.maxRoundNumber;
     }
 
     getCurrentRoundNumber() {

@@ -20,6 +20,10 @@ export class GameModeColor {
     //     this.setConfigurationGameRound();
     // }
 
+    setGameRoundDataToDisplay(){
+        this.setConfigurationGameRound();
+    }
+
     setConfigurationGameRound() {
         this.gameColors = this.colors;
         // this.startTime = 0;

@@ -1,7 +1,7 @@
 import {ModuleGame} from "./ModuleGame.js";
 
 import {ControllerGameClicker} from "../../controller/game/ControllerGameClicker.js";
-import {GameManager} from "../../game/GameManager";
+import {GameManager} from "../../game/GameManager.js";
 
 
 class ModuleClickerGame {

@@ -1,7 +1,7 @@
 export class GameModeReactionTime {
 
     constructor() {
-        this.seReactionTimeStart();
+        // this.setReactionTimeStart();
     }
 
     reactionTime = 0;
@@ -10,7 +10,11 @@ export class GameModeReactionTime {
     endTime = 0;
     gameTimeTimeoutStart;
 
-    configureReactionTime(){
+    setGameRoundModeCounterKind() {
+        this.setReactionTimeStart();
+    }
+
+    configureReactionTime() {
         this.setEndTime();
         this.setReactionTime();
     }
@@ -23,7 +27,8 @@ export class GameModeReactionTime {
         return this.reactionTime;
     }
 
-    seReactionTimeStart() {
+    setReactionTimeStart() {
+        console.log("2 start reaction time  ");
         this.startTime = performance.now();
     }
 

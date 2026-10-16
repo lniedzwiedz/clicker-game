@@ -44,7 +44,7 @@ export class ControllerGameClicker {
             .configureButtonGameListener();
 
         // ???
-        this.configureCounterFraud();
+        // this.configureCounterFraud();
 
         // round 1
         this.startRound();
@@ -91,30 +91,115 @@ export class ControllerGameClicker {
     }
 
     startRound() {
+        console.log("A current round number =" + this.gameManager.getCurrentRoundNumber());
 
-        if (!this.gameManager.isGameRunning()) {
-            this.gameOver();
-            return;
-        }
+        // if (!this.gameManager.isGameRunning()) {
+        //     this.gameOver();
+        //     return;
+        // }
+        //
+        // this.gameManager
+        //     .setCurrentRoundNumber();
+        //
+        // this.configureCounterFraud();
+        //
+        // // this.game
+        // //     .playClickColorCounterTime();
+        //
+        // this.gameManager
+        //     .setGameRoundCountTime();
+        //
+        // this.runTimeoutBeforeClick();
 
-        this.gameManager
-            .setCurrentRoundNumber();
+        // if (!this.gameManager.isGameRunning()) {
+        //     this.gameOver();
+        //     return;
+        // }
+        //
+        // this.gameManager
+        //     .setCurrentRoundNumber();
 
-        this.configureCounterFraud();
+        console.log("NEW ROUND -------------------");
 
-        // this.game
-        //     .playClickColorCounterTime();
+        this.gameManager.runGame();
+        // this.configureGameRoundModeCounter();
+        this.configureGameRoundModeCounter(this.gameRoundModeCounter);
 
-        this.gameManager
-            .setGameRoundCountTime();
+
+        // this.gameManager
+        //     .setGameRoundCountTime();
 
         this.runTimeoutBeforeClick();
+        // this.runGameRoundModeCounter();
+
+
+
+    }
+
+
+
+    runGameRoundModeCounter() {
+
+        // if(this.gameManager.isGameModeFraud()){
+        //     this.runTimeoutBeforeClick();
+        // }
+        // else{
+        //
+        // }
+        //
+    }
+
+    // configureGameRoundModeCounter() {
+    //     this.controllerGameCoordinator.setOnGame(() =>
+    //         this.gameRoundModeCounter());
+    // }
+    //
+    // gameRoundModeCounter() {
+    //     this.gameManager.setGameRoundModeCounter();
+    //
+    //     // this.runTimeoutBeforeClick();
+    // }
+
+    configureGameRoundModeCounter(gameRoundModeCounter) {
+        this.controllerGameCoordinator.setOnGame(() =>
+            gameRoundModeCounter());
+    }
+
+    gameRoundModeCounter = () => {
+        console.log("test");
+        this.gameManager.setGameRoundModeCounter();
+        // this.runTimeoutBeforeClick();
     }
 
     runTimeoutBeforeClick() {
 
         // const timeout =
         //     this.game.getRandomTimeBeforeChangeColor();
+        //
+        // const timeout =
+        //     this.gameManager.getRandomTimeout();
+        //
+        // this.clickColorTimeout =
+        //     setTimeout(() => {
+        //
+        //         // const randomColor =
+        //         //     this.game.getRandomColor();
+        //
+        //         // change var name = randomColor
+        //         const randomColor =
+        //             this.gameManager.getGameRoundDataToDisplay();
+        //
+        //         this.controllerGameCoordinator.setButtonGameColor(randomColor);
+        //
+        //         // this.gameManager.getGameRoundReactionTimeStart();
+        //         this.gameManager.setGameRoundModeCounter();
+        //
+        //         this.configureCounterReactionTime();
+
+
+        // console.log("A timeout")
+
+
 
         const timeout =
             this.gameManager.getRandomTimeout();
@@ -122,30 +207,40 @@ export class ControllerGameClicker {
         this.clickColorTimeout =
             setTimeout(() => {
 
+                console.log("B timeout")
+
+                this.gameManager.runGame();
+
                 // const randomColor =
                 //     this.game.getRandomColor();
 
+                // change var name = randomColor
                 const randomColor =
                     this.gameManager.getGameRoundDataToDisplay();
 
                 this.controllerGameCoordinator.setButtonGameColor(randomColor);
 
-                this.gameManager.getGameRoundReactionTimeStart();
+                // this.gameManager.getGameRoundReactionTimeStart();
+                // this.gameManager.setGameRoundModeCounter();
+
+                console.log("in timeout = " + this.gameManager.getRandomTimeout());
+
+                // this.configureGameRoundModeCounter();
 
                 this.configureCounterReactionTime();
 
             }, timeout);
     }
 
-    configureCounterFraud() {
-        this.controllerGameCoordinator.setOnGame(() =>
-            this.countFraud());
-    }
-
-    countFraud() {
-        // this.game.setFraudCountedClicks();
-        this.gameManager.setGameRoundCountFraud();
-    }
+    // configureCounterFraud() {
+    //     this.controllerGameCoordinator.setOnGame(() =>
+    //         this.countFraud());
+    // }
+    //
+    // countFraud() {
+    //     // this.game.setFraudCountedClicks();
+    //     this.gameManager.setGameRoundCountFraud();
+    // }
 
     configureCounterReactionTime() {
         this.controllerGameCoordinator.setOnGame(() =>
@@ -154,7 +249,12 @@ export class ControllerGameClicker {
 
     processReactionTimeClick() {
 
+        // console.log("A current round number =" + this.gameManager.getCurrentRoundNumber());
+
+        // move to statistic
         if (this.gameManager.getCurrentRoundNumber() === 1) {
+
+            // console.log("B current round number =" + this.gameManager.getCurrentRoundNumber());
 
             this.controllerGameCoordinator
                 .configureStatistic(
@@ -162,7 +262,7 @@ export class ControllerGameClicker {
                 );
         }
 
-        this.setStatistics();
+        // this.setStatistics();
 
         // next round 2, 3, 4 ...
         this.startRound();
@@ -231,7 +331,6 @@ export class ControllerGameClicker {
         //
         // let fraudCountedSumNumber =
         //     fraudStatisticsMap.get("fraudSummaryTotalKey");
-
 
 
         // this.controllerGameCoordinator.updateStatistic(

@@ -2,7 +2,8 @@ import {Game} from "./Game.js";
 import * as variablesGame from "./common/variablesGame.js";
 import {GameStatisticsTime} from "./statistics/GameStatisticsTime.js";
 import {GameStatisticsFraud} from "./statistics/GameStatisticsFraud.js";
-import {GameModeColor} from "./mode/GameModeColor";
+import {GameModeColor} from "./mode/GameModeColor.js";
+import {GameModeReactionTime} from "./mode/GameModeReactionTime.js";
 
 export class GameManager {
 
@@ -23,7 +24,7 @@ export class GameManager {
         this.game = new Game(this.gameModeKind, gameRoundCount);
     }
 
-    setGameModeKind(gameModeKind){
+    setGameModeKind(gameModeKind) {
         let gameKind = "GameModeColor";
 
         if (gameKind === gameModeKind) {
@@ -35,9 +36,46 @@ export class GameManager {
         }
     }
 
-    runGame(){
-
+    runGame() {
+        this.game.runGame();
     }
+
+    isGameModeFraud(){
+        return this.game.isGameModeFraud();
+    }
+
+    setGameRoundModeCounter(){
+        this.game.setGameRoundModeCounter();
+    }
+
+    // setGameRoundCountFraud() {
+    //     // this.gameModeFraud = new GameModeFraud();
+    //     this.game.setFraudCountedClicks();
+    // }
+
+    getGameRoundCount() {
+        return this.game.getGameRoundCount();
+    }
+
+    getCurrentRoundNumber() {
+        return this.game.currentRoundNumber;
+    }
+
+    getRandomTimeout() {
+        return this.game.getRandomTimeout();
+    }
+
+    getGameRoundDataToDisplay() {
+        return this.gameModeKind.getGameRoundDataToDisplay();
+    }
+
+
+
+    getGameRoundReactionTimeStart() {
+        // this.gameReactionTime.seReactionTimeStart();
+        return this.gameModeReactionTime = new GameModeReactionTime();
+    }
+
 
 
 
